@@ -1,0 +1,9 @@
+I have one page of HTML5 clean, valid markup that I made my self, by hand.
+
+I want to make it into a four page website, parkinsons-supplements.com with navigation links, header, footer, and clean simple design theme.
+
+| About Parkinson's Disease | Supplements | Therapies | Drugs |
+
+I want clean, valid, static HTML and css, responsive to mobile devices. Please take a look at the attached code. I don't want invalid html or tag soup. 
+
+Thank you.
