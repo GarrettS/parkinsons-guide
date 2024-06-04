@@ -1,1154 +1,2309 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head> 
-	<title>Parkinson's Supplements</title>
-	<style>
-	.block-image {
-		display: block;
-		margin: auto;
+<head>
+    <title>Parkinson's Guide</title>
+    
+<style>
+body {
+	background: #ddd;
+	font-family: georgia, "Open Sans", Helvetica;
+}
+
+.block-image {
+	display: block;
+	margin: auto;
+}
+section {
+	background-color: #eee;
+	padding: 0.5em;
+	border: 2px solid transparent;
+}
+section:target {
+	background-color: #fff;
+	background-color: #fff;
+	animation: highlightFade 4s ease forwards; /* Play the animation */
+}
+section section {
+	background-color: inherit;
+}
+
+/* Animation for highlighting and fading out on in-page links */
+@keyframes highlightFade {
+	0% {
+		background-color: #ffe9ee88;
+		border-color: #e635;
 	}
-	</style>
+	50% {
+		background-color: #ffe9ee88;
+		border-color: #e635;
+	} /* Maintain highlight for duration */
+	100% {
+		background-color: initial;
+	} /* Fade out to default style */
+}
+/* Define the style for the section when it is the target */
+section:target {
+	animation: highlightFade 5s ease forwards;
+}
+        
+/** Treatment Types — example styles — TODO  
+.antifibrillogenic::after {
+  content: " (Antifibrillogenic)";
+  color: blue;
+}
+
+.anti-aggregant::after {
+    content: " (Anti-aggregant)";
+    color: green;
+}
+
+.anti-ischemic::after {
+    content: " (Anti-ischemic)";
+    color: red;
+}
+
+.senolytic::after {
+    content: " (Senolytic)";
+    color: purple;
+}
+
+.mitochondrial::after {
+    content: " (Mitochondrial)";
+    color: orange;
+}
+
+.sleep::after {
+    content: " (Sleep)";
+    color: brown;
+}
+
+
+.dopaminergic::after {
+    content: " (Dopaminergic)";
+    color: teal;
+}
+
+.neuroprotective::after {
+    content: " (Neuroprotective)";
+    color: magenta;
+}
+
+.neuroprotective.dopaminergic::after {
+    content: " (Neuroprotective) (Dopaminergic)";
+    color: magenta;
+}
+
+.antioxidant::after {
+    content: " (Antioxidant)";
+    color: yellow;
+}
+
+.anti-inflammatory::after {
+    content: " (Anti-inflammatory)";
+    color: pink;
+}
+
+.safety-rating::after {
+    content: " (Safety: " attr(data-safety-rating) "/10)";
+    color: green;
+}
+
+.efficancy-rating::after {
+    content: " (Effectiveness: " attr(data-efficacy-rating) "/10)";
+    color: green;
+}
+*/
+
+[data-safety-rating] {
+    position: relative;
+    display: inline-block; /* Ensure the element has a block-level display */
+    background-color: attr(data-color color); 
+    color: attr(data-color color); 
+}
+
+[data-safety-rating]::after {
+    content: " (Safety Rating: " attr(data-safety-rating) "/10)";
+    font-size: 0.8em;
+}
+[data-safety-rating="1"]::after,
+[data-safety-rating="2"]::after,
+[data-safety-rating="3"]::after {
+	background-color: #FF222299;
+}
+
+[data-safety-rating="4"]::after,
+[data-safety-rating="5"]::after,
+[data-safety-rating="6"],
+[data-safety-rating="7"]::after {
+	background-color: #FFFF66cc;
+}
+
+[data-safety-rating="8"]::after,
+[data-safety-rating="9"]::after,
+[data-safety-rating="10"]::after {
+	background-color: #99FF88cc;
+}
+    </style>
 </head>
 <body>
-<section>
-	<h1>
-		Parkinson&rsquo;s Overview
-	</h1>
-	<p>
-		Parkinson&rsquo;s Disease (PD) is a neurological condition resulting from pathology of alpha-synuclein (&alpha;syn) (&alpha;synopathy). 
-	</p>
-
-	<h2>Alpha-sinuclein</h2>
-	<p>
-		Overexpression of &alpha;syn leads to its aggregation and formation &alpha;syn structures, either as oligomers (peptides) or fibrils (see image). Oligomers of &alpha;syn can form lewy bodies, abnormal aggregations of protein that develop inside nerve cells affected by PD.
-	</p>
-	<p>
-		<img src="img/alpha-synuclein.jpeg" alt="alpha synuclein"
-		class="block-image">
-	</p>
-
-	<p>
-		Alpha-synuclein is abundant primarily in the brain, especially in the neocortex, hippocampus, substantia nigra (SN). Smaller amounts are found in the heart, muscles, and other tissues. It is transported into and out of the brain by the blood-brain barrier.
-	</p>
-
-	<p>
-		Six mutations of &alpha;syn are currently associated with familial parkinsonism. Mutant &alpha;syn forms aggregates more readily than wild-type (normal) &alpha;syn.
-	</p>
-	<p>
-		Wild-type &alpha;syn can be removed by lysosomes, mutant forms of &alpha;syn, however, resist their own degradation and inhibit that of other substrates. 
-	</p>
-
-	<p>
-		&alpha;syn oligomers play a central role in the multi-factorial causes of Parkinson&rsquo;s disease. &alpha;syn oligomers, as well as other &alpha;syn variants, actively participate in disrupting mitochondrial function, autophagy and lysosomal degradation, membrane 
-		homeostasis, ER function and synapses, and can induce inflammation. 
-	</p>
-
-	<h3>SNCA Gene Encodes Alpha-synuclein</h3>
-
-	<p>
-		The SNCA gene encodes &alpha;syn. In the brain, &alpha;syn is found mainly at the tips of nerve cells (neurons) in specialized structures called presynaptic terminals.
-	</p>
-	<p>Mutations in the SNCA gene lead to mutant &alpha;syn.
-	</p>
-
-	<h3>
-		Autosomal Dominant Parkinson's Disease, PARK1
-	</h3>
-	<p>
-		PARK1 is an inherited, dominant genetic trait (autosomal dominant) in PD that causes heterozygous triplication of the SNCA gene.
-	</p>
-
-	<h3>LRRK2</h3>
-	<p>
-		Leucine-Rich Repeat Kinase 2 (LRRK2) is an enzyme encoded by a gene of the same name (the LRRK2 gene).
-	</p>
-	<h4>LRRK2-G2019S</h4>
-	<p>
-		LRRK2-G2019S is a mutant form of LRRK2 found in PD. LRRK2-G20195 cause αsyn accumulation in dopaminergic neurons. αsyn accumulation leads to all of the problems caused previously mentioned, including αsyn oligomers and fibrils.
-
-	<p>
-		LRRK2 mutants in genetic PD cause shortening and simplification of the dendritic tree in vivo and in cultured neurons.
-	</p>
-	<p>
-	 LRRK2 inhibitors can improve Parkinson's disease by reducing α-synuclein.
-	</p>
-
-	<h3>PINK1</h3>
-	<p>
-		PTEN-induced kinase 1 (PINK1) is a kinase produced by the PINK1 gene.
-		Mutations in the PINK1 gene are a rare cause of one form of autosomal recessive early-onset Parkinson's disease that may be more associated with mitophagy.
-	</p>
-
-
-	<h3>Current Therapies in Clinical Trials of Parkinson’s Disease: A 2021 Update</h3>
-	<p>
-		The complex pathology is partially depicted in the figure below
-	</p>
-	<figure>
-		<img src="img/figure-1-pd.png" alt="Parkinson's Disease Pathology Diagram"
-		class="block-image">
-		<figcaption>
-			<p>
-			The pathological hallmarks of PD and the interplay of aging, environmental hazards, And genetics in thepathogenesis of PD. 
-			</p>
-
-			<p>
-				(A) The pathological hallmarks of Parkinson’s disease include dopaminergic neuronal death, α-synuclein aggregates, mitochondrial dysfunction, reactive oxygen species, apoptosis, and neuroinﬂammation. 
-			</p>
-			<p>
-				(B) PD is a multifactorial disorder involving aging, genetics, and environmental factors, associated with dopaminergic neuronaldeath. Gene mutations associate with PD includes DJ-1, PTEN-induced putative kinase-1 (PINK1), parkin, leucine-rich repeatserine/threonine kinase-2 (LRRK2), Synuclein alpha (SNAC), and ubiquitin carboxyl-terminal hydrolase-L1 (UCHL1). Neurotoxins (e.g., rotenone, paraquat) and gene mutations of DJ-1, PINK1, parkin, LRRK2, and SNAC induce mitochondria complex I inhibition, ATP depletion, reactive oxygen species (ROS) accumulation, mitochondria depolarization, and mitochondrialdysfunction in dopaminergic neurons to promote neuronal death in the substantia nigra of PD patients. 
-			</p>
-
-			<p>
-				Overexpression of SNAC gene mutations enhance α-synuclein aggregation in Lewy bodies of PD brain. UCHL1 gene mutations impair ubiquitin-proteasome systems and further induce autophagy lysosomal pathway dysfunction, contributing to Lewy body formation in dopaminergic neurons.
-			</p>
-		</figcaption>
-	</figure>
-	<p>
-		The diagram offers some visual depiction of PD, with small mistakes.
-	</p>
-	<p>
-		The authors miscall the αsyn gene, SNCA, "SNAC". Most of what they categorize as genetic is actually epigenetic. That is, attributable to a combination genetic <em>and</em> environmental factors.
-	</p>
-	<p>
-		Lewy bodies are comprised of αsyn fibrils, the manifestation of which can be partly affected by environmental factors. Lewy bodies appear in the “Genetic factors" group below αsyn. 
-	</p>
-	<p>
-		αsyn increase is not solely attributable to genetics but to a variety of epigenetic factors that can be affected. 
-	</p>
-	<p>
-		Epigenetic factors can influence mutations in LRRK2 (LRRK2-G2019S) and cause encoding mutations in LRRK2 and SNCA genes that affect production and pathogenicity of mutant αsyn.
-	</p>
-	<p>
-		Vitamin B12, for example, is an external factor that prevents LRRK2-G2019S-potentiated α-synuclein accumulation in dopaminergic neurons.
-	</p>
-
-	<h4>
-		Alpha-synuclein References:
-	</h4>
-	<ol>
-		<li> 
-			<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5122110/"
-		>Alpha-synuclein structure, functions, and interactions</a>
-
-		<li>
-			<a href="https://pubmed.ncbi.nlm.nih.gov/30605594/">
-				Different Effects of &alpha;-Synuclein Mutants on Lipid Binding and Aggregation Detected by Single Molecule Fluorescence Spectroscopy and ThT Fluorescence-Based Measurements
-			</a>
-		<li> 
-			<a href="https://alpha-synuclein.net/mutations/"
-				>ALPHA SYNUCLEIN: MUTATIONS</a>
-		<li>
-			<a href="https://pubs.acs.org/doi/10.1021/bi010616g">
-				Effect of Familial Parkinson's Disease Point Mutations A30P and A53T on the Structural Properties, Aggregation, and Fibrillation of Human &alpha;-Synuclein
-			</a>
-		<li>
-			<a href="https://pubmed.ncbi.nlm.nih.gov/23205266/">
-				Environmental toxins trigger PD-like progression via increased alpha-synuclein release from enteric neurons in mice
-			</a>
-		<li>
-			<a href="https://pubmed.ncbi.nlm.nih.gov/31931835/">
-				Alpha-synuclein-induced mitochondrial dysfunction is mediated via a sirtuin 3-dependent pathway
-			</a>
-		<li>
-			<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3253033/"
-			>Genetics of Parkinson’s Disease</a>
-		<li>
-			<a href="https://pubmed.ncbi.nlm.nih.gov/25278492/">Alpha synuclein is transported into and out of the brain by the blood-brain barrier</a>
-	</ol>
-
-	<p>
-		Pesticide and herbicide exposure causes &alpha;syn overexpression in certain individuals. Rotenone, a pesticide, so reliably induces PD that it is used in studies to induce PD in rodents who can then be studied and treated experimentally.
-	</p>
-
-	<p>
-		SATB1 a cell regulator, represses expression of the pro-senescence factor p21 in dopaminergic neurons. 
-
-	</p>
-	<p>
-		 SATB1 is inhibited in Parkinson's disease. Less SATB1 means more p21 pro-senescence. Senescent dopaminergic neurons contribute to the pathology of Parkinson's disease.
-	</p>
-	<p>
-		Senescent &ldquo;zombie&rdquo; cells cease to function and divide and damage healthy neighboring cells by propagating inflammation and senescence. 
-	</p>
-	<h4>Testing</h4>
-	<p>
-		Testing for alpha-sincuclein requires a spinal tap and also by saliva.
-	</p>
-	<p>
-		Salivary αsyn was tested. Total αsyn was lower, but α-syn oligomers were higher in PD than in healthy subjects. (See: <a href="https://pubmed.ncbi.nlm.nih.gov/30796010/">Salivary alpha-synuclein in the diagnosis of Parkinson's disease and Progressive Supranuclear Palsy</a>)
-	</p>
-	<p>
-		Genetic testing can help identify the type of PD. all genes associated with PD contribute to disease in the same way. LRRK2 and GBA genes can be tested on 23andme.
-	</p>
-
-	<h4>
-		Treatment
-	</h4>
-
-	<p>
-		Effective treatment must the PD from multiple angles. This requires understanding its pathology. The review <cite>"Current Therapies in Clinical Trials of Parkinson’s Disease: A 2021 Update"</cite>, provides a fair overview of PD.
-	</p>
-
-	<p>
-		Supplements, peptides, therapies, drugs, and stem cells can mitigate asyn overexpression, reduce mutant asyn, strengthen the mitochondria, reduce the side effects of LD/dopa decarb, decrease the need for LD/dopa decarb, reduce ROS, improve mood, improve sleep, improve recovery. 
-	<p>
-		Strengthening mitochondrial function and count in neuronal cells prevents loss of SIRT3 and preserves their function.
-	</p>
-	<p>
-		Peptide therapy, by practitioner in-home visits, can be used (SS-31, AICAR, Epitalon, Pinealon).
-	</p>
-	<p>
-		Stem cell therapy may provide more dopaminergic neurons (dvcstem, Anova).
-	</p>
-	<p>
-		Senolytics, drugs to induce death of senescent cells, may be used by a practitioner. 
-	</p>
-	<p>
-		Estrogen is neuroprotective, so estrogen can be used in women.
-	</p>
-	<p>
-		Testosterone is neuroprotective and converts partially to estradiol, so can be used in men.
-	</p>
-</section>
-
-<section id="drugs">
-	<h2>Drugs</h2>
-	<h3>SynuClean-D Can Revert Neurodegeneration Caused By Parkinson's</h3>
-
-	<p>
-		https://sciencebeta.com/synuclean-d-parkinsons/
-	</p>
-	<ol>
-		<li>
-			<a href="https://pubmed.ncbi.nlm.nih.gov/30249646/">Small molecule inhibits α-synuclein aggregation, disrupts amyloid fibrils, and prevents degeneration of dopaminergic neurons</a>
-	</ol>
-</section>
-
-<section id="food-and-supplements">
-	<h2>
-		Foods &amp; Supplements
-	</h2>
-	<p>
-		Many plants contain phytochemicals that can improve conditions and inhibit the progression of PD.
-	</p>
-	<p>
-		<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6433754/">
-			Plant Extracts and Phytochemicals Targeting &alpha;-Synuclein Aggregation in Parkinson's Disease Models
-		</a>
-	</p>
-	<p>
-		The supplements stack is a work-in-progress designed to fight PD from multiple angles, from mitigating &alpha;syn 
-		<wbr />
-		overexpression, to reducing mutant &alpha;syn to reducing the effects of LD/decarboxylase inhibitors, reducing Reactive Oxygen Species (ROS) and neuroinflammation, improving mood, improving sleep, improving recovery rate, strengthening the mitochondria, and so much more. 
-	</p>
-	<p>
-		I have first-hand experience taking all these supplements.
-	</p>
-
-	<section id="turmeric-saffron-coconut-oil">
-
-		<h3>
-			Turmeric, Saffron, and Coconut Oil
-		</h3>
+    <h1>Parkinson's Disease Guide</h1>
+    <nav>
+        <ul>
+            <li><a href="#purpose">How to Use This Guide</a></li>
+            <li><a href="#introduction">Introduction to Parkinson's Disease</a></li>
+            <li>
+                <a href="#treatments">Treatments</a>
+                Treatment Approaches
+                <ul>
+                	<li><a href="#symptomatic">Symptomatic Treatment</a></li>
+                	<li><a href="#disease-progressio">Disease-progression</a></li>
+                	<li><a href="#holistic">Holistic Approach</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#medications">Medications</a>
+                        <ul>
+                            <li><a href="#dopamine-agonists">Dopamine Agonists</a></li>
+                            <li><a href="#levodopa-carbidopa">Levodopa/Carbidopa</a></li>
+                            <li><a href="#mao-b-inhibitors">MAO-B Inhibitors</a></li>
+                            <li><a href="#comt-inhibitors">COMT Inhibitors</a></li>
+                            <li><a href="#anticholinergics">Anticholinergics</a> <span>❌ WARNING: cognitive impairment</span></li>
+                            <li><a href="#synuclean-d-and-minzasolmin">SynuClean-D and Minzasolmin</a> 🧪</li>
+                        </ul>
+                    </li>
+					<li>
+						<a href="#hormonal-interventions">Hormonal Interventions</a>
+						<ul>
+							<li><a href="#hrt">HRT — Testosterone, Estrogen</a></li>
+							<li><a href="#dhea">DHEA</a></li>
+							<li><a href="#pregnenolone">Pregnenolone</a></li>
+						</ul>
+					</li>
+                    <li><a href="#dbs">Deep Brain Stimulation (DBS)</a></li>
+                    <li><a href="#physical-therapy-exercise"
+                    	>Physical Therapy / Exercise</a></li>
+                    <li><a href="#pbm">Photobiomodulation</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#food-and-supplements">Food &amp; Supplements</a>
+                <ul>
+					<li>GLYNAC</li>
+					<li>Creatine Monohydrate</li>
+					<li><a href="#turmeric-saffron-coconut-oil">Turmeric, Saffron, and Coconut Oil</a> (anti-aggregant)</li>
+					<li><a href="#ginger">Ginger</a></li>
+					<li><a href="#egcg">EGCG (Green Tea)</a></li>
+					<li><a href="#ginsenoside">Ginseng</a></li>
+					<li><a href="#acetyl-l-carnitine-and-rala">Acetyl-L-Carnitine &amp; r-ALA</a></li>
+					<li>
+						<a href="#gaba-5-htp-melatonin">GABA, 5-HTP, and Melatonin</a>
+						<ul>
+							<li><a href="#gaba">GABA</a></li>
+							<li><a href="#5-htp">5-HTP</a></li>
+							<li><a href="#melatonin">Melatonin</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#quinones">Quinones</a>
+						<ul>
+							<li><a href="#pqq">PQQ Pyrroloquinoline Quinone</a></li>
+							<li><a href="#k2">Menaquinone (Vitamin K2)</a></li>
+							<li><a href="#ubiquinol">Ubiquinol (Reduced Coenzyme Q-10)</a></li>
+						</ul>
+					</li>
+					<li><a href="#gg">Geranylgeraniol (GG)</a></li>
+					<li><a href="#nattokinase">Nattokinase</a></li>
+					<li><a href="#dha">Docosahexaenoic Acid (DHA)</a></li>
+					<li><a href="#uridine-and-cdp-choline">Uridine and CDP Choline</a></li>
+					<li><a href="#citicoline">Citicoline (CDP Choline)</a></li>
+					<li><a href="#magnesium-threonate">Magnesium Threonate</a></li>
+					<li><a href="#vitamin-d">Vitamin D</a></li>
+					<li><a href="#vitamin-b16">Vitamin B-6</a></li>
+					<li><a href="#vitamin-b12">Vitamin B-12</a></li>
+					<li><a href="#tocotrienols">Tocotrienols</a></li>
+					<li>
+						<a href="#nicotinamides">NAD+, NMN, Niacin, and NR</a>
+						<ul>
+							<li><a href="#nmn">Nicotinamide Mononucleotide (NMN)</a></li>
+							<li><a href="#nad">Injectable NAD+</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#senolytics">Senolytics</a>
+						<ul>
+							<li><a href="#urolithin-a">Urolithin A</a></li>
+							<li><a href="#resveratrol">Resveratrol</a></li>
+							<li><a href="#quercetin">Quercetin</a></li>
+							<li><a href="#theaflavin">Theaflavin</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+            <li><a href="#stem-cell">Mesenchymal Stem Cells</a></li>
+        </ul>
+    </nav>
+    <header id="purpose">
+        <h2>How to Use This Guide</h2>
 		<p>
-			Curcumin is a hydrophobic bioactive compound in turmeric.
+			The purpose of the guide is to empower individuals with Parkinson's Disease (PD) with the best possible knowledge to manage their condition based on the latest scientific research.
 		</p>
 		<p>
-			Eating all three with food increases their absorption. Indian food such as basmati rice with saffron and vegetable korma are good sources of all three.
+			Knowledge is crucial to achieving predictable success. A primary goal of any individual should be to improve one's quality of life and longevity. Quality of life depends upon health status. Health deficits lead to impaired physical and mental performance and reduced quality of life.
 		</p>
 		<p>
-			However, supplements provide convenience of pill form.
+			The first step to optimizing one's health is understanding one's condition. That entails some understanding of the human organism and some understanding of any health conditions. Those who take their condition seriously and employ the best strategies to mitigate the progression of the disease will enjoy greater quality of life and longevity. Contrary to tired "listen to your doctor" mantra, this paper challenges the reader to greater self-empowerment through informed education and insight.
 		</p>
-		<section id="Curcumin">
-			<h4>
-				Turmeric Products: 
-			</h4>
-				 
-			<a href="https://www.amazon.com/gp/product/B07NXQHXV3/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B07NXQHXV3&amp;linkCode=as2&amp;tag=garrettsmit02-20&amp;linkId=143e5904cc8bab43c355acfc7eed8bc2">
-				Garden of Life, MyKind Organics, Extra Strength Turmeric
-			</a>
+		<p>
+			Alpha-synuclein aggregates in the midbrain brain and damages neurons, including the autonomic nuclei, also located also throughout the body, which are responsible for autonomic functions (blood pressure, heart rate, GI system, etc). Progressive neurodegeneration is exacerbated by unilateral neurological modulation of the dopaminergic pathway (the L-Dopa / DDC inhibitors, aka "standard of care") and is more pronounced in later stages.
+		</p>
+		<p>
+			The approach recommended herein is not the tired "listen to your doctor," but to get informed and build a team of healthcare professionals with multiple specialties with whom to collaborate on an individualized treatment plans that includes nutrition, lifestyle, supplementation, medication, monitoring, testing, and constant analysis, and revision, and an open minded approach to adjust the program to new information and personal experience. This proactive and comprehensive approach underscores the importance of self-care, self-advocacy, and ongoing education in navigating life with Parkinson's disease. You do not win with your eyes closed.
+		</p>
+		<p>
+			A holistic approach to Parkinson's disease management empowers PD patients to take charge of their health, optimize their quality of life and longevity, and slow the progression of the disease.
+		</p>
+
+    </header>
+    <section id="introduction">
+        <h2>
+            Introduction to Parkinson's Disease (PD)
+        </h2>
+        <p>
+            Parkinson's Disease (PD) affects various brain regions, including the substantia nigra, basal ganglia, cerebral cortex, thalamus, hippocampus, cerebellum, and other regions involved in motor control, cognition, movement and the nervous systems.
+        </p>
+        <p>
+            The nervous system comprises the Central Nervous System (CNS), Peripheral Nervous System (PNS), and autonomic nervous system (ANS). The CNS, consisting of the brain and spinal cord, processes information and coordinates responses. The PNS connects the CNS to the body, relaying sensory input and motor output. The ANS regulates involuntary functions like heart rate and digestion.
+        </p>
+        <p>
+            In PD, progressive neurodegeneration (PN) primarily affects the Central Nervous System (CNS), particularly dopamine-producing neurons, leading to motor symptoms like tremors and rigidity. However, dysfunction of the autonomic nervous system (ANS) becomes more noticeably pronounced in the later stages, contributing to non-motor symptoms such as GI issues, low blood pressure, and urinary dysfunction.
+        </p>
+        <p>
+            PD-related autonomic dysfunction can exacerbate renal issues, leading to a complex interplay of factors that contribute to orthostatic hypotension in PD.
+        </p>
+        <h3>Alpha-synuclein</h3>
+        <p>
+            PD is a neurological condition resulting from pathology of alpha-synuclein (α-synuclein) (α-synucleinopathy). 
+            <span class="call-out">Understanding the role and effects of α-synuclein is key to mitigating the disease's progression.</span>
+        </p>
+        <p>
+            Overexpression of &alpha;-synuclein leads to its aggregation and formation of &alpha;-synuclein structures, either as oligomers (peptides) or fibrils (see image). Oligomers of &alpha;-synuclein can form Lewy bodies, abnormal
+            aggregations of protein that develop inside nerve cells affected by PD.
+        </p>
+        <p>
+            <img src="img/alpha-synuclein.jpeg" alt="alpha-synuclein" class="block-image" />
+        </p>
+        <p>
+            Alpha-synuclein is abundant primarily in the brain, especially in the neocortex, hippocampus, and substantia nigra (SN). Smaller amounts are found in the heart, muscles, and other tissues. It is transported into and out of the
+            brain by the blood-brain barrier.
+        </p>
+        <p>
+            Six mutations of &alpha;-synuclein are currently associated with familial parkinsonism. Mutant &alpha;-synuclein forms aggregates more readily than wild-type (normal) &alpha;-synuclein.
+        </p>
+        <p>
+            Wild-type &alpha;-synuclein can be removed by lysosomes, mutant forms of &alpha;-synuclein, however, resist their degradation and inhibit that of other substrates.
+        </p>
+        <p>
+            &alpha;-synuclein oligomers play a central role in the multi-factorial causes of Parkinson&rsquo;s disease. &alpha;-synuclein oligomers, as well as other &alpha;-synuclein variants, actively participate in disrupting
+            mitochondrial function, autophagy and lysosomal degradation, membrane homeostasis, Endoplasmic Reticulum (ER) function, and synapses, and can induce inflammation.
+        </p>
+        
+        <h4>SNCA Gene Encodes Alpha-synuclein</h4>
+        <p>
+            The SNCA gene encodes &alpha;-synuclein. In the brain, &alpha;-synuclein is found mainly at the tips of nerve cells (neurons) in specialized structures called presynaptic terminals.
+        </p>
+        <p>Mutations in the SNCA gene lead to mutant &alpha;-synuclein.</p>
+        <h4>
+            Autosomal Dominant Parkinson's Disease, PARK1
+        </h4>
+        <p>
+            PARK1 is an inherited, dominant genetic trait (autosomal dominant) in PD that causes heterozygous triplication of the SNCA gene.
+        </p>
+        <h4>LRRK2</h4>
+        <p>
+            Leucine-Rich Repeat Kinase 2 (LRRK2) is an enzyme encoded by a gene of the same name (the LRRK2 gene).
+        </p>
+        <p>
+            LRRK2 mutations are implicated in PD pathogenesis and may influence &alpha;-synuclein metabolism and neuronal function.
+        </p>
+        <h5>LRRK2-G2019S</h5>
+        <p>
+            LRRK2-G2019S is a mutant form of LRRK2 found in PD. LRRK2-G20195 causes &alpha;-synuclein accumulation in dopaminergic neurons. &alpha;-synuclein accumulation leads to all of the problems previously mentioned,
+            including &alpha;-synuclein oligomers and fibrils.
+        </p>
+        <p>
+            LRRK2 mutants in genetic PD cause shortening and simplification of the dendritic tree in vivo and in cultured neurons.
+        </p>
+        <p>
+            LRRK2 inhibitors can improve Parkinson's disease by reducing &alpha;-synuclein.
+        </p>
+        <h4>PINK1</h4>
+        <p>
+            PTEN-induced kinase 1 (PINK1) is a kinase produced by the PINK1 gene. Mutations in the PINK1 gene are a rare cause of one form of autosomal recessive early-onset Parkinson's disease that may be more associated with
+            mitophagy, a process by which damaged or dysfunctional mitochondria are removed, reducing oxidative stress and inflammation.
+        </p>
+        <h4>Current Therapies in Clinical Trials of Parkinson’s Disease: A 2021 Update</h4>
+        <p>
+            The complex pathology is partially depicted in the figure below
+        </p>
+        <figure>
+            <img src="img/figure-1-pd.png" alt="Parkinson's Disease Pathology Diagram" class="block-image" />
+            <figcaption>
+                <p>
+                    The pathological hallmarks of PD and the interplay of aging, environmental hazards, and genetics.
+                </p>
+                <p>
+                    (A) The pathological hallmarks of Parkinson’s disease include dopaminergic neuronal death, &alpha;-synuclein aggregates, mitochondrial dysfunction, reactive oxygen species, apoptosis, and neuroinﬂammation.
+                </p>
+                <p>
+                    (B) PD is a multifactorial disorder involving aging, genetics, and environmental factors, associated with dopaminergic neuronal death. Gene mutations associated with PD include DJ-1, PTEN-induced putative kinase-1 (PINK1), parkin, leucine-rich repeat kinase-2 (LRRK2), Synuclein alpha (SNAC), and ubiquitin carboxyl-terminal hydrolase-L1 (UCHL1). 
+                </p>
+                <p>
+                    Neurotoxins (e.g., rotenone, paraquat) and gene mutations of DJ-1,  PINK1, parkin, LRRK2, and SNAC, induce mitochondria complex I inhibition, ATP depletion, reactive oxygen species (ROS) accumulation, mitochondria depolarization, and mitochondrial dysfunction in dopaminergic neurons to promote neuronal death in the substantia nigra of PD patients.
+                </p>
+                <p>
+                    Overexpression of the SNCA gene can lead to the accumulation of  &alpha;-synuclein in the brain, which, if &alpha;-synuclein is of a mutant form can cause problems and contribute to the formation of Lewy bodies. 
+                </p>
+                <p>
+                    The UCHL1 gene and the overexpression of the SNCA gene are related in that UCHL1 is involved in the degradation of &alpha;-synuclein, a protein that is overexpressed in PD. 
+                <p>
+                    The UCHL1 gene and the SNCA gene are both involved in PD pathogenesis.
+                    UCHL1 gene mutations impair ubiquitin-proteasome systems and further induce autophagy lysosomal pathway dysfunction, contributing to Lewy body formation in dopaminergic neurons.
+                </p>
+            </figcaption>
+        </figure>
+        <p>
+            The diagram offers some visual depiction of PD, with small mistakes.
+        </p>
+        <p>The authors miscall the &alpha;-synuclein gene, SNCA, "SNAC". Most of what they categorize as genetic is epigenetic. That is, attributable to a combination of genetic <em>and</em> environmental factors.</p>
+        <p>
+            Lewy bodies are comprised of &alpha;-synuclein fibrils, the manifestation of which can be partly affected by environmental factors. Lewy bodies appear in the “Genetic factors" group below &alpha;-synuclein.
+        </p>
+        <p>
+            &alpha;-synuclein increase is not solely attributable to genetics but to a variety of epigenetic factors that can be affected.
+        </p>
+        <p>
+            Epigenetic factors can influence mutations in LRRK2 (LRRK2-G2019S) and cause encoding mutations in LRRK2 and SNCA genes that affect the production and pathogenicity of mutant &alpha;-synuclein.
+        </p>
+        <p>
+            Vitamin B12, for example, is an external factor that prevents LRRK2-G2019S-potentiated &alpha;-synuclein accumulation in dopaminergic neurons.
+        </p>
+        <h5>
+            Alpha-synuclein References:
+        </h5>
+        <ol>
+            <li>
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5122110/">Alpha-synuclein structure, functions, and interactions</a>
+            </li>
+
+            <li>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/30605594/">
+                    Different Effects of &alpha;-Synuclein Mutants on Lipid Binding and Aggregation Detected by Single Molecule Fluorescence Spectroscopy and ThT Fluorescence-Based Measurements
+                </a>
+            </li>
+
+            <li>
+                <a href="https://alpha-synuclein.net/mutations/">ALPHA SYNUCLEIN: MUTATIONS</a>
+            </li>
+
+            <li>
+                <a href="https://pubs.acs.org/doi/10.1021/bi010616g">
+                    Effect of Familial Parkinson's Disease Point Mutations A30P and A53T on the Structural Properties, Aggregation, and Fibrillation of Human &alpha;-Synuclein
+                </a>
+            </li>
+
+            <li>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/23205266/">
+                    Environmental toxins trigger PD-like progression via increased alpha-synuclein release from enteric neurons in mice
+                </a>
+            </li>
+
+            <li>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/31931835/">
+                    Alpha-synuclein-induced mitochondrial dysfunction is mediated via a sirtuin 3-dependent pathway
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3253033/">Genetics of Parkinson’s Disease</a>
+            </li>
+
+            <li>
+                <a href="https://pubmed.ncbi.nlm.nih.gov/25278492/">Alpha synuclein is transported into and out of the brain by the blood-brain barrier</a>
+            </li>
+        </ol>
+
+        <p>
+            Pesticide and herbicide exposure causes &alpha;-synuclein overexpression in certain individuals. Rotenone, a pesticide, so reliably induces PD that it is used in studies to induce PD in rodents which can then be studied and
+            treated experimentally.
+        </p>
+        <p>
+            SATB1 a cell regulator, represses expression of the pro-senescence factor p21 in dopaminergic neurons.
+        </p>
+        <p>
+            SATB1 is inhibited in Parkinson's disease. Less SATB1 means more p21 pro-senescence. Senescent dopaminergic neurons contribute to the pathology of Parkinson's disease.
+        </p>
+        <p>
+            Senescent cells cease to function and divide, damaging healthy neighboring cells by secreting inflammatory factors and contributing to further tissue dysfunction and senescence.
+        </p>
+        <h5>Testing</h5>
+        <p>
+            Testing for alpha-sinuclein requires a spinal tap and also by saliva.
+        </p>
+        <p>
+            Salivary &alpha;-synuclein was tested. Total &alpha;-synuclein was lower, but &alpha;-synuclein oligomers were higher in PD than in healthy subjects. (See:
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30796010/">Salivary alpha-synuclein in the diagnosis of Parkinson's disease and Progressive Supranuclear Palsy</a>)
+        </p>
+        <p>
+            Genetic testing can help identify the type of PD. All genes associated with PD contribute to disease in the same way. LRRK2 and GBA genes can be tested on 23andme.
+        </p>
+    </section>
+    <section id="treatments">
+        <h3>Treatments</h3>
+        <p>
+        	This section lists treatments for which strategies can be developed.
+        </p>
+        <p>
+            Approach strategies can be grouped into symptomatic treatment and disease progression treatment, with some overlap.
+        </p>
+        <section id="symptomatic">
+			<h4>Symptomatic Treatment</h4>
+			<h5>Gold Standard: Dopamine Agonism</h5>
+			<p class="call-out">
+				The gold standard for managing PD is symptomatic management via dopamine agonism. Unfortunately, that leads to other neurological imbalances, causes other nutrient deficiencies, and leads to PN.
+			</p>
+			<h5>Increasing Dopamine Levels</h5>
+			<ul>
+				<li>Levodopa/Carbidopa (dopamine agonists)
+				<li>MAO-B inhibitors
+				<li>COMT inhibitors
+			</ul>
+			<p>
+				Some doctors may attempt to enhance dopamine function by suppressing the cholinergic system using anticholinergics, but this approach leads to adverse effects.
+			</p>        
+        </section>
+		<section id="disease-progression">
+			<h4>Disease-Progression Approach</h4>
+			<p>
+				Doctors tend to discount the idea of slowing the progression of the disease. Some will off-handedly discount supplements and nutrition into "complementary" care without examination. Many of these same doctors once prescribed anticholinergics. (If your doctor is one of those, get a new doctor.)
+			</p>
+
+			<h5>The Role of Nutrition</h5>
+			<p>
+				Nutritional deficiencies can exacerbate symptoms in individuals with Parkinson's disease (PD) and may sometimes be mistaken for progressive neurodegeneration. This misinterpretation can lead to inappropriate management strategies if the underlying nutritional issues are not addressed.
+			</p>
+			<p>
+				Furthermore, certain nutrient deficiencies can trigger cascading effects, exacerbating PD symptoms or hasten the decline of the condition. For example, deficiencies in vitamins B12, folate, and vitamin D have been implicated in PD and can affect neurological function and overall health. Inadequate intake of essential nutrients can also impair mitochondrial function, increase oxidative stress, and compromise neurotransmitter synthesis and signaling, all of which are implicated in PD pathophysiology.
+			</p>
+			<p>
+				Additionally, levodopa/carbidopa therapy can reduce vitamin B6 levels, which is essential for the synthesis of neurotransmitters.
+			</p>
+			<p>
+				It's crucial to build a comprehensive plan that strikes a balance between supplementation, nutrition, lifestyle, and regular monitoring to slow disease progression.
+			</p>
+			<p>
+				Don't just "talk to your doctor", collaborate with a team of healthcare professionals with multiple specialties to create individualized treatment plans that include nutrition, lifestyle, supplementation, and medication. Regularly test and monitor status with symptoms and biochemical markers to assess the effectiveness of interventions and make adjustments as needed.
+			</p>
+			<p>
+				<dfn>Antifibrillogenics</dfn> mitigate formation of α-synuclein fibrils. Anti-aggregants aim to prevent the accumulation of fibrils and other misfolded proteins into lewy bodies. By preventing the formation of α-synuclein fibrils and aggregates, these compounds address the underlying pathology of Parkinson's disease at a more fundamental level, potentially offering therapeutic benefits in managing the condition.
+			</p>
+			<p>
+				Preventing fibril aggregation (<dfn>anti-aggregant</dfn>): These treatments focus on inhibiting the aggregation of α-synuclein fibrils into Lewy bodies, potentially slowing the spread of pathology and neurodegeneration.
+			</p>
+			<p>
+				It is necessary to work with doctors who focus on what works. Focus on the facts and evidence, consider risk/reward, and work on total health. Avoid doctors who won't look at the evidence you present them.
+			</p>
+			<h4>What Do Doctors Miss?</h4>
+			<p>
+				Doctors typically prioritize symptoms over addressing the underlying causes. Specifically, they tend to focus on the dopamine pathway with medications like levodopa/carbidopa, to enhance dopamine levels in the brain, and COMT inhibitors, to inhibit its breakdown by catechol-O-methyltransferase (COMT).
+			</p>
+			<p>
+				Approaches to mitigating the underlying cause can extend longevity, improve quality of life, and reduce the dependence on medication which is not without side effects. Address these key areas for a more comprehensive approach to managing PD:
+			</p>
+			<menu>
+				<li class="senolytic">Senescence: Senolytics</li>
+				<li class="mitochondrial">Mitochondrial health: Mitophagy and mitogenesis</li>
+				<li class="neuroprotective">Neuroprotective measures</li>
+				<li class="neuroinflammation">Anti-inflammatory: Reducing neuroinflammation</li>
+				<li class="cytotoxicity">Reducing cytotoxicity</li>
+				<li class="multiple-pathways">Addressing Dopaminergic, serotonergic, and GABAergic systems</li>
+				<li class="fibrils">Preventing fibril formation and aggregation</li>
+				<li class="sleep">Sleep management</li>
+				<li class="total-health">
+					Overall health promotion
+				</li>
+			</menu>
 
 			<p>
-				<img src="img/turmeric-mykind.jpeg" alt="MyKind Turmeric">
-			</p>
-
-			<h3>Curcumin Product: 
-				<a href="https://www.amazon.com/gp/product/B01ELXB3MA/ref=as_li_tl?ie=UTF8&tag=garrettsmit02-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01ELXB3MA&linkId=ab05fa8195a7a04384554288ef47d9bd"
-				>Curcumin as BCM-95&reg; (CURCUGREEN&reg;)</a>
-			</h3>
-
-			<p>
-				<img src="img/curcumin.jpeg" alt="CurcuGreen Curcumin" />
-			</p>
-
-			<h4>
-				How Curcumin Helps PD
-			</h4>
-			<p>
-				Curcumin prevents aggregation of alpha-sinuclein. It is anti-inflammatory and neuroprotective in neurological disorders. 
+				Many approaches overlap more than one problem area and have synergistic benefits. For example, 5-HTP is converted into serotonin in the brain. It inhibits the release of glutamate, mitigates oxidation modulates dopamine
+				release, improves mitochondrial function, and improves sleep, which improves overall health, leading to a better sense of well-being and better exercise capacity and recovery.
 			</p>
 			<p>
-				Several studies in different experimental models of PD strongly support the clinical application of curcumin in PD. Curcumin crosses the blood-brain barrier
+				Effective treatment must approach PD from multiple angles. This requires understanding its pathology. The review <cite>"Current Therapies in Clinical Trials of Parkinson’s Disease: A 2021 Update"</cite>, provides a fair overview
+				of PD.
 			</p>
-			<p>
-				Curcumin can be taken in pill form but absorbs best with food. Turmeric can be mixed into a cooked SEDDS (self-emulsifying drug delivery system) containing vegetables and coconut oil called &ldquo;curry&rdquo; and eaten and enjoyed. 
-			</p>
-			<h4>
-				Curcumin References:
-			</h4>
-			<ol>
-				<li>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/22211691/">
-					Curcumin: a potential neuroprotective agent in Parkinson's disease
-				</a>
-				<li>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/29027056/">
-					Curcumin affords neuroprotection and inhibits &alpha;-synuclein aggregation in lipopolysaccharide-induced Parkinson's disease model
-				</a>
-				<li>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/22267729/">
-					Curcumin prevents aggregation in &alpha;-synuclein by increasing reconfiguration rate
-				</a>
-			</ol>
 		</section>
 
-		<section id="saffron">
-			<h3>
-				Saffron
-			</h3>
-			<div>
-				Saffron, like turmeric, is also neuroprotective.
-			</div>
-			<div>
-				<strong>
-					Saffron Product: 
-				</strong>
-				<a href="https://www.amazon.com/gp/product/B07Q23DCZC/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07Q23DCZC&amp;linkId=a89eecbeabe1c12666d9093201834fce">
-					Saffron Extract Supplements
-				</a>
-			</div>
+   		<section id="holistic">
+			<h4>Holistic Approach</h4>
 			<p>
-				<img src="img/saffron.jpeg" title="saffron">
+				The best possible individual results can be obtained with a holistic approach that minimizes dopaminergic modulation. This approach addresses the complexity of Parkinson's disease, including both motor and non-motor symptoms. By considering the interconnectedness of various physiological systems, it offers more comprehensive and personalized care.
 			</p>
-			<div>
-				Turmeric and Saffron can also be prepared together a warm night drink of golden milk with a calming effect. Both can be purchased online. 
-			</div>
-			<div>
-				<strong>
-					Turmeric and Saffron Product:
-				</strong>
-				 
-				<a href="https://www.amazon.com/gp/product/B07BH6KBN4/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07BH6KBN4&amp;linkId=5726ef5550d5890bb7fd0e237f6a7791">
-					Turmeric Latte with Saffron
-				</a>
-			</div>
+
+			<!-- p>
+				Peptide therapy, by practitioner in-home visits, can be used (SS-31, AICAR, Epitalon, Pinealon).
+			</p -->
+			
 			<p>
-				<img src="img/turmeric-latte.jpeg" alt="turmeric latte"/>
+				The holistic approach is a multifaceted, evidence-based strategy that involves thinking and problem-solving skills. Its primary objective is maximizing health and longevity while navigating the challenges of PD. 
+			
+			<p>			
+				It is also a problem-solving approach that involves breaking down the complexity of human health into its fundamental parts, stripping away assumptions, and using logic, reason, and evidence to tackle the complexity of PD. This emphasis on reason over faith means it is not for everyone.
 			</p>
-			<div>
-				<div>
-					<strong>
-						Saffron References:
-					</strong>
-				</div>
+			
+			<p>
+				The holistic approach is for patients, providers, and caretakers open to embracing new ideas, challenging conventional wisdom, and actively participating in the decision-making process to maximize patient health. 
+			</p>
+
+			<p>
+				The holistic approach is <em>not</em> "complementary" or "alternative" therapy. In contrast, it is a multifaceted, evidence-based strategy for managing Parkinson's disease that focuses on health-maximization through a multitude of approaches mentioned throughout this document to address the underlying pathology. So, although this approach is not for everyone, it does however, lead to predictably favorable outcomes compared to the disease-progression approach for several reasons outlined above and elaborated on herein. Despite these benefits, many may still prefer the disease-progression approach. 
+			</p>
+			
+			<p>
+				The downsides of this approach include the upfront cost of time, effort, and financial investment. 
+			</p>
+			
+			<p>
+				Additionally, this approach involves building a care team of providers open to identifying root causes and developing innovative solutions. This proactive approach challenges conventional methods and focuses on evidence, cause, and effect. Diverging from the norm, as such, can pose challenges in building a healthcare team. Ultimately, it's up to the reader to weigh the options and forge their own journey in managing Parkinson's disease. 
+			</p>
+			
+			<p>
+				What specific benefits does it offer? By applying first-principles thinking, individuals can develop a deeper understanding of complex problems, challenge assumptions, and create innovative solutions to maximize health and longevity.
+			</p>
+			
+			<p>
+				A holistic approach to PD addresses underlying problem areas at their proximal causes:
+			</p>
+			<dl>
+				<dt class="antifibrillogenic">Antifibrillogenic</dt>
+				<dd>Preventing fibril formation of α-synuclein</dd>
+
+				<dt class="anti-aggregant">Anti-aggregant</dt>
+				<dd>Preventing aggregation of fibrils</dd>
+
+				<dt class="anti-ischemic">Anti-ischemic</dt>
+				<dd>Preventing ischemia</dd>
+
+				<dt class="senolytic">Senolytic</dt>
+				<dd>Targeting senescent cells</dd>
+
+				<dt class="mitochondrial">Mitochondrial health promoters</dt>
+				<dd>Promoting mitochondrial health (mitogeneic, mitophagic)</dd>
+
+				<dt class="sleep">Sleep</dt>
+				<dd>Addressing insomnia</dd>
+
+				<dt class="dopaminergic">Dopaminergic side-effects</dt>
+				<dd>Mitigating side effects of dopaminergic treatments (e.g., dyskinesia, impulse control disorders)</dd>
+
+				<dt class="neuroprotective">Neuroprotective</dt>
+				<dd>Protecting neuronal structure and function</dd>
+
+				<dt class="antioxidant">Antioxidant</dt>
+				<dd>Reducing oxidative stress</dd>
+
+				<dt class="anti-inflammatory">Anti-inflammatory</dt>
+				<dd>Reducing inflammation</dd>
+
+				<dt class="neurorestorative">Neurorestorative</dt>
+				<dd>Promoting recovery and regeneration of neural tissue</dd>
+			</dl>
+			<!-- p>
+				Supplements, peptides, therapies, drugs, and stem cells can mitigate &alpha;-synuclein overexpression, reduce mutant &alpha;-synuclein, strengthen the mitochondria, reduce the side effects of LD/dopa decarboxylase (DDC), decrease the need for LD/dopa decarboxylase, reduce ROS, improve mood, improve sleep, improve recovery.
+			</p -->
+			<p>
+				While the holistic approach demands more time, effort, and initial investment, it forces a crucial question: confront the complexity of Parkinson's disease or hope for the best? This approach challenges conventional methods, requiring individuals to question assumptions and embrace change. While not an easy path, evidence-based strategies offer potential benefits in symptom management and overall well-being. For those seeking a comprehensive approach to managing Parkinson's disease, the holistic approach presents a clear choice: proactive engagement or supplication to limited solutions from your healthcare system's neurologist.
+			</p>
+		</section>
+
+        <section id="medications">
+            <h3>Medications</h3>
+            <ul>
+                <li>Levodopa/Carbidopa (Dopamine Agonists)</li>
+                <li>COMT Inhibitors</li>
+                <li>MAO-B Inhibitors</li>
+                <li>Anticholinergics ❌ WARNING: Take these only if you want cognitive impairment.</li>
+            </ul>
+
+			<p>
+			 	Levodopa/Carbidopa are dopamine agonists. COMT inhibitors prevent the breakdown of dopamine. Both classes of drugs exhibit dopaminergic side effects.
+			</p>
+			<p>Dopamine agonists
+			<p>
+				Tolcapone, a COMT inhibitor, has been associated with a higher risk of liver damage, which can be severe in some cases.
+			</p>
+			<p>
+				Entacapone, another COMT inhibitor, has been linked to an increased risk of dyskinesias and other dopaminergic side effects.
+			</p>
+
+			<h5>Dopaminergic Side Effects and PN</h5>
+			<p>
+				It's crucial to understand the interconnectedness of various neurochemical systems in the midbrain and their roles in PD management. Focusing solely on the dopaminergic system without considering other neurotransmitter systems can indeed lead to inadequate symptom management, exacerbation of non-motor symptoms, and progressive neurodegeneration (PN).
+			</p>
+			<p>
+				Dopamine agonists deplete active vitamin B6 levels in the body. They do this by irreversibly binding to and permanently deactivating pyridoxal 5’-phosphate (P5P), the active form of vitamin B6. This leads to various side effects and exacerbate the progression of the disease, as B6 is essential for dopamine synthesis and is involved in other metabolic pathways.
+			</p>
+
+			<section id="synuclean-d-and-minzasolmin">
+           		<h4>SynuClean-D and Minzasolmin 🧪</h4>
+           		<p>
+           		Both SynuClean-D and Minzasolmin are in research phase. There are outlets 
+           		for research chemicals and there are clinical trials.
+				<p>
+					https://sciencebeta.com/synuclean-d-parkinsons/
+				</p>
 				<ol>
 					<li>
-						<a href="https://pubmed.ncbi.nlm.nih.gov/30573341/">
-							Crocus sativus restores dopaminergic and noradrenergic damages induced by lead in Meriones shawi: A possible link with Parkinson's disease
-						</a>
+						<h4>SynuClean-D Can Revert Neurodegeneration Caused By Parkinson's</h4>
+						<p>
+							SynuClean-D inhibits &alpha;-synuclein aggregation, disrupts amyloid fibrils, and prevents degeneration of dopaminergic neurons ()
+							<a href="https://pubmed.ncbi.nlm.nih.gov/30249646/"><abbr title="Proceedings of the National Academy of Sciences">PNAS</abbr></a>) and inhibits the formation of &alpha;-synuclein aggregation.
+						</p>
+						<p>
+							SynuClean-D is available as a research chemical. It is being studied in a Phase 2 clinical trial of 450 early-stage PD patients with an expected completion date in mid-2024.
+						</p>
+					</li>
 					<li>
-						<a href="https://pubmed.ncbi.nlm.nih.gov/26705857/">
-							Evidence of neuroprotective effects of saffron and crocin in a Drosophila model of parkinsonism
-						</a>
+						<h4>Minzasolmin</h4>
+						<p>
+							Minzasolmin is a misfolding inhibitor, whereas SynuClean-D is an aggregation inhibitor. While Minzasolmin is in clinical development for Parkinson’s disease, SynuClean-D is primarily mentioned as a research compound.
+						</p>
+						<p>
+							Minzasolmin is being studied in clinical trials, and patients with Parkinson’s disease can participate in these trials to access the medication. The clinical trial information is available on ClinicalTrials.gov (ID: NCT04658186; EudraCT Number 2020-003265).
+						</p>
+					</li>
 				</ol>
-			</div>
-		</section>
+				<h4>Summary</h4>
+				<p>
+					Minzasolmin and SynuClean-D both seem promising in inhibiting the misfolding and aggregation of &alpha;-synuclein aggregation respectively. Ask your team about clinical trials or apply to participate directly with those trials' clinicians.
+				</p>
+            </section>
+        </section>
+        <section id="hormonal-interventions">
+            <h4>HRT — Estrogen and Testosterone</h4>
+            <p class="neuroprotective">
+                Estrogen is neuroprotective, so estrogen can be used in women.
+            </p>
+            <p>
+                Testosterone is neuroprotective and converts partially to estradiol, so can be used in men.
+            </p>
+            <section id="pregnenolone">
+                <h4>Pregnenolone</h4>
+                <p>
+                    Pregnenolone is a neurosteroid and precursor to various hormones, including cortisol, DHEA, and progesterone. Its potential role in countering Levodopa-induced dyskinesias (LIDs) without compromising L-DOPA's motor benefits is intriguing.
+                </p>
+                <p>
+                    Pregnenolone is available as a dietary supplement and typically safe in doses ranging from 10 to 50 mg per day.
+                </p>
+                <p>
+                    Pregnenolone is believed to penetrate the BBB easily due to its lipophilic nature. Once in the brain, pregnenolone can be converted into other neurosteroids, such as allopregnanolone, which have various effects on neuronal function and behavior.
+                </p>
+            </section>
+            <section id="dhea">
+                <h4 class="neuroprotective">Dehydroepiandrosterone (DHEA)</h4>
+                <p>
+               		Dehydroepiandrosterone (DHEA) is a hormone produced by the adrenal glands, the ovaries, and the brain. It is a precursor to both estrogen and testosterone and is converted into estrogen and testosterone in peripheral tissues.
+                </p>
+                <p>
+                	DHEA is also involved in the regulation of sleep, memory, and cholesterol levels
+                </p>
+                <p>
+                    DHEA has been shown to have neuroprotective effects, which may help protect against the progression of PD.
+                </p>
+                <p>
+                    A study found that DHEA administration alone improved the mean parkinsonian score in moderately and severely impaired MPTP monkeys, a model of Parkinson’s disease. 
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0197458005003003"
+                    >https://www.sciencedirect.com/science/article/abs/pii/S0197458005003003</a>
+                </p>
 
-		<section id="coconut-oil">
+                <p>
+                    Several clinical studies have investigated pregnenolone as a treatment for Parkinson’s disease. One study found that pregnenolone dose-dependently countered L-DOPA-induced dyskinesias (LIDs) without affecting L-DOPA-induced motor improvements. 
+                </p>
+                <p>Like pregnenolone, DHEA is lipid-soluble, which allows it to cross the BBB relatively easily, and is available as a dietary supplement. Recommended dosage is 100mg ED.
+            </section>
+        </section>
+        <section id="dbs" class="neuroprotective">
+            <h3>Deep Brain Stimulation (DBS)</h3>
+            <p>
+                Deep Brain Stimulation (DBS) uses electrodes implanted in the brain to deliver electrical impulses to the globus pallidus internus (GPi). This helps to regulate brain activity.
+            </p>
+            <p>
+                DBS of the (GPi) primarily targets the GABAergic output neurons of the basal ganglia, influencing motor output and reducing motor symptoms in PD. However, the therapeutic effects of GPi stimulation in PD extend beyond
+                modulating GABAergic transmission within the basal ganglia circuitry and can indirectly impact cortical glutamatergic input to the basal ganglia.
+            </p>
+            <p>
+                While GPi stimulation primarily targets the GABAergic output of the basal ganglia, the dopaminergic system remains crucial in PD pathology and treatment. Dopamine depletion in the basal ganglia is a hallmark feature of
+                PD and leads to motor symptoms such as bradykinesia, tremors, and rigidity, and DBS helps treat these problems.
+            </p>
+            <p>
+                Other neurotransmitter systems affected by DBS include the serotonergic, cholinergic, noradrenergic, and glutamatergic systems. Due to the delicate balance between all these systems stimulation of the entire GPi can more
+                easily achieve a positive, balanced effect, compared to medication and supplementation with l-dopa/carbidopa and supplements like 5-HTP and GABA.
+            </p>
+            <p>
+                This normalizes basal ganglion activity resulting in reduced excitotoxicity, better neuronal function, and greater cell longevity.
+            </p>
+            <p>
+                Medication alone leads to PN. DBS reduces the need for medication, thus mitigating PN. Supplementation further reduces the need for medication, and thus PN. A team of specialists to craft a program with DBS, medication,
+                and supplementation may offer the best possible outcome with the least PN and greater longevity.
+            </p>
+            <p>
+                Crafting a personalized treatment program that incorporates DBS, medication, and supplementation requires the expertise of a multidisciplinary team of specialists, including neurologists, movement disorder specialists,
+                neurosurgeons, pharmacists, dietitians, and other healthcare professionals. This team can collaborate to tailor treatment to the individual patient's needs, optimize therapy, and minimize PN.
+            </p>
+        </section>
+        <section id="physical-therapy-exercise">
+            <h3>
+                Physical Therapy / Exercise
+            </h3>
+            <p>
+                Exercise has many positive impacts on general health. In PD, exercise improves motor and non-motor symptoms.
+            </p>
+            <p>
+                Exercise increases brain-derived neurotrophic factor (BDNF) and autophagy (recycling of senescent cells), downregulates proinflammatory cytokines, and lowers blood sugar.
+            </p>
+        </section>
+        <section id="pbm">
+            <h3 class="neuroprotective">Photobiomodulation (PBM)</h3>
+            <p>
+                Photobiomodulation (PBM) is a non-invasive, low-risk treatment for PD.
+            </p>
+            <ul>
+                <li>Enhances mitochondrial function and ATP production</li>
+                <li>Increases expression of neurotrophic factors, such as brain-derived neurotrophic factor (BDNF)</li>
+                <li>Reduces oxidative stress and inflammation</li>
+                <li>Promotes neuroprotection and neuroregeneration</li>
+                <li>
+                    Improves kidney function — PD impairs kidney function through Alpha-synuclein impairment via aggregation accumulation and inflammation, autonomic nervous system dysfunction, and dopamine depletion (dopamine plays a
+                    crucial role in regulating blood pressure and kidney function.)
+                </li>
+            </ul>
+            <p>
+                Parkinson’s disease kidney impairment happens from the start but becomes more of a problem during later stages of the disease. Start early; don't wait.
+            </p>
+            <p>
+                Near-infrared (NIR) Light (700-1100 nm) penetrates deeper into tissues, making it a better choice for targeting deeper affected brain regions.
+            </p>
+
+            <p>
+                Red light can be effective, too, but the longer duration and stronger intensity required for efficacy may overstimulate skin. If you have a device that allows for a blend of NIR and red frequencies, use a lower intensity
+                for the red frequencies to glean their dermal benefits while getting more intense NIR for the deep regions of the brain.
+            </p>
+            
+            <h4>Oxidative Stress and Inflammation</h4>
+            
+            <p>
+                PBM has anti-inflammatory effects, which can help mitigate the inflammatory response associated with ischemic injury, reducing tissue damage and promoting healing.
+            </p>
+            
+            <h4>Ischemia and Blood Flow</h4>
+            <p>
+                PBM has been shown to increase local blood flow and oxygenation in ischemic     tissues, which can help alleviate hypoxia (low oxygen levels) and promote tissue recovery.
+            </p>
+            
+            <p>
+                Ischemia can affect the delivery of therapeutic agents to the desired target in the midbrain. During ischemic events, blood flow to affected brain regions can be significantly compromised, limiting the delivery of oxygen and nutrients, and therapeutic compounds like melatonin.
+            </p>
+                
+            <p>
+                The timing of PBM, in conjunction with the administration of substances like melatonin, can play a role in potentially mitigating the effects of ischemic inhibition on nutrient delivery to the midbrain.
+            </p>
+
+            <p>
+                Near-infrared (NIR) light has a deeper penetration depth than red light, allowing it to reach deeper tissues and organs, including the brain, without overstimulating the skin.
+            </p>
+                
+            <h4>Photobiomodulation Reaseach</h4>
+            <ul>
+                <li>An RCT published in 2019 found PBM improved motor symptoms and quality of life in patients with PD.</li>
+                <li>A case series study published in 2018 reported improvements in motor function, speech, and cognition in patients with PD treated with PBM.</li>
+                <li>A study published in 2013 found that PBM reduced symptoms of PD in a mouse model of the disease.</li>
+                <li>
+                    Transcranial PBM: A study published in the journal Neurophotonics found transcranial PBM (tPBM) improved motor symptoms in patients with PD. The study used a helmet-like device to deliver near-infrared light to the
+                    brain.
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128061/">Exploring the use of transcranial photobiomodulation in Parkinson's disease patients</a>
+                </li>
+                <li>
+                    Intranasal PBM: A study published in the journal BMC Neurology used a device that delivered near-infrared light through the nose. They found intranasal PBM improved motor symptoms and quality of life in patients with
+                    PD.
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/34215216/">Improvements in clinical signs of Parkinson's disease using photobiomodulation: a prospective proof-of-concept study</a>
+                </li>
+                <li>
+                    Darlot et al. (2016). Near-infrared light is neuroprotective in a monkey model of Parkinson disease. Photomedicine and Laser Surgery, 34(10), 531-538.
+                </li>
+                <li>
+                    El Massri et al. (2016). Photobiomodulation for Parkinson’s disease: A systematic review. Journal of Clinical Neuroscience, 23, 1-8.
+                </li>
+                <li>
+                    Darlot et al. (2016). Near-infrared light is neuroprotective in a monkey model of Parkinson disease. Photomedicine and Laser Surgery, 34(10), 531-538.
+                </li>
+            </ul>
+        </section>
+		<section id="food-and-supplements">
 			<h3>
-				Coconut Oil
+				Foods &amp; Supplements
 			</h3>
+			<p>
+				Supplements can fight the progression of PD from multiple angles, from mitigating &alpha;-synuclein overexpression to reducing mutant &alpha;-synuclein to reducing the effects of LD/decarboxylase inhibitors, reducing Reactive
+				Oxygen Species (ROS) and neuroinflammation, improving mood, improving sleep, improving recovery rate, strengthening the mitochondria, and so much more.
+			</p>
+			<p>
+				I have first-hand experience taking all these supplements.
+			</p>
+			<p>
+				Eggs are a source of omega-3 fatty acids, choline, lutein, zeaxanthin, vitamin E, beta carotene, vitamin A, and selenium. Pasture-raised eggs contain more bioactive compounds and less saturated fat and cholesterol.
+			</p>
+			<p>
+				Many plants contain phytochemicals that can improve conditions and inhibit the progression of PD.
+			</p>
+			<p>
+				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6433754/">
+					Plant Extracts and Phytochemicals Targeting &alpha;-Synuclein Aggregation in Parkinson's Disease Models
+				</a>
+			</p>
+			<section id="glynac">
+				<h4>GlyNAC</h4>
+			</section>
+			<section id="creatine">
+				<h4>Creatine Monohydrate</h4>
+			</section>
+			<section id="Curcumin" class="neuroprotective antifibrillogenic">
+				<h4 data-safety-rating="9">
+					Turmeric 
+				</h4>
+				<section>
+					<h5>Introduction to Turmeric and Curcuminoids</h5>
+					<p>
+						Turmeric is a rhizome of the Curcuma longa plant.
+					</p>
+
+					<p>
+						Curcuminoids are a group of compounds found in turmeric, with curcumin being the most well-known and studied. Other curcuminoids include demethoxycurcumin and bisdemethoxycurcumin, which are similar to curcumin in structure and also contribute to turmeric's health benefits.
+					<p>
+					
+					<p>
+						Curcumin prevents aggregation of alpha-synuclein, reduces inflammation, and provides neuroprotection in neurological disorders.
+					</p>
+				
+					<p>
+						Several studies in different experimental models of PD strongly support the clinical application of curcumin in PD. Curcumin crosses the blood-brain barrier
+					</p>
+				
+					<h5>Challenges with Curcumin Absorption</h5>
+					<p>
+						Although curcumin pills are convenient, orally-ingested curcumin is poorly absorbed.
+					</p>
+				
+					<h5>Introduction to Self-Emulsifying Drug Delivery Systems SEDDS</h5>
+					<p>	
+						Self-Emulsifying Drug Delivery Systems (SEDDS) are lipid-based formulations that create an emulsion to improve the oral bioavailability of lipophilic substances. 
+					</p>
+				
+					<h5>Enhancing Absorption with Food</h5>
+					<p>							
+						Curcuminoids, being fat-soluble polyphenols, integrate into curries, with vegetables and coconut oil, offering both flavor and health benefits. This formulation with food facilitates better absorption. Additionally, turmeric can be blended into warm milk, creating the renowned "golden milk" beverage.
+					</p>
+				
+					<p>
+						Curcumin's ability to cross the blood-brain barrier to exert its benefits make it a promising therapeutic agent for managing Parkinson's disease symptoms.
+					</p>
+				</section>
+
+				<section>
+					<h5>
+						Curcumin References:
+					</h5>
+					<ol>
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/22211691/" target="_blank">
+								Curcumin: a potential neuroprotective agent in Parkinson's disease
+							</a>
+						</li>
+
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/29027056/" target="_blank">
+								Curcumin affords neuroprotection and inhibits &alpha;-synuclein aggregation in lipopolysaccharide-induced Parkinson's disease model
+							</a>
+						</li>
+
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/22267729/" target="_blank">
+								Curcumin prevents aggregation in &alpha;-synuclein by increasing the reconfiguration rate
+							</a>
+						</li>
+					</ol>
+				</section>
+				<section>
+					<h5>
+						Turmeric Products:
+					</h5>
+					<p>
+						<a href="https://www.amazon.com/Frontier-Bulk-Turmeric-Powder-Trade/dp/B006K0C1RE">Frontier Co-op Organic Fair Trade Ground Turmeric Root 1lb</a>
+					</p>
+					<p>
+						<img alt="Fronteirs Bulk Turmeric" src="img/frontiers_turmeric-sm.png" />
+					</p>
+					<a
+						href="https://www.amazon.com/gp/product/B07NXQHXV3/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B07NXQHXV3&amp;linkCode=as2&amp;tag=garrettsmit02-20&amp;linkId=143e5904cc8bab43c355acfc7eed8bc2"
+					>
+						Garden of Life, MyKind Organics, Extra Strength Turmeric
+					</a>
+					<p>
+						<img src="img/turmeric-mykind.jpeg" alt="MyKind Turmeric" />
+					</p>
+					<h4>
+						Curcumin Product:
+						<a href="https://www.amazon.com/gp/product/B01ELXB3MA/ref=as_li_tl?ie=UTF8&tag=garrettsmit02-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01ELXB3MA&linkId=ab05fa8195a7a04384554288ef47d9bd">
+							Curcumin as BCM-95&reg; (CURCUGREEN&reg;)
+						</a>
+					</h4>
+					<p>
+						<img src="img/curcumin.jpeg" alt="CurcuGreen Curcumin" />
+					</p>
+				</section>
+			</section>
+			<section id="saffron">
+				<h4>
+					Saffron
+				</h4>
+				<div>
+					Saffron, like turmeric, is also neuroprotective.
+				</div>
+				<div>
+					<strong>
+						Saffron Product:
+					</strong>
+					<a
+						href="https://www.amazon.com/gp/product/B07Q23DCZC/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07Q23DCZC&amp;linkId=a89eecbeabe1c12666d9093201834fce"
+					>
+						Saffron Extract Supplements
+					</a>
+				</div>
+				<p>
+					<img src="img/saffron.jpeg" title="saffron" />
+				</p>
+				<div>
+					Turmeric and Saffron can also be prepared together as a warm night drink of golden milk with a calming effect. Both can be purchased online.
+				</div>
+				<div>
+					<strong>
+						Turmeric and Saffron Product:
+					</strong>
+					<a
+						href="https://www.amazon.com/gp/product/B07BH6KBN4/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07BH6KBN4&amp;linkId=5726ef5550d5890bb7fd0e237f6a7791"
+					>
+						Turmeric Latte with Saffron
+					</a>
+				</div>
+				<p>
+					<img src="img/turmeric-latte.jpeg" alt="turmeric latte" />
+				</p>
+				<div>
+					<div>
+						<strong>
+							Saffron References:
+						</strong>
+					</div>
+					<ol>
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/30573341/">
+								Crocus sativus restores dopaminergic and noradrenergic damages induced by lead in Meriones shawi: A possible link with Parkinson's disease
+							</a>
+						</li>
+
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/26705857/">
+								Evidence of neuroprotective effects of saffron and crocin in a Drosophila model of parkinsonism
+							</a>
+						</li>
+					</ol>
+				</div>
+			</section>
+			<section id="coconut-oil">
+				<h4>
+					Coconut Oil
+				</h4>
+				Coconut oil helps neural function and mitigates the effects of L-dopa supplementation.
+				<strong>
+					Coconut Oil Product:
+				</strong>
+				<a href="https://www.amazon.com/gp/product/B00CQ7TNDK/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B00CQ7TNDK&amp;linkId=f32fa29138420ac8f79b25b5f9f8849f"
+				>
+					Dr. Bronner's - Organic Virgin Coconut Oil
+				</a>
+				<p>
+					<img src="img/coconut-oil.jpeg" alt="coconut oil" />
+				</p>
+				<h5>Coconut Oil References:</h5>
+				<ol>
+					<li>
+						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5610862/">
+							Role of Diet and Nutritional Supplements in Parkinson's Disease Progression
+						</a>
+					</li>
+
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/32707436/">
+							Neurochemical, neurobehavioral and histochemical effects of therapeutic dose of l-dopa on striatal neurons in rats: Protective effect of virgin coconut oil
+						</a>
+					</li>
+				</ol>
+			</section>
+			<section id="ginger">
+				<h4>
+					Ginger
+				</h4>
+				<div>
+					Ginger, a member of the same family of rhizomes as turmeric, contains several phenolic compounds. Gingerol and shogaol protect dopamanergic neurons.
+				</div>
+				<div>
+					<strong>
+						Ginger References:
+					</strong>
+				</div>
+				<div>
+					1)
+					<a href="https://pubmed.ncbi.nlm.nih.gov/23811724/">
+						6-Shogaol, an active compound of ginger, protects dopaminergic neurons in Parkinson's disease models via anti-neuroinflammation.
+					</a>
+				</div>
+				<div>
+					2)
+					<a href="https://nhsjs.com/2021/extractions-of-6-shogaol-and-6-gingerol-from-ginger-zingiber-officinale-on-the-protection-of-dopaminergic-neurons-in-a-parkinsons-disease-model/">
+						Extractions of 6-Shogaol and 6-Gingerol from Ginger (Zingiber officinale) on the Protection of Dopaminergic Neurons in a Parkinson&rsquo;s Disease Model
+					</a>
+				</div>
+			</section>
+			<section id="egcg">
+				<h4>
+					EGCG (from Green Tea)
+				</h4>
+				<p>
+					EGCG (epigallocatechin gallate), a component in Green Tea, inhibits the ability of preformed oligomers, such as oligomers of &alpha;-synuclein, to permeabilize vesicles and induce cytotoxicity in rat brain cells.
+				</p>
+				<p>
+					<em>
+						Warning:
+					</em>
+					Green tea contains moderate levels of fluoride, a neurotoxin. Matcha, a Japanese powdered green tea, which contains high levels of EGCG also, unfortunately, has slightly high levels of oxalates. Oxalates contribute to
+					inflammation and damage kidneys. Supplemental ECCG can provide the desired dose without the fluoride oxalate concentrations found in green tea.
+				</p>
+				<h5>
+					Product:
+				</h5>
+				<img src="img/cytokine-suppress.png" alt="cytokine suppress" />
+				<h4>
+					<a
+						href="https://www.amazon.com/gp/product/B00FPOF0ME/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B00FPOF0ME&amp;linkId=ed2f547390cfaadd1c5ca40695bf1d3a"
+					>
+						Life Extension Cytokine Suppress
+					</a>
+				</h4>
+				<strong>
+					EGCG References:
+				</strong>
+				<ol>
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/27364962/">
+							Epigallocatechin Gallate (EGCG) Inhibits Alpha-Synuclein Aggregation: A Potential Agent for Parkinson's Disease
+						</a>
+					</li>
+
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/24907278/">
+							How epigallocatechin gallate can inhibit &alpha;-synuclein oligomer toxicity in vitro
+						</a>
+					</li>
+
+					<li>
+						<a href="https://link.springer.com/article/10.1007/s11064-016-1995-9">
+							https://link.springer.com/article/10.1007/s11064-016-1995-9
+						</a>
+					</li>
+
+					<li>
+						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2867908/">
+							EGCG remodels mature &alpha;-synuclein and amyloid-&beta; fibrils and reduces cellular toxicity
+						</a>
+					</li>
+				</ol>
+			</section>
+			<section id="ginsenoside">
+				<h4>
+					Ginseng (Ginsenoside Rb1)
+				</h4>
+				<p>
+					Ginsenoside Rb1 inhibits fibrillation and toxicity of &alpha;-synuclein and disaggregates preformed fibrils.
+				</p>
+				<p>
+					Oral absorption of non-fermented ginsenosides is roughly 0.1 &mdash; 3.7%. Fermented ginseng has higher ginsenoside concentration and better absorption.
+				</p>
+				<h5>
+					Products:
+				</h5>
+				<p>
+					<a href="https://www.amazon.com/Fermented-Korean-Ginseng-Liquid-Extract/dp/B01MQP1DGE/ref=sr_1_7?s=hpc&sr=1-7">ILHWA Fermented Panax Korean Ginseng Liquid 4 Pack of 1</a>
+				</p>
+				<p>
+					<img src="img/ginseng.jpeg" alt="ginseng" />
+				</p>
+				<div>
+					<a
+						href="https://www.amazon.com/gp/product/B00KDSZ6XU/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B00KDSZ6XU&amp;linkId=d82ad47963e6dede78ec44e2184a1d36"
+					>
+						https://www.amazon.com/ILHWA- ILHWA 3.5oz(100g) Korean Ginseng Concentrated Pure Extract
+					</a>
+				</div>
+				<h5>
+					Ginsenoside Rb1 References:
+				</h5>
+				<ol>
+					<li>
+						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4882765/">
+							Ginsenoside Rb1 inhibits fibrillation and toxicity of &alpha;-synuclein and disaggregates preformed fibrils.
+						</a>
+					</li>
+
+					<li>
+						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3659629/">
+							The bioavailability of red ginseng extract fermented by Phellinus linteus
+						</a>
+					</li>
+				</ol>
+			</section>
+			<section id="acetyl-l-carnitine-and-rala">
+				<h4>
+					Acetyl-L-Carnitine &amp; r-ALA
+				</h4>
+				<h5>
+					Dosage:
+				</h5>
+				<p>
+					<strong>
+						r-ALA:
+					</strong>
+					250-500 mg ED
+				</p>
+				<p>
+					<strong>
+						ALCAR:
+					</strong>
+					2-3g ED
+				</p>
+				<p>
+					r-Alpha-Lipoic Acid (
+					<strong>
+						r-ALA)
+					</strong>
+					reduces mitochondrial dysfunction and oxidative damage and protects dopaminergic neurons from damage in Parkinson&rsquo;s in Parkinson&rsquo;s disease.
+				</p>
+				<p>
+					Most research on ALA uses both s- and r- isoforms. The s- form inhibits the absorption of the r- isomer, and the r- isomer has better bioavailability. Thus, when using the r- form, a smaller dose can be more effective.
+				</p>
+				<h5>
+					Product:
+				</h5>
+				<h5>
+					<a
+						href="https://www.amazon.com/gp/product/B006L8DWSC/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B006L8DWSC&amp;linkId=c6c8f2664db42d477f10657223837e34"
+					>
+						Life Extension Mitochondrial Energy Optimizer with PQQ
+					</a>
+				</h5>
+				<img src="img/mitochondrial-optimizer.jpeg" alt="mitochondrial optimizer" />
+				<p>
+					Note: This product contains Taurine, which is
+					<a href="https://journeywithparkinsons.com/2018/04/05/neuroprotection-with-taurine-in-a-parkinsons-model-system/">neuroprotective </a> and
+					<a href="https://pubmed.ncbi.nlm.nih.gov/26004911/">found to be suppressed in PD patients on L-Dopa</a>.
+				</p>
+				<h5>
+					Product:
+				</h5>
+				<h5>
+					<a
+						href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B0027YKO1C&amp;linkId=ebcbfd85708db0064877b27b10629629"
+					>
+						Life Extension Super R-Lipoic Acid, 240mg
+					</a>
+				</h5>
+				<img src="img/r-ala.jpeg" alt="r-Alpha Lipoic Acid" height="280" />
+				<h4>
+					Acetyl-L-carnitine (ALCAR (not to be confused with AICAR)) crosses the blood-brain barrier.
+				</h4>
+				<h5>
+					Product:
+				</h5>
+				<h5>
+					<a
+						href="https://www.amazon.com/gp/product/B07BLMSWGN/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07BLMSWGN&amp;linkId=d5ce891282e299fedbd0358e75eafd91"
+					>
+						Superior Labs | Acetyl L-Carnitine 1000mg
+					</a>
+				</h5>
+				<img src="img/acetyl-l-carnitine.jpeg" alt="acetyl-l-carnitine" />
+				<h5>
+					How ALCAR Works
+				</h5>
+				<p>
+					ALCAR directly affects mitochondrial respiration.
+				</p>
+				<p>
+					ALCAR protects dopaminergic neurons by abrogating neuroinflammation, apoptosis, astrogliosis, and oxidative stress. For PD, ALCAR protects cells against the accumulation of alpha-synuclein.
+				</p>
+				<p>
+					<strong>
+						How r-ALA Works
+					</strong>
+				</p>
+				<p>
+					r-ALA decreases the levels of intracellular reactive oxygen species (ROS) and iron. Iron has been shown to reduce survival rate, to induce injury to dopaminergic neurons, and induce more severe motor deficits with
+					mutant &alpha;-synuclein.
+				</p>
+				<p>
+					A 1990 Italian study on a small group of patients, published in the International Journal of Pharmacology research, titled &ldquo;
+					<a href="https://pubmed.ncbi.nlm.nih.gov/2387661/">
+						Clinical pharmacodynamics of acetyl-L-carnitine in patients with Parkinson's disease
+					</a>
+					&rdquo;, found 1&ndash;2g of ALC improved the H response, sleep stages and spindling in test (non-placebo) subjects.
+				</p>
+				<p>
+					A later 2018, &ldquo;
+					<a href="https://pubmed.ncbi.nlm.nih.gov/30906386/">
+						a multicenter, randomized double-blind, placebo-controlled clinical trial for efficacy of acetyl-L-carnitine in patients with dementia-associated with cerebrovascular disease
+					</a>
+					&rdquo;, found 1.5g of ALCAR significantly improved cognitive assessment.
+				</p>
+				<h5>
+					Carnitine &amp; r-ALA References:
+				</h5>
+				<ol>
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/20414966/">
+							Combined R-alpha-lipoic acid and acetyl-L-carnitine exerts efficient preventative effects in a cellular model of Parkinson's disease
+						</a>
+					</li>
+
+					<li>
+						<a href="https://www.salubrainous.com/alpha-lipoic-acid-for-parkinsons/">
+							Alpha Lipoic Acid (ALA) For Parkinson&rsquo;s: Research, Benefits &amp; Safety
+						</a>
+					</li>
+
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/14595704/">
+							Acetyl-L-carnitine permeability across the blood-brain barrier and involvement of carnitine transporter OCTN2
+						</a>
+					</li>
+
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/28199883/">
+							Acetyl-l-carnitine protects dopaminergic nigrostriatal pathway in 6-hydroxydopamine-induced model of Parkinson's disease in the rat
+						</a>
+					</li>
+
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/28168622/">
+							Alpha-synuclein and iron: two keys unlocking Parkinson's disease
+						</a>
+					</li>
+
+					<li>
+						<a href="https://www.frontiersin.org/articles/10.3389/fnagi.2018.00097/full">
+							High Dietary Iron Supplement Induces the Nigrostriatal Dopaminergic Neurons Lesion in Transgenic Mice Expressing Mutant A53T Human Alpha-Synuclein
+						</a>
+					</li>
+
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/20414966/">
+							Combined R-alpha-lipoic acid and acetyl-L-carnitine exerts efficient preventative effects in a cellular model of Parkinson's disease
+						</a>
+					</li>
+				</ol>
+			</section>
+			<section id="gaba-5-htp-melatonin">
+				<h4>GABA, 5-HTP, and Melatonin</h4>
+				<p>
+					GABA, 5-HTP, and melatonin can help PD patients through multiple neurological pathways. They're grouped because they all promote sleep and should all be taken at night.
+				</p>
+				<h5>Dopaminergic, Serotonergic, and GABAergic Systems</h5>
+				<p>
+					The dopaminergic, serotonergic, and GABAergic systems are three important and interdependent neurotransmitter systems in the brain that play critical roles in regulating various physiological and psychological processes. All are impacted by PD and all are interrelated. Doctors typically only address the dopaminergic system, leading to imbalances in the other systems, nutrient deficiencies, and progressive neurodegeneration (PN).
+				</p>
+				<p>
+					Addressing only the dopaminergic system without considering the broader neurochemical landscape results in inadequate management of PD symptoms, exacerbates non-motor symptoms, and leads treatment-related complications. Furthermore, medications used to manage PD symptoms, such as levodopa, modulate only the dopaminergic system. This lopsided approach impacts other neurotransmitter systems and can contribute to nutrient deficiencies or imbalances.
+				</p>
+				<p>
+					It is crucial to take a comprehensive approach to PD management that considers the interplay between neurotransmitter systems and addresses both motor and non-motor symptoms. This may involve a combination of pharmacological interventions, lifestyle modifications, and nutritional support to optimize patient outcomes and quality of life while minimizing potential side effects and complications associated with treatment.
+				</p>
+				<p>
+					A comprehensive approach to PD must consider not only the direct effects of medications but also their broader implications for nutritional status and metabolic function.
+				</p>
+				<p>
+					Unfortunately, most doctors typically address the dopaminergic system.
+				</p>
+
+				<p>
+					GABA and 5-HTP modulate the GABAergic and serotonergic pathways, respectively. It's crucial to have everyone on your medical team on board with this, to avoid causing depletion of any one nutrient, as depletion can exacerbates PN.
+				</p>
+				<section id="gaba">
+					<h5>gamma-aminobutyric acid (GABA)</h5>
+					<p>
+						GABA (gamma-aminobutyric acid) is an inhibitory neurotransmitter that plays a crucial role in regulating the activity of dopaminergic neurons in the brain.
+					</p>
+					<p>
+						GABA supplementation has positive effects on GABAergic neurons.
+					</p>
+					<p>
+						In Parkinson’s disease, the loss of GABAergic neurons in the substantia nigra, a region responsible for motor control, is thought to contribute to the development of motor symptoms.
+					</p>
+
+					<p>
+						Dyskinesia is a common side effect of long-term treatment with levodopa in Parkinson’s disease.
+					</p>
+					<p>
+						GABA supplementation and GABAergic neurons in the substantia nigra are important for the regulation of dopamine release and the modulation of movement. GABA supplementation at 1000mg ED is safe and is likely to
+						ameliorate these side effects.
+					</p>
+					<p>
+						Non-pharmacological approaches such as physical therapy and deep brain stimulation (DBS) surgery targeting GABAergic circuits may also be considered for managing motor complications.
+					</p>
+				</section>
+				<section id="5-htp">
+					<h5>5-HTP</h5>
+					<p>
+						PD affects not only the dopaminergic system but also other neurotransmitter systems, including the serotonergic system. It does this by affecting causing a gradual and nonlinear degeneration of serotonergic
+						terminals, which is associated with the development of non-motor symptoms and complications. Insufficient serotonin production or function has been linked to GI dysfunction, a common problem in PD, and may be related
+						to visual hallucinations in some patients.
+					</p>
+					<p>
+						L-dopa/Carbidopa therapy interferes with nutrient metabolism. For example, this drug combination can reduce vitamin B6 levels, which is essential for the synthesis of other neurotransmitters.
+					</p>
+					<p>
+						The complex and interdependent nature of metabolic pathways involving neurotransmitters and essential nutrients such as dopamine, norepinephrine, epinephrine, glutathione, S-adenosylmethionine (SAMe), methionine,
+						cysteine, tryptophan, serotonin, and vitamin B6. These compounds play crucial roles in neurological function, oxidative stress regulation, mood regulation, and overall health.
+					</p>
+					<p>
+						It's crucial to strike a balance with diet, supplementation, and regular monitoring to slow disease progression.
+					</p>
+					<img src="img/5-htp-competitive-inhibitors.jpeg" alt="Competitive Inhibitors" />
+					<p>
+						5-HTP is converted into serotonin in the brain. It inhibits the release of glutamate, mitigates oxidation, and modulates dopamine release.
+					</p>
+					<p>
+						Changes in serotonin signaling happen in the early stages of Parkinson's.
+					</p>
+					<p>
+						The effects of PD on the serotonergic system are vastly understated. Several studies have shown serotonergic dysfunction in Parkinson's disease is associated with the development of motor and non-motor symptoms and
+						complications.
+					</p>
+
+					<p>
+						Neuroprotection: 5-HTP has been shown to have neuroprotective effects in various animal models of neurodegenerative diseases, including Parkinson’s disease. It may help reduce oxidative stress, inflammation, and
+						mitochondrial dysfunction, which are thought to contribute to Parkinson’s disease pathogenesis.
+					</p>
+					<h6>Serotonin and 5-HTP References</h6>
+					<ul>
+						<li>
+							<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3201695/">Serotonergic Dysfunction in Parkinson's Disease and Its Relevance to Disability</a>
+						</li>
+
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/25086269/">Serotonin in Parkinson's disease</a>
+						</li>
+
+						<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4827589/">Parkinson’s disease managing reversible neurodegeneration</a>
+						</li>
+					
+					</ul>
+				</section>
 			
-			Coconut oil helps neural function and mitigates the effects of L-dopa supplementation. 
-			<strong>
-				Coconut Oil Product:
-			</strong>
-			 
-			<a href="https://www.amazon.com/gp/product/B00CQ7TNDK/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B00CQ7TNDK&amp;linkId=f32fa29138420ac8f79b25b5f9f8849f">
-				Dr. Bronner's - Organic Virgin Coconut Oil
-			</a>
-			<p>
-				<img src="img/coconut-oil.jpeg" alt="coconut oil"/>
-			</p>
+				<section id="melatonin">
+					<h5>Melatonin</h5>
+				
+					<p>
+						Melatonin is a hormone produced by the pineal gland, a small endocrine gland located in the midbrain between the two hemispheres.
+					</p>
+				
+					<h6>Neuroprotective:</h6>
+					<p>
+						Melatonin protects neurons, especially against oxidative stress, a problem exacerbated by PD, leading to progressive neurodegeneration (PN). 
+					</p>
 
-			<h4>Coconut Oil References:</h4>
-			<ol>
-				<li>
-					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5610862/">
-						Role of Diet and Nutritional Supplements in Parkinson's Disease Progression
+					<p>
+						Melatonin's role in protecting neurons against oxidative stress is particularly significant in neurodegenerative diseases like PD. By scavenging free radicals and enhancing the activity of antioxidative enzymes, such as superoxide dismutase, glutathione peroxidase, and glutathione reductase, melatonin slows the progression of neurodegeneration.
+					</p>
+				
+					<p>
+						Melatonin receptors MT1 and MT2 in the substantia nigra are reduced in PD patients. Supplementing melatonin helps amend this deficit.
+					</p>
+
+					<p>
+						Melatonin's neuroprotective effects, bolstered by its anti-inflammatory effects, may contribute to the preservation of MT1 and MT1 receptors.
+					</p>
+								
+					<p>
+						Melatonin's anti-inflammatory properties may further contribute to its neuroprotective effects in PD, as inflammation is also implicated in the pathogenesis of the disease.
+					</p>
+
+					<h6>Vasodilation:</h6>
+					<p>                
+						Ischemia, a condition where blood flow and oxygen supply are restricted or reduced to a part of the body, has been linked to Parkinson’s disease (PD). In PD, ischemia can occur in various parts of the brain, including the substantia nigra, which is responsible for producing dopamine, a neurotransmitter essential for motor function.
+					</p>
+					<p>
+						Ischemia can impair mitochondrial function, leading to energy depletion and cell death. 
+					</p>                
+					<figure style="display: block; width:100%; clear: both">
+						<img src="img/ischemia-pathophysiology.png" alt="Ischaemia pathophysiology diagram">
+						<figcaption>
+							<p style="float: left">
+								Ischemia pathophysiology at four stages: energy failure, excitotoxicity, oxidative, stress and inflammation. <img src="img/ischemia-mechanism-icon.jpeg" alt="icon for diagram"> Represents the site of melatonin action
+							</p>
+						</figcaption>
+					</figure>
+				
+					<p style="clear: both">
+						Melatonin has vasodilatory effects, relaxing blood vessels, and improving blood flow. This may help improve perfusion to ischemic brain regions, potentially reducing tissue damage and promoting recovery. 
+					</p>
+				
+					<h5>Mitoprotective</h5>
+					<p>
+						Melatonin protects mitochondrial function and integrity, mitigating the cellular damage caused by ischemia.
+					</p>
+					<h6>
+						Product:
+					</h6>
+					<p>
+						Supplemental melatonin crosses the blood-brain barrier. It is safe to take in doses up to 10mg.
+					</p>
+					<p>
+						Time-released formulations help maintain melatonin levels for a longer period of time. The reduced peak concentration helps maintain sleep throughout the night.
+					</p>
+					<p>
+					<img src="img/sleep3.png" alt="Sleep3 — Nature's Bounty Sleep3 Melatonin 10mg, Maximum Strength 100% Drug Free Sleep Aid, Dietary Supplement, L-Theanine & Nighttime Herbal Blend Time Release Technology, 60 Tri-Layered Tablets">
+					</p>
+					<a
+						href="https://www.amazon.com/gp/product/B07PXT5LYR/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07DJJXPDD&amp;linkId=fcbfe06c3bf2c5b2709c3b7afef8459"
+						>Sleep3 — Nature's Bounty — Time-released Melatonin — 10mg</a>
+				
+					<h6>Melatonin References</h6>
+					<ul>
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/10668453/"
+					>Melatonin as a pharmacological agent against neuronal loss in experimental models of Huntington's disease, Alzheimer's disease and 
+					parkinsonism</a>
+						</li>
+						<li>
+							<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187674/"
+					>Therapeutic potential of melatonin and its analogs in Parkinson’s disease: focus on sleep and neuroprotection</a>
+						</li>                    
+					</ul>
+				</section>
+			</section>
+			<section id="quinones">
+				<h4>
+					Supplementation of Quinones (PQQ, CoQ10, Menaquinone (MK-4 and MK7 (k2)) for Mitochondrial Function
+				</h4>
+				<p>
+					Quinones are a class of compounds that play a crucial role in maintaining mitochondrial function and overall cellular health. 
+				</p>
+				<p>
+					PQQ, CoQ10, and Menaquinone (MK-4 and MK7 (k2)) are three quinones that have been studied for their potential benefits on mitochondrial function.
+				</p>
+				<p>
+					All three promote mitochondrial function by supporting biogenesis, energy production, and reducing oxidative stress. Combined supplementation may have synergistic effects on mitochondrial function, leading to improved overall cellular health, reduced fatigue, and better overall health.
+				</p>
+				<section id="pqq">
+					<h4>
+						PQQ Pyrroloquinoline Quinone (PQQ)
+					</h4>
+					<p>
+						PQQ is a naturally occurring coenzyme manufactured by bacteria, found in plants in tiny amounts, and utilized by mammalian cells as an important nutritional growth factor. PQQ is not produced endogenously in humans.
+					</p>
+					<p>
+						PQQ has multiple beneficial effects, including preventing the formation of &alpha;-synuclein fibrils, strengthening mitochondria, promoting mitochondrial biogenesis in brain cells, improving cognitive deficits from oxidative damage, inhibiting senescence, and enhancing memory, attention, cognition, and learning. It also increases blood flow to the cerebral cortex, protects against cell damage from pesticides, prevents neurodegeneration due to oxidative stress, and reduces LDL cholesterol to inhibit osteoporosis.
+					</p>
+					<h5>
+						Dosage:
+					</h5>
+					<p>
+						100-150mg per day. PQQ is very safe. In 2017, The European Food Safety Authority (EFSA) Panel on Dietetic Products determined a no‐observed‐adverse‐effect‐level (NOAEL) of 100 mg/kg bw per day, for a 90-day repeated oral dose toxicity study with
+						BioPQQ&trade;. At 100 mg/kg bw, a 50kg woman would be expected to observe no side effects up to 5 grams per day of PQQ.
+					</p>
+					<p>
+						Given the vast multitude of benefits that occur on the cellular level, and especially by reducing alpha-synuclein fibrils relevant to PD sufferers, and the incredibly high safety threshold, a recommended dose of PQQ is 100-200mg per day. There are no known contraindications.
+					</p>
+					<h5>
+						Product:
+					</h5>
+
+					<a
+				href="https://www.amazon.com/gp/product/B07DJJXPDD/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07DJJXPDD&amp;linkId=fcbfe06c3bf2c5b2709c3b7afef84597"
+					>
+						VED PQQ 50mg
 					</a>
-				<li>
-					<a href="https://pubmed.ncbi.nlm.nih.gov/32707436/">
-						Neurochemical, neurobehavioral and histochemical effects of therapeutic dose of l-dopa on striatal neurons in rats: Protective effect of virgin coconut oil
+					<h5>
+						<img src="img/pqq.jpeg" alt="pqq" />
+					</h5>
+					<h5>
+						PQQ References:
+					</h5>
+					<ol>
+						<li>
+							<a href="https://www.dementia.news/2018-12-13-pqq-combats-neurodegeneration-that-can-affect-the-aging-brain.html">
+								PQQ is effective in combating neurodegeneration that can affect the aging brain
+							</a>
+						</li>
+
+						<li>
+							<a href="https://www.sciencedirect.com/science/article/abs/pii/S0006291X06019747">
+								Pyrroloquinoline quinone (PQQ) prevents fibril formation of alpha-synuclein
+							</a>
+						</li>
+
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/19861415/">
+								Pyrroloquinoline quinone stimulates mitochondrial biogenesis through cAMP response element-binding protein phosphorylation and increased PGC-1alpha expression
+							</a>
+						</li>
+
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/29714638/">
+								Mechanisms Behind Pyrroloquinoline Quinone Supplementation on Skeletal Muscle Mitochondrial Biogenesis: Possible Synergistic Effects with Exercise
+							</a>
+						</li>
+
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/31860387/">
+								Effects of Pyrroloquinoline Quinone (PQQ) Supplementation on Aerobic Exercise Performance and Indices of Mitochondrial Biogenesis in Untrained Men
+							</a>
+						</li>
+
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/18231627/">
+								Pyrroloquinoline Quinone (PQQ) Prevents Cognitive Deficit Caused by Oxidative Stress in Rats
+							</a>
+						</li>
+
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/20482893/">
+								The inhibitory effect of pyrroloquinoline quinone on the amyloid formation and cytotoxicity of truncated alpha-synuclein
+							</a>
+						</li>
+
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/26622336/">
+								Biological effects of pyrroloquinoline quinone on liver damage in Bmi-1 knockout mice
+							</a>
+						</li>
+
+						<li>
+							<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5666047/">
+								Effect and mechanism of pyrroloquinoline quinone on anti-osteoporosis in Bmi-1 knockout mice-Anti-oxidant effect of pyrroloquinoline quinone
+							</a>
+						</li>
+
+						<li>
+							<a>
+								Effects of Pyrroloquinoline Quinone Disodium Salt Intake on the Serum Cholesterol Levels of Healthy Japanese
+							</a>
+						</li>
+					</ol>
+				</section>
+				<section id="k2">
+					<h4>Vitamin K2</h4>
+					<p>
+						Vitamin K2 has been shown to support the production of ATP and to reduce the production of ROS.
+					</p>
+					<p>
+						Vitamin K2 supports mitochondrial function by activating sirtuin 1 (SIRT1), a longevity gene and protein that regulates mitochondrial biogenesis and function.
+					</p>
+				</section>
+				<section id="ubiquinol">
+					<h4>
+						Ubiquinol 
+					</h4>
+					<p>
+						Ubiquinol, the reduced form of Coq10, improves mitochondrial function with exercise and improves cognitive function in chronic fatigue syndrome (CFS). 
+					</p>
+					<p>
+						In Parkinson&rsquo;s, ubiquinol-10 may significantly improve PD with wearing off, as judged by total UPDRS scores, and is safe and well-tolerated.
+					</p>
+					<p>
+						Previous studies using ubiquinone showed a lack of effect in PD patients. However, unlike ubiquinone, ubiquinol, the reduced form of CoQ10, has shown to be effective.
+					</p>
+				
+					<p>
+					Multiple system atrophy (MSA) is progressive neurodegeneration characterized by autonomic failure in various forms of Parkinsonism.
+					</P>
+					<p>
+						CoQ10 plays an essential role in mitochondrial electron transport. 
+					</p>
+
+					<h5>Supplementation</h5>
+					<p>
+						Ubiquinol has been demonstrated to be superior to ubiquinone. Phytosome Q10 has been shown to provide even greater absorption, but research shows strong safety and efficacy of ubiquinol, making it a reliable option for CoQ10 supplementation.
+					</p>
+					<p>
+						In a study published in The Lancet, a patient with advanced Multiple System Atrophy (MSA) showed restored brain oxygen consumption after taking 1200 mg of oral ubiquinol. This finding suggests a potential benefit of ubiquinol supplementation in MSA patients, possibly related to its role in supporting mitochondrial function. 
+					</p>    
+					<h5>
+						Product:
+					</h5>
+					<p>
+						<a
+							href="https://www.amazon.com/gp/product/B08HJW9HFV/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B08HJW9HFV&amp;linkId=8dfbb571aff8ef0d60000d5a4bb43913"
+						>
+							Princeton Vitamins CoQ10 with UBIQSOME (Bioavailable | 9X Better Absorption | Clinically Proven )
+						</a>
+					</p>
+					<img src="img/coq-10-ubiquisome.jpeg" alt="CoQ 10 ubiquisome" />
+					<h5>
+						Product:
+					</h5>
+					<a href="https://science.bio/product/coq10-phyt-powder/">
+						CoQ10 Phytosome
 					</a>
-			</ol>
+					(best for food blend combinations)
+
+					<h5>
+						Ubiquinol-10 References:
+					</h5>
+					<ol>
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/27125909/">
+								Ubiquinol‐10 supplementation improves autonomic nervous function and cognitive function in chronic fatigue syndrome
+							</a>
+						</li>
+
+						<li>
+							<a href="https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(23)00097-4/fulltext"
+						>High-dose ubiquinol supplementation in multiple-system atrophy: a multicentre, randomised, double-blinded, placebo-controlled phase 2 trial</a>
+						</li>
+						<li>
+							<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6220380/">
+								Combination of Coenzyme Q10 Intake and Moderate Physical Activity Counteracts Mitochondrial Dysfunctions in a SAMP8 Mouse Model
+							</a>
+						</li>
+
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/26054881/">
+								Randomized, double-blind, placebo-controlled pilot trial of reduced coenzyme Q10 for Parkinson's disease
+							</a>
+						</li>
+
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/31475897/">
+								A New Food-grade Coenzyme Q10 Formulation Improves Bioavailability: Single and Repeated Pharmacokinetic Studies in Healthy Volunteers
+							</a>
+						</li>
+
+						<li>
+							<a href="https://www.researchgate.net/publication/335584101_A_New_Food-grade_Coenzyme_Q10_Formulation_Improves_Bioavailability_Single_and_Repeated_Pharmacokinetic_Studies_in_Healthy_Volunteers">
+								A New Food-grade Coenzyme Q10 Formulation Improves Bioavailability: Single and Repeated Pharmacokinetic Studies in Healthy Volunteers
+							</a>
+						</li>
+					</ol>
+				</section>
+			</section>
+			<section id="gg">
+				<h4>
+					Geranylgeraniol (GG)
+				</h4>
+				<p>
+					Geranylgeraniol (GG) is synthesized endogenously in the human body via the mevalonate pathway, which is the same biochemical pathway by which cholesterol, heme A, dolichol, and ubiquinone (CoQ10) are synthesized. GG is an essential building block for the production of CoQ10, vitamin K2, and testosterone, as well as for protein synthesis and modification. Geranylgeraniol has been linked to Parkinson’s disease in several ways.
+				</p>
+				<p>
+					Dolichols are the major lipid component (14% by mass) of human substantia nigra. Alterations in their synthesis and composition may contribute to the pathophysiology of Parkinson’s disease.
+				</p>
+				<p>
+					Further studies are needed to fully understand the relationship between GG, dolichol, and Parkinson’s disease, but the available evidence suggests that GG may play a critical role in maintaining the health of dopamine-producing neurons and potentially slowing disease progression.
+				</p>
+				<p>
+					GG is involved in the synthesis of dopamine, a neurotransmitter that is depleted in Parkinson’s disease.
+				</p>
+				<p>
+					GG synthesis decreases with age. GG inhibits the activity of MAO-B and reduces oxidative stress in dopamine-producing neurons, which may help to slow the progression of Parkinson’s disease.
+				</p>
+				<p>
+					Supplementing geranyl geraniol is considered very safe because the body has a natural regulatory mechanism to control its levels. The body can regulate the production of geranyl geraniol by adjusting the activity of enzymes involved in the mevalonate pathway. This ensures that the levels of geranyl geraniol in the body remain within a healthy range, reducing the risk of adverse effects.
+				</p>
+			</section>
+			<section id="nattokinase">
+				<h4>Nattokinase</h4>
+				<p>
+					Nattokinase is a proteolytic and fibrinolytic enzyme Nattokinase that reduces inflammation.
+				</p>
+				<p>
+					Nattokinase has been shown to degrade amyloid fibrils in mice, which may help to slow down the progression of Parkinson’s disease.
+				</p>
+				<p>
+					Nattokinase has been shown to promote the non-amyloidogenic processing of Aβ, which may help to reduce the accumulation of amyloid plaques in the brain.
+				</p>
+			</section>
+			<section id="dha">
+				<h4>
+					Docosahexaenoic Acid (DHA)
+				</h4>
+				<p>
+					DHA is neuroprotective and prevents ROS production in dopaminergic neurons via enhancement of glutathione homeostasis. With DHA, higher doses are not only safe, they are more effective in lipid oxidation. 2000mg DHA per
+					day is effective and safe, and, in DHA/EPA combinations, DHA in greater proportion to EPA is more effective.
+				</p>
+				<p>
+					In PD, Unilateral oxidopamine lesions of the nigrostriatal pathway produce side-biased motor impairments that reflect motor deficits.
+				</p>
+				<p>
+					<strong>
+						DHA Dosage:
+					</strong>
+					2 &ndash; 6g/day.
+				</p>
+				<p>
+					DHA exhibits a dose-dependent response. Gastric tolerance between individuals vary. Start at 2 grams and work upwards from there. Spread consumption over a period of time.
+				</p>
+				<p>
+					<strong>
+						DHA + Uridine
+					</strong>
+				</p>
+				<p>
+					DHA has been shown to restore unilateral dopaminergic neurotransmission loss in this model of Parkinson's disease, and the effect was augmented when combined with Uridine (uridine-5&rsquo;-monophosphate).
+				</p>
+				<p>
+					In a 2006 dual university study, Brain phosphatidylcholine rose by 13&ndash;22% with uridine and choline alone, or DHA alone, or by 45% with the combination. Oral administration of uridine or DHA alone was shown to
+					increases synaptic proteins and phospholipids, and in combination, a synergistic effect was noticed.
+				</p>
+				<h5>
+					Product:
+				</h5>
+				<a href="https://www.amazon.com/gp/product/B004T7DYOO/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B004T7DYOO&amp;linkId=03df93bc6eab5eeabecf94de7e16e7e4">
+					Nordic Naturals Children&rsquo;s DHA, Strawberry
+				</a>
+				<h5>
+					<img src="img/childrens-dha.jpeg" title="children's DHA" />
+				</h5>
+				<h5>
+					DHA + Uridine References:
+				</h5>
+				<ol>
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/32001239/">
+							Docosahexaenoic acid protects motor function and increases dopamine synthesis in a rat model of Parkinson's disease via mechanisms associated with increased protein kinase activity in the striatum
+						</a>
+					</li>
+
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/25545062/"> Docosahexaenoic acid prevents paraquat-induced reactive oxygen species production in dopaminergic neurons via enhancement of glutathione homeostasis</a>
+					</li>
+
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/29846653/"> High-Dose DHA Has More Profound Effects on LDL-Related Features Than High-Dose EPA: The ComparED Study</a>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/28778752/"> DHA, EPA, and their combination at various ratios differently modulated A&beta; 25-35-induced neurotoxicity in SH-SY5Y cells</a>
+					</li>
+
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/18761383/"> Restorative effects of uridine plus docosahexaenoic acid in a rat model of Parkinson's disease</a>
+					</li>
+
+					<li>
+						<a href="http://wurtmanlab.mit.edu/static/pdf/1016.pdf">Synaptic proteins and phospholipids are increased in gerbil brain by administering uridine plus docosahexaenoic acid orally</a>
+					</li>
+
+					<li>
+						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2478743/">
+							Chronic Administration of DHA and UMP Improves the Impaired Memory of Environmentally Impoverished Rats
+						</a>
+					</li>
+
+					<li>
+						<a href="https://www.tandfonline.com/doi/full/10.1080/10408398.2018.1425978">
+							How does high DHA fish oil affect health? A systematic review of evidence
+						</a>
+					</li>
+				</ol>
+			</section>
+			<section id="uridine-and-cdp-choline">
+				<h4>
+					Uridine Monophoshate (uridine-5&rsquo;-monophosphate, UMP)
+				</h4>
+				<p>
+					Uridine is a type of nucleoside, a fundamental component of nucleic acids. Nucleic acids are the building blocks of life, and they play a crucial role in the storage and transmission of genetic information.
+				</p>
+				<h5>How it Works</h5>
+				<p>
+					Uridine increases CDP choline. As explained under the section DHA &amp; Uridine, Uridine restores unilateral dopaminergic neurotransmission caused by oxidopamine lesions.
+				</p>
+				<p>
+					UMP is a precursor to the synthesis of brain phospholipids, which are important for cell membrane structure and function. It has been shown to support memory, learning, and overall cognitive function.
+				</p>
+
+				<p>
+					<strong>❌ CAUTION </strong>
+				</p>
+				<p>
+					Contrary to dying myth, acetylcholine does not cause the tremors of PD. The drugs given to reduce CDP choline in PD, such as Trihexyphenidyl and Benztropine, not only don't help PD, they have serious side effects!
+					They cause confusion, memory issues, hallucinations, dry mouth, blurry vision, and urinary retention problems.
+				</p>
+				<p><em>Increasing</em> choline by 1,200 mg of supplemental citicoline improved tremors in PD and allowed patients to halve their L-dopa + dopa decarboxylase inhibitor dose. Uridine increases CDP.</p>
+				<p>
+					It's important to have a healthcare provider that understands and accounts for this as part of a holistic plan.
+				</p>
+
+				<h5>
+					Product:
+				</h5>
+				<a
+					href="https://www.amazon.com/Monophosphate-Disodium-Supports-Cognitive-Mitochondrial/dp/B01BYY0QY0/ref=sr_1_4_pp?s=hpc&sr=1-4&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B086KMB9YN&amp;linkId=e758783750e802b48ff75aa147f0afa9"
+				>
+					Uridine Monophosphate Powder
+				</a>
+				<h5>Uridine and CDP Choline References</h5>
+				<ol>
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/2289218/">
+							Citicoline in the treatment of Parkinson's disease
+						</a>
+					</li>
+
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/7162583/"> New strategies in the management of Parkinson's disease: a biological approach using a phospholipid precursor (CDP-choline)</a>
+					</li>
+				</ol>
+			</section>
+			<section id="citicoline">
+				<h4>
+					Citicoline (CDP Choline)
+				</h4>
+				<p>
+					As mentioned in the uridine discussion, citicoline supplementation halves L-Dopa / dopa decarboxylase dosage. Citicoline is neuroprotective.
+				</p>
+				<p>
+					In patients with chronic cerebral ischemia, citicoline improves scores in cognitive rating scales, while in patients with Alzheimer's senile dementia, it stops the course of the disease, and neuroendocrine,
+					neuroimmunomodulatory, and neurophysiological benefits have been reported. Citicoline has also been shown to be effective in PD, drug addictions, and alcoholism, as well as in amblyopia and glaucoma. No
+					serious side effects have occurred in any series of patients treated with citicoline, which attests to the safety of treatment with citicoline.
+				</p>
+				<p>
+					Citicoline reduces glutamate excitotoxicity and oxidative stress, increases neurotrophin levels, enhances neurotransmitter release (such as norepinephrine and dopamine), promotes mitochondrial function, and modulates
+					insulin signaling. In addition, citicoline prevents ischemia-induced tissue accumulation of free fatty acids and reduces infarct volume and brain edema, thus resulting in an antiapoptotic effect that is related to the 
+					mitochondrial-dependent cell death mechanism.
+				</p>
+				<p>
+					As mentioned in this document, CDP is involved in the synthesis of phosphatidylcholine, a major component of cell membranes, and also serves as a precursor to both choline and uridine in the brain.
+				</p>
+				<p>
+					Uridine, a nucleotide base, can convert to CDP-choline (Citicoline) and back again. This conversion process is a natural metabolic pathway in the body.
+				</p>
+				<p>
+					Citicoline improves axonal transport deficits and supports axon regeneration. Axon regeneration is limited in adults, partly due to the reduced growth potential of mature neurons.
+				</p>
+				<h5>Uridine and CDP Choline</h5>
+				<p>
+					The combination of uridine and CDP choline has been shown to have numerous benefits for brain health and cognitive function, including:
+				</p>
+				<p>
+					Improved memory and learning: Uridine and CDP choline have been shown to enhance memory and learning by increasing the production of acetylcholine, a neurotransmitter involved in memory formation.
+				</p>
+				<p>
+					Neuroprotection: The combination of uridine and CDP choline has been shown to have neuroprotective effects, potentially helping to protect against neurodegenerative diseases such as Alzheimer’s and Parkinson’s.
+				</p>
+				<p>
+					Improved cognitive function: Uridine and CDP choline have been shown to improve cognitive function, including attention, focus, and processing speed.
+				</p>
+				<p>
+					Because Uridine increases CDP levels, it is necessary to strike a balance between supplemental Uridine and CDP.
+				</p>
+				<p>
+					Striking a balance between supplemental uridine and CDP choline is especially important for individuals taking carbidopa/levodopa.
+				</p>
+				<p>
+					Since uridine is a precursor to CDP choline, increasing uridine levels can potentially affect the balance of these two compounds in the body.
+				</p>
+				UMP and CDP choline may have slightly different mechanisms of action and potential benefits. Some research suggests that CDP-choline may have more direct effects on acetylcholine levels in the brain, while UMP may have more
+				pronounced effects on dopamine levels.
+				<p>
+					Normally, the body tightly regulates these pathways, so and excessive supplementation may not necessarily lead to imbalances.
+				</p>
+				<p>
+					However, the effects of these supplements vary on individual basis, so the dose will need to be custom-tailored.
+				</p>
+				<h5>
+					Product:
+				</h5>
+				<a href="https://www.amazon.com/gp/product/B001ESE21K/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B001ESE21K&amp;linkId=1a2fefa4dbb6e04cc9613e95c02b9867">
+					Healthy Origins Cognizin Citicoline 250 MG, 150 Count
+				</a>
+				<h5>
+					<img src="img/cdp-choline.jpeg" alt="Healthy Origins Cognizin Citicoline 250 MG, 150 Count" />
+				</h5>
+				<h5>
+					Citicoline References:
+				</h5>
+				<ol>
+					<li>
+						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8003774/">
+							Citicoline in Ophthalmological Neurodegenerative Disease: A Comprehensive Review
+						</a>
+					</li>
+
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/29450391/">
+							Citicoline - a neuroprotector with proven effects on glaucomatous disease
+						</a>
+					</li>
+				</ol>
+			</section>
+			<section id="magnesium-threonate">
+				<h5>
+					Magnesium Threonate
+				</h5>
+				<p>
+					Magnesium Threonate Crosses the Blood-brain barrier (BBB), inhibits oxidative stress, attenuates motor deficits, and slows the progression of neurodegeneration.
+				</p>
+				<h5>
+					Product:
+				</h5>
+				<a href="https://www.amazon.com/gp/product/B07KWM4C5L/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07KWM4C5L&amp;linkId=8f6f3f54762aeaec83a6e9014c89c8fe">
+					Life Extension Neuro-Mag Magnesium L-Threonate
+				</a>
+				<h5>
+					<img src="img/neuromag.jpeg" alt="neuromag" />
+				</h5>
+				<p>
+					Magnesium relaxes blood vessels and causes overall relaxation. Therefore, it&rsquo;s best to take this at night.
+				</p>
+				<h5>
+					Magnesium Threonate References:
+				</h5>
+				<ol>
+					<li>
+						<a href="https://parkinsonsnewstoday.com/2019/11/12/magnesium-compound-reaching-brain-slows-motor-decline-neuronal-loss-parkinsons-mouse-study/">
+							Oral Magnesium Compound Able to Reach Brain Seen to Slow Motor Decline, Neuronal Loss in Early Study
+						</a>
+					</li>
+
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/31806980/">
+							Treatment Of Magnesium-L-Threonate Elevates The Magnesium Level In The Cerebrospinal Fluid And Attenuates Motor Deficits And Dopamine Neuron Loss In A Mouse Model Of Parkinson's disease
+						</a>
+					</li>
+				</ol>
+			</section>
+			<section id="vitamin-d">
+				<h4 class="neuroprotective">
+					Vitamin D
+				</h4>
+				<p>
+					A study on Parkinson’s Disease Research, Education, and Clinical Center at the Portland and Puget Sound Veteran Affairs (VA) Clinics performed an add-on study to a longitudinal study following neuropsychiatric function in persons with PD.
+				</p>
+				<p>
+					Researchers found higher plasma vitamin D was associated with better cognition and better mood in their sample of PD patients without dementia.
+				</p>
+				<p>
+					More is not always better! Too much vitamin D3 can disturb calcium levels. Ask your team to optimize your vitamin D3 levels with regular bloodwork and supplement accordingly. 4,000 IU per day is safe. The body stores D3 so if you miss a day, you can double up the next day.
+				</p>
+				<h4>
+					Vitamin D References
+				</h4>
+				<ol>
+					<li>
+						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3966187/">Memory, Mood, and Vitamin D in Persons with Parkinson’s Disease</a>
+					</li>
+				</ol>
+			</section>
+			<section id="vitamin-b6">
+				<h4 class="neuroprotective dopaminergic">
+					Vitamin B-6 (pyridoxine)
+				</h4>
+				
+				<p>
+					Vitamin B6, also known as pyridoxine, is neuroprotective, playing a crucial role in the synthesis of neurotransmitters, regulation of the glutamatergic and system, and maintenance of the nervous system’s health.
+				</p>
+				<p>
+					Vitamin B6 is necessary for dopamine biosynthesis and antioxidant properties. However, high doses of vitamin B6 can cause peripheral neuropathy, and it is essential to consume it as part of a balanced diet and consult with a healthcare professional before taking supplements.
+				</p>
+
+				<p>
+					Vitamin B6 helps in reducing the side effects of dopaminergic treatments,
+				</p>
+			</section>
+			<section id="vitamin-b12">
+				<h4>
+					Vitamin B-12
+				</h4>
+				<h5>How B-12 helps Parkinson's Disease</h5>
+				<p>
+					A study published in Cell Research, "Vitamin B12 modulates Parkinson’s disease LRRK2 kinase activity through allosteric regulation and confers neuroprotection" found that B-12 has multiple mechanisms related to LRRK2
+					expressions that protect dopaminergic neurons.
+				</p>
+				<p>
+					Vitamin B12 inhibits LRRK2 kinase activity. This protects dopaminergic neurons from toxicity induced by LRRK2 and its mutant form, LRRK2-G2019S. The effect was shown to deficits in dopamine transmission in LRRK2-PD mouse
+					models.
+				</p>
+				<p>
+					Vitamin B12 prevents LRRK2-G2019S-potentiated &alpha;-synuclein accumulation in dopaminergic neurons.
+				</p>
+				<ol>
+					<li>
+						<a href="https://www.nature.com/articles/s41422-019-0153-8">Vitamin B12 modulates Parkinson’s disease LRRK2 kinase activity through allosteric regulation and confers neuroprotection</a>
+					</li>
+				</ol>
+			</section>
+			<section id="tocotrienols">
+				<h4>
+					Tocotrienols
+				</h4>
+				<p>
+					Tocotrienols are neuroprotective. Tocotrienols cross the BBB and have been shown to improve learning impairment in elderly subjects. Tocotrienols have cytoprotective effects in murine PD models.
+				</p>
+				<p>
+					Vitamin E is fat soluble, so it&rsquo;s best taken with other fats, like DHA, coconut oil, etc, and with other fat-soluble supplements. Too much is bad.
+				</p>
+				<h4>
+					Product:
+				</h4>
+				<a href="https://www.amazon.com/gp/product/B00AZQXO3E/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B00AZQXO3E&amp;linkId=3ba360ffd9243d4be9db93ad7adaf534">
+					Doctor's Best Tocotrienols contains EVNol SupraBio Full Spectrum Vitamin E Complex
+				</a>
+				<h5>
+					<img src="img/tocotrienols.jpeg" alt="mixed tocotrienols" />
+				</h5>
+				<h5>
+					Tocotrienol References:
+				</h5>
+				<ol>
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/31619646/">
+							Protective Effect of Tocotrienol on In Vitro and In Vivo Models of Parkinson's Disease
+						</a>
+					</li>
+				</ol>
+			</section>
+			<section id="nicotinamides">
+				<h4>NAD+, NMN, Niacin, and NR</h4>
+				<p>
+					Supplementation with nicotinamide mononucleotide (NMN), niacin, and nicotinamide riboside (NR) increases cellular levels of nicotinamide adenine dinucleotide (NAD+).
+				</p>
+				<h5>Nicotinamide Adenine Dinucleotide (NAD+)</h5>
+				<p>
+					NAD+ is a coenzyme involved in various cellular processes, including energy metabolism, DNA repair, and cell signaling.
+				</p>
+				<p>
+					Aging is accompanied by a gradual decline in tissue and cellular NAD+ levels. This decline is linked causally to numerous age-associated diseases, including cognitive decline, cancer, metabolic disease, sarcopenia, and
+					frailty. Many of these age-associated diseases can be slowed down and even reversed by restoring NAD+ levels.
+				</p>
+				<p>
+					NAD+ is essential for mitochondrial function and mitigating oxidative stress response pathways. As mentioned, mitochondrial dysfunction and oxidative stress play significant roles in the pathogenesis of Parkinson's disease. Declining NAD+ levels contribute to reduced mitochondrial function and impaired cellular energy metabolism in neurons, making them more susceptible to oxidative damage and degeneration. 
+				</p>
+
+				<p>
+					NAD+ is also involved in cellular signaling pathways that regulate neuronal survival and inflammation. Dysregulation of these pathways due to NAD+ depletion can exacerbate neuroinflammation and neuronal death in PD.
+				</p>
+				<p>
+					Strengthening mitochondrial function and count in neuronal cells prevents loss of Mitochondrial Sirtuin 3 (SIRT3) and preserves their function.
+				</p>
+				<p>
+					NAD+ modulation may influence dopaminergic neurotransmission and synaptic plasticity, potentially alleviating motor symptoms and improving quality of life in PD patients.
+				</p>
+				<h5>NAD Precursor Synergy</h5>
+				<p>
+					All three precursors to NAD+ and their supplementation have been shown to increase NAD+ levels in cells to support mitochondrial function, energy metabolism, and DNA repair. NMN seems to be the safest, best-tolerated,
+					and, because it closer in the pathway to NAD+ production, most effective and the production of NAD+.
+				</p>
+				<p>
+					Niacin also increases NAD+ levels through a longer metabolic pathway. While niacin has been studied for its potential health benefits, including cardiovascular health, its effectiveness in boosting NAD+ levels compared
+					to NMN and NR may be lower.
+				</p>
+				<section id="nmn">
+					<h5>NMN</h5>
+					<p>
+						NMN is a precursor to NAD+. NAD+ levels decline with age and in certain disease states, including Parkinson's disease (PD). A typical dose of NMN is about 1g per day. It's considered safe and rodent models have used
+						much higher doses.
+					</p>
+					<p>
+						NAD+ precursors like NMN, NR, and Niacin may help with Energy metabolism, neuroprotection, mitochondrial function, and DNA repair.
+					</p>
+					<p>
+						NMN supplementation can help replenish NAD+ levels to support mitochondrial function and energy production, including in neurons, potentially mitigating the energy deficits observed in PD.
+					</p>
+					<p>
+						Neuroprotection: NAD+ plays a role in cellular stress response pathways and may have neuroprotective effects. By enhancing NAD+ levels, NMN supplementation could help protect neurons from oxidative stress,
+						inflammation, and other pathological processes associated with PD.
+					</p>
+					<p>
+						Mitochondrial function: Dysfunction of mitochondria, the cellular powerhouses, is a hallmark of Parkinson's disease. NAD+ is crucial for maintaining mitochondrial function, and NMN supplementation may support
+						mitochondrial health and integrity, potentially attenuating neuronal damage and degeneration in PD.
+					</p>
+					<p>
+						DNA repair: NAD+ is essential for DNA repair mechanisms, and deficiencies in DNA repair capacity have been implicated in the pathogenesis of Parkinson's disease. By facilitating DNA repair processes, NMN
+						supplementation may help prevent or reduce DNA damage accumulation in neurons, thereby slowing disease progression.
+					</p>
+					<p>
+						Preclinical studies and some clinical trials have shown promising results regarding the potential benefits of NMN supplementation in Parkinson's disease, more research is needed to fully understand its efficacy in
+						humans. NMN is safe, however.
+					</p>
+				</section>
+				<section id="nad">
+					<h5>Injectable NAD+</h5>
+					<a href="https://www.peptidesciences.com/nad-100mg">NAD+ 750mg — Peptide Sciences</a> (wait for 15% off sale) Peptide Sciences is the place for peptides. Compared to others, only PS sells lyophilized peptides.
+					<h5>
+						<img src="./img/nad__750mg.png" alt="peptide sciences NAD+" height="280" />
+					</h5>
+					<h5>NMN Bulk Powder</h5>
+					<a href="https://www.prohealth.com/products/prohealth-nmn-pro-powder-1-kilo-ph537?selling_plan=3992027236">NMN Bulk — Prohealth Longevity</a>
+					<p>ProHealth Longevity is a well-established company that provides GMP compliance and third-party testing for purity and potency.</p>
+					<h6>NMN References</h6>
+					<ol>
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/27798264/">NAD+ repletion reverses age-related behavioral and synaptic deficits in mice</a>
+							<p>
+								This study demonstrates supplementation with NAD+ precursors, including NMN, improves mitochondrial function, synaptic plasticity, and cognitive function in aged mice. The findings suggest that NAD+ repletion
+								may have potential therapeutic benefits for age-related neurological disorders.
+							</p>
+						</li>
+						<li>
+							<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7963035/">NAD+ metabolism and its roles in cellular processes during ageing</a>
+							<p>
+								NAD+ metabolism in cellular processes associated with aging and age-related diseases, including neurodegenerative disorders like PD. It highlights the potential therapeutic implications of NAD+ precursors in
+								mitigating age-related declines in cellular function and promoting healthy aging.
+							</p>
+						</li>
+						<li>
+							<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5518566/">Nicotinamide mononucleotide requires SIRT3 to improve cardiac function and bioenergetics in a Friedreich's ataxia cardiomyopathy model</a>
+							<p>
+								Although this study focuses on a cardiomyopathy model in Friedrich's ataxia, it provides insights into the potential benefits of NMN supplementation in a disease characterized by mitochondrial dysfunction.
+								The findings suggest that NMN administration improves cardiac function and bioenergetics through SIRT3-mediated mechanisms, highlighting the importance of NAD+ metabolism in mitochondrial health.
+							</p>
+						</li>
+					</ol>
+				</section>
+			</section>
+			<section id="senolytics">
+				<h4>Senolytics</h4>
+				<p>
+					Senolytics are small molecules that selectively induce the dissolution (lysis) of senescent cells. Senolytic means "senescent cell destruction".
+				</p>
+				<p>
+					In PD, &alpha;-synuclein and especially its mutant forms damage mitochondria, causing a leak of sirtuins from the inner membrane of the mitochondria leading to mitochondrial failure and eventual cell failure.
+				</p>
+				<p>
+					Aggregates of &alpha;-synuclein form Lewy bodies inside the cell and block T-cells from activating the lysosome of non-functioning "zombie" cells.
+				</p>
+				<p>
+					Senolytics help prevent the formation of &alpha;-synuclein aggregates. This has numerous benefits, including neuroprotection, decreased neuroinflammation, improved mitochondrial function, neurogenesis, and autophagy.
+				</p>
+				<p>
+					Senolytics reduce the formation of Lewy bodies and facilitate T-cell activation of the lysosome in senescent cells by preventing obstruction by  &alpha;-synuclein aggregates
+				</p>
+			
+				<p>
+					If senolytics can effectively enhance the immune response against alpha-synuclein aggregates, they may offer a disease-modifying treatment approach for Parkinson's disease. By targeting the underlying pathology of alpha-synuclein aggregation and promoting its clearance, senolytics could potentially slow or halt disease progression.
+				</p>
+				<section id="urolithin-a" class="mitochondrial senolytic">
+					<h4>Urolithin-A (UA)</h4>
+					<p>Urolithin-A selectively eliminates senescent cells, making it senolytic. It also mitigates neurodegeneration, specifically motor symptoms, cognitive decline, and a range of non-motor symptoms in PD.</p>
+					<p>
+						UA induces mitophagy. This helps to enhance mitogenesis, the production of new mitochondria.
+					</p>
+					<p>
+						UA inhibits the activation of the NLRP3 inflammasome, a key player in the development of neuroinflammation and neurodegeneration.
+					</p>
+					<p>
+						In a human clinical trial, urolithin-A was shown to promote healthy muscle function during aging and improve physical function in patients with idiopathic pulmonary fibrosis (IPF), a senescence-associated disease.
+					</p>
+					<p>
+						UA has been found to protect against dopamine neuron degeneration and motor symptoms in PD models.
+					</p>
+					<p>
+						UA has been shown to improve behavioral symptoms, such as motor function and cognitive decline, in PD models.
+					</p>
+				</section>
+				<section id="resveratrol">
+					<h5>
+						Resveratrol
+					</h5>
+					<p>
+						Resveratrol has displayed potent neuroprotective efficacy in several PD animal models.
+					</p>
+					<h5>
+						How it works:
+					</h5>
+					<p>
+						Resveratrol inhibits &alpha;-synuclein aggregation and cytotoxicity, lowering the levels of total &alpha;-synuclein and oligomers, and reducing neuroinflammation and oxidative stress in a dose-dependent manner.
+					</p>
+					<h5>
+						Product:
+					</h5>
+					<p>
+						<a
+							href="https://www.amazon.com/gp/product/B00IM21FBG/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B00IM21FBG&amp;linkId=ec9df367e733c718d4c8ac89e53e5bdf"
+						>
+							Purity Labs Organic Trans-Resveratrol 1,500MG Enhanced with Quercetin
+						</a>
+					</p>
+					<img src="img/trans-resveratrol.jpeg" alt="trans-resveratrol" />
+					<p>
+						Purity Labs Trans-Resveratrol is a high dose, 2 pills per day formula. It might be better to take just one
+					</p>
+					<h5>
+						Resveratrol References:
+					</h5>
+					<ol>
+						<li>
+							<a href="https://scienceofparkinsons.com/tag/resveratrol/">
+								Brain. On. Fire | The Science of Parkinson&rsquo;s.
+							</a>
+							(this article covers other published research on compounds with inhibitory activities on components of the NLRP3 inflammosome pathway, including EGCG, Curcumin, Sulforaphane, and Quercetin)
+						</li>
+
+						<li>
+							<a href="https://pubmed.ncbi.nlm.nih.gov/33967780/">
+								Resveratrol in Rodent Models of Parkinson's Disease: A Systematic Review of Experimental Studies
+							</a>
+						</li>
+					</ol>
+				</section>
+				<section id="fisetin">
+					<h4>Fisetin</h4>
+					<p>Fisetin is a polyphenol found in many fruits and vegetables, such as strawberries, apples, persimmons, onions, and cucumbers.</p>
+					<h5>How Fisetin Helps PD</h5>
+					<p>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/34199487/">Small Molecule Fisetin Modulates Alpha-Synuclein Aggregation</a>
+					</p>
+					<p>Fisetin <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5527824/">helps to maintain glutathione (GSH) levels</a>.</p>
+					<p>
+						<a href="https://link.springer.com/article/10.1007/s11626-013-9681-6">Fisetin reduces ROS production</a>
+					</p>
+				</section>
+				<section id="quercetin">
+					<h4>Quercetin</h4>
+					<p>
+						Neuroprotective Effect of Quercetin in Combination with Piperine Against Rotenone- and Iron Supplement-Induced Parkinson's Disease in Experimental Rats
+					</p>
+				</section>
+				<section id="theaflavin">
+					<h4>Theaflavin</h4>
+					<p>
+						Theaflavin, from black tea, is senolytic.
+					</p>
+				</section>
+			</section>
+			<section id="stem-cell">
+				<h4>Mesenchymal Stem Cells (MSC)</h4>
+				<p>
+					Mesenchymal stem cell (MSC) therapy may provide more dopaminergic neurons (dvcstem, Anova). However, the cost/benefit ration is low.
+				</p>
+				<p>
+					Senolytics can be used to induce the death of senescent cells.
+				</p>
+			</section>
 		</section>
-	</section>
-
-	<section id="ginger">
-		<h3>
-			Ginger
-		</h3>
-		<div>
-			Ginger, a member of the same family of rhizome as turmeric, contains several phenolic compounds. Gingerol and shogaol protect dopimanergic neurons.
-		</div>
-		<div>
-			<strong>
-				Ginger References:
-			</strong>
-		</div>
-		<div>
-			1) 
-			<a href="https://pubmed.ncbi.nlm.nih.gov/23811724/">
-				6-Shogaol, an active compound of ginger, protects dopaminergic neurons in Parkinson's disease models via anti-neuroinflammation.
-			</a>
-		</div>
-		<div>
-			2) 
-			<a href="https://nhsjs.com/2021/extractions-of-6-shogaol-and-6-gingerol-from-ginger-zingiber-officinale-on-the-protection-of-dopaminergic-neurons-in-a-parkinsons-disease-model/">
-				Extractions of 6-Shogaol and 6-Gingerol from Ginger (Zingiber officinale) on the Protection of Dopaminergic Neurons in a Parkinson&rsquo;s Disease Model
-			</a>
-		</div>
-	</section>
-
-	<section id="egcg">
-		<h3>
-			EGCG (from Green Tea)
-		</h3>
-		<p>
-			EGCG (epigallocatechin gallate), a component in Green Tea, inhibits the ability of preformed oligomers, such as oligomers of &alpha;syn, to permeabilize vesicles and induce cytotoxicity in a rat brain cells.
-		</p>
-		<p>
-			<em>
-				Warning:
-			</em>
-			 Green tea contains moderate levels of fluoride, a neurotoxin. Matcha, a japanese powdered green tea, which contains high levels of EGCG also, unfortunately, has high levels of oxalates. Oxalates contribute to inflammation and damage kidneys. Supplemental ECCG can provide the desired dose without the fluoride oxalate concentrations found in green tea. 
-		</p>
-		<h4>
-			Product:
-		</h4>
-		<img src="img/cytokine-suppress.png" alt="cytokine suppress" />
-		<h3>
-			<a href="https://www.amazon.com/gp/product/B00FPOF0ME/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B00FPOF0ME&amp;linkId=ed2f547390cfaadd1c5ca40695bf1d3a">
-				Life Extension Cytokine Suppress
-			</a>
-		</h3>
-		<strong>
-			EGCG References:
-		</strong>
-		<ol>
-			<li>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/27364962/">
-					Epigallocatechin Gallate (EGCG) Inhibits Alpha-Synuclein Aggregation: A Potential Agent for Parkinson's Disease
-				</a>
-			<li>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/24907278/">
-					How epigallocatechin gallate can inhibit &alpha;-synuclein oligomer toxicity in vitro
-				</a>
-			<li>
-				<a href="https://link.springer.com/article/10.1007/s11064-016-1995-9">
-					https://link.springer.com/
-					<wbr />
-					article/10.1007/s11064-016-
-					<wbr />
-					1995-9
-				</a>
-			<li>
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2867908/">
-					EGCG remodels mature &alpha;-synuclein and amyloid-&beta; fibrils and reduces cellular toxicity
-				</a>
-		</ol>
-	</section>
-
-	<section id="ginsenoside">
-		<h3>
-				Ginsenoside Rb1
-		</h3>
-		<p>
-			Ginsenoside Rb1 inhibits fibrillation and toxicity of &alpha;syn and disaggregates preformed fibrils.
-		</p>
-		<p>
-			Oral absorption of non-fermented ginsenosides is roughly 0.1 &mdash; 3.7%. Fermented ginseng has higher ginsenoside concentration and better oral absorption.
-		</p>
-		<h4>
-			Product:
-		</h4>
-		<p>
-			<img src="img/ginseng.jpeg" alt="ginseng" />
-		</p>
-		<div>
-			<a href="https://www.amazon.com/gp/product/B00KDSZ6XU/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B00KDSZ6XU&amp;linkId=d82ad47963e6dede78ec44e2184a1d36"
-			>https://www.amazon.com/ILHWA-
-				ILHWA 3.5oz(100g) Korean Ginseng Concentrated Pure Extract</a>
-		</div>
-		<h4>
-				Ginsenoside Rb1 References:
-		</h4>
-		<ol>
-			<li>
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4882765/">
-					Ginsenoside Rb1 inhibits fibrillation and toxicity of &alpha;syn and disaggregates preformed fibrils.
-				</a>
-			<li>
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3659629/">
-					The bioavailability of red ginseng extract fermented by Phellinus linteus
-				</a>
-		</ol>
-	</section>
-	<section id="acetyl-l-carnitine">
-		<h3>
-			Acetyl-L-Carnitine &amp; r-ALA
-		</h3>
-
-		<h4>
-			Dosage:
-		</h4>
-		<p>
-			<strong>
-				r-ALA:
-			</strong>
-			 250-500 mg ED
-		</p>
-		<p>
-			<strong>
-				ALCAR:
-			</strong>
-			 2-3g ED
-		</p>
-		<p>
-			r-Alpha-Lipoic Acid (
-			<strong>
-				r-ALA)
-			</strong>
-			 reduces mitochondrial dysfunction and oxidative damage and protects dopaminergic neurons from damage in Parkinson&rsquo;s in Parkinson&rsquo;s disease. 
-		</p>
-		<p>
-			Most research on ALA uses both s- and r- isoforms. The s- form inhibits the absorption of the r- isomer, and the r- isomer has better bioavailability. Thus, when using the r- form, a smaller dose can be more effective.
-		</p>
-
-		<h4>
-			Product:
-		</h4>
-		<h4>
-			<a href="https://www.amazon.com/gp/product/B006L8DWSC/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B006L8DWSC&amp;linkId=c6c8f2664db42d477f10657223837e34"
-			>Life Extension Mitochondrial Energy Optimizer with PQQ</a>
-		</h4>
-		<img src="img/mitochondrial-optimizer.jpeg" alt="mitochondrial optimizer"/>
-
-		<p>
-			Note: This product contains Taurine, which is 
-			<a href="https://journeywithparkinsons.com/2018/04/05/neuroprotection-with-taurine-in-a-parkinsons-model-system/">neuroprotective
-			</a>, and <a href="https://pubmed.ncbi.nlm.nih.gov/26004911/"
-			>found to be suppressed in PD patients on L-Dopa</a>.
-		</p>
-		<h4>
-			Product:
-		</h4>
-		<h4>
-			<a href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B0027YKO1C&amp;linkId=ebcbfd85708db0064877b27b10629629">
-				Life Extension Super R-Lipoic Acid, 240mg
-			</a>
-		</h4>
-		<img src="img/r-ala.jpeg" alt="r-Alpha Lipoic Acid"/>
-		<h3>
-			Acetyl-L-carnitine
-		 (ALCAR (not to be confused with AICAR)) crosses the blood-brain barrier.
-		</h3>
-
-		<h4>
-			Product:
-		</h4>
-		<a href="https://www.amazon.com/gp/product/B07BLMSWGN/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07BLMSWGN&amp;linkId=d5ce891282e299fedbd0358e75eafd91">
-			Superior Labs | Acetyl L-Carnitine 1000mg
-		</a>
-		<img src="img/acetyl-l-carnitine.jpeg" alt="acetyl-l-carnitine"/>
-
-		<h4>
-				How ALCAR Works
-		</h4>
-		<p>
-			ALCAR directly affects mitochondrial respiration.
-		</p>
-
-		<p>
-			ALCAR protects dopaminergic neurons by abrogating neuroinflammation, apoptosis, astrogliosis, and oxidative stress. For PD, ALCAR protects cells against accumulation of alpha-synuclein.
-		</p>
-		<p>
-			<strong>
-				How r-ALA Works
-			</strong>
-		</p>
-		<p>
-			r-ALA decreases the levels of intracellular reactive oxygen species (ROS) and iron. Iron has been shown to reduce survival rate, to induce injury to dopaminergic neurons, and to induce more severe motor deficits with mutant &alpha;syn.
-		</p>
-		<p>
-			A 1990 Italian study on a small group of patients, published in the International Journal of Pharmacology research, titled &ldquo;
-			<a href="https://pubmed.ncbi.nlm.nih.gov/2387661/">
-				Clinical pharmacodynamics of acetyl-L-carnitine in patients with Parkinson's disease
-			</a>
-			&rdquo;, found 1&ndash;2g of ALC improved the H response, sleep stages and spindling in test (non-placebo) subjects. 
-		</p>
-		<p>
-			A later 2018, &ldquo;
-			<a href="https://pubmed.ncbi.nlm.nih.gov/30906386/">
-				a multicenter, randomized double-blind, placebo-controlled clinical trial for efficacy of acetyl-L-carnitine in patients with dementia-associated with cerebrovascular disease
-			</a>
-			&rdquo;, found 1.5g of ALCAR significantly improved cognitive assessment.
-		</p>
-		<h4>
-			Carnitine &amp; r-ALA References:
-		</h4>
-		<ol>
-			<li>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/20414966/">
-					Combined R-alpha-lipoic acid and acetyl-L-carnitine exerts efficient preventative effects in a cellular model of Parkinson's disease
-				</a>
-			<li>
-				<a href="https://www.salubrainous.com/alpha-lipoic-acid-for-parkinsons/">
-					Alpha Lipoic Acid (ALA) For Parkinson&rsquo;s: Research, Benefits &amp; Safety
-				</a>
-			<li>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/14595704/">
-					Acetyl-L-carnitine permeability across the blood-brain barrier and involvement of carnitine transporter OCTN2
-				</a>
-			<li>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/28199883/">
-					Acetyl-l-carnitine protects dopaminergic nigrostriatal pathway in 6-hydroxydopamine-induced model of Parkinson's disease in the rat
-				</a>
-			<li>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/28168622/">
-					Alpha-synuclein and iron: two keys unlocking Parkinson's disease
-				</a>
-			<li>
-				<a href="https://www.frontiersin.org/articles/10.3389/fnagi.2018.00097/full">
-					High Dietary Iron Supplement Induces the Nigrostriatal Dopaminergic Neurons Lesion in Transgenic Mice Expressing Mutant A53T Human Alpha-Synuclein
-				</a>
-			<li>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/20414966/">
-					Combined R-alpha-lipoic acid and acetyl-L-carnitine exerts efficient preventative effects in a cellular model of Parkinson's disease
-				</a>
-		</ol>
-	</section>
-	<section id="pqq">
-
-		<h3>
-			PQQ Pyrroloquinoline quinone
-		</h3>
-		<p>
-			Pyrroloquinoline quinone (PQQ) is a naturally occurring coenzyme manufactured by bacteria, found in plants, and utilized by mammalian cells as an important nutritional growth factor. PQQ is not manufactured in humans.
-		</p>
-		<p>
-			PQQ prevents fibril formation of &alpha;syn, strengthens mitochondria, boosts mitochondrial biogenesis in brain cells, improves cognitive deficit caused by oxidative damage, inhibits senescence, has nootropic effects of memory, attention, cognition, and learning, increases blood flow to the cerebral cortex, and prevents damage to cells caused by pesticides, and prevents neurodegeneration caused by oxidative stress, reduces LDL cholesterol inhibits osteoporosis.
-		</p>
-		<h4>
-			Dosage:
-		</h4>
-		<p>
-			 100-150mg per day. PQQ is very safe. In 2017, The EFSA Panel on Dietetic Products determined a no‐observed‐adverse‐effect‐
-			<wbr />
-			level (NOAEL) of 100 mg/kg bw per day, for a 90 day repeated oral dose toxicity study with BioPQQ&trade;. At 100 mg/kg bw, a 50kg woman would be expected to observe no side effects up to 5 grams per day of PQQ. 
-		</p>
-		<p>
-			Given the vast multitude of benefits that occur on the cellular level, and especially by reducing alpha-synuclein fibrils relevant to PD sufferers, and the incredibly high safety threshold, a recommended dose of PQQ is 100-200mg per day. There are no known contraindications.
-		</p>
-
-		<h4>
-		    Product:
-		</h4>
-			 
-			<a href="https://www.amazon.com/gp/product/B07DJJXPDD/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07DJJXPDD&amp;linkId=fcbfe06c3bf2c5b2709c3b7afef84597">
-				VED PQQ 50mg
-			</a>
-			<img src="img/pqq.jpeg" alt="pqq" />
-		<h4>
-			PQQ References:
-		</h4>
-		<ol>
-			<li> 
-				<a href="https://www.dementia.news/2018-12-13-pqq-combats-neurodegeneration-that-can-affect-the-aging-brain.html">
-					PQQ is effective in combating neurodegeneration that can affect the aging brain
-				</a>
-
-			<li> 
-				<a href="https://www.sciencedirect.com/science/article/abs/pii/S0006291X06019747">
-					Pyrroloquinoline quinone (PQQ) prevents fibril formation of alpha-synuclein
-				</a>
-			<li> 
-				<a href="https://pubmed.ncbi.nlm.nih.gov/19861415/">
-					Pyrroloquinoline quinone stimulates mitochondrial biogenesis through cAMP response element-binding protein phosphorylation and increased PGC-1alpha expression
-				</a>
-			<li> 
-				<a href="https://pubmed.ncbi.nlm.nih.gov/29714638/">
-					Mechanisms Behind Pyrroloquinoline Quinone Supplementation on Skeletal Muscle Mitochondrial Biogenesis: Possible Synergistic Effects with Exercise
-				</a>
-			<li> 
-				<a href="https://pubmed.ncbi.nlm.nih.gov/31860387/">
-					Effects of Pyrroloquinoline Quinone (PQQ) Supplementation on Aerobic Exercise Performance and Indices of Mitochondrial Biogenesis in Untrained Men
-				</a>
-			<li> 
-				<a href="https://pubmed.ncbi.nlm.nih.gov/18231627/">
-					Pyrroloquinoline Quinone (PQQ) Prevents Cognitive Deficit Caused by Oxidative Stress in Rats
-					<br />
-				</a>
-			<li> 
-				<a href="https://pubmed.ncbi.nlm.nih.gov/20482893/">
-					The inhibitory effect of pyrroloquinoline quinone on the amyloid formation and cytotoxicity of truncated alpha-synuclein
-				</a>
-			<li> 
-				<a href="https://pubmed.ncbi.nlm.nih.gov/26622336/">
-					Biological effects of pyrroloquinoline quinone on liver damage in Bmi-1 knockout mice
-				</a>
-			<li> 
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5666047/">
-					Effect and mechanism of pyrroloquinoline quinone on anti-osteoporosis in Bmi-1 knockout mice-Anti-oxidant effect of pyrroloquinoline quinone
-				</a>
-			<li> 
-				<a>
-					Effects of Pyrroloquinoline Quinone Disodium Salt Intake on the Serum Cholesterol Levels of Healthy Japanese
-				</a>
-		</ol>
-	</section>
-
-	<section id="dha">
-		<h3>
-			DHA 
-		</h3>
-		<p>
-			DHA (docosahexaenoic acid) is neuroprotective and prevents ROS production in dopaminergic neurons via enhancement of glutathione homeostasis. With DHA, higher doses are not only safe, they are more effective in lipid oxidation. 2000mg DHA per day is effective and safe, and, in DHA/EPA combinations, DHA in greater proportion to EPA is more effective.
-		</p>
-		<p>
-			In PD, Unilateral oxidopamine lesions of the nigrostriatal pathway produce side-biased motor impairments that reflect motor deficits.
-		</p>
-		<p>
-			<strong>
-				DHA Dosage:
-			</strong>
-			 2 &ndash; 6g/day.
-		</p>
-		<p>
-			DHA exhibits a dose-dependent response. Gastric tolerance between individuals vary. Start at 2 grams and work upwards from there. Spread consumption over a period of time.
-		</p>
-		<p>
-			<strong>
-				DHA + Uridine
-			</strong>
-		</p>
-		<p>
-			DHA has been shown to restore unlinateral dopaminergic neurotransmission loss in this model of Parkinson's disease, and the effect was augmented when combined with Uridine (uridine-5&rsquo;-monophosphate). 
-		</p>
-		<p>
-			In a 2006 dual university study, Brain phosphatidylcholine rose by 13&ndash;22% with uridine and choline alone, or DHA alone, or by 45% with the combination. Oral administration of uridine or DHA alone was shown to increases synaptic proteins and phospholipids, and in combination, a synergistic effect was noticed.
-		</p>
-
-		<h4>
-			Product:
-		</h4>
-			 
-		<a href="https://www.amazon.com/gp/product/B004T7DYOO/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B004T7DYOO&amp;linkId=03df93bc6eab5eeabecf94de7e16e7e4">
-			Nordic Naturals Children&rsquo;s DHA, Strawberry
-		</a>
-			<img src="img/childrens-dha.jpeg" title="children's DHA"/>
-		<h4>
-				DHA + Uridine References:
-		</h4>
-		<ol>
-			<li> 
-				<a href="https://pubmed.ncbi.nlm.nih.gov/32001239/">
-					Docosahexaenoic acid protects motor function and increases dopamine synthesis in a rat model of Parkinson's disease via mechanisms associated with increased protein kinase activity in the striatum</a>
-			<li> 
-			<a href="https://pubmed.ncbi.nlm.nih.gov/25545062/">
-				Docosahexaenoic acid prevents paraquat-induced reactive oxygen species production in dopaminergic neurons via enhancement of glutathione homeostasis</a>
-
-			<li> 
-			<a href="https://pubmed.ncbi.nlm.nih.gov/29846653/">
-				High-Dose DHA Has More Profound Effects on LDL-Related Features Than High-Dose EPA: The ComparED Study</a>
-
-			<a href="https://pubmed.ncbi.nlm.nih.gov/28778752/">
-				DHA, EPA and their combination at various ratios differently modulated A&beta; 25-35-induced neurotoxicity in SH-SY5Y cells</a>
-			<li> 
-			<a href="https://pubmed.ncbi.nlm.nih.gov/18761383/">
-				Restorative effects of uridine plus docosahexaenoic acid in a rat model of Parkinson's disease</a>
-			<li>
-				<a href="http://wurtmanlab.mit.edu/static/pdf/1016.pdf"
-				>Synaptic proteins and phospholipids are increased in gerbil brain by administering uridine plus docosahexaenoic acid orally</a>
-			<li>
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2478743/">
-					Chronic Administration of DHA and UMP Improves the Impaired Memory of Environmentally Impoverished Rats
-				</a>
-			<li>
-				<a href="https://www.tandfonline.com/doi/full/10.1080/10408398.2018.1425978">
-					How does high DHA fish oil affect health? A systematic review of evidence
-				</a>
-		</ol>
-	</section>
-
-	<section id="uridine">
-		<h3>
-			Uridine (uridine-5&rsquo;-monophosphate)
-		</h3>
-		<p>
-			Uridine is a nucleosides which make up nucleic acids.
-		</p>
-		<h4>How it Works</h4>
-		<p>
-			Uridine increases CDP choline. As explained under the section DHA &amp; Uridine, Uridine restores unlinateral dopaminergic neurotransmission caused by oxidopamine lesions.
-		</p>
-		<p>
-			<strong>❌ FAKE NEWS ALERT!</strong>
-		</p>
-		<p>
-			Contrary to dying myth, acetylcholine does not cause the tremors of PD. The drugs given to reduce CDP choline in PD, such as Trihexyphenidyl and Benztropine, not only don&rsquo;t help PD, they have serious side effects! They cause confusion, memory issues, hallucinations, dry mouth, blurry vision, and urinary retention problems. 
-		</p>
-		<p>
-			<em>Increasing</em> choline by 1,200 mg of supplemental citicoline improved tremors in PD and allowed patients halve their L-dopa + dopa decarboxylase inhibitor dose. Uridine increases CDP. 
-		</p>
-		<h4>
-			Product:
-		</h4>
-			 
-		<a href="https://www.amazon.com/gp/product/B086KMB9YN/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B086KMB9YN&amp;linkId=e758783750e802b48ff75aa147f0afa9">
-			Uridine Monophosphate Powder
-		</a>
-		<img src="img/uridine-monophosphate.jpeg" alt="uridine monophosphate"/>
-
-		<h4>Uridine and CDP Choline References</h4>
-		<ol>
-			<li> 
-				<a href="https://pubmed.ncbi.nlm.nih.gov/2289218/">
-					Citicoline in the treatment of Parkinson's disease
-				</a>
-			<li> 
-				<a href="https://pubmed.ncbi.nlm.nih.gov/7162583/">
-				New strategies in the management of Parkinson's disease: a biological approach using a phospholipid precursor (CDP-choline)</a>
-		</ol>
-	</section>
-
-
-	<section id="citicoline">
-		<h3>
-			Citicoline (CDP Choline):
-		</h3>
-		<p>
-			As mentioned in the uridine discussion, citicoline supplementation halves L-Dopa / dopa decarb dosage. Citicoline is neuroprotective.
-		</p>
-		<p>
-			In patients with chronic cerebral ischemia, citicoline improves scores in cognitive rating scales, while in patients with senile dementia of the Alzheimer type it stops the course of disease, and neuroendocrine, neuroimmunomodulatory, and neurophysiological benefits have been reported. Citicoline has also been shown to be effective in Parkinson disease, drug addictions, and alcoholism, as well as in amblyopia and glaucoma. No serious side effects have occurred in any series of patients treated with citicoline, which attests to the safety of treatment with citicoline.
-		</p>
-		<p>
-			Citicoline reduces glutamate excitotoxicity and oxidative stress, increases neurotrophin levels, enhances neurotransmitter release (such as norepinephrine and dopamine), promotes mitochondrial function, and modulating insulin signaling. In addition, citicoline prevents ischemia-induced tissue accumulation of free fatty acids and reduces infarct volume and brain edema, thus resulting in an antiapoptotic effect that is related to mitochondrial dependent cell death mechanism
-		</p>
-		<p>
-			Citicoline improves axonal transport deficits and supporting axon regeneration. Axon regeneration is limited in adults due partly to reduced growth potential of mature neurons.
-		</p>
-		<p>
-		Because Uridine increases CDP levels, it is necessary to strike a balance between supplemental Uridine and CDP.
-		</p>
-		<h4>
-			Product: 
-		</h4>
-		<a href="https://www.amazon.com/gp/product/B001ESE21K/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B001ESE21K&amp;linkId=1a2fefa4dbb6e04cc9613e95c02b9867">
-			Healthy Origins Cognizin Citicoline 250 MG, 150 Count
-		</a>
-		<img src="img/cdp-choline.jpeg" alt="Healthy Origins Cognizin Citicoline 250 MG, 150 Count" />
-		<h4>
-				Citicoline References:
-		</h4>
-		<ol>
-			<li> 
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8003774/">
-					Citicoline in Ophthalmological Neurodegenerative Disease: A Comprehensive Review
-				</a>
-			<li> 
-				<a href="https://pubmed.ncbi.nlm.nih.gov/29450391/">
-					Citicoline - a neuroprotector with proven effects on glaucomatous disease
-				</a>
-		</ol>
-	</section>
-	<section id="magnesium-threonate">
-		<h4>
-				Magnesium Threonate
-		</h4>
-		<p>
-			Magnesium Threonate Crosses the BBB, inhibits oxidative stress, attenuates motor defecits, and slows the progression of neurodegeneration. 
-		</p>
-			<h4>
-				Product:
-			</h4>
-			<a href="https://www.amazon.com/gp/product/B07KWM4C5L/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07KWM4C5L&amp;linkId=8f6f3f54762aeaec83a6e9014c89c8fe">
-				Life Extension Neuro-Mag Magnesium L-Threonate
-			</a>
-			<img src="img/neuromag.jpeg" alt="neuromag"/>
-			<p>
-				Magnesium relaxes blood vessels and causes overall relaxation. Therefore, it&rsquo;s best to take this at night.
-			</p>
-			<h4>
-				Magnesium Threonate References:
-			</h4>
-			<ol>
-				<li>
-					<a href="https://parkinsonsnewstoday.com/2019/11/12/magnesium-compound-reaching-brain-slows-motor-decline-neuronal-loss-parkinsons-mouse-study/">
-						Oral Magnesium Compound Able to Reach Brain Seen to Slow Motor Decline, Neuronal Loss in Early Study
-					</a>
-			<li>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/31806980/">
-					Treatment Of Magnesium-L-Threonate Elevates The Magnesium Level In The Cerebrospinal Fluid And Attenuates Motor Deficits And Dopamine Neuron Loss In A Mouse Model Of Parkinson's disease
-				</a>
-		</ol>
-	</section>
-	<section id="ubiquinol">
-		<h3>
-			Ubiquinol &amp; Phytosome Q10
-		</h3>
-		<p>
-			Ubiquinol, the reduced form of coq10, improves mitochondrial function with exercise and improves cognitive function in CFS. Exercise, recovery, and cognitive function are part of every program.
-		</p>
-		<p>
-			In Parkinson&rsquo;s, ubiquinol-10 may significantly improve PD with wearing off, as judged by total UPDRS scores, and is safe and well-tolerated.
-		</p>
-		<p>
-			Previous studies using ubiquinone showed a lack of effect in PD patients. However unlike ubiquinone, ubiquinol, the reduced form of CoQ10, has shown to be effective. 
-		</p>
-		<p>
-			While Ubiquinol has been demonstrated superior to ubiquinone, phytosome Q10 has been shown to provide even greater absorption.
-		</p>
-		<h4>
-			Product: 
-		</h4>
-		<a href="https://science.bio/product/coq10-phyt-powder/">
-			CoQ10 Phytosome
-		</a>
-		(best for food blend combinations)
-
-		<h4>
-			Product: 
-		</h4>
-		<p>
-			<a href="https://www.amazon.com/gp/product/B08HJW9HFV/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B08HJW9HFV&amp;linkId=8dfbb571aff8ef0d60000d5a4bb43913">
-				Princeton Vitamins CoQ10 with UBIQSOME (Bioavailable | 9X Better Absorption | Clinically Proven )
-			</a>
-		</p>
-		<img src="img/coq-10-ubiquisome.jpeg" alt="CoQ 10 ubiquisome"/>
-		<h4>
-			Ubiquinol-10 References:
-		</h4>
-		<ol>
-			<li> 
-				<a href="https://pubmed.ncbi.nlm.nih.gov/27125909/">
-					Ubiquinol‐10 supplementation improves autonomic nervous function and cognitive function in chronic fatigue syndrome
-				</a>
-			<li> 
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6220380/">
-					Combination of Coenzyme Q10 Intake and Moderate Physical Activity Counteracts Mitochondrial Dysfunctions in a SAMP8 Mouse Model
-				</a>
-			<li> 
-				<a href="https://pubmed.ncbi.nlm.nih.gov/26054881/">
-					Randomized, double-blind, placebo-controlled pilot trial of reduced coenzyme Q10 for Parkinson's disease
-				</a>
-			<li> 
-				<a href="https://pubmed.ncbi.nlm.nih.gov/31475897/">
-					A New Food-grade Coenzyme Q10 Formulation Improves Bioavailability: Single and Repeated Pharmacokinetic Studies in Healthy Volunteers
-				</a>
-			<li> 
-			<a href="https://www.researchgate.net/publication/335584101_A_New_Food-grade_Coenzyme_Q10_Formulation_Improves_Bioavailability_Single_and_Repeated_Pharmacokinetic_Studies_in_Healthy_Volunteers">
-				A New Food-grade Coenzyme Q10 Formulation Improves Bioavailability: Single and Repeated Pharmacokinetic Studies in Healthy Volunteers
-			</a>
-		</ol>
-	</section>
-
-	<section id="vitamin-d">
-		<h3>
-			Vitamin D
-		</h3>
-
-		<p>
-			A study on Parkinson’s Disease Research, Education, and Clinical Center at the Portland and Puget Sound Veteran Affair (VA) Clinics performed an add-on study to a longitudinal study following neuropsychiatric function in persons with PD. 
-		</p>
-
-		<p>
-			Researchers found higher plasma vitamin D were associated with better cognition and better mood in there sample of PD patients without dementia.  
-		</p>
-
-		<p>
-			More is not always better! Too much vitamin D3 can disturb calcium levels.
-			Ask your doctor to optimize your vitamin D3 levels with regular bloodwork and supplement accordingly.
-		</p>
-		<h3>
-			Vitamin D Reference
-		</h3>
-		<ol>
-			<li>
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3966187/"
-				>Memory, Mood, and Vitamin D in Persons with Parkinson’s Disease</a>
-		</ol>
-	</section>
-
-	<section id="vitamin-b12">
-		<h3>
-			Vitamin B-12
-		</h3>
-		
-		<h4>How B-12 helps Parkinson's Disease</h4>
-
-		<p>
-			A study published in Cell Research, "Vitamin B12 modulates Parkinson’s disease LRRK2 kinase activity through allosteric regulation and confers neuroprotection" found that B-12 has multiple mechanisms related to LRRK2 expressions that protect 
-			dopaminergic neurons. 
-		</p>
-		<p>
-			Vitamin B12 inhibits LRRK2 kinase activity. This protects dopaminergic neurons from toxicity induced by LRRK2 and its mutant form, LRRK2-G2019S. 
-			The effect was shown to deficits in dopamine transmission in LRRK2-PD mouse models.
-		</p>
-		<p>
-			Vitamin B12 prevents LRRK2-G2019S-potentiated α-synuclein accumulation in dopaminergic neurons.
-		</p>
-
-		<ol>
-			<li>
-				<a href="https://www.nature.com/articles/s41422-019-0153-8">Vitamin B12 modulates Parkinson’s disease LRRK2 kinase activity through allosteric regulation and confers neuroprotection</a>
-		</ol>
-	</section>
-
-	<section id="tocotrienols">
-		<h3>
-			Tocotrienols
-		</h3>
-		<p>
-			Tocotrienols are neuroprotective. Tocotrienols cross the BBB and have been shown to improve learning impairment in elderly subjects.Tocotrienols have cytoprotective effects in murine PD models.
-		</p>
-		<p>
-			Vitamin E is fat soluble, so it&rsquo;s best taken with other fats, like DHA, cononut oil, etc, and with other fat soluble supplements. Too much is bad.
-		</p>
-		<h3>
-			Product:
-		</h3>
-				 
-		<a href="https://www.amazon.com/gp/product/B00AZQXO3E/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B00AZQXO3E&amp;linkId=3ba360ffd9243d4be9db93ad7adaf534">
-			Doctor's Best Tocotrienols contains EVNol SupraBio Full Spectrum Vitamin E Complex
-		</a>
-		<img src="img/tocotrienols.jpeg" alt="mixed tocotrienols"/>
-		<h4>
-			Tocotrienol References:
-		</h4>
-		<ol>
-			<li> 
-			<a href="https://pubmed.ncbi.nlm.nih.gov/31619646/">
-				Protective Effect of Tocotrienol on In Vitro and In Vivo Models of Parkinson's Disease
-			</a>
-		</ol>
-	</section>
-
-	<section id="senolytics">
-		<h3>Senolytics</h3>
-
-		<p>
-			Senolytics are small molecules that selectively induce the dissolution (lysis) of senescent cells. Senolytic means "senescent cell destruction".  
-		</p>
-		<p>
-			In PD, &alpha;syn and especially its mutant forms damage mitochondria, causing a leak of sirtuins from the inner membrane of the mitochondria leading to mitochondrial failure and eventual cell failure. 
-		</p>
-		<p>
-			Aggregates of &alpha;syn form Lewy bodies inside the cell and block T-cells from activating the lysosome of non-functioning "zombie" cells.  
-		</p>
-
-		<p>
-			Senolytics help prevent the formation of &alpha;syn aggregates. This has two benefits. 
-		</p>
-		<p>
-			First, it leads to a reduction in formation of Lewy bodies
-		 (which are comprised primarily of fibrils of mutant &alpha;syn). 
-			Commonly used senolytics include quercetin, trans-resveratrol, and fisetin.
-		</p>
-		<p>
-			Second, it allows T-cell activation of the lysosome of senescent cells.
-		</p>
-
-		<section id="resveratrol">
-			<h4>
-				Resveratrol
-			</h4>
-			<p>
-				Resveratrol has displayed a potent neuroprotective efficacy in several PD animal models.
-			</p>
-			<h4>
-				How it works:
-			</h4>
-			<p>
-				Resveratrol inhibits &alpha;-synuclein aggregation and cytotoxicity, lowering the levels of total &alpha;-synuclein and oligomers, reducing neuroinflammation and oxidative stress in a dose-dependent manner.
-			</p>
-			<h4>
-				Product: 
-			</h4>
-			<p>
-				<a href="https://www.amazon.com/gp/product/B00IM21FBG/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B00IM21FBG&amp;linkId=ec9df367e733c718d4c8ac89e53e5bdf">
-					Purity Labs Organic Trans-Resveratrol 1,500MG Enhanced with Quercetin
-				</a>
-			</p>
-			<img src="img/trans-resveratrol.jpeg" alt="trans resveratrol" />
-
-			<p>
-				Purity Labs Trans-Resveratrol is a high dose, 2 pills per day formula. It might be better to take just one 
-			</p>
-			<h4>
-				Resveratrol References:
-			</h4>
-			<ol>
-				<li> 
-					<a href="https://scienceofparkinsons.com/tag/resveratrol/">
-						Brain. On. Fire | The Science of Parkinson&rsquo;s.
-					</a>
-					 (this article covers other published research on compounds with inhibitory activities on components of the NLRP3 inflammosome pathway, including EGCG, Curcumin, Sulforaphane, and Quercetin)
-				<li> 
-					<a href="https://pubmed.ncbi.nlm.nih.gov/33967780/">
-						Resveratrol in Rodent Models of Parkinson's Disease: A Systematic Review of Experimental Studies
-					</a>
-			</ol>
-
-		</section>
-
-		<section id="fisetin">
-			<h3>Fisetin</h3>
-			<p>Fisetin is a polyphenol found in many fruits and vegetables, such as strawberries, apples, persimmons, onions and cucumbers.
-			</p>
-
-			<h4>How Fisetin Helps PD</h4>
-			<p>
-				<a href="https://pubmed.ncbi.nlm.nih.gov/34199487/">Small Molecule Fisetin Modulates Alpha-Synuclein Aggregation</a>
-			</p>
-			<p>
-				Fisetin <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5527824/">helps to maintain glutathione (GSH) levels</a>.
-			</p>
-			<p>
-				<a href="https://link.springer.com/article/10.1007/s11626-013-9681-6">Fisetin reduces ROS production</a>
-			</p>
-		</section>
-
-		<section id="quercetin">
-
-			<h3>Quercetin</h3>
-			<p>
-				Neuroprotective Effect of Quercetin in Combination with Piperine Against Rotenone- and Iron Supplement-Induced Parkinson's Disease in Experimental Rats
-			</p>
-		</section>
-
-		<section id="theaflavin">
-
-			<h3>Theaflavin</h3>
-			<p>
-				Theaflavin, from black tea, is senolytic.
-			</p>
-		</section>
-
-	</section>
-</section>
+    </section>
 </body>
 </html>
