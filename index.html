@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+	<meta charset="UTF-8">
     <title>Parkinson's Guide</title>
     
 <style>
@@ -45,7 +47,32 @@ section section {
 section:target {
     animation: highlightFade 5s ease forwards;
 }
-        
+
+
+.product-list {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.product-list li {
+    max-width: 500px;
+	height: auto;
+    flex-grow: 1;
+    flex-shrink: 3; /* default 1 */
+}
+
+
+.product-list img {
+    width: auto;
+    max-height: 200px;
+    max-width: 200px;
+    min-width: 0;
+    object-fit: cover;
+  	vertical-align: bottom;
+}
+  
 /** Treatment Types — example styles — TODO  
 .antifibrillogenic::after {
   content: " (Antifibrillogenic)";
@@ -204,7 +231,8 @@ section:target {
                     <li><a href="#ginger">Ginger</a></li>
                     <li><a href="#egcg">EGCG (Green Tea)</a></li>
                     <li><a href="#ginsenoside">Ginseng</a></li>
-                    <li><a href="#acetyl-l-carnitine-and-rala">Acetyl-L-Carnitine &amp; r-ALA</a></li>
+                    <li><a href="#acetyl-l-carnitine">Acetyl-L-Carnitine (ALCAR)</a></li>
+                    <li><a href="#r-ala">Racemic Alpha-Lipoic Acid (Na-r-ALA)</a></li>
                     <li>
                         <a href="#gaba-5-htp-melatonin">GABA, 5-HTP, and Melatonin</a>
                         <ul>
@@ -576,40 +604,40 @@ To make the most of this Parkinson's Disease Guide, follow these steps:
             An care team might include:
         </p>
 
-            <ol>
-                <li>Neurology expertise for diagnosis and oversight.
-                <li>Functional medicine approach to address root causes.
-                <li>Movement disorder specialization for tailored treatment.
-                <li>Physical therapy guidance for symptom management.
-                <li>Nutritional support focusing on individual needs.
-                <li>Integrative medicine for evidence-based complementary therapies.
-                <li>Research involvement for cutting-edge options.
-                <li>Biomarker testing for personalized monitoring and treatment.
-            </ol>
-            <p>
-                A good plan might involve:
-            </p>
-            
-            <ol>
-                <li>Rigorous and regular testing regimen.
-                <li>Photobiomodulation
-                <li>Comprehensive supplement plan with doctor-involvement
-                <li>Early DBS
-            </ol>
-        
-            <p>
-                Referrals can begin with your PCP, a neurologist, or another specialist. Where you start doesn't matter; the goal is to build a complete care team with a neurologist and PCP at the core. A functional medicine specialist could potentially be of great help.
-            </p>
-            <p>
-                The neurologist must have experience in PD management and be open to novel evidence-based approaches. Be forewarned, most institutional neurologists typically address little more than the dopaminergic system and are not open to anything that falls out of the purview of standard of care
-            </p>
-            <p>
-                Patient-centered care that is complete, addresses the root cause, is individualized, and evidence-based can predict the best results. Seek and ask for that.
-            </p>
-            <p>
-                During your initial consultation with the neurologist, clearly communicate your interest with improving total health to keep dopamine replacement to a minimum. Mention specific treatments like hormone replacement therapy (HRT), photobiomodulation (PBM), and 5-HTP and how they may interact with for dopamine replacement. If the doctor cannot articulate their benefits or potential interaction with dopamine replacement, find another doctor.
-            </p>
-        </section>
+		<ol>
+			<li>Neurology expertise for diagnosis and oversight.
+			<li>Functional medicine approach to address root causes.
+			<li>Movement disorder specialization for tailored treatment.
+			<li>Physical therapy guidance for symptom management.
+			<li>Nutritional support focusing on individual needs.
+			<li>Integrative medicine for evidence-based complementary therapies.
+			<li>Research involvement for cutting-edge options.
+			<li>Biomarker testing for personalized monitoring and treatment.
+		</ol>
+		<p>
+			A good plan might involve:
+		</p>
+		
+		<ol>
+			<li>Rigorous and regular testing regimen.
+			<li>Photobiomodulation
+			<li>Comprehensive supplement plan with doctor-involvement
+			<li>Early DBS
+		</ol>
+	
+		<p>
+			Referrals can begin with your PCP, a neurologist, or another specialist. Where you start doesn't matter; the goal is to build a complete care team with a neurologist and PCP at the core. A functional medicine specialist could potentially be of great help.
+		</p>
+		<p>
+			The neurologist must have experience in PD management and be open to novel evidence-based approaches. Be forewarned, most institutional neurologists typically address little more than the dopaminergic system and are not open to anything that falls out of the purview of standard of care
+		</p>
+		<p>
+			Patient-centered care that is complete, addresses the root cause, is individualized, and evidence-based can predict the best results. Seek and ask for that.
+		</p>
+		<p>
+			During your initial consultation with the neurologist, clearly communicate your interest with improving total health to keep dopamine replacement to a minimum. Mention specific treatments like hormone replacement therapy (HRT), photobiomodulation (PBM), and 5-HTP and how they may interact with for dopamine replacement. If the doctor cannot articulate their benefits or potential interaction with dopamine replacement, find another doctor.
+		</p>
+	</section>
     <section id="treatment-approaches">
         <h2>Treatment Approaches</h2>
         <p>
@@ -679,9 +707,9 @@ To make the most of this Parkinson's Disease Guide, follow these steps:
                 Doctors typically prioritize symptoms over addressing the underlying causes. Specifically, they tend to focus on the dopamine pathway with medications like levodopa/carbidopa, to enhance dopamine levels in the brain, and COMT inhibitors, to inhibit its breakdown by catechol-O-methyltransferase (COMT).
             </p>
             <p>
-                Approaches to mitigating the underlying cause can extend longevity, improve quality of life, and reduce the dependence on medication which is not without side effects. Address these key areas for a more comprehensive approach to managing PD:
+                Approaches to mitigating the underlying cause can extend longevity, improve quality of life, and reduce the dependence on medication which is not without side effects. Address these key areas for a more comprehensive approach to managing PD. (For solutions, see: <a href="#problem-list">Problem List</a>)
             </p>
-            <menu>
+            <ul>
                 <li class="senolytic">Senescence: Senolytics</li>
                 <li class="mitochondrial">Mitochondrial health: Mitophagy and mitogenesis</li>
                 <li class="neuroprotective">Neuroprotective measures</li>
@@ -693,7 +721,7 @@ To make the most of this Parkinson's Disease Guide, follow these steps:
                 <li class="total-health">
                     Overall health promotion
                 </li>
-            </menu>
+            </ul>
 
             <p>
                 Many approaches overlap more than one problem area and have synergistic benefits. For example, 5-HTP is converted into serotonin in the brain. It inhibits the release of glutamate, mitigates oxidation modulates dopamine
@@ -1460,7 +1488,6 @@ Sterols, which are also fat-soluble compounds.
                     <li>Efficacy: 6/10 (70% σ)
                 </ul>
                 
-                <section>
                     <h5>Introduction to Turmeric and Curcuminoids</h5>
                     <p>
                         Turmeric is a rhizome of the Curcuma longa plant.
@@ -1508,9 +1535,7 @@ Sterols, which are also fat-soluble compounds.
                     <p>
                         Consuming excessively high amounts of turmeric (over 5g ED) may lead to gastrointestinal issues or increase the risk of kidney stone formation, particularly in individuals prone to kidney stones or with a history of kidney problems.
                     </p>
-                </section>
 
-                <section>
                     <h4>
                         Curcumin References:
                     </h4>
@@ -1562,8 +1587,6 @@ Sterols, which are also fat-soluble compounds.
                             </p>
                         </li>
                     </ol>
-                </section>
-                <section>
                     <h4>
                         Turmeric Products:
                     </h4>
@@ -1590,7 +1613,6 @@ Sterols, which are also fat-soluble compounds.
                     <p>
                         <img src="img/curcumin.jpeg" alt="CurcuGreen Curcumin" />
                     </p>
-                </section>
             </section>
             <section id="saffron">
                 <h3>
@@ -1801,94 +1823,37 @@ Sterols, which are also fat-soluble compounds.
                     </li>
                 </ol>
             </section>
-            <section id="acetyl-l-carnitine-and-rala">
+            <section id="acetyl-l-carnitine">
                 <h4>
-                    Acetyl-L-Carnitine &amp; r-ALA
+                    Acetyl-L-Carnitine
                 </h4>
                 <h5>
-                    Dosage:
+                    Dosage: 2-3g ED
                 </h5>
-                <p>
-                    <strong>
-                        r-ALA:
-                    </strong>
-                    250-500 mg ED
-                </p>
-                <p>
-                    <strong>
-                        ALCAR:
-                    </strong>
-                    2-3g ED
-                </p>
-                <p>
-                    r-Alpha-Lipoic Acid (
-                    <strong>
-                        r-ALA)
-                    </strong>
-                    reduces mitochondrial dysfunction and oxidative damage and protects dopaminergic neurons from damage in Parkinson&rsquo;s in Parkinson&rsquo;s disease.
-                </p>
-                <p>
-                    Most research on ALA uses both s- and r- isoforms. The s- form inhibits the absorption of the r- isomer, and the r- isomer has better bioavailability. Thus, when using the r- form, a smaller dose can be more effective.
-                </p>
-                <h5>
-                    Product:
-                </h5>
-                <h5>
-                    <a
-                        href="https://www.amazon.com/gp/product/B006L8DWSC/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B006L8DWSC&amp;linkId=c6c8f2664db42d477f10657223837e34"
-                    >
-                        Life Extension Mitochondrial Energy Optimizer with PQQ
-                    </a>
-                </h5>
-                <img src="img/mitochondrial-optimizer.jpeg" alt="mitochondrial optimizer" />
-                <p>
-                    Note: This product contains Taurine, which is
-                    <a href="https://journeywithparkinsons.com/2018/04/05/neuroprotection-with-taurine-in-a-parkinsons-model-system/">neuroprotective </a> and
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/26004911/">found to be suppressed in PD patients on L-Dopa</a>.
-                </p>
-                <h5>
-                    Product:
-                </h5>
-                <h5>
-                    <a
-                        href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B0027YKO1C&amp;linkId=ebcbfd85708db0064877b27b10629629"
-                    >
-                        Life Extension Super R-Lipoic Acid, 240mg
-                    </a>
-                </h5>
-                <img src="img/r-ala.jpeg" alt="r-Alpha Lipoic Acid" height="280" />
-                <h4>
-                    Acetyl-L-carnitine (ALCAR (not to be confused with AICAR)) crosses the blood-brain barrier.
-                </h4>
-                <h5>
-                    Product:
-                </h5>
-                <h5>
-                    <a
-                        href="https://www.amazon.com/gp/product/B07BLMSWGN/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07BLMSWGN&amp;linkId=d5ce891282e299fedbd0358e75eafd91"
-                    >
-                        Superior Labs | Acetyl L-Carnitine 1000mg
-                    </a>
-                </h5>
-                <img src="img/acetyl-l-carnitine.jpeg" alt="acetyl-l-carnitine" />
-                <h5>
-                    How ALCAR Works
-                </h5>
+                
+                <h4>Products</h4>
+                <ul class="product-list">
+					<li>
+						<figure>
+							<img src="img/acetyl-l-carnitine.jpeg" alt="">
+						
+							<figcaption>
+								<p>
+									<a href="https://www.amazon.com/gp/product/B07BLMSWGN/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07BLMSWGN&amp;linkId=d5ce891282e299fedbd0358e75eafd91">Superior Labs | Acetyl L-Carnitine 1000mg</a>
+								</p>
+							</figcaption>
+						</figure>
+					</li>
+                </ul>
+                
+                <h4>How ALCAR Works</h4>
                 <p>
                     ALCAR directly affects mitochondrial respiration.
                 </p>
                 <p>
                     ALCAR protects dopaminergic neurons by abrogating neuroinflammation, apoptosis, astrogliosis, and oxidative stress. For PD, ALCAR protects cells against the accumulation of alpha-synuclein.
                 </p>
-                <p>
-                    <strong>
-                        How r-ALA Works
-                    </strong>
-                </p>
-                <p>
-                    r-ALA decreases the levels of intracellular reactive oxygen species (ROS) and iron. Iron has been shown to reduce survival rate, to induce injury to dopaminergic neurons, and induce more severe motor deficits with
-                    mutant &alpha;-synuclein.
-                </p>
+
                 <p>
                     A 1990 Italian study on a small group of patients, published in the International Journal of Pharmacology research, titled &ldquo;
                     <a href="https://pubmed.ncbi.nlm.nih.gov/2387661/">
@@ -1903,9 +1868,7 @@ Sterols, which are also fat-soluble compounds.
                     </a>
                     &rdquo;, found 1.5g of ALCAR significantly improved cognitive assessment.
                 </p>
-                <h5>
-                    Carnitine &amp; r-ALA References:
-                </h5>
+                <h5>Products</h5>
                 <ol>
                     <li>
                         <a href="https://pubmed.ncbi.nlm.nih.gov/20414966/">
@@ -1950,6 +1913,67 @@ Sterols, which are also fat-soluble compounds.
                     </li>
                 </ol>
             </section>
+            
+            <section id="r-ala">
+            	<h3>Na-r-ALA</h3>
+
+            	<p>
+
+                    250-500 mg ED
+				</p>
+				<p>
+					r-Alpha-Lipoic Acid (r-ALA) reduces mitochondrial dysfunction and oxidative damage and protects dopaminergic neurons from damage in Parkinson's disease.
+				</p>
+				<p>
+					Most research on ALA uses both s- and r- isoforms. The s- form inhibits the absorption of the r- isomer, and the r- isomer has better bioavailability. Thus, when using the r- form, a smaller dose can be more effective.
+				</p>
+
+				<h5>
+					Product:
+				</h5>
+				<ul class="product-list">
+					<li>
+						<figure>
+			                <img src="img/mitochondrial-optimizer.jpeg" alt="mitochondrial optimizer">			
+							<figcaption>
+								<p>
+									<a href="https://www.amazon.com/gp/product/B006L8DWSC/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B006L8DWSC&amp;linkId=c6c8f2664db42d477f10657223837e34"
+									>Life Extension Mitochondrial Energy Optimizer with PQQ</a>
+								</p>
+							<p>
+								Note: This product contains Taurine, which is
+								<a href="https://journeywithparkinsons.com/2018/04/05/neuroprotection-with-taurine-in-a-parkinsons-model-system/">neuroprotective </a> and
+								<a href="https://pubmed.ncbi.nlm.nih.gov/26004911/">found to be suppressed in PD patients on L-Dopa</a>.
+							</p>
+							</figcaption>
+						</figure>
+					</li>
+					
+					<li>
+						<figure>
+							<img src="img/r-ala.jpeg" alt="r-Alpha Lipoic Acid" height="280">
+							<figcaption>
+							<p>
+								<a
+href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B0027YKO1C&amp;linkId=ebcbfd85708db0064877b27b10629629"
+								>Life Extension Super R-Lipoic Acid, 240mg
+								</a>
+							</p>
+							</figcaption>
+						</figure>
+					</li>
+				</ul>
+                <p>
+                    <strong>
+                        How r-ALA Works
+                    </strong>
+                </p>
+                <p>
+                    r-ALA decreases the levels of intracellular reactive oxygen species (ROS) and iron. Iron has been shown to reduce survival rate, to induce injury to dopaminergic neurons, and induce more severe motor deficits with
+                    mutant &alpha;-synuclein.
+                </p>
+            </section>
+            
             <section id="gaba-5-htp-melatonin">
                 <h4>GABA, 5-HTP, and Melatonin</h4>
                 <p>
@@ -2938,7 +2962,7 @@ water maze.
                         <li>
                             <a href="https://www.sciencedirect.com/science/article/pii/S1550413122000456">NOPARK</a>, an ngoing phase II clinical trial investigating the efficacy of NR supplementation in patients with PD.
                         </li>
-                    </OL>
+                    </ol>
                 </section>
                 
                 <section id="niacin">
@@ -2955,14 +2979,12 @@ water maze.
                         Niacin increases NAD+ levels through a longer metabolic pathway than that of NMN however, NMN and NR are considered superior due to their more direct conversion pathways and higher efficiency, supported by various studies and research.
                     </p>
                     
-                    
                     <h4>Safety</h4>
                     <p>
                     Niacin causes a flushing at higher doses. This is harmless, but may be uncomfortable. 
                     </p>
 
                     <h4>Niacin References</h4>
-                    
                     <ol>
                         <li>
                             <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8245760/"
@@ -2988,7 +3010,7 @@ water maze.
                         <a href="https://www.peptidesciences.com/nad-100mg">NAD+ 750mg — Peptide Sciences</a> (wait for 15% off sale) Peptide Sciences is the place for peptides. Compared to others, only PS sells lyophilized peptides.
                     </p>
                     <figure>
-                        <img src="./img/nad__750mg.png" alt="peptide sciences NAD+" height="280" />
+                        <img src="./img/nad__750mg.png" alt="peptide sciences NAD+" height="280">
                     </figure>
                 <h4>NAD+ Injection References</h4>
                 <ol>
@@ -3000,7 +3022,8 @@ water maze.
                         <p>
                             Eleven (Test n = 8, Control n = 3) male participants aged 30–55 years received 750 mg NAD+ in normal saline over a 6 h period. This resulted in a significant and quick elevation of intracellular NAD+.
                         </p>
-                    </li>                   
+                    </li>
+                </ol>
                 </section>
                 
                 <h4>NAD+ References</h4>
@@ -3042,7 +3065,7 @@ water maze.
                         </p>
                     </li>
                 </ol>
-            </section>
+        	</section>
             <section id="senolytics">
                 <h4>Senolytics</h4>
                 <p>
