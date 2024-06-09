@@ -72,7 +72,25 @@ section:target {
     object-fit: cover;
   	vertical-align: bottom;
 }
-  
+
+#treatment-legend {
+	margin-top: 1.2em;
+	border: 1px solid grey;
+	position: relative;
+}
+
+#treatment-legend > h3:first-child {
+	background-color: #eee;	
+	position: absolute;
+	margin-top: -1em;
+	margin-bottom: -1em;
+	padding: 0.05em 0.3em;
+}
+
+#legend-legend {
+	list-style: none;
+	font-size: smaller;
+}
 /** Treatment Types — example styles — TODO  
 .antifibrillogenic::after {
   content: " (Antifibrillogenic)";
@@ -1176,18 +1194,25 @@ To make the most of this Parkinson's Disease Guide, follow these steps:
                 I have first-hand experience taking all these supplements.
             </p>
             <p>
-	            The supplements are presented with an overview:
+	            The supplements are presented with an overview following the legend below.
             </p>
-            
-            <h3>Supplement Name</h3>
-			<ul class="treatment-rating">
-				<li>Mechanisms: see <a href="#problems-list">"mechanisms"</a> list.
-				<li>Dose: []  (🍽️ - take with food; 💤 - take at night)
-                <li>Fat-soluble: [✅ | ❌]
-				<li>🩸🧠BBB: Crosses blood-brain barrier [✅ | ❌]
-				<li>Safety: [1-10]/10 ([safety confidence]% σ)
-				<li>Efficacy: [1-10]/10 ([efficacy confidence ]% σ)
-			</ul>
+            <section id="treatment-legend">
+				<h3>Treatment Legend:</h3>
+				<h3>Supplement Name</h3>
+				<ul class="treatment-rating">
+					<li>Mechanisms: See <a href="#problems-list">"mechanisms"</a> list.
+					<li>Dose: [dose]  (🍽️ &mdash; with food;&emsp;💤 &mdash; at night)
+					<li>Fat-soluble: [✅ | ❌]
+					<li>🩸🧠BBB: Crosses blood-brain barrier [✅ | ❌]
+					<li>Safety: [1-10]/10 ([safety confidence]% σ)
+					<li>Efficacy: [1-10]/10 ([efficacy confidence ]% σ)
+				</ul>
+				<ul id="legend-legend">
+					<li>ED &mdash; Daily
+					<li>BID &mdash; Twice Daily
+					<li>σ — confidence level, 0&ndash;100%
+				</ul>
+			</section>
             <p>
                 Eggs are a source of omega-3 fatty acids, choline, lutein, zeaxanthin, vitamin E, beta carotene, vitamin A, and selenium. Pasture-raised eggs contain more bioactive compounds and less saturated fat and cholesterol.
             </p>
@@ -1912,25 +1937,40 @@ Sterols, which are also fat-soluble compounds.
             </section>
             
             <section id="r-ala">
-            	<h3>Na-r-ALA</h3>
+				<h3>Na-r-ALA &mdash; r-Alpha-Lipoic Acid (r-ALA)</h3>
+				<ul class="treatment-rating">
+					<li>Mechanisms: Neuroprotective, Antioxidant, Mitochondrial</li>
+					<li>Dose:  250-500 mg ED ☀️</li>
+					<li>🩸🧠BBB: ✅</li>
+					<li>Safety: 7/10 (75% σ)</li>
+					<li>Efficacy: 7/10 (70% σ)</li>
+				</ul>
 
-            	<p>
-                    250-500 mg ED
-				</p>
 				<p>
 					r-Alpha-Lipoic Acid (r-ALA) reduces mitochondrial dysfunction and oxidative damage and protects dopaminergic neurons from damage in Parkinson's disease.
 				</p>
+				
+				<h4>Supplement Form, s- and r- Enantiomers, and Binding</h4>
+
 				<p>
-					Most research on ALA uses both s- and r- isoforms. The s- form inhibits the absorption of the r- isomer, and the r- isomer has better bioavailability. Thus, when using the r- form, a smaller dose can be more effective.
+					Most research on ALA uses both s- and r- isoforms. The synthetically-produced <dfn>s-</dfn> form inhibits the absorption of the naturally-occurring <dfn>r-</dfn> isomer, and the <dfn>r-</dfn> isomer has better bioavailability. Thus, when using the <dfn>r-</dfn> form, a smaller dose can be more effective.
+				</p>
+				
+				<p>
+					Sodium-bound R-ALA is a stabilized form of R-Alpha Lipoic Acid that offers increased absorption and stability. 
 				</p>
 
                 <h4>How r-ALA Works</h4>
-                </p>
                 <p>
                     r-ALA decreases the levels of intracellular reactive oxygen species (ROS) and iron. Iron has been shown to reduce survival rate, to induce injury to dopaminergic neurons, and induce more severe motor deficits with
                     mutant &alpha;-synuclein.
                 </p>
-				<h5>Products</h5>
+                
+                <h4>Side Effects</h4>
+                <p>
+                	Gastrointestinal upset can be an issue. I experience this problem when taking Na-R-ALA on a full stomach, but do not have this problem when taking r-ALA in the morning with water and fruit.
+                </p>
+				<h4>Products</h4>
 				<ul class="product-list">
 					<li>
 						<figure>
@@ -1963,10 +2003,24 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
 						</figure>
 					</li>
 				</ul>
-                <h5>References</h5>
+                <h4>References</h4>
                 <ol>
                     <li>
-                        <!--a href=""></a-->
+                        <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2020.00612/full"
+                        title="Alpha-Lipoic Acid Mediates Clearance of Iron Accumulation by Regulating Iron Metabolism in a Parkinson’s Disease Model Induced by 6-OHDA"
+                        target="_blank">Alpha-Lipoic Acid Mediates Clearance of Iron Accumulation in PD Model</a>
+                        
+                        <p>
+                        	This PD-induced rodent model showed that ALA could provide significant protection from 6-OHDA-induced cell damage in vitro by decreasing the levels of intracellular reactive oxygen species and iron. 
+                        </p>
+                    </li>
+                    <li>
+                        <a href="https://www.tandfonline.com/doi/abs/10.3109/00207454.2010.535934"
+                        title="Acetyl-l-carnitine and α-lipoic acid affect rotenone-induced damage in nigral dopaminergic neurons of rat brain, implication for Parkinson's disease therapy"
+                        target="_blank">ALACAR and α-lipoic acid improve motor performance and reduced brain lipid peroxides in rat PD model</a>
+                        <p>
+							In this rodent model, researchers found treatment with acetyl-l-carnitine or α-lipoic acid improved the motor performance and reduced the level of lipid peroxides in rat brains.
+                        </p>
                     </li>
                 </ol>
             </section>
@@ -2075,7 +2129,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         Melatonin is a hormone produced by the pineal gland, a small endocrine gland located in the midbrain between the two hemispheres.
                     </p>
                 
-                    <h5Neuroprotective:</h5>
+                    <h5>Neuroprotective:</h5>
                     <p>
                         Melatonin protects neurons, especially against oxidative stress, a problem exacerbated by PD, leading to progressive neurodegeneration (PN). 
                     </p>
