@@ -16,7 +16,7 @@ body {
     margin: auto;
 }
 
-figure {
+section > figure {
     border: 0.1vh solid #33333333;
     background: #FFFFFF33;
     padding: 2vi 3vi;
@@ -36,6 +36,11 @@ section section {
     background-color: inherit;
 }
 
+@scope(.product-list) {
+	figure, p {
+		margin-bottom: 0;
+	}
+}
 /* Animation for highlighting and fading out on in-page links */
 @keyframes highlightFade {
     0% {
@@ -61,6 +66,8 @@ section:target {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-end;
+
 }
 
 .product-list li {
@@ -3758,6 +3765,8 @@ water maze.
                     <ol>
                         <li>
                             <a href="https://pubmed.ncbi.nlm.nih.gov/29599478/7"
+                            title="Chronic nicotinamide riboside supplementation is well-tolerated and elevates NAD+ in healthy middle-aged and older adults"
+                            target="_blank"
                             >Chronic NR supplementation in older adults</a>
                             <p>
                                 This small-scale RCT (Randomized Controlled Clinical Trial) found that chronic oral supplementation with 1000mg of NR daily increased NAD+ levels in healthy middle-aged and older adults. 
@@ -3765,16 +3774,18 @@ water maze.
                         </li>                   
                         <li>
                             <a href="https://pubmed.ncbi.nlm.nih.gov/38016950/"
+                            target="_blank"
+                            title="NR-SAFE: a randomized, double-blind safety trial of high dose nicotinamide riboside in Parkinson's disease"
                         >NR-SAFE trial</a>, a Phase I clinical trial published in 2023 found that high-dose NR supplementation (3,000 mg/day) was well-tolerated and associated with improved motor symptoms in patients with PD.
                         </li>
                         <li>
-                            <a href="https://pubmed.ncbi.nlm.nih.gov/35235774/">NADPARK</a>
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/35235774/"
+                            title="The NADPARK study: A randomized phase I trial of nicotinamide riboside supplementation in Parkinson’s disease"
+                            target="_blank"
+                            >NADPARK</a>
                             <p>
                                 A phase I clinical trial published in 2022 found that NR supplementation increased whole blood NAD+ levels and expanded the NAD+ metabolome in patients with PD.
                             </p>
-                        </li>
-                        <li>
-                            <a href="https://www.sciencedirect.com/science/article/pii/S1550413122000456">NOPARK</a>, an ngoing phase II clinical trial investigating the efficacy of NR supplementation in patients with PD.
                         </li>
                     </ol>
                 </section>
