@@ -15,6 +15,13 @@ body {
     display: block;
     margin: auto;
 }
+
+figure {
+    border: 0.1vh solid #33333333;
+    background: #FFFFFF33;
+    padding: 2vi 3vi;
+}
+
 section {
     background-color: #eee;
     padding: 0.5em;
@@ -339,7 +346,8 @@ section:target {
     <section id="how-to-use-this-guide">
         <h2>How to Use This Guide</h2>
         <p>
- 			To make the most of this Parkinson's Disease Guide, <a href="#introduction-to-pd">Educate yourself about Parkinson's disease</a>, learn about <a href="#food-and-supplements">supplements</a>, and get started with the <a href="#treatment-plan">Treatment Starter Plan</a> to get started.
+ 			To make the most of this Parkinson's Disease Guide, <a href="#introduction-to-pd">Educate yourself about Parkinson's disease</a>, learn about <a href="#food-and-supplements">supplements</a>, and get started with the <a href="#treatment-plan">Treatment Starter Plan</a>.
+ 		</p>
     </section>
     <section id="introduction-to-pd">
         <h2>Introduction to Parkinson's Disease</h2>
@@ -372,16 +380,22 @@ section:target {
 		<section id="causes-of-pd">
 			<h3>Causes and Risk Factors</h3>
 			<p>
-				Parkinson's Disease is a neurological condition resulting from pathology of alpha-synuclein (α-synuclein) (α-synucleinopathy). 
+				Parkinson's Disease is a neurological condition resulting from pathology of alpha-synuclein (α-synuclein), (α-synucleinopathy). 
 				<span class="call-out">Understanding the role and effects of α-synuclein is key to mitigating the disease's progression.</span>
 			</p>
 			<p>
 				Overexpression of &alpha;-synuclein leads to its aggregation and formation of &alpha;-synuclein structures, either as oligomers (peptides) or fibrils (see image). Oligomers of &alpha;-synuclein can form Lewy bodies, abnormal
 				aggregations of protein that develop inside nerve cells affected by PD.
 			</p>
-			<p>
-				<img src="img/alpha-synuclein.jpeg" alt="alpha-synuclein" class="block-image" />
-			</p>
+			
+			<figure>
+				<img src="img/alpha-synuclein.jpeg" alt="α-synuclein monomer, fibril, and oligomer." class="block-image">
+			<figcaption>
+				<p>
+					Depiction of α-synuclein monomer, fibril, and oligomer. α-Synuclein fibrils are long, insoluble fibers composed of many monomers and oligomers.
+				</p>
+			</figcaption>
+			</figure>
 			<p>
 				Alpha-synuclein is abundant primarily in the brain, especially in the neocortex, hippocampus, and substantia nigra (SN). Smaller amounts are found in the heart, muscles, and other tissues. It is transported into and out of the
 				brain by the blood-brain barrier.
@@ -390,7 +404,7 @@ section:target {
 				Six mutations of &alpha;-synuclein are currently associated with familial parkinsonism. Mutant &alpha;-synuclein forms aggregates more readily than wild-type (normal) &alpha;-synuclein.
 			</p>
 			<p>
-				Wild-type &alpha;-synuclein can be removed by lysosomes, mutant forms of &alpha;-synuclein, however, resist their degradation and inhibit that of other substrates.
+				Wild-type &alpha;-synuclein can be removed by lysosomes. Mutant forms of &alpha;-synuclein, however, resist their degradation and inhibit that of other substrates.
 			</p>
 			<p>
 				&alpha;-synuclein oligomers play a central role in the multi-factorial causes of Parkinson&rsquo;s disease. &alpha;-synuclein oligomers, as well as other &alpha;-synuclein variants, actively participate in disrupting
@@ -1106,7 +1120,7 @@ in α-synuclein have increased propensity to aggregate compared with the wild-ty
                     <li>
                         <h4>SynuClean-D Can Revert Neurodegeneration Caused By Parkinson's</h4>
                         <p>
-                            SynuClean-D inhibits &alpha;-synuclein aggregation, disrupts amyloid fibrils, prevents degeneration of dopaminergic neurons (<a href="https://pubmed.ncbi.nlm.nih.gov/30249646/"><abbr title="Proceedings of the National Academy of Sciences">reference</abbr></a>) and inhibits &alpha;-synuclein aggregation.
+                            SynuClean-D inhibits &alpha;-synuclein aggregation, disrupts amyloid fibrillization, prevents degeneration of dopaminergic neurons (<a href="https://pubmed.ncbi.nlm.nih.gov/30249646/"><abbr title="Proceedings of the National Academy of Sciences">reference</abbr></a>) and inhibits &alpha;-synuclein aggregation.
                         </p>
                         <p>
                             SynuClean-D is available as a research chemical. It is being studied in a Phase 2 clinical trial of 450 early-stage PD patients with an expected completion date in mid-2024.
@@ -1118,7 +1132,7 @@ in α-synuclein have increased propensity to aggregate compared with the wild-ty
                             Minzasolmin is a misfolding inhibitor, whereas SynuClean-D is an aggregation inhibitor. While Minzasolmin is in clinical development for Parkinson’s disease, SynuClean-D is primarily mentioned as a research compound.
                         </p>
                         <p>
-                            Minzasolmin is being studied in clinical trials, and patients with Parkinson’s disease can participate in these trials to access the medication. The clinical trial information is available on ClinicalTrials.gov (ID: NCT04658186; EudraCT Number 2020-003265).
+                           Patients with Parkinson’s disease can apply to participate in clinical trials for Minzasolmin. The clinical trial information is available on ClinicalTrials.gov (ID: NCT04658186; EudraCT Number 2020-003265).
                         </p>
                     </li>
                 </ol>
@@ -1918,7 +1932,7 @@ Sterols, which are also fat-soluble compounds.
                             </p>
                         </li>
                     </ol>
-                    <h4>Turmeric Products </h4>
+                    <h4>Turmeric Products</h4>
                     
                     <ul class="product-list">
                         <li>
@@ -1958,23 +1972,62 @@ Sterols, which are also fat-soluble compounds.
             </section>
             <section id="saffron">
                 <h3>
-                    Saffron
+                    Saffron (TODO)
                 </h3>
-                <div>
-                    Saffron, like turmeric, is also neuroprotective.
-                </div>
-                <div>
-                    <strong>
-                        Saffron Product:
-                    </strong>
-                    <a
-                        href="https://www.amazon.com/gp/product/B07Q23DCZC/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07Q23DCZC&amp;linkId=a89eecbeabe1c12666d9093201834fce"
-                    >
-                        Saffron Extract Supplements
+                <ul class="treatment-rating">
+                    <li>Mechanisms: Neuroprotective, Antioxidant, Sleep</li>
+                    <li>Dose: ~30mg of Saffron (8-10 threads) 🍽️</li>
+                    <li>🩸🧠BBB: ✅</li>
+                    <li>Safety: 9/10 (95% CI)</li>
+                    <li>Efficacy: 7/10 (80% CI)</li>
+                </ul>
+                <p>
+                    Saffron, like turmeric, is a fat-soluble neuroprotective food that can help with sleep.
+                </p>
+                
+                <h4>Saffron in Neurodegenerative Disease</h4>
+            	<p>
+                	 Glial cells, and specifically astrocytes, support the function and survival of neurons. Astrocytes can release neurotransmitters, such as glutamate and ATP, which can influence neuronal activity.
+            	</p>
+            	<p>
+            		Glial scar formation is a common pathological feature in various central nervous system (CNS) diseases, including Parkinson’s disease (PD). In PD, the glial scars form around damaged dopaminergic neurons, blocking their repair.
+				</p>
+                <p>
+                	Saffron inhibits damage and inflammation to astrocytes (glia) through multiple pathways.
+                </p>
+                <h5>Supplementation</h5>
+                <p>
+                	Because saffron is fat-soluble, it's best taken with food. (It's also delicious.) Saffron can be drunk with turmeric and cinnamon in golden milk. Excessive amounts may cause bloating and gas. 
+                </p>
+                <!--
+                
+                <h4>
+                        Saffron Productss
+                </h4>
+                <ul class="product-list">
+                    <li>
+                        <a href=""></a>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="" alt="">          
+                            <figcaption>
+                                <p>
+                                    <a href=""
+                                    target="_blank"></a>
+                                </p>
+                            </figcaption>
+                        </figure>
+                	</li>
+                </ul>
+                
+                    <a    href="https://www.amazon.com/gp/product/B07Q23DCZC/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07Q23DCZC&amp;linkId=a89eecbeabe1c12666d9093201834fce"
+                    title=""
+                    >Saffron Extract Supplements
                     </a>
                 </div>
                 <p>
-                    <img src="img/saffron.jpeg" title="saffron" />
+                    <img src="img/saffron.jpeg" title="saffron">
                 </p>
                 <div>
                     Turmeric and Saffron can also be prepared together as a warm night drink of golden milk with a calming effect. Both can be purchased online.
@@ -1992,24 +2045,63 @@ Sterols, which are also fat-soluble compounds.
                 <p>
                     <img src="img/turmeric-latte.jpeg" alt="turmeric latte" />
                 </p>
-                <div>
-                    <h5>
-                            Saffron References:
-                    </h5>
-                    <ol>
-                        <li>
-                            <a href="https://pubmed.ncbi.nlm.nih.gov/30573341/">
-                                Crocus sativus restores dopaminergic and noradrenergic damages induced by lead in Meriones shawi: A possible link with Parkinson's disease
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="https://pubmed.ncbi.nlm.nih.gov/26705857/">
-                                Evidence of neuroprotective effects of saffron and crocin in a Drosophila model of parkinsonism
-                            </a>
-                        </li>
-                    </ol>
-                </div>
+            -->
+				<h5>
+						Saffron References:
+				</h5>
+				<ol class="reference-list">
+					<li>
+                        <a href="ncbi.nlm.nih.gov/pmc/articles/PMC7573929/"
+                        title="Neuroprotective Potency of Saffron Against Neuropsychiatric Diseases, Neurodegenerative Diseases, and Other Brain Disorders: From Bench to Bedside
+">
+                        target="_blank"
+                        >Neuroprotective Potency of Saffron Against Neuropsychiatric Diseases&hellip;</a>
+                        <p>
+                        	This review study discussed the neuroprotective effects of crocin and crocetin, and that both could provide neuroprotection by reducing Aβ aggregation.
+                        </p>
+                    </li>
+                    <li>
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5361500/"
+                        title="Neuroprotective properties of dietary saffron: more than just a chemical scavenger?">
+                        target="_blank"
+                        >Neuroprotective properties of dietary saffron&hellip;</a>
+                        <p>
+                        	This review study discussed the mechanism of actions of saffron to induce dose-dependent neuroprotective response.
+                        </p>
+                    </li>
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/30573341/"
+						target="_blank"
+						title="Crocus sativus restores dopaminergic and noradrenergic damages induced by lead in Meriones shawi: A possible link with Parkinson's disease"
+						>Crocus sativus restores dopaminergic and noradrenergic damages&hellip;</a>
+						<p>
+							This rodent study showed that movement disorder caused by Pd (lead)-induced damage to dopaminergic and noradrenergic systems in the midbrain was reversed by saffron (crocus sativus).
+						</p>
+					</li>
+					<li>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/32056539/"
+                        title="Effects of saffron on sleep quality in healthy adults with self-reported poor sleep: a randomized, double-blind, placebo-controlled trial
+">
+                        target="_blank"
+                        >Effects of saffron on sleep quality in healthy adults with self-reported poor sleep: a randomized, double-blind, placebo-controlled trial
+</a>
+                        <p>
+                        	This 28-day, parallel-group, double-blind, randomized controlled trial included sixty-three healthy adults aged 18-70 with self-reported sleep problems. Subjects were randomized to receive either saffron extract (saffron; 14 mg twice daily) or a placebo.
+                        </p>
+                        <p>
+                        	Conclusions: Saffron intake was associated with improvements in sleep quality in adults with self-reported sleep complaints.
+                        </p>
+                    </li>
+					<li>
+						<a href="https://pubmed.ncbi.nlm.nih.gov/26705857/"
+						target="_blank"
+						title="Evidence of neuroprotective effects of saffron and crocin in a Drosophila model of parkinsonism"
+						>Evidence of neuroprotective effects of saffron and crocin in a Drosophila model of parkinsonism</a>
+						<p>
+							This drosophila model of parkinsonism study showed the neuroprotective effects of saffron and crocin. It concluded that these effects may be largely attributable to its antioxidant action and recommended saffron be exploited as a supplementary therapeutic agent in PD and other oxidative stress mediated neurodegenerative conditions.
+						</p>
+					</li>
+				</ol>
             </section>
             <section id="coconut-oil">
                 <h4>
@@ -2588,7 +2680,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     <figure style="display: block; width:100%; clear: both">
                         <img src="img/ischemia-pathophysiology.png" alt="Ischaemia pathophysiology diagram">
                         <figcaption>
-                            <p style="float: left">
+                            <p>
                                 Ischemia pathophysiology at four stages: energy failure, excitotoxicity, oxidative, stress and inflammation. <img src="img/ischemia-mechanism-icon.jpeg" alt="icon for diagram"> Represents the site of melatonin action
                             </p>
                         </figcaption>
