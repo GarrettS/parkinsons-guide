@@ -137,22 +137,29 @@ nav h3 {
 	position: absolute;
 	right: 0;
 	margin: 0;
+	cursor: pointer;
 }
 nav a {
     color: #fff;
+  container: sidebar / normal;
 }
 
-nav:focus, nav:hover, nav:active, nav>h3:active  {
+nav:hover, nav:focus, nav:active, nav>h3:active  {
     transform: translateX(0);
 }
 
-nav:hover a:hover {
+nav a:hover {
 	color: #9cf;
 
 }
-nav:hover h3 {
-	writing-mode: unset;
-	position: static;
+
+@container sidebar (min-width: 400px) {
+	  h3 {
+		font-size: 2em;
+		writing-mode: unset;
+		position: static;
+		cursor: default;
+	}
 }
     </style>
 </head>
@@ -161,7 +168,7 @@ nav:hover h3 {
     <p><strong>Working Draft</strong><p>
     <p><strong>Editor:</strong> Garrett Smith</p>
     <nav>
-        <h3 tabindex="0">Menu:</h3>
+        <h3 tabindex="0">Menu</h3>
         <ul>
             <li><a href="#purpose">The Purpose of This Guide</a></li>
             <li><a href="#how-to-use-this-guide">How to Use This Guide</a></li>
