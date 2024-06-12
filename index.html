@@ -141,22 +141,23 @@ nav h3 {
 }
 nav a {
     color: #fff;
-  container: sidebar / normal;
+  	container: sidebar / normal;
 }
 
-nav:hover, nav:focus, nav:active, nav>h3:active  {
+nav:hover, nav:focus, nav:active, nav>h3:active,
+body:has(header:active, section:active, *:focus) nav  {
     transform: translateX(0);
 }
+
 
 nav a:hover {
 	color: #9cf;
 
 }
 
-@container sidebar (min-width: 400px) {
+@container sidebar (min-width: 200px) {
 	  h3 {
-		font-size: 2em;
-		writing-mode: unset;
+		writing-mode: unset !important;
 		position: static;
 		cursor: default;
 	}
