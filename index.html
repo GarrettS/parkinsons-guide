@@ -9,6 +9,9 @@
 body {
     background: #ddd;
     font-family: georgia, "Open Sans", Helvetica;
+    position: relative;
+    font-size: 1.7vw;
+    margin: 0 0 0 2.28em;
 }
 
 .block-image {
@@ -105,102 +108,36 @@ section:target {
     list-style: none;
     font-size: smaller;
 }
-/** Treatment Types — example styles — TODO  
-.antifibrillogenic::after {
-  content: " (Antifibrillogenic)";
-  color: blue;
+
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateX(calc(-100% + 2.1em));
+    transition: transform 0.3s ease;
+    background-color: #333;
+    color: #fff;
+    overflow-y: auto;
+    padding: 10px;
 }
 
-.anti-aggregant::after {
-    content: " (Anti-aggregant)";
-    color: green;
+nav h3 {
+	writing-mode: vertical-lr;
+	position: absolute;
+	right: 0;
+	margin: 0;
+}
+nav a {
+    color: #fff;
+}
+nav:hover {
+    transform: translateX(0);
 }
 
-.anti-ischemic::after {
-    content: " (Anti-ischemic)";
-    color: red;
-}
-
-.senolytic::after {
-    content: " (Senolytic)";
-    color: purple;
-}
-
-.mitochondrial::after {
-    content: " (Mitochondrial)";
-    color: orange;
-}
-
-.sleep::after {
-    content: " (Sleep)";
-    color: brown;
-}
-
-
-.dopaminergic::after {
-    content: " (Dopaminergic)";
-    color: teal;
-}
-
-.neuroprotective::after {
-    content: " (Neuroprotective)";
-    color: magenta;
-}
-
-.neuroprotective.dopaminergic::after {
-    content: " (Neuroprotective) (Dopaminergic)";
-    color: magenta;
-}
-
-.antioxidant::after {
-    content: " (Antioxidant)";
-    color: yellow;
-}
-
-.anti-inflammatory::after {
-    content: " (Anti-inflammatory)";
-    color: pink;
-}
-
-.safety-rating::after {
-    content: " (Safety: " attr(data-safety-rating) "/10)";
-    color: green;
-}
-
-.efficancy-rating::after {
-    content: " (Effectiveness: " attr(data-efficacy-rating) "/10)";
-    color: green;
-}
-*/
-
-[data-safety-rating] {
-    position: relative;
-    display: inline-block; /* Ensure the element has a block-level display */
-    background-color: attr(data-color color); 
-    color: attr(data-color color); 
-}
-
-[data-safety-rating]::after {
-    content: " (Safety Rating: " attr(data-safety-rating) "/10)";
-    font-size: 0.8em;
-}
-[data-safety-rating="1"]::after,
-[data-safety-rating="2"]::after,
-[data-safety-rating="3"]::after {
-    background-color: #FF222299;
-}
-
-[data-safety-rating="4"]::after,
-[data-safety-rating="5"]::after,
-[data-safety-rating="6"],
-[data-safety-rating="7"]::after {
-    background-color: #FFFF66cc;
-}
-
-[data-safety-rating="8"]::after,
-[data-safety-rating="9"]::after,
-[data-safety-rating="10"]::after {
-    background-color: #99FF88cc;
+nav:hover h3 {
+	writing-mode: unset;
+	position: static;
 }
     </style>
 </head>
@@ -209,7 +146,7 @@ section:target {
     <p><strong>Working Draft</strong><p>
     <p><strong>Editor:</strong> Garrett Smith</p>
     <nav>
-        <h3>Contents:</h3>
+        <h3>Menu:</h3>
         <ul>
             <li><a href="#purpose">The Purpose of This Guide</a></li>
             <li><a href="#how-to-use-this-guide">How to Use This Guide</a></li>
@@ -503,6 +440,21 @@ section:target {
             <p>
                 Vitamin B12, for example, is an external factor that prevents LRRK2-G2019S-potentiated &alpha;-synuclein accumulation in dopaminergic neurons.
             </p>
+            
+            <h5>The Role of Pesticides</h5>
+            <p>
+                Pesticide and herbicide exposure causes &alpha;-synuclein overexpression in certain individuals. Rotenone and paraquat, both pesticides, so reliably induce PD that they are used to induce PD in rodent model experiments.
+            </p>
+            <p>
+                SATB1 a cell regulator, represses expression of the pro-senescence factor CDK inhibitor p21 in dopaminergic neurons. P21 inhibits cyclin-dependent kinases (CDKs). CDKs help regulate the cell cycle, including the removal of senescent cells.
+            </p>
+            <p>
+                SATB1 is inhibited in Parkinson's disease. Less SATB1 means more p21, leading to decreased CDKs, leading to the accumulation of senescent cells. Senescent dopaminergic neurons contribute to the pathology of Parkinson's disease.
+            </p>
+            <p>
+                Senescent cells cease to function and divide, damaging healthy neighboring cells by secreting inflammatory factors and contributing to further tissue dysfunction and senescence.
+            </p>
+
             <h5>
                 Alpha-synuclein References:
             </h5>
@@ -561,6 +513,7 @@ in α-synuclein have increased propensity to aggregate compared with the wild-ty
                     target="_blank"
                     >Alpha-synuclein-induced mitochondrial dysfunction is mediated via a sirtuin 3-dependent pathway</a>
                     <p>
+                    	This rodent model showed that pesticides can initiate the progression of PD pathology and that this progression is based on the transneuronal and <dfn>"retrograde axonal transport"</dfn> (that &alpha;-synuclein goes back into the cell) of alpha-synuclein. If confirmed in patients, this study would have crucial implications in the strategies used to prevent and treat PD.
                     </p>
                 </li>
                 <li>
@@ -582,19 +535,6 @@ in α-synuclein have increased propensity to aggregate compared with the wild-ty
                     </p>
                 </li>
             </ol>
-
-            <p>
-                Pesticide and herbicide exposure causes &alpha;-synuclein overexpression in certain individuals. Rotenone and paraquat, both pesticides, so reliably induce PD that they is used to induce PD in rodents which can then be studied and treated experimentally.
-            </p>
-            <p>
-                SATB1 a cell regulator, represses expression of the pro-senescence factor p21 in dopaminergic neurons.
-            </p>
-            <p>
-                SATB1 is inhibited in Parkinson's disease. Less SATB1 means more p21 pro-senescence. Senescent dopaminergic neurons contribute to the pathology of Parkinson's disease.
-            </p>
-            <p>
-                Senescent cells cease to function and divide, damaging healthy neighboring cells by secreting inflammatory factors and contributing to further tissue dysfunction and senescence.
-            </p>
         </section>
         <section id="testing-and-diagnosis">
             <h3>Testing and Diagnosis</h3>
