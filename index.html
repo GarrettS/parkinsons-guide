@@ -6,12 +6,37 @@
     <title>Parkinson's Guide</title>
     
 <style>
+html {
+    background-color: light-dark(#710, #F30);
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
 body {
-    background: #ddd;
+    background-color: light-dark(#DDDDDDcc, #222222cc);
+	color: light-dark(#111111cc, #CCCE);
+
+	
     font-family: georgia, "Open Sans", Helvetica;
     position: relative;
     font-size: calc(10px + 1vw);
-    margin: 0 0 0 2.28em;
+    margin: 0 0 0 1.2em;
+    padding-left: 2vw;
+    border-style: solid;
+    border-width: 1px;
+    border-color: light-dark(#DDDDDDcc, #330500cc);
+}
+
+a:link, a:visited {
+	color: inherit;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+a:visited {
+	color: lighten;
+	font-style: italic;
 }
 
 .block-image {
@@ -20,19 +45,20 @@ body {
 }
 
 section > figure {
-    border: 0.1vh solid #33333333;
-    background: #FFFFFF33;
+    border-width: 0.1vh;
+    border-style: solid;
+    border-color: light-dark(#333333, #333333);
+    background-color: light-dark(#FFFFFF33, #FFFFFF33);
     padding: 2vi 3vi;
 }
 
-section {
-    background-color: #eee;
+section, header {
+    background-color: light-dark(lighten, darken);
     padding: 0.5em;
     border: 2px solid transparent;
 }
 section:target {
-    background-color: #fff;
-    background-color: #fff;
+    background-color: light-dark(#FFFFFFCC, #5555);
     animation: highlightFade 4s ease forwards; /* Play the animation */
 }
 section section {
@@ -47,22 +73,15 @@ section section {
 /* Animation for highlighting and fading out on in-page links */
 @keyframes highlightFade {
     0% {
-        background-color: #ffe9ee88;
         border-color: #e635;
     }
     50% {
-        background-color: #ffe9ee88;
-        border-color: #e635;
-    } /* Maintain highlight for duration */
+        border-color: light-dark(lighten, darken);
+    } 
     100% {
         background-color: initial;
-    } /* Fade out to default style */
-}
-/* Define the style for the section when it is the target */
-section:target {
-    animation: highlightFade 5s ease forwards;
-}
-
+    }  
+} 
 
 .product-list {
     list-style: none;
@@ -92,12 +111,15 @@ section:target {
 
 #treatment-legend {
     margin-top: 1.2em;
-    border: 1px solid grey;
+    border: 1px solid #9999;
     position: relative;
 }
 
 #treatment-legend > h3:first-child {
-    background-color: #eee; 
+    background-color: light-dark(#FFFFFFCC, #401C16EE);
+    border-color: #777;
+    border-width: 1px;
+    border-style: solid;
     position: absolute;
     margin-top: -1em;
     margin-bottom: -1em;
@@ -116,15 +138,19 @@ nav {
     bottom: 0;
     transform: translateX(calc(-100% + 1.6em));
     transition: transform 0.3s ease;
-    background-color: #333;
+    background-color: #333333FC;
     color: #fff;
     padding: 10px;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
+    z-index: 100;
     overflow-x: hidden;
     overflow-y: hidden;
 }
 
 nav > ul {
+	opacity: 0;
+    transition: opacity 0.3s ease;
     list-style: none;
     margin-left: 0;
     padding: 0 0 0 1vw;
@@ -138,11 +164,13 @@ nav > ul > li > a {
 
 nav h3 {
 	writing-mode: vertical-lr;
-	position: absolute;
-	right: 0;
+	position: fixed;
+	top: 0.5em;
 	margin: 0;
+	right: 0;
 	cursor: pointer;
 }
+
 nav a {
     color: #fff;
   	container: sidebar / normal;
@@ -151,6 +179,14 @@ nav a {
 nav.open {
     transform: translateX(0);
     overflow-y: auto;
+}
+
+nav.open h3{
+	position: absolute;
+}
+
+nav.open > ul {
+    opacity: 1;
 }
 
 nav a:hover {
@@ -2670,6 +2706,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     <p>
                         Metabolic pathways involving neurotransmitters are complex. The complexities of these delicate interactions, as shown in the figure "Competitive Neurotransmitter Inhibitors", are well-handled in healthy individuals, but disrupted in PD and disrupted further by DRT.
                     </p>   
+                    
                     <p>
                     To elaborate, the aforementioned pathways include Dopamine, norepinephrine, epinephrine, glutathione, S-adenosylmethionine (SAMe), methionine, cysteine, tryptophan, serotonin, and vitamin B6 affect each other and contribute to neurological function, oxidative stress regulation, mood regulation, and overall health. 
                     </p>
