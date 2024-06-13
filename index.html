@@ -160,22 +160,19 @@ nav a:hover {
 }
     </style>
     
-    <script>
-scope: {
-    "use strict";
-    const documentElement = document.documentElement;
-    const clickHandler = event => {
-    	const isNav = event.target?.matches("nav, nav *");
-    	const nav = document.getElementById("nav");
-    	if (isNav) {
-    		nav.classList.add("open");
-    	} else {
-    		nav.classList.remove("open");
-    	}
-    };
-   documentElement.addEventListener("click", clickHandler);
-   documentElement.addEventListener("touchstart", clickHandler);
-}
+    <script type="module">
+const documentElement = document.documentElement;
+const clickHandler = event => {
+	const isNav = event.target?.matches("nav, nav *");
+	const nav = document.getElementById("nav");
+	if (isNav) {
+		nav.classList.add("open");
+	} else {
+		nav.classList.remove("open");
+	}
+};
+documentElement.addEventListener("click", clickHandler);
+documentElement.addEventListener("touchstart", clickHandler);
 	</script>
 </head>
 <body>
