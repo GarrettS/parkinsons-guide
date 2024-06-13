@@ -143,7 +143,7 @@ nav a {
   	container: sidebar / normal;
 }
 
-nav:hover, nav:focus, nav:active {
+nav.open {
     transform: translateX(0);
 }
 
@@ -159,12 +159,30 @@ nav a:hover {
 	}
 }
     </style>
+    
+    <script>
+scope: {
+    "use strict";
+    const documentElement = document.documentElement;
+    const clickHandler = event => {
+    	const isNav = event.target?.matches("nav, nav *");
+    	const nav = document.getElementById("nav");
+    	if (isNav) {
+    		nav.classList.add("open");
+    	} else {
+    		nav.classList.remove("open");
+    	}
+    };
+   documentElement.addEventListener("click", clickHandler);
+   documentElement.addEventListener("touchstart", clickHandler);
+}
+	</script>
 </head>
 <body>
     <h1>Parkinson's Disease Guide</h1>
     <p><strong>Working Draft</strong><p>
     <p><strong>Editor:</strong> Garrett Smith</p>
-    <nav>
+    <nav id="nav">
         <h3 tabindex="0">Menu</h3>
         <ul>
             <li><a href="#purpose">The Purpose of This Guide</a></li>
