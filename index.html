@@ -194,7 +194,7 @@ nav a:hover {
 	color: #9cf;
 }
 
-.good-answers, .bad-answers {
+.good-answers, .bad-answers, .baseline-answers {
 	list-style: none;
 }
 .good-answers li::before {
@@ -204,6 +204,9 @@ nav a:hover {
 	content: "❌";
 }
 
+.baseline-answers li::before {
+	content: "✔️";
+}
 @container sidebar (min-width: 200px) {
 	  h3 {
 		writing-mode: unset !important;
@@ -876,7 +879,7 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
 				&mdash; and that is beyond the very basic fundamentals of:&mdash;
 			</p>
 
-			<ul class="bad-answers">
+			<ul class="baseline-answers">
 				<li> Detailed medical history and symptom review.
 				<li> Thorough motor symptoms exam 
 				<li> Non-motor symptoms (sleep disturbances, autonomic dysfunction, mood disorders).
