@@ -55,6 +55,13 @@ section > figure {
     padding: 2vi 3vi;
 }
 
+ol.reference-list > li[id]::before {
+	font-size: 60%;
+	font-style: italic;
+	margin: .1em;
+	content: "[" attr(id) "]"
+}
+
 section, header {
     background-color: light-dark(lighten, darken);
     padding: 0.5em;
@@ -588,7 +595,7 @@ documentElement.addEventListener("touchstart", clickHandler);
                     This study showed that differential mechanisms of metals, such as iron, in &alpha;-synuclein pathology on the molecular level.
                     </p>
                 </li>
-                <li id="alpha-synuclein-net"><cite class="reflink">[alpha-synuclein.net]</cite>
+                <li id="alpha-synuclein-net">
                     <a href="https://alpha-synuclein.net/mutations/"
                     title="ALPHA SYNUCLEIN: MUTATIONS"
                     target="_blank"
@@ -597,7 +604,7 @@ documentElement.addEventListener("touchstart", clickHandler);
                         Individuals who developed a triplication of the SNCA gene, as opposed to a duplication, displayed more severe symptoms including early-onset parkinsonism with dementia. This indicates that there is a “dose dependent” correlation between the progression of PD and SNCA gene dosage. <cite class="reflink">[<a href="#alpha-synuclein-net">alpha-synuclein-net</a>]</cite>
                     </p>
                 </li>
-                <li id="jie-li"><cite class="reflink">[jie-li]</cite>
+                <li id="jie-li">
                     <a href="https://pubs.acs.org/doi/10.1021/bi010616g"
                     title="Effect of Familial Parkinson's Disease Point Mutations A30P and A53T on the Structural Properties, Aggregation, and Fibrillation of Human α-Synuclein"
                     target="_blank"
@@ -610,7 +617,7 @@ in α-synuclein have increased propensity to aggregate compared with the wild-ty
                         They note α-synuclein in PD arose from gene-linkage experiments in familial early-onset Parkinson’s disease, which revealed the A53T mutation.
                     </p>
                 </li>
-                <li id="f-pan-montojo"><cite class="reflink">[F. Pan-Montojo]</cite>
+                <li id="f-pan-montojo">
                     <a href="https://pubmed.ncbi.nlm.nih.gov/23205266/"
                     title="Environmental toxins trigger PD-like progression via increased alpha-synuclein release from enteric neurons in mice"
                     target="_blank"
@@ -619,7 +626,7 @@ in α-synuclein have increased propensity to aggregate compared with the wild-ty
                         This rodent model showed that pharmacologically increasing SIRT3, as recommended in this article, can counteract α-synuclein-induced mitochondrial dysfunction by reducing αsα-synucleinyn oligomers and normalizing mitochondrial bioenergetics. 
                     </p>
                 </li>
-                <li id="jae-hyeon-park"><cite class="reflink">[jae-hyeon-park]</cite>
+                <li id="jae-hyeon-park"> 
                     <a href="https://pubmed.ncbi.nlm.nih.gov/31931835/"
                     title="Alpha-synuclein-induced mitochondrial dysfunction is mediated via a sirtuin 3-dependent pathway"
                     target="_blank"
@@ -628,7 +635,7 @@ in α-synuclein have increased propensity to aggregate compared with the wild-ty
                     	This rodent model showed that pesticides can initiate the progression of PD pathology and that this progression is based on the transneuronal and <dfn>"retrograde axonal transport"</dfn> (that &alpha;-synuclein goes back into the cell) of alpha-synuclein. If confirmed in patients, this study would have crucial implications in the strategies used to prevent and treat PD.
                     </p>
                 </li>
-                <li id="christine-klein"><cite class="reflink">[christine-klein]</cite>
+                <li id="christine-klein"> 
                     <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3253033/"
                     title="Genetics of Parkinson’s Disease"
                     target="_blank"
@@ -637,7 +644,7 @@ in α-synuclein have increased propensity to aggregate compared with the wild-ty
                         This 2014 paper provides compelling arguments that identification of PD gene mutations, especially in patients with early-onset PD, can provide information on prognosis and will affect treatment choices in cases of PD that were initially suspected to be psychogenic. <em>Why is this 10-year old paper not the standard of care!?</em>
                     </p>
                 </li>
-                <li id="yu-ting-sui"><cite class="reflink">[yu-ting-sui]</cite>
+                <li id="yu-ting-sui"> 
                     <a href="https://pubmed.ncbi.nlm.nih.gov/25278492/"
                     title="Alpha synuclein is transported into and out of the brain by the blood-brain barrier"
                     target="_blank"
@@ -646,7 +653,7 @@ in α-synuclein have increased propensity to aggregate compared with the wild-ty
                         This rodent model study showed α-synuclein is transported across the BBB bidirectionally, in both the brain-to-blood and blood-to-brain directions.
                     </p>
                 </li>
-                <li id="adam-schaffner"><cite class="reflink">[a-schaffner]</cite>
+                <li id="adam-schaffner"> 
                     <a href="https://pubmed.ncbi.nlm.nih.gov/30858560/"
                     title="Vitamin B12 modulates Parkinson's disease LRRK2 kinase activity through allosteric regulation and confers neuroprotection"
                     target="_blank"
@@ -656,7 +663,7 @@ in α-synuclein have increased propensity to aggregate compared with the wild-ty
                     </p>
                 </li>
                 
-                <li id="markus-riessland"><cite class="reflink">[markus-riessland]</cite>
+                <li id="markus-riessland"> 
                     <a href="https://pubmed.ncbi.nlm.nih.gov/30858560/"
                     title="Loss of SATB1 Induces p21-Dependent Cellular Senescence in Post-mitotic Dopaminergic Neurons"
                     target="_blank"
@@ -752,7 +759,7 @@ in α-synuclein have increased propensity to aggregate compared with the wild-ty
                 </p>
         
                 <ol class="reference-list">
-                    <li id="k-burton"><cite class="reflink">[k-burton]</cite>
+                    <li id="k-burton"> 
                         <a href="https://www.medscape.com/viewarticle/994849"
                         title="Why Genetic Testing May Be Our Best Shot at Progress in PD"
                         target="_blank"
@@ -761,7 +768,7 @@ in α-synuclein have increased propensity to aggregate compared with the wild-ty
                             Previous studies have shown that some genetic variants increase the risk for PD after exposure to environmental factors such as pesticides. Research has also shown that patient genotype can indicate survival time and treatment approaches.
                         </p>
                     </li>
-                    <li id="l-cook"><cite class="reflink">[l-cook]</cite>
+                    <li id="l-cook"> 
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8101316/"
 							title="Genetic Testing for Parkinson Disease"
 							target="_blank"
@@ -1479,9 +1486,11 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                 <li>Increases expression of neurotrophic factors, such as brain-derived neurotrophic factor (BDNF)</li>
                 <li>Reduces oxidative stress and inflammation</li>
                 <li>Promotes neuroprotection and neuroregeneration</li>
+                <li>Improves cognitive function in PD patients 
+                <cite class="reflink">[<a href="#amir-nizamutdinov">amir-nizamutdinov</a>]</cite></li>
+                <li>Improves sleep <cite class="reflink">[<a href="#jiexiu-zhao">jiexiu-zhao</a>]</cite></li>
                 <li>
-                    Improves kidney function &mdash; PD impairs kidney function through Alpha-synuclein impairment via aggregation accumulation and inflammation, autonomic nervous system dysfunction, and dopamine depletion (dopamine plays a
-                    crucial role in regulating blood pressure and kidney function.)
+                    Improves kidney function &mdash; PD impairs kidney function through &alpha;-synuclein aggregation accumulation and inflammation, autonomic nervous system (ANS) dysfunction, and dopamine depletion (dopamine influences renal blood flow, blood pressure, and kidney function.)
                 </li>
             </ul>
             <p>
@@ -1516,7 +1525,7 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
 
             <h4>Near-Infrared (NIR) vs Red Light Therapy</h4>
             <p>
-                Near-infrared (NIR) light has a deeper penetration depth than red light, allowing it to reach deeper tissues and organs, including the brain, without overstimulating the skin.
+                Near-infrared (NIR) light has a deeper penetration depth than red light, allowing it to reach deeper tissues and organs, including the brain, without overstimulating the skin. <cite class="reflink">[<a href="#t-a-henderson">t-a-henderson</a>]</cite>
             </p>
                 
             <h4>Photobiomodulation References</h4>
@@ -1531,21 +1540,35 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                         This review study concluded use of cell therapy and photobiomodulation therapy can improve the symptoms of PD.
                     </p>
                 </li>
-                    
-                <li>
+                
+                
+                
+                <li id="jiexiu-zhao">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/23182016/"
+                    title="Red light and the sleep quality and endurance performance of Chinese female basketball players
+"
+                    target="_blank"
+                    >Red light and the sleep quality and endurance performance of Chinese female basketball players</a>, Jiexiu Zhao 
+                    <p>
+                        Our study confirmed the effectiveness of body irradiation with red light in improving the quality of sleep of elite female basketball players and offered a nonpharmacologic and noninvasive therapy to prevent sleep disorders after training.
+                    </p>
+                </li>
+                
+                
+                <li id="michael-r-hamblin"> 
                     <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10581558/"
                     title="Transcranial photobiomodulation for the brain: a wide range of clinical applications"
                     target="_blank"
-                    >Transcranial photobiomodulation for the brain: a wide range of clinical applications</a>
+                    >Transcranial photobiomodulation for the brain: a wide range of clinical applications</a>, Michael R. Hamblin.
                     <p>
                         This review discussed the highly effective use of PBMT in treating Alzheimer’s and Parkinson’s disease models as well as the mechanisms that affect the mitochondria.
                     </p>
                 </li>
-                <li>
+                <li id="damir-nizamutdinov"> 
                     <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8219492/"
                     title="Transcranial Near Infrared Light Stimulations Improve Cognition in Patients with Dementia"
                     target="_blank"
-                    >Transcranial Near Infrared Light Stimulations Improve Cognition in Patients with Dementia</a>
+                    >Transcranial Near Infrared Light Stimulations Improve Cognition in Patients with Dementia</a>, Damir Nizamutdinov, et al.
                     <p>
                         This placebo controlled, randomized, double-blinded human study examined 6 min, twice daily eight weeks transcranial near-infrared (tNIR) light NIR light with wavelength of 1060-1080nm and 15,000mW, irradiance or power density= 23.1mW/cm2, ~650cm2 per treatment area compared with a sham placebo.
                     </p>
@@ -1558,11 +1581,11 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                     </p>
                 </li>
                 
-                <li>
+                <li id="t-a-henderson"> 
 					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552256/"
 					title="Near-infrared photonic energy penetration: can infrared phototherapy effectively reach the human brain?"
 					target="_blank"
-					>Near-infrared photonic energy penetration: can infrared phototherapy effectively reach the human brain?</a>
+					>Near-infrared photonic energy penetration: can infrared phototherapy effectively reach the human brain?</a>, Theodore A Henderson, Larry D Morries
 					<p>
 						Showed that higher wattage NIR lasers can deliver therapeutic effects to greater depths of the brain without tissue heating or damage. 
 					</p>
