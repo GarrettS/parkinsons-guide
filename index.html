@@ -31,17 +31,23 @@ body {
 abbr, dfn {
     position: relative;
 }
-
-abbr:hover::after, dfn:hover::after {
+abbr::after, dfn::after {
+	opacity: 0.1;
+    display: inline-block;
     position: absolute;
     bottom: 100%;
     left: 100%;
     display: block;
     padding: .5em .46em .5em .5em;
     background-color: light-dark(#EEE, #555);
-    content: attr(title);
     font-size: smaller;
     border-radius: .4em;
+}
+
+abbr:hover::after, dfn:hover::after {
+    transform: translateX(calc(-100% + 1.8em));
+	opacity: 0.9999;
+    content: attr(title);
 }
 
 a:link, a:visited {
@@ -2891,7 +2897,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         target="_blank"
                         >Combined R-alpha-lipoic acid and acetyl-L-carnitine exerts efficient preventative effects in a cellular model of Parkinson's disease</a>, Hongyu Zhang, et al.
                         <p>
-                            This in vitro study revealed that pretreatment with combined ALA and ALCAR increased mitochondrial biogenesis and decreased production of <abbr title="reactive oxygen species">ROS</abbr> through the up-regulation of <abbr title="the peroxisome proliferator-activated receptor-gamma coactivator 1 alpha">PGC-1a</abbr> as a possible underlying mechanism.
+                            This in vitro study revealed that pretreatment with combined ALA and ALCAR increased mitochondrial biogenesis and decreased production of <abbr title="reactive oxygen species">ROS</abbr> through the up-regulation of <abbr title="Peroxisome Proliferator-activated Receptor-gamma Coactivator 1 alpha">PGC-1a</abbr> as a possible underlying mechanism.
                         </p>
                         <p>
                             <abbr title="the peroxisome proliferator-activated receptor-gamma coactivator 1 alpha">PGC-1a</abbr> is a transcriptional coactivator that regulates various cellular energy metabolism, mitochondrial biogenesis, and cellular stress responses. 
