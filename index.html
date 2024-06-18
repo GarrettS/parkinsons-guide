@@ -28,6 +28,22 @@ body {
     border-color: light-dark(#DDDDDDcc, #330500cc);
 }
 
+abbr, dfn {
+    position: relative;
+}
+
+abbr:hover::after, dfn:hover::after {
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    display: block;
+    padding: .5em .46em .5em .5em;
+    background-color: light-dark(#EEE, #555);
+    content: attr(title);
+    font-size: smaller;
+    border-radius: .4em;
+}
+
 a:link, a:visited {
 	color: inherit;
 	text-decoration: underline;
@@ -93,6 +109,20 @@ section section {
     }  
 } 
 
+.good-answers, .bad-answers, .baseline-answers {
+	list-style: none;
+}
+.good-answers li::before {
+	content: "✅";
+}
+.bad-answers li::before {
+	content: "❌";
+}
+
+.baseline-answers li::before {
+	content: "✔️";
+}
+
 .product-list {
     list-style: none;
     display: flex;
@@ -141,6 +171,7 @@ section section {
     font-size: smaller;
 }
 
+/** Nav styles */
 nav {
     position: fixed;
     left: 0;
@@ -203,20 +234,8 @@ nav.open > ul {
 nav a:hover {
 	color: #9cf;
 }
+*/
 
-.good-answers, .bad-answers, .baseline-answers {
-	list-style: none;
-}
-.good-answers li::before {
-	content: "✅";
-}
-.bad-answers li::before {
-	content: "❌";
-}
-
-.baseline-answers li::before {
-	content: "✔️";
-}
 @container sidebar (min-width: 200px) {
 	  h3 {
 		writing-mode: unset !important;
@@ -449,7 +468,7 @@ documentElement.addEventListener("touchstart", clickHandler);
                 brain by the blood-brain barrier. <cite class="reflink">[<a href="#yu-ting-sui">yu-ting-sui</a>]</cite>
             </p>
             <p>
-                Six mutations of &alpha;-synuclein are currently associated with familial parkinsonism. Mutant &alpha;-synuclein forms aggregates more readily than wild-type (normal) &alpha;-synuclein. <cite class="reflink">[<a href="#v-c-ruf">v-c-ruf</a>]</cite>, <cite class="reflink">[<a href="#jie-li">jie-li</a>]</cite>
+                Six mutations of &alpha;-synuclein are currently associated with familial parkinsonism. Mutant &alpha;-synuclein forms aggregates more readily than wild-type (normal) &alpha;-synuclein. <cite class="reflink">[<a href="#v-c-ruf">v-c-ruf</a>]</cite>, <cite class="reflink"><a href="#jie-li">jie-li</a>]</cite>
             </p>
             <p>
                 Wild-type &alpha;-synuclein can be removed by lysosomes. Mutant forms of &alpha;-synuclein, however, resist their degradation and inhibit that of other substrates.
@@ -553,7 +572,10 @@ documentElement.addEventListener("touchstart", clickHandler);
 			</p>
 			
             <p>
-                Epigenetic factors can influence mutations in LRRK2 (LRRK2-G2019S) and cause encoding mutations in LRRK2 and SNCA genes that affect the production and pathogenicity of mutant &alpha;-synuclein. <cite class="reflink">[<a href="#christine-klein">christine-klein</a>]</cite>
+                Epigenetic factors can influence mutations in <abbr title="Leucine-Rich Repeat Kinase 2 gene"
+                >LRRK2</abbr> (<abbr title="Leucine-Rich Repeat Kinase 2 gene with a Glycine to Serine substitution at position 2019"
+                >LRRK2</abbr>) and cause encoding mutations in <abbr title="Leucine-Rich Repeat Kinase 2 gene"
+                >LRRK2</abbr> and SNCA genes that affect the production and pathogenicity of mutant &alpha;-synuclein. <cite class="reflink">[<a href="#christine-klein">christine-klein</a>]</cite>
             </p>
             <p>
                 Vitamin B12, for example, is an external factor that prevents LRRK2-G2019S-potentiated &alpha;-synuclein accumulation in dopaminergic neurons. <cite class="reflink">[<a href="#a-schaffner">a-schaffner</a>]</cite>
@@ -567,7 +589,8 @@ documentElement.addEventListener("touchstart", clickHandler);
                 <abbr title="Special AT-rich sequence-binding protein 1">SATB1</abbr> a cell regulator, represses the expression of p21 in dopaminergic neurons. P21 is a pro-senescence factor that maintains the viability of senescent cells under persistent DNA damage response.  <cite class="reflink">[<a href="#markus-riessland">markus-riessland</a>]</cite>
             </p>
             <p>
-                SATB1 is inhibited in Parkinson's disease. Less SATB1 means more p21, leading to decreased CDKs, leading to the accumulation of senescent cells. Senescent dopaminergic neurons contribute to the pathology of Parkinson's disease.
+                <abbr title="Special AT-rich sequence-binding protein 1">SATB1</abbr> is inhibited in PD. Less SATB1 means more p21, leading to decreased <abbr 
+                title="cyclin-dependent kinases">CDKs</abbr>, leading to the accumulation of senescent cells. Senescent dopaminergic neurons contribute to the pathology of PD.
                 <cite class="reflink">[<a href="#markus-riessland">markus-riessland</a>]</cite>
             </p>
             <p>
@@ -602,14 +625,14 @@ documentElement.addEventListener("touchstart", clickHandler);
                     target="_blank"
                     >ALPHA SYNUCLEIN: MUTATIONS</a>
                     <p>
-                        Individuals who developed a triplication of the SNCA gene, as opposed to a duplication, displayed more severe symptoms including early-onset parkinsonism with dementia. This indicates that there is a “dose dependent” correlation between the progression of PD and SNCA gene dosage. <cite class="reflink">[<a href="#alpha-synuclein-net">alpha-synuclein-net</a>]</cite>
+                        Individuals who developed a triplication of the <abbr title="Synuclein Alpha Gene">SNCA gene</abbr>, as opposed to a duplication, displayed more severe symptoms including early-onset parkinsonism with dementia. This indicates that there is a “dose dependent” correlation between the progression of PD and <abbr title="Synuclein Alpha">SNCA</abbr> gene dosage. <cite class="reflink">[<a href="#alpha-synuclein-net">alpha-synuclein-net</a>]</cite>
                     </p>
                 </li>
                 <li id="jie-li">
                     <a href="https://pubs.acs.org/doi/10.1021/bi010616g"
                     title="Effect of Familial Parkinson's Disease Point Mutations A30P and A53T on the Structural Properties, Aggregation, and Fibrillation of Human α-Synuclein"
                     target="_blank"
-                    >Effect of Familial Parkinson's Disease Point Mutations A30P and A53T on the Structural Properties, Aggregation, and Fibrillation of Human α-Synuclein</a>, Jie Li, et al.
+                    >Effect of Familial Parkinson's Disease Point Mutations <dfn title="a point mutation in the alpha-synuclein (SNCA) gene, which is associated with autosomal dominant Parkinson’s disease">A30P</dfn> and <dfn title="Alpha-53-Thr mutation: point mutation in the human alpha-synuclein (α-synuclein) gene, associated with early-onset familial PD">A53T</dfn> on the Structural Properties, Aggregation, and Fibrillation of Human α-Synuclein</a>, Jie Li, et al.
                     <p>
                         This rodent study showed that the A53T and A30P genetic mutations
 in α-synuclein have increased propensity to aggregate compared with the wild-type protein, and this strongly supports the direct and critical role of α-synuclein aggregation in the etiology of Parkinson’s disease. 
@@ -1896,7 +1919,7 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                 </p>
 
                 <p>
-                    Creatine increases mitochondrial ATP production, provides antioxidant effects, and reduces oxidative stress and mitochondrial damage. Its neuroprotective properties have been demonstrated to protect against neuronal damage and prevent cell death. [caroline-rae]<cite class="reflink">[<a href="#anne-catherine-passaquin">anne-catherine-passaquin</a>]</cite>
+                    Creatine increases mitochondrial ATP production, provides antioxidant effects, and reduces oxidative stress and mitochondrial damage. Its neuroprotective properties have been demonstrated to protect against neuronal damage and prevent cell death. <cite class="reflink">[<a href="#c-rae">c-rae</a></cite>, <cite class="reflink"><a href="#a-c-passaquin">a-c-passaquin</a></cite>,  <cite class="reflink"><a href="#hamid-arazi">hamid-arazi</a>]</cite>
                 </p>
                 
                 <h4>Supplementation</h4>
@@ -1912,8 +1935,8 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                 <p>
                     Creatine supplementation alone may not significantly slow the progression of Parkinson's disease, especially not in the later stages. But its neuroprotective and antioxidant effects contribute to overall disease management when used as part of a comprehensive treatment approach, particularly in combination with exercise, to stave off disease progression in the early stages of the disease. Because creatine helps with exercise recovery, its use allows for more frequent training to enjoy the benefits of exercise.
                 </p>
-                <ol>
-                    <li id="caroline-rae">[caroline-rae]
+                <ol class="reference-list">
+                    <li id="c-rae">
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1691485/"  title="Oral creatine monohydrate supplementation improves brain performance: a double-blind, placebo-controlled, cross-over trial."
                         target="_blank"
                         >Oral creatine monohydrate supplementation improves brain performance: a double-blind, placebo-controlled, cross-over trial</a>, Caroline Rae, et al
@@ -1922,7 +1945,7 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                         </p>
                     </li>
 
-                    <li id="hyukki-chang">[hyukki-chang]
+                    <li id="hyukki-chang">
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10844727/" title="The potential role of creatine supplementation in neurodegenerative diseases"
                         target="_blank"
                         >The potential role of creatine supplementation in neurodegenerative diseases</a>, Hyukki Chang, et al.
@@ -1930,7 +1953,7 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                             This review study concluded creatine supplementation had neuroprotective effects in animal models and in vitro studies of certain neurodegenerative diseases, but that clinical trials failed to reproduce favorable outcomes.
                         </p>
                     </li>
-                    <li id="anne-catherine-passaquin">[anne-catherine-passaquin]
+                    <li id="a-c-passaquin">
                         <a href="https://www.sciencedirect.com/science/article/abs/pii/S0960896601002735" title="Creatine supplementation reduces skeletal muscle degeneration and enhances mitochondrial function in mdx mice"
                         target="_blank"
                         >Creatine supplementation reduces skeletal muscle degeneration and enhances mitochondrial function in mdx mice</a>, Anne-Catherine Passaquin , et al.
@@ -1939,13 +1962,13 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                         </p>
                     </li>
                     
-                    <li id="hamid-arazi">[hamid-arazi]
+                    <li id="hamid-arazi">
                         <a href="https://www.mdpi.com/2072-6643/13/3/869" 
                         title="Creatine Supplementation, Physical Exercise and Oxidative Stress Markers: A Review of the Mechanisms and Effectiveness"
                         target="_blank"
                         >Creatine Supplementation, Physical Exercise and Oxidative Stress Markers</a>
                         <p>
-                            This study reviewed available scientific literature to better understand creatine's antioxidant mechanisms. They concluded that creatine has positive effects on oxidative stress and reduces ROS and that creatine can maintain mitochondrial integrity, increase CrP resources, act as a cellular energy buffer, and protect two important cellular targets, mtDNA and RNA, from oxidative damage. 
+                            This review study concluded creatine's antioxidant mechanisms include reduced <abbr title="Reactive Oxygen Species">ROS</abbr> and <abbr title="Reactive Nitrogen Species">RNS</abbr> leading, and that creatine can maintain mitochondrial integrity, increase creatine phosphate (CP) resources, act as a cellular energy buffer, and protect two important cellular targets, mtDNA and RNA, from oxidative damage. 
                         </p>
                     </li>
                 </ol>
@@ -2676,18 +2699,6 @@ compounds that induced the secretion of extracellular NGF in NG108-15 cells, the
                             Acetyl-l-carnitine protects dopaminergic nigrostriatal pathway in 6-hydroxydopamine-induced model of Parkinson's disease in the rat
                         </a>
                     </li>
-
-                    <li>
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/28168622/">
-                            Alpha-synuclein and iron: two keys unlocking Parkinson's disease
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.frontiersin.org/articles/10.3389/fnagi.2018.00097/full">
-                            High Dietary Iron Supplement Induces the Nigrostriatal Dopaminergic Neurons Lesion in Transgenic Mice Expressing Mutant A53T Human Alpha-Synuclein
-                        </a>
-                    </li>
                </ol>
             </section>
             
@@ -2708,46 +2719,52 @@ compounds that induced the secretion of extracellular NGF in NG108-15 cells, the
                 <h4>Supplement Forms: s- and r-Enantiomers, and Binding</h4>
 
                 <p>
-                    Most research on ALA uses both s- and r-isoforms. The synthetically produced s-form inhibits the absorption of the naturally occurring r-isomer, which has better bioavailability. 
+                    Most research on ALA uses both s- and r-isoforms. The synthetically produced s-form inhibits the absorption of the naturally occurring r-isomer, which has better bioavailability. <cite class="reflink">[<a href="#b-salehi">b-salehi</a>]</cite>
                 </p>
                 
                 <p>
-                    Na-r-ALA (sodium-bound r-ALA) has better absorption and stability.
+                    Na-r-ALA (sodium-bound r-ALA) has better absorption and stability. <cite class="reflink">[<a href="#d-a-carlson">d-a-carlson</a>]</cite>
                 </p>
 
                 <h4>How r-ALA Works</h4>
                 
                 <p>
-                    R-ALA activates <abbr title="AMP-activated protein kinase">AMPK</abbr>, which stimulates mitophagy. This leads to mitochondrial biogenesis and improved mitochondrial function. It increases glucose uptake and decreases glucose production in the liver, resulting in enhanced insulin sensitivity and reduced oxidative stress.
+                    R-ALA activates <abbr title="AMP-activated protein kinase">AMPK</abbr>, which stimulates mitophagy. This leads to mitochondrial biogenesis and improved mitochondrial function. It increases glucose uptake and decreases glucose production in the liver, resulting in enhanced insulin sensitivity and reduced oxidative stress. <cite class="reflink">[<a 
+             href="#w-j-lee">w-j-lee</a></cite>]
                 </p>
                 
                 <h4>R-ALA in Parkinson's Disease</h4>
                 <p>
-                     Insulin resistance (IR) is commonly associated with an increased risk of developing Parkinson’s disease. IR leads to elevated brain glucose, which damages brain cells and accelerates neurodegeneration.
+                     Insulin resistance (IR) is commonly associated with an increased risk of developing Parkinson’s disease. IR leads to elevated brain glucose, which damages brain cells and accelerates neurodegeneration. <cite class="reflink">[<a 
+             href="#HOMA-IR">HOMA-IR</a></cite>]
+                </p>
+                
+                <h5>Iron in Parkinson's Disease</h5>
+                <p>
+                	Alpha-synuclein pathology disrupts iron homeostasis in PD. High iron levels harm dopaminergic neurons, inducing cell death and leading to more severe motor deficits with mutant α-synuclein. <cite class="reflink">[<a 
+             href="#f-jia">f-jia</a>, <a 
+             href="#p-lingor">p-lingor</a></cite>
                 </p>
                 <p>
-                    R-ALA decreases intracellular reactive oxygen species (ROS) and iron levels. High iron levels harm dopaminergic neurons, inducing cell death and leading to more severe motor deficits with mutant α-synuclein.
+                    R-ALA decreases intracellular <abbr title="Reactive Oxygen Species">ROS</abbr> and iron levels. <cite class="reflink">[<a 
+             href="#s-tai">s-tai</a></cite>
                 </p>
                 
                 <p>
-                    Overexpression of α-synuclein inhibits AMPK activity, contributing to the neurodegenerative process in PD.
+                    Overexpression of α-synuclein inhibits <abbr title="Adenosine 5′ Monophosphate-Activated Protein Kinase">AMPK</abbr> activity, contributing to the neurodegenerative process in PD. <cite class="reflink">[<a 
+             href="#lw-bobela">w-bobela</a>]</cite>
                 </p>
                 
-                <p>
-                    While r-ALA improves upon some aspects of PD pathology, based on current evidence, its effectiveness is moderate, partly contingent upon insulin sensitivity, and best incorporated as an adjuvant.
-                </p>
                 <h4>Synergy</h4>
                 <h5>Na-r-ALA, Creatine, ALCAR, and Carbohydrates</h5>
-                <p>
-                    Taking r-ALA with carbohydrates and creatine monohydrate enhances the uptake of these nutrients into brain and muscle cells.
-                </p>
                 
                 <p>
                     ALCAR helps transport fatty acids into the mitochondria, where they can be converted into energy. R-ALA, an antioxidant, helps protect the mitochondria from damage, allowing them to function more efficiently. <cite class="reflink">[<a 
              href="#leite-sampaio">leite-sampaio</a>]</cite>
                 </p>
                 <p>
-                    Combining ALCAR, r-ALA, and creatine can amplify their neuroprotective effects, making this combination a potent pre-workout mitochondrial activator.
+                    Combining ALCAR, r-ALA, and creatine together can potentially enhance their update and amplify their effects, making this combination a potent pre-workout mitochondrial activator. <cite class="reflink">[<a href="#h-zhang">h-zhang</a></cite>, <cite class="reflink"><a 
+             href="#w-bobela">w-bobela</a>]</cite>
                 </p>
                 <h4>Side Effects</h4>
                 <p>
@@ -2788,42 +2805,42 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     </li>
                 </ul>
                 <h4>References</h4>
-                <ol>
+                <ol class="reference-list">
                 
-                    <li>
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/20414966/"
-                        title="Combined R-alpha-lipoic acid and acetyl-L-carnitine exerts efficient preventative effects in a cellular model of Parkinson's disease"
+                	<li id="b-salehi">
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6723188/"
+                        title="Insights on the Use of α-Lipoic Acid for Therapeutic Purposes"
                         target="_blank"
-                        >ALA plus ALCAR increases mitochondrial biogenesis and decrease ROS</a>        
+                        >Insights on the Use of α-Lipoic Acid for Therapeutic Purposes
+</a>, Bahare Salehi, et al.
                         <p>
-                            This in vitro study revealed that pretreatment with combined ALA and ALCAR increased mitochondrial biogenesis and decreased production of <abbr title="reactive oxygen species">ROS</abbr> through the up-regulation of <abbr title="the peroxisome proliferator-activated receptor-gamma coactivator 1 alpha">PGC-1a</abbr> as a possible underlying mechanism.
-                        </p>
-                        <p>
-                            <abbr title="the peroxisome proliferator-activated receptor-gamma coactivator 1 alpha">PGC-1a</abbr> is a transcriptional coactivator that regulates various cellular energy metabolism, mitochondrial biogenesis, and cellular stress responses. 
+                            The R enantiomer of ALA shows better pharmacokinetic parameters, including increased bioavailability as compared to its S enantiometer.
                         </p>
                     </li>
-                     <li>
+                    
+					<li id="d-a-carlson">
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/18069903/"
+                        title="The plasma pharmacokinetics of R-(+)-lipoic acid administered as sodium R-(+)-lipoate to healthy human subjects"
+                        target="_blank"
+                        >The plasma pharmacokinetics of R-(+)-lipoic acid administered as sodium R-(+)-lipoate to healthy human subjects</a>, David A Carlson, et al.
+                        <p>
+                            Na-r-ALA is less prone to polymerization, completely soluble in water, and displays significantly higher <dfn title="maximum serum concentration">Cmax</dfn> and <abbr title="Area Under the Curve">AUC</abbr> values and decreased time to maximum concentration (Tmax) and T1/2 values than RLA or rac-LA.
+                        </p>
+                    </li>
+                    <li id="s-tai">
                         <a href="https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2020.00612/full"
                         title="Alpha-Lipoic Acid Mediates Clearance of Iron Accumulation by Regulating Iron Metabolism in a Parkinson’s Disease Model Induced by 6-OHDA"
-                        target="_blank">Alpha-Lipoic Acid Mediates Clearance of Iron Accumulation in PD Model</a>
+                        target="_blank">Alpha-Lipoic Acid Mediates Clearance of Iron Accumulation in PD Model</a>, Shengyan Tai, et al.
                         
                         <p>
                             This PD-induced rodent model showed that ALA could provide significant protection from 6-OHDA-induced cell damage in vitro by decreasing the levels of intracellular reactive oxygen species and iron. 
                         </p>
                     </li>
-                    <li>
-                        <a href="https://www.tandfonline.com/doi/abs/10.3109/00207454.2010.535934"
-                        title="Acetyl-l-carnitine and α-lipoic acid affect rotenone-induced damage in nigral dopaminergic neurons of rat brain, implication for Parkinson's disease therapy"
-                        target="_blank">ALACAR and α-lipoic acid improve motor performance and reduced brain lipid peroxides in rat PD model</a>
-                        <p>
-                            In this rodent model, researchers found treatment with acetyl-l-carnitine or α-lipoic acid improved the motor performance and reduced the level of lipid peroxides in rat brains.
-                        </p>
-                    </li>
                     
-                    <li>
+                    <li id="HOMA-IR">
                         <a href="https://www.parkinson.org/blog/science-news/insulin-resistance"
                         >Parkinson's Disease and Insulin Resistance (HOMA-IR)
-</a>
+</a>, <cite>(anonymous)</cite>
                         <p>
                             A recently published study in the Journal of Parkinson’s Disease titled, “High Prevalence of Undiagnosed Insulin Resistance in Non-Diabetic Subjects with Parkinson’s Disease” (Hogg et al., 2018)
                         </p>
@@ -2832,13 +2849,60 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                             The study revealed nearly 60% of the non-diabetic study participants may have undiagnosed insulin resistance &mdash; despite having normal blood sugar levels.
                         </p>
                     </li>
-                    <li>
+					<li id="w-j-lee">
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/15913551/"
+                        title="Alpha-lipoic acid increases insulin sensitivity by activating AMPK in skeletal muscle"
+                        target="_blank"
+                        >Alpha-lipoic acid increases insulin sensitivity by activating AMPK in skeletal muscle</a>, Woo Je Lee, et al.
+                        <p>
+                            This study suggests that ALA-induced improvement of insulin sensitivity is mediated by activation of AMPK and reduced triglyceride accumulation in skeletal muscle.
+                        </p>
+                    </li>
+                    <li id="w-bobela">
                         <a href="https://molecularneurodegeneration.biomedcentral.com/articles/10.1186/s13024-017-0220-x"
                         title="Modulating the catalytic activity of AMPK has neuroprotective effects against α-synuclein toxicity"
                         target="_blank"
-                        >AMPK activation mitigates α-synuclein toxicity</a>
+                        >AMPK activation mitigates α-synuclein toxicity</a>, Wojciech Bobela, et al.
                         <p>
                             Researches modulated AMPK activity to overexpress AMPK. Overexpression of AMPK mitigated α-synuclein toxicity in nigral dopamine neurons.
+                        </p>
+                    </li>
+                    <li id="p-lingor">
+                        <a title="Alpha-synuclein and iron: two keys unlocking Parkinson's disease"
+                        target="_blank"
+                        href="https://pubmed.ncbi.nlm.nih.gov/28168622/">
+                            Alpha-synuclein and iron: two keys unlocking Parkinson's disease</a>, Paul Lingor, et al.
+                            
+                    	<p>
+                    		This short review, focuses on two disease mechanisms: alpha-synuclein pathology and dysfunction of iron homeostasis, as well as their intricate interaction.
+                    	</p>
+                    </li>
+					<li id="f-jia">
+                        <a href="https://www.frontiersin.org/articles/10.3389/fnagi.2018.00097/full">
+                            High Dietary Iron Supplement Induces the Nigrostriatal Dopaminergic Neurons Lesion in Transgenic Mice Expressing Mutant A53T Human Alpha-Synuclein</a>, Fengju Jia, et al.
+                            
+                    <p>
+                    	These results suggested high dietary iron supplement could induce nigral dopaminergic neurons lesion in A53T mice, which might be due to the vulnerability of SN to accumulate iron.
+                    </p>
+                    </li>
+                    <li id="h-zhang">
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/20414966/"
+                        title="Combined R-alpha-lipoic acid and acetyl-L-carnitine exerts efficient preventative effects in a cellular model of Parkinson's disease"
+                        target="_blank"
+                        >Combined R-alpha-lipoic acid and acetyl-L-carnitine exerts efficient preventative effects in a cellular model of Parkinson's disease</a>, Hongyu Zhang, et al.
+                        <p>
+                            This in vitro study revealed that pretreatment with combined ALA and ALCAR increased mitochondrial biogenesis and decreased production of <abbr title="reactive oxygen species">ROS</abbr> through the up-regulation of <abbr title="the peroxisome proliferator-activated receptor-gamma coactivator 1 alpha">PGC-1a</abbr> as a possible underlying mechanism.
+                        </p>
+                        <p>
+                            <abbr title="the peroxisome proliferator-activated receptor-gamma coactivator 1 alpha">PGC-1a</abbr> is a transcriptional coactivator that regulates various cellular energy metabolism, mitochondrial biogenesis, and cellular stress responses. 
+                        </p>
+                    </li>
+                    <li id="araujo">
+                        <a href="https://www.tandfonline.com/doi/abs/10.3109/00207454.2010.535934"
+                        title="Acetyl-l-carnitine and α-lipoic acid affect rotenone-induced damage in nigral dopaminergic neurons of rat brain, implication for Parkinson's disease therapy"
+                        target="_blank">ALACAR and α-lipoic acid improve motor performance and reduced brain lipid peroxides in rat PD model</a>, Dayane Pessoa De Araújo, et al.
+                        <p>
+                            In this rodent model, researchers found treatment with acetyl-l-carnitine or α-lipoic acid improved the motor performance and reduced the level of lipid peroxides in rat brains.
                         </p>
                     </li>
                 </ol>
