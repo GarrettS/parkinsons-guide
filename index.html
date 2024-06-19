@@ -17,7 +17,6 @@ body {
     background-color: light-dark(#EEEEEED3, #222222cc);
 	color: light-dark(#111111cc, #CCCE);
 
-	
     font-family: georgia, "Open Sans", Helvetica;
     position: relative;
     font-size: calc(10px + 1vw);
@@ -145,7 +144,6 @@ section section {
     flex-shrink: 3; /* default 1 */
 }
 
-
 .product-list img {
     width: auto;
     max-height: 200px;
@@ -186,7 +184,7 @@ nav {
     transform: translateX(calc(-100% + 1.8em));
     transition: transform 0.3s ease;
     background-color: #333333FC;
-    color: #fff;
+    color: #FFFC;
     padding: 10px;
     height: auto;
     min-height: 100%;
@@ -217,6 +215,11 @@ nav h3 {
 	right: 0;
 	padding: 0.1em;
 	cursor: pointer;
+	z-index: 100;
+}
+
+nav h3:hover {
+	color: #FFF
 }
 
 nav a {
@@ -230,7 +233,7 @@ nav.open {
 }
 
 nav.open h3{
-	position: absolute;
+	right: 0;
 }
 
 nav.open > ul {
@@ -254,11 +257,16 @@ nav a:hover {
     <script type="module">
 const documentElement = document.documentElement;
 const clickHandler = event => {
-	const isNav = event.target?.matches("nav, nav *");
+	const target = event.target;
+	if (!target) return;
 	const nav = document.getElementById("nav");
-	if (isNav) {
-		nav.classList.add("open");
-	} else {
+	const isNotNav = !nav.contains(target);
+	const isNavHeader = target.matches("nav > h3");
+	
+	if (isNavHeader) {
+		nav.classList.toggle("open");
+		return;
+	} else if (isNotNav) {
 		nav.classList.remove("open");
 	}
 };
@@ -445,7 +453,7 @@ documentElement.addEventListener("touchstart", clickHandler);
             The nervous system comprises the Central Nervous System (CNS), Peripheral Nervous System (PNS), and autonomic nervous system (ANS). The CNS, consisting of the brain and spinal cord, processes information and coordinates responses. The PNS connects the CNS to the body, relaying sensory input and motor output. The ANS regulates involuntary functions like heart rate and digestion.
         </p -->
         <p>
-            In PD, progressive neurodegeneration (PN) primarily affects the Central Nervous System (CNS), particularly dopamine-producing neurons, leading to motor symptoms like tremors and rigidity. However, dysfunction of the autonomic nervous system (ANS) becomes more noticeably pronounced in the later stages, contributing to non-motor symptoms such as GI issues, low blood pressure, and urinary dysfunction.
+            In PD, progressive neurodegeneration (PN) primarily affects the Central Nervous System (CNS), particularly dopamine-producing neurons, leading to motor symptoms like tremors and rigidity. However, dysfunction of the autonomic nervous system (ANS) becomes more noticeably pronounced in the later stages, contributing to non-motor symptoms such as <abbr title="Gastrointestinal">GI</abbr> issues, low blood pressure, and urinary dysfunction.
         </p>
         <p>
             PD-related autonomic dysfunction can exacerbate renal issues, leading to a complex interplay of factors that contribute to orthostatic hypotension in PD.
@@ -571,7 +579,7 @@ documentElement.addEventListener("touchstart", clickHandler);
 				PD's multifactorial effects involve aging, genetics, and environmental factors associated with dopaminergic neuronal death. <cite class="reflink">[<a href="#k-burton">k-burton</a>]</cite>
 			</p>
 			<p>
-				Neurotoxins, such as rotenone and <a href="https://www.syngenta.com/en/paraquat-in-the-media">paraquat</a>, along with gene mutations of DJ-1, PINK1, parkin, LRRK2, and SNAC, contribute to several cellular issues. These include mitochondria complex I inhibition, ATP depletion, and <abbr title="Reactive Oxygen Species">ROS</abbr>  accumulation. They also cause mitochondrial depolarization and dysfunction. Together, these factors promote neuronal death in the substantia nigra of PD patients. <cite class="reflink">[<a href="#jae-hyeon-park">jae-hyeon-park</a>]</cite><cite class="reflink">[<a href="f-pan-montojo">F. Pan-Montojo</a>]</cite>
+				Neurotoxins, such as rotenone and <a href="https://www.syngenta.com/en/paraquat-in-the-media">paraquat</a>, along with gene mutations of <abbr title="Parkinsonism-Associated Deglycase 1 or Park7">DJ-1</abbr>, <abbr title="PTEN-induced Kinase 1">PINK1</abbr>, parkin, <abbr title="Leucine-Rich Repeat Kinase 2 gene">LRRK2</abbr>, and <abbr title="Synuclein Alpha Gene">SNCA</abbr> genes, contribute to several cellular issues. These include mitochondria complex I inhibition, ATP depletion, and <abbr title="Reactive Oxygen Species">ROS</abbr>  accumulation. They also cause mitochondrial depolarization and dysfunction. Together, these factors promote neuronal death in the substantia nigra of PD patients. <cite class="reflink">[<a href="#jae-hyeon-park">jae-hyeon-park</a>]</cite><cite class="reflink">[<a href="f-pan-montojo">F. Pan-Montojo</a>]</cite>
 			</p>
 			<p>
 				This is difficult. Reread that until it makes sense.
@@ -580,8 +588,8 @@ documentElement.addEventListener("touchstart", clickHandler);
             <p>
                 Epigenetic factors can influence mutations in <abbr title="Leucine-Rich Repeat Kinase 2 gene"
                 >LRRK2</abbr> (<abbr title="Leucine-Rich Repeat Kinase 2 gene with a Glycine to Serine substitution at position 2019"
-                >LRRK2</abbr>) and cause encoding mutations in <abbr title="Leucine-Rich Repeat Kinase 2 gene"
-                >LRRK2</abbr> and SNCA genes that affect the production and pathogenicity of mutant &alpha;-synuclein. <cite class="reflink">[<a href="#christine-klein">christine-klein</a>]</cite>
+                >LRRK2-G2019S</abbr>) and cause encoding mutations in <abbr title="Leucine-Rich Repeat Kinase 2 gene"
+                >LRRK2</abbr> and <abbr title="Synuclein Alpha Gene">SNCA</abbr> genes that affect the production and pathogenicity of mutant &alpha;-synuclein. <cite class="reflink">[<a href="#christine-klein">christine-klein</a>]</cite>
             </p>
             <p>
                 Vitamin B12, for example, is an external factor that prevents LRRK2-G2019S-potentiated &alpha;-synuclein accumulation in dopaminergic neurons. <cite class="reflink">[<a href="#a-schaffner">a-schaffner</a>]</cite>
@@ -832,20 +840,20 @@ in α-synuclein have increased propensity to aggregate compared with the wild-ty
     
         <ol>
             <li>Balanced hormone levels
-            <li>Efficient metabolism (basic CMP)
+            <li>Efficient metabolism (basic <abbr title="Basic Metabolic Panel">BMP</abbr>)
             <li>Healthy blood pressure and cholesterol levels
             <li>Strong immune system
-            <li>Well-functioning organs and systems, including cardiovascular, respiratory, digestive systems (CMP)
-            <li>Health Blood markers (CBC)
+            <li>Health Blood markers (<abbr title="Complete Blood Count">CBC</abbr>)
         </ol>
     
         But we could go deeper:
         <ol>
             <li>Resting heart rate below 60 beats per minute
+            <li>Well-functioning organs and systems, including cardiovascular, respiratory, digestive systems (<abbr title="Comprehensive Metabolic Panel">CMP</abbr>)
             <li>Normal blood pressure (around 120/80 mmHg)
             <li><del>crude lipid profile with low LDL and high HDL cholesterol</del>
-            <li>More useful lipid profile <em>high</em> lbLDL and lbHDL, low sdLDL and sdHDL, and high ratio of lbHDL to lbLDL
-            <li>Healthy body composition; low visceral fat (DEXA)
+            <li>More useful lipid profile <em>high</em> <abbr title="Large, Buoyant Low-Density Lipoprotein">lbLDL</abbr> and <abbr title="Large, Buoyant Low-Density Lipoprotein">lbHDL</abbr>, low <abbr title="Small, Dense Low-Density Lipoprotein">sdLDL</abbr> and <abbr title="Small, Dense High-Density Lipoprotein">sdHDL</abbr>, and high ratio of <abbr title="Large, Buoyant High-Density Lipoprotein">lbHDL</abbr> to <abbr title="Large, Buoyant Low-Density Lipoprotein">lbLDL</abbr>
+            <li>Healthy body composition; low visceral fat (<abbr title="dual-energy X-ray absorptiometry">DEXA</abbr>)
             <li>Optimal levels of inflammation and oxidative stress (Cytokine Markers and Inflammatory Markers tests).
         </ol>
         Deeper yet:
@@ -858,7 +866,7 @@ in α-synuclein have increased propensity to aggregate compared with the wild-ty
             title="Oral Glucose Tolerance Test">OGTT</abbr>).
             <li>Adequate cellular repair mechanisms ensuring tissue integrity and longevity.
             <li>Optimal mitochondrial function providing energy for cellular activities
-            ()<a href="https://aonm.org/mitochondrial-testing/">mitochondrial testing</a>).
+            (<a href="https://aonm.org/mitochondrial-testing/">mitochondrial testing</a>).
 		</ol>
             Focusing on the brain:
         <ol>
