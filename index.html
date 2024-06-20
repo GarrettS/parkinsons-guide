@@ -193,12 +193,13 @@ nav {
     left: 0;
     top: 0;
     bottom: 0;
+    padding: 0;
+    margin: 0;
     transform: translateX(calc(-100% + 3.9vw));
     transition: transform 0.3s ease;
     background-color: #333333FC;
     color: #FFFC;
-    height: 100vh;
-    max-height: 100vh;
+    height: 100%;
     z-index: 100;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -222,7 +223,7 @@ nav > ul > li > a {
     font-weight: bolder;
 }
 
-nav>div:first-child {
+nav > div:first-child {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -235,6 +236,7 @@ nav h3 {
 	position: sticky;
 	top: 1.8vh;
 	right: 0;
+	margin-right: 2vw;
 	padding: 1.5vh 0.55vh;
 	margin: 0;
 	cursor: pointer;
