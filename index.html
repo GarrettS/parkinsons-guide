@@ -12,7 +12,8 @@ html {
     padding: 0;
     font-size: 0;
     height: 100%;
-    width: 100%;}
+    width: 100%;
+}
 
 body {
     background-color: light-dark(#EEEEEED3, #222222cc);
@@ -22,7 +23,7 @@ body {
     position: relative;
     font-size: calc(10px + 1vw);
     margin: 0 0 0 2.6vh;
-    padding-left: 2vw;
+    padding-left: 2.5vw;
     border-style: solid;
     border-width: 1px;
     border-color: light-dark(#DDDDDDcc, #330500cc);
@@ -94,9 +95,13 @@ ol.reference-list > li[id]::before {
 	content: "[" attr(id) "]"
 }
 
+body > section, body > header {
+    width: 100%;
+}
+
 section, header {
     background-color: light-dark(lighten, darken);
-    padding: 1vh;
+    margin: 0;
     border: 2px solid transparent;
 }
 
@@ -224,24 +229,29 @@ nav > ul > li > a {
 }
 
 nav > div:first-child {
+	background: transparent;
 	position: absolute;
 	top: 0;
 	right: 0;
 	z-index: 1000;
-	background: transparent;
+	width: 3.9vw;
+	font-size: 2.3vw;
+	height: 5.5em; /** accomodate "Menu" */
+	display: inline-block;
 }
 
 nav h3 {
 	writing-mode: vertical-lr;
+	display: inline-block;
 	position: sticky;
-	top: 1.8vh;
+	top: 1vh;
 	right: 0;
-	margin-right: 2vw;
-	padding: 1.5vh 0.55vh;
+	padding: 1.5vh 0.5vh;
 	margin: 0;
 	cursor: pointer;
 	z-index: 1000;
 	user-select: none;
+	font-size: 2.3vw;
 }
 
 nav h3:hover, nav.open h3 {
