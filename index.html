@@ -193,7 +193,7 @@ nav {
     left: 0;
     top: 0;
     bottom: 0;
-    transform: translateX(calc(-100% + 3vw));
+    transform: translateX(calc(-100% + 3.9vw));
     transition: transform 0.3s ease;
     background-color: #333333FC;
     color: #FFFC;
@@ -253,6 +253,10 @@ nav h3:hover {
 	color: #fff;
 }
 
+nav > ul {
+	position: relative;
+	z-index: 1;
+}
 nav a {
     color: #fff;
   	container: sidebar / normal;
