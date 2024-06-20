@@ -11,7 +11,8 @@ html {
     margin: 0;
     padding: 0;
     font-size: 0;
-}
+    height: 100%;
+    width: 100%;}
 
 body {
     background-color: light-dark(#EEEEEED3, #222222cc);
@@ -25,11 +26,15 @@ body {
     border-style: solid;
     border-width: 1px;
     border-color: light-dark(#DDDDDDcc, #330500cc);
+    min-height: 100%;
+    min-width: 100%;
+    position: relative;
 }
 
 abbr, dfn {
     position: relative;
 }
+
 abbr::after, dfn::after {
 	opacity: 0.1;
     display: inline-block;
@@ -63,6 +68,12 @@ a:visited {
 	font-style: italic;
 }
 
+dl {
+	font-family: cormorant, "Latin Modern Roman";
+}
+dt {
+	font-style: italic;
+}
 .block-image {
     display: block;
     margin: auto;
@@ -182,7 +193,7 @@ nav {
     left: 0;
     top: 0;
     bottom: 0;
-    transform: translateX(calc(-100% + 1.95em));
+    transform: translateX(calc(-100% + 3.3vw));
     transition: transform 0.3s ease;
     background-color: #333333FC;
     color: #FFFC;
@@ -215,6 +226,8 @@ nav>div:first-child {
 	position: absolute;
 	top: 0;
 	right: 0;
+	z-index: 1000;
+	background: transparent;
 }
 
 nav h3 {
@@ -225,7 +238,7 @@ nav h3 {
 	padding: 1.5vh 0.55vh;
 	margin: 0;
 	cursor: pointer;
-	z-index: 100;
+	z-index: 1000;
 	user-select: none;
 }
 
@@ -236,7 +249,7 @@ nav h3:hover, nav.open h3 {
 	border-bottom-left-radius: 0.4vw;
 }
 
-h3:hover {
+nav h3:hover {
 	color: #fff;
 }
 
