@@ -50,7 +50,7 @@ abbr::after, dfn::after {
 }
 
 abbr:hover::after, dfn:hover::after {
-    transform: translateX(calc(-100% + 1.8em));
+    transform: translateX(calc(-100% + 1.8em)) !important;
 	opacity: 0.9999;
     content: attr(title);
 }
@@ -285,6 +285,7 @@ nav.open ul {
 	because we must keep the "Menu" tab sticky
 	*/
     overflow-y: auto;
+    height: 97%;
 }
 nav.open h3{
 	right: 0;
