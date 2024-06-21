@@ -31,27 +31,30 @@ body {
     position: relative;
 }
 
-abbr, dfn {
+abbr[title], dfn[title] {
     position: relative;
+    text-decoration: underline;
+  	text-decoration-style: dotted;
 }
 
-abbr::after, dfn::after {
-	opacity: 0.1;
-    display: inline-block;
+abbr[title]::after, dfn[title]::after {
+	opacity: 0.0000000001;
     position: absolute;
     bottom: 100%;
     left: 100%;
-    display: block;
     padding: .5em .46em .5em .5em;
     background-color: light-dark(#EEE, #555);
     font-size: smaller;
     border-radius: .4em;
+    transition: opacity 0.3s ease-in;
+    content: attr(title);
+    z-index: -1;
 }
 
-abbr:hover::after, dfn:hover::after {
-    transform: translateX(calc(-100% + 1.8em)) !important;
-	opacity: 0.9999;
-    content: attr(title);
+abbr[title]:hover::after, dfn[title]:hover::after {
+    display: inline-block;
+    z-index: 1;
+	opacity: 0.9999999;
 }
 
 a:link, a:visited {
@@ -404,7 +407,7 @@ documentElement.addEventListener("touchstart", clickHandler);
                     <li>
                         <a href="#hormonal-interventions">Hormonal Interventions</a>
                         <ul>
-                            <li><a href="#hrt">HRT — Testosterone, Estrogen</a></li>
+                            <li><a href="#hrt">HRT &mdash; Testosterone, Estrogen</a></li>
                             <li><a href="#dhea">DHEA</a></li>
                             <li><a href="#pregnenolone">Pregnenolone</a></li>
                         </ul>
@@ -670,7 +673,7 @@ documentElement.addEventListener("touchstart", clickHandler);
             
             <h5>The Role of Pesticides</h5>
             <p>
-                Pesticide and herbicide exposure causes &alpha;-synuclein overexpression in certain individuals. Rotenone and paraquat, both pesticides, so reliably induce PD that they are used to induce PD in rodent model experiments. 
+                Pesticide and herbicide exposure causes &alpha;-synuclein overexpression in certain individuals. Herbicide rotenone and pesticide paraquat so reliably induce PD that they are used to induce PD in rodent model experiments. 
             </p>
             <p>
                 <abbr title="Special AT-rich sequence-binding protein 1">SATB1</abbr> a cell regulator, represses the expression of p21 in dopaminergic neurons. P21 is a pro-senescence factor that maintains the viability of senescent cells under persistent DNA damage response.  <cite class="reflink">[<a href="#markus-riessland">markus-riessland</a>]</cite>
@@ -1337,7 +1340,7 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
             <h3>Medications</h3>
             
             <p class="call-out">
-                Parkinson's disease is generally treated with symptomatic management. That includes:—
+                Parkinson's disease is generally treated with symptomatic management. That includes:&mdash;
             </p>
             
             <ul>
@@ -1351,7 +1354,7 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
             </p>
             
             <section id="dopamine-agonists">
-                <h4>Dopamine Replacement Therapy — Overview</h4>
+                <h4>Dopamine Replacement Therapy &mdash; Overview</h4>
             
                 <p>
                     Dopamine replacement therapy (DRT) for PD commonly includes levodopa/carbidopa (LD/DDC) and MAO-B inhibitors. 
@@ -1386,7 +1389,7 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                     Dopamine is but one of many neurochemical systems in the midbrain. Focusing solely on the dopaminergic system without considering other neurotransmitter systems leads to progressive neurodegeneration (PN) exacerbating motor and non-motor symptoms.
                 </p>
                         
-                <h4>Dopamine Replacement Therapy — Summary</h4>
+                <h4>Dopamine Replacement Therapy &mdash; Summary</h4>
                 <p>
                     Therefore, while dopamine replacement is beneficial, its use can be minimized to the least effective dose with a multi-faceted approach that addresses neuroprotection, neurorestoration, antioxidation, and mitochondrial health.
                 </p>
@@ -1447,7 +1450,7 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
         <section id="hormonal-interventions">
             <h3>Hormonal Interventions</h3>
             <section id="hrt">
-                <h4 class="neuroprotective">HRT — Estrogen and Testosterone</h4>
+                <h4 class="neuroprotective">HRT &mdash; Estrogen and Testosterone</h4>
             
                 <p>
                     Estrogen is neuroprotective and has had positive effects in animal models of PD, reducing dopaminergic neuron loss and improving motor function.
@@ -2165,6 +2168,9 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8538722/
                         <p>
 							Ingestion of 3 g cinnamon reduced postprandial serum insulin and increased GLP-1 concentrations without significantly affecting blood glucose, GIP, the ghrelin concentration, satiety, or GER in healthy subjects. The results indicate a relation between the amount of cinnamon consumed and the decrease in insulin concentration.
                         </p>
+                        
+                        <p>
+                        	(<dfn>GIP</dfn>, is <dfn>glucose-dependent insulinotropic polypeptide</dfn>, an <dfn>incretin</dfn> hormone secreted by <dfn title="K Cells or GIP cells are enteroendocrine cells found in the small intestine">K cells</dfn> in the upper small intestine in response to nutrient ingestion, particularly glucose.)
                     </li>
                     
                     <li id="a-marques">
@@ -2232,8 +2238,8 @@ Model of Parkinson’s Disease Via Astrocytic GDNF</a>
                     Lion's mane is safe and well-tolerated. The compounds Hericenones and erinacines, which are the compounds identified as being active in promoting Nerve Growth Factor (NGF) and are primarily alcohol soluble.
 Sterols, which are also fat-soluble compounds.
                 </p>
-                <ol>
-                    <li id="koichiro-mori">[koichiro-mori]
+                <ol class="reference-list">
+                    <li id="koichiro-mori">
                         <a href="https://pubmed.ncbi.nlm.nih.gov/18844328/"
                         title="Improving effects of the mushroom Yamabushitake (Hericium erinaceus) on mild cognitive impairment: a double-blind placebo-controlled clinical trial"
                         target="_blank"
@@ -2251,7 +2257,7 @@ Sterols, which are also fat-soluble compounds.
                             This double-blind RCT found that elderly men and women who took a daily 350mg capsule containing 5 mg/g erinacine A (active ingredient) demonstrated better cognitive performance and functioning.
                         </p>
                     </li>
-				<li id="sarah-docherty">[sarah-docherty]
+					<li id="sarah-docherty">[sarah-docherty]
                         <a href="https://www.mdpi.com/2072-6643/15/22/4842"
                         title="The Acute and Chronic Effects of Lion’s Mane Mushroom Supplementation on Cognitive Function, Stress and Mood in Young Adults: A Double-Blind, Parallel Groups, Pilot Study">Lion’s Mane Supplementation on Cognitive Function, Stress, and Mood in Young Adults</a>, Sarah Docherty, et al.
                         
@@ -2275,18 +2281,93 @@ compounds that induced the secretion of extracellular NGF in NG108-15 cells, the
                     </li>
                 </ol>
             </section>
+            
             <section id="cordyceps" class="neuroprotective anti-inflammatory">
                 <h3>Cordyceps</h3>
-                
+                <ul class="treatment-rating">
+                    <li>Mechanisms: Neuroprotective, Anti-inflammatory, Mitochondrial, Antioxidant</li>
+                    <li>Dose: ~3g ED️</li>
+                    <li>🩸🧠BBB: ✅</li>
+                    <li>Safety: 7/10 (90% σ)</li>
+                    <li>Efficacy: 5/10 (80% σ)</li>
+                </ul>                
                 <p>
-                    Cordycepin, a bioactive component of Cordyceps militaris, has been found to have neuroprotective effects on Parkinson’s disease.
+                    Cordycepin, a bioactive component of cordyceps militaris, reduces neuroinflammation. It does this by regulating cytokine production. <cite class="reflink">[<a href="#y-sun">y-sun</a>]</cite>
                 </p>
-                <ol>
-                    <li>
-                        <a href="https://www.sciencedirect.com/science/article/pii/S1756464620304989"
-                        ></a>
+                
+                <h4>BBB</h4>
+                <p>
+	                Cordycepin of (2′-Deoxyadenosine) is a small molecule (<abbr title="molecular weight">MW</abbr> ~251 <abbr title="Daltons &ndash; unit of molecular mass">Da</abbr>), that can cross the BBB and improve its tight junction. <cite class="reflink">[<a href="#j-yuan">j-yuan</a>]</cite>
+    			</p>
+    			
+    			<h4>Immunomodulation</h4>
+    			<p>
+    				Beta-glucans, a type of polysaccharide found in the cell walls of many mushrooms, including cordyceps, are potent immunomodulators. <cite class="reflink">[<a href="#c-cerletti">c-cerletti</a>]</cite>
+    			</p>
+    			
+    			<p>
+    				Both cordycepin and adenosine can be used to mitigate excessive inflammation. <cite class="reflink">[<a href="#s-shin">s-shin</a>]</cite> <cite class="reflink">[<a href="#s-j-jung">s-j-jung</a>]</cite>
+    			</p>
+                <ol class="reference-list">
+                    <li id="y-sun">
+                        <a 
+                        title="Neuroprotective effects of natural cordycepin on LPS-induced Parkinson’s disease through suppressing TLR4/NF-κB/NLRP3-mediated pyroptosis"
+                        target="_blank"
+href="https://www.sciencedirect.com/science/article/pii/S1756464620304989"
+                        >Neuroprotective effects of natural cordycepin on LPS-induced Parkinson’s disease through suppressing TLR4/NF-κB/NLRP3-mediated pyroptosis</a>, Ying Sun, et al.
                         <p>
-                            Found cordycepin exerts neuroprotective effects via an anti-apoptotic mechanism based on the mitochondrial pathway in a rotenone-induced PD rat model.
+                            Found cordycepin exerts neuroprotective effects via an anti-apoptotic mechanism based on the mitochondrial pathway in a rotenone-induced PD rat model. It suppresses inflammatory cytokines that lead to <dfn>pyroptosis</dfn>, or <dfn>"fiery falling"</dfn>, which describes the bursting of pro-inflammatory chemical signals from the dying cell.
+                        </p>
+                        <p>
+                        	Toll-like receptor 4 (TLR4) is a receptor involved in the innate immune response and inflammation. Activation of TLR4 triggers downstream signaling pathways, including <abbr title="Nuclear factor kappa-light-chain-enhancer of activated B cells ">NF-κB</abbr> activation. Cordycepin inhibits TLR4 activation, reducing initiation of inflammatory responses in the brain.
+                        </p>
+                        <p>
+                        	Cordycepin inhibits the activation of the <abbr title="NOD-, LRR- and pyrin domain-containing protein 3) &mdash; immune system protein">NLRP3</abbr> inflammasome. This inhibition reduces the production and release of IL-1β and IL-18, which are potent mediators of inflammation-induced neurotoxicity.
+                        </p>
+                    </li>
+                    
+                    <li id="j-yuan">
+						<a 
+							title="Cordycepin attenuates traumatic brain injury-induced impairments of blood-brain barrier integrity in rats"
+							target="_blank"
+	href="https://pubmed.ncbi.nlm.nih.gov/27646481/"
+							>Cordycepin attenuates traumatic brain injury-induced impairments of blood-brain barrier integrity in rats</a>, Jing Yuan, et al.
+							
+						<p>
+							Cordycepin has protective effects against brain damages induced by TBI. The protection of cordycepin on BBB integrity was probably achieved through recovery of tight junction proteins, inhibition of local inflammation, and prevention of NOX activity.
+						</p>
+                    </li>
+                    
+                     <li id="s-shin">
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2816959/"
+                        title="Role of Cordycepin and Adenosine on the Phenotypic Switch of Macrophages via Induced Anti-inflammatory Cytokines"
+                        target="_blank"
+                        >Role of Cordycepin and Adenosine on the Phenotypic Switch of Macrophages via Induced Anti-inflammatory Cytokines</a>, Seulmee Shin, et al.
+                        
+                        <p>
+                        	This in-vitro study found cordycepin and adenosine regulated the phenotypic switch on macrophages and suggested that cordycepin and adenosine may potentially be used as immunomodulatory agents in the treatment of inflammatory disease.
+                        </p>
+                        <p>
+                        	By interacting with immune cells such as macrophages and dendritic cells, cordycepin and adenosine promote <dfn title="A process by which a cell engulfs a particle, such as a bacterium, dead cell, or foreign substance, and digests it">phagocytosis</dfn>, and enhancing immune responses against pathogens.
+                        </p>
+                    </li>
+                    
+                    <li id="c-cerletti">
+                    	<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8308413/"
+                    	title="Edible Mushrooms and Beta-Glucans: Impact on Human Health"
+                    	target="_blank">Edible Mushrooms and Beta-Glucans: Impact on Human Health</a>, Chiara Cerletti, et al.
+                    </li>
+                    
+                    <li id="s-j-jung">
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6441223/"
+                        title="Immunomodulatory effects of a mycelium extract of Cordyceps (Paecilomyces hepiali; CBG-CS-2): a randomized and double-blind clinical trial"
+                        target="_blank"
+                        >Immunomodulatory effects of a mycelium extract of Cordyceps (Paecilomyces hepiali; CBG-CS-2): a randomized and double-blind clinical trial</a>, Su-Jin Jung, et al.
+                        <p>
+                        	The results of this randomized and double-blind clinical trial suggest that the immune system functions well with supplementation, perhaps with less accompanying inflammation. Thus, CBG-CS-2 is safe and effective for enhancing cell-mediated immunity in healthy adults.
+                        </p>
+                        <p>
+                        	CBG-CS-2 is a specific strain of Cordyceps, Paecilomyces hepiali.
                         </p>
                     </li>
                 </ol>
@@ -2296,7 +2377,6 @@ compounds that induced the secretion of extracellular NGF in NG108-15 cells, the
                 <h3>
                     Turmeric 
                 </h3>
-                <h3>Turmeric</h3>
                 <ul class="treatment-rating">
                     <li>Mechanisms: Neuroprotection, Anti-inflammatory, Antifibrillogenic, Anti-aggregation
                     <li>Dose: 1-3g daily 🍽️💤
@@ -4510,7 +4590,7 @@ water maze.
                     </p>
                     
                     <h6>Food Sources</h6>
-                        Pomegranates contain ellagitannins, convertible to urolithin A by gut bacteria in 30% to 50% of people. Optimistically, eating 1 pomegranate might yield a negligible 2 milligrams of Urolithin-A — <em>not enough</em>!             
+                        Pomegranates contain ellagitannins, convertible to urolithin A by gut bacteria in 30% to 50% of people. Optimistically, eating 1 pomegranate might yield a negligible 2 milligrams of Urolithin-A &mdash; <em>not enough</em>!             
                     
                     <h5>Side Effects</h5>
                     <p>
