@@ -22,14 +22,15 @@ body {
     font-family: georgia, "Open Sans", Helvetica;
     position: relative;
     font-size: calc(10px + 1.5vi);
-    margin: 0 0 0 2.6vi;
-    padding-left: 2.5vi;
+    margin: 0 0 0 2vi;
+    padding-left: 2vi;
     border-style: solid;
     border-width: 1px;
     border-color: light-dark(#DDDDDDcc, #330500cc);
     min-height: 100%;
     min-width: 100%;
     position: relative;
+    box-sizing: border-box;
 }
 
 abbr, dfn {
@@ -96,7 +97,8 @@ ol.reference-list > li[id]::before {
 }
 
 body > section, body > header {
-    width: 100%;
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;
 }
 
 section, header {
@@ -229,11 +231,13 @@ nav > ul > li > a {
 }
 
 nav > div:first-child {
+    border-top: 1vh solid #0000;
 	writing-mode: vertical-lr;
 	background: transparent;
 	position: absolute;
 	top: 0;
 	right: 0;
+	width: 3.8vw;
 	z-index: 1000;
 	font-size: 2.3vi;
 	height: 5.5em; /** accomodate "Menu" */
@@ -243,22 +247,30 @@ nav > div:first-child {
 	align-items: flex-start;
 }
 
+nav > div:first-child:hover {
+    border-top: 1vh solid #100E;
+}
+
+nav.open > div:first-child  {
+    border-color: #FFFe;
+}
 nav h3 {
 	writing-mode: vertical-lr;
 	display: inline-block;
 	position: sticky;
 	top: 1vh;
-	padding: 2vi 1vi;
+	padding: 1vi 0.3vi;
 	margin: 0;
 	cursor: pointer;
 	z-index: 1000;
 	user-select: none;
-	font-size: 2.3vw;
+	font-size: 2.65vw;
+	border: 1px solid #0000;
 }
 
 nav h3:hover, nav.open h3 {
 	background-color: #77110088;
-	border: 1px solid #11000033
+	border: 1px solid #11000033;
 	border-bottom-right-radius: 0.4vw;
 	border-bottom-left-radius: 0.4vw;
 }
