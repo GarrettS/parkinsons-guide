@@ -280,12 +280,15 @@ nav.open {
     transform: translateX(0);
 }
 
-nav.open ul {
+nav.open > ul {
 	/* put overflow on UL, not nav, 
 	because we must keep the "Menu" tab sticky
 	*/
+	min-height: 99dvh;
     overflow-y: auto;
-    height: 97%;
+    bottom: 0;
+    position: relative;
+    padding-bottom: 1dvi;
 }
 nav.open h3{
 	right: 0;
