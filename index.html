@@ -16,6 +16,8 @@ html {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+}
+:root {
 	color-scheme: light dark;
 }
 body {
@@ -216,7 +218,11 @@ section section {
     border-width: 1px;
     border-style: solid;
     position: absolute;
-    margin-top: -1em;
+    top: -1.4ex;
+    display: inline-block;
+    font-size: smaller;
+    z-index: 10;
+    margin-top: 0;
     margin-bottom: -1em;
     padding: 0.05em 0.3em;
 }
@@ -2032,6 +2038,7 @@ Mesenchymal stem cells therapy exerts neuroprotection in a progressive animal mo
                 </ul>
                 <ul id="legend-legend">
                     <li>ED &mdash; Daily
+                    <li>EOD &mdash; Every Other Day
                     <li>BID &mdash; Twice Daily
                     <li>σ &mdash; confidence level, 0&ndash;100%
                 </ul>
