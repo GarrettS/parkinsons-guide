@@ -21,7 +21,7 @@ html {
 
 body {
     background-color: light-dark(#EEEEEED3, #222222cc);
-	color: light-dark(#111111cc, #CCCE);
+    color: light-dark(#111111cc, #CCCE);
 
     font-family: georgia, "Open Sans", Helvetica;
     position: relative;
@@ -39,7 +39,7 @@ body {
 abbr[title], dfn[title] {
     position: relative;
     text-decoration: underline;
-  	text-decoration-style: dotted;
+    text-decoration-style: dotted;
 }
 
 abbr[title]::after, dfn[title]::after {
@@ -58,10 +58,10 @@ abbr[title]::after, dfn[title]::after {
 }
 
 abbr[title]:hover::after, dfn[title]:hover::after {
-	opacity: 0.9999999;
-	z-index: auto;
-	width: unset;
-	height: unset;
+    opacity: 0.9999999;
+    z-index: auto;
+    width: unset;
+    height: unset;
     transition: all 0.3s ease-out;
 }
 
@@ -70,24 +70,24 @@ abbr[title]:hover::after, dfn[title]:hover::after {
 }
 
 a:link, a:visited {
-	color: inherit;
-	text-decoration: underline;
-	font-weight: bold;
+    color: inherit;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 cite.reflink {
-	font-size: 60%;
+    font-size: 60%;
 }
 a:visited {
-	color: lighten;
-	font-style: italic;
+    color: lighten;
+    font-style: italic;
 }
 
 dl {
-	font-family: cormorant, "Latin Modern Roman";
+    font-family: cormorant, "Latin Modern Roman";
 }
 dt {
-	font-style: italic;
+    font-style: italic;
 }
 .block-image {
     display: block;
@@ -103,10 +103,10 @@ section > figure {
 }
 
 ol.reference-list > li[id]::before {
-	font-size: 60%;
-	font-style: italic;
-	margin: .1em;
-	content: "[" attr(id) "]"
+    font-size: 60%;
+    font-style: italic;
+    margin: .1em;
+    content: "[" attr(id) "]"
 }
 
 body > section, body > header {
@@ -129,9 +129,9 @@ section section {
 }
 
 @scope(.product-list) {
-	figure, p {
-		margin-bottom: 0;
-	}
+    figure, p {
+        margin-bottom: 0;
+    }
 }
 /* Animation for highlighting and fading out on in-page links */
 @keyframes highlightFade {
@@ -147,17 +147,17 @@ section section {
 } 
 
 .good-answers, .bad-answers, .baseline-answers {
-	list-style: none;
+    list-style: none;
 }
 .good-answers li::before {
-	content: "✅";
+    content: "✅";
 }
 .bad-answers li::before {
-	content: "❌";
+    content: "❌";
 }
 
 .baseline-answers li::before {
-	content: "✔️";
+    content: "✔️";
 }
 
 .product-list {
@@ -169,7 +169,7 @@ section section {
 }
 
 .product-list li {
-    max-width: 400px;
+    max-width: 30vw;
     height: auto;
     flex-grow: 1;
     flex-shrink: 3; /* default 1 */
@@ -177,8 +177,7 @@ section section {
 
 .product-list img {
     width: auto;
-    max-height: 200px;
-    max-width: 200px;
+    max-width: 28vw;
     min-width: 0;
     object-fit: cover;
     vertical-align: bottom;
@@ -227,7 +226,7 @@ nav {
 nav > ul {
     position: relative;
 
-	opacity: 0.01;
+    opacity: 0.01;
     transition: opacity 0.3s ease;
 
     list-style: none;
@@ -244,19 +243,19 @@ nav > ul > li > a {
 
 nav > div:first-child {
     border-top: 1vh solid #0000;
-	writing-mode: vertical-lr;
-	background: transparent;
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 3.8vw;
-	z-index: 1000;
-	font-size: 2.3vi;
-	height: 5.5em; /** accomodate "Menu" */
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: flex-end;
-	align-items: flex-start;
+    writing-mode: vertical-lr;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3.8vw;
+    z-index: 1000;
+    font-size: 2.3vi;
+    height: 5.5em; /** accomodate "Menu" */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 nav > div:first-child:hover {
@@ -267,41 +266,41 @@ nav.open > div:first-child  {
     border-color: #FFFe;
 }
 nav h3 {
-	writing-mode: vertical-lr;
-	display: inline-block;
-	position: sticky;
-	padding: 1.5vi 0.4vw 1.2vi 0.25vw;
-	margin: 0;
-	cursor: pointer;
-	z-index: 1000;
-	user-select: none;
-	font-size: 2.65vw;
-	border: 1px solid #0000;
+    writing-mode: vertical-lr;
+    display: inline-block;
+    position: sticky;
+    padding: 1.5vi 0.4vw 1.2vi 0.25vw;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1000;
+    user-select: none;
+    font-size: 2.65vw;
+    border: 1px solid #0000;
 }
 
 nav h3:hover, nav.open h3 {
-	background-color: #3F51B5;
-	border: 1px solid #11000033;
-	border-bottom-right-radius: 0.54vw;
-	border-bottom-left-radius: 0.54vw;
+    background-color: #3F51B5;
+    border: 1px solid #11000033;
+    border-bottom-right-radius: 0.54vw;
+    border-bottom-left-radius: 0.54vw;
 }
 
 nav h3:hover {
-	color: #fff;
+    color: #fff;
 }
 
 nav > ul {
-	position: relative;
-	z-index: 1;
+    position: relative;
+    z-index: 1;
 }
 
 nav > ul > li:last-child {
-	margin-bottom: 4dvh;
+    margin-bottom: 4dvh;
 }
 
 nav a {
     color: #fff;
-  	container: sidebar / normal;
+    container: sidebar / normal;
 }
 
 nav.open {
@@ -309,17 +308,17 @@ nav.open {
 }
 
 nav.open > ul {
-	/* put overflow on UL, not nav, 
-	because we must keep the "Menu" tab sticky
-	*/
-	min-height: 99dvh;
+    /* put overflow on UL, not nav, 
+    because we must keep the "Menu" tab sticky
+    */
+    min-height: 99dvh;
     overflow-y: auto;
     bottom: 0;
     position: relative;
     padding-bottom: 1dvi;
 }
 nav.open h3{
-	right: 0;
+    right: 0;
 }
 
 nav.open > ul {
@@ -327,16 +326,16 @@ nav.open > ul {
 }
 
 nav a:hover {
-	color: #9cf;
+    color: #9cf;
 }
 */
 
 @container sidebar (min-width: 200px) {
-	  h3 {
-		writing-mode: unset !important;
-		position: static;
-		cursor: default;
-	}
+      h3 {
+        writing-mode: unset !important;
+        position: static;
+        cursor: default;
+    }
 }
     </style>
     
@@ -344,22 +343,22 @@ nav a:hover {
 const documentElement = document.documentElement;
 
 const clickHandler = event => {
-	const target = event.target;
-	if (!target) return;
-	const nav = document.getElementById("nav");
-	const isNotNav = !nav.contains(target);
-	const isNavHeader = target.matches("#nav-heading");
-	
-	if (isNavHeader) {
-		nav.classList.toggle("open");
-		return;
-	} else if (isNotNav) {
-		nav.classList.remove("open");
-	}
+    const target = event.target;
+    if (!target) return;
+    const nav = document.getElementById("nav");
+    const isNotNav = !nav.contains(target);
+    const isNavHeader = target.matches("#nav-heading");
+    
+    if (isNavHeader) {
+        nav.classList.toggle("open");
+        return;
+    } else if (isNotNav) {
+        nav.classList.remove("open");
+    }
 };
 documentElement.addEventListener("click", clickHandler);
 documentElement.addEventListener("touchstart", clickHandler);
-	</script>
+    </script>
 </head>
 <body>
     <h1>Parkinson's Disease Guide</h1>
@@ -425,13 +424,13 @@ documentElement.addEventListener("touchstart", clickHandler);
                     </li>
                     <li><a href="#dbs">Deep Brain Stimulation (DBS)</a></li>
                     <li><a href="#gene-therapy">Gene Therapy</a></li>
-		            <li><a href="#stem-cell">Stem Cells (MSC, iPSC)</a></li>
+                    <li><a href="#stem-cell">Stem Cells (MSC, iPSC)</a></li>
                     <li><a href="#physical-therapy-exercise"
                         >Physical Therapy / Exercise</a></li>
                     <li><a href="#pbm">Photobiomodulation</a></li>
                 </ul>
             </li>
-			<li><a href="#how-to-build-a-supplement-plan">How to Build a Supplement Plan</a></li>
+            <li><a href="#how-to-build-a-supplement-plan">How to Build a Supplement Plan</a></li>
             <li>
                 <a href="#food-and-supplements">Food &amp; Supplements</a>
                 <ul>
@@ -561,11 +560,11 @@ documentElement.addEventListener("touchstart", clickHandler);
             
             <figure>
                 <img src="img/alpha-synuclein.jpeg" alt="α-synuclein monomer, fibril, and oligomer." class="block-image">
-            <figcaption>
-                <p>
-                    Depiction of α-synuclein monomer, fibril, and oligomer. α-Synuclein fibrils are long, insoluble fibers composed of many monomers and oligomers.
-                </p>
-            </figcaption>
+                <figcaption>
+                    <p>
+                        Depiction of α-synuclein monomer, fibril, and oligomer. α-Synuclein fibrils are long, insoluble fibers composed of many monomers and oligomers.
+                    </p>
+                </figcaption>
             </figure>
             <p>
                 Alpha-synuclein is abundant primarily in the brain, especially in the neocortex, hippocampus, and substantia nigra (SN). Smaller amounts are found in the heart, muscles, and other tissues. It is transported into and out of the
@@ -658,23 +657,23 @@ documentElement.addEventListener("touchstart", clickHandler);
                 &alpha;-synuclein increase is not solely attributable to genetics but to a variety of epigenetic factors that can be affected.
             </p>
             -->
-			<p>
-				In PD aging, environmental hazards, and genetics interact pathologically.
-			</p>
-			<p>
-				The pathological hallmarks of PD include dopaminergic neuronal death, &alpha;-synuclein aggregates, mitochondrial dysfunction, reactive oxygen species (ROS), apoptosis, and neuroinﬂammation.
-			</p>
+            <p>
+                In PD aging, environmental hazards, and genetics interact pathologically.
+            </p>
+            <p>
+                The pathological hallmarks of PD include dopaminergic neuronal death, &alpha;-synuclein aggregates, mitochondrial dysfunction, reactive oxygen species (ROS), apoptosis, and neuroinﬂammation.
+            </p>
 
-			<p>
-				PD's multifactorial effects involve aging, genetics, and environmental factors associated with dopaminergic neuronal death. <cite class="reflink">[<a href="#k-burton">k-burton</a>]</cite>
-			</p>
-			<p>
-				Neurotoxins, such as rotenone and <a href="https://www.syngenta.com/en/paraquat-in-the-media">paraquat</a>, along with gene mutations of <abbr title="Parkinsonism-Associated Deglycase 1 or Park7">DJ-1</abbr>, <abbr title="PTEN-induced Kinase 1">PINK1</abbr>, parkin, <abbr title="Leucine-Rich Repeat Kinase 2 gene">LRRK2</abbr>, and <abbr title="Synuclein Alpha Gene">SNCA</abbr> genes, contribute to several cellular issues. These include mitochondria complex I inhibition, ATP depletion, and <abbr title="Reactive Oxygen Species">ROS</abbr>  accumulation. They also cause mitochondrial depolarization and dysfunction. Together, these factors promote neuronal death in the substantia nigra of PD patients. <cite class="reflink">[<a href="#jae-hyeon-park">jae-hyeon-park</a>]</cite><cite class="reflink">[<a href="f-pan-montojo">F. Pan-Montojo</a>]</cite>
-			</p>
-			<p>
-				This is difficult. Reread that until it makes sense.
-			</p>
-			
+            <p>
+                PD's multifactorial effects involve aging, genetics, and environmental factors associated with dopaminergic neuronal death. <cite class="reflink">[<a href="#k-burton">k-burton</a>]</cite>
+            </p>
+            <p>
+                Neurotoxins, such as rotenone and <a href="https://www.syngenta.com/en/paraquat-in-the-media">paraquat</a>, along with gene mutations of <abbr title="Parkinsonism-Associated Deglycase 1 or Park7">DJ-1</abbr>, <abbr title="PTEN-induced Kinase 1">PINK1</abbr>, parkin, <abbr title="Leucine-Rich Repeat Kinase 2 gene">LRRK2</abbr>, and <abbr title="Synuclein Alpha Gene">SNCA</abbr> genes, contribute to several cellular issues. These include mitochondria complex I inhibition, ATP depletion, and <abbr title="Reactive Oxygen Species">ROS</abbr>  accumulation. They also cause mitochondrial depolarization and dysfunction. Together, these factors promote neuronal death in the substantia nigra of PD patients. <cite class="reflink">[<a href="#jae-hyeon-park">jae-hyeon-park</a>]</cite><cite class="reflink">[<a href="f-pan-montojo">F. Pan-Montojo</a>]</cite>
+            </p>
+            <p>
+                This is difficult. Reread that until it makes sense.
+            </p>
+            
             <p>
                 Epigenetic factors can influence mutations in <abbr title="Leucine-Rich Repeat Kinase 2 gene"
                 >LRRK2</abbr> (<abbr title="Leucine-Rich Repeat Kinase 2 gene with a Glycine to Serine substitution at position 2019"
@@ -759,7 +758,7 @@ documentElement.addEventListener("touchstart", clickHandler);
                     target="_blank"
                     >Alpha-synuclein-induced mitochondrial dysfunction is mediated via a sirtuin 3-dependent pathway</a>, Jae-Hyeon Park, et al.
                     <p>
-                    	This rodent model showed that pesticides can initiate the progression of PD pathology and that this progression is based on the transneuronal and <dfn>"retrograde axonal transport"</dfn> (that &alpha;-synuclein goes back into the cell) of alpha-synuclein. If confirmed in patients, this study would have crucial implications in the strategies used to prevent and treat PD.
+                        This rodent model showed that pesticides can initiate the progression of PD pathology and that this progression is based on the transneuronal and <dfn>"retrograde axonal transport"</dfn> (that &alpha;-synuclein goes back into the cell) of alpha-synuclein. If confirmed in patients, this study would have crucial implications in the strategies used to prevent and treat PD.
                     </p>
                 </li>
                 <li id="christine-klein"> 
@@ -808,7 +807,7 @@ documentElement.addEventListener("touchstart", clickHandler);
             
             <p>
             Upon clinical diagnosis of PD, serious damage has already been done to nerve cells of the substantia nigra. This underscores the importance of early testing and genetic testing. 
-			</p>
+            </p>
 
             <p>
                 Alpha-synuclein oligomers are higher in PD patients than in healthy subjects. This can be tested with AlphaSyn-SAA salivary test or Syn-One skin biopsy.
@@ -902,8 +901,8 @@ documentElement.addEventListener("touchstart", clickHandler);
                     </li>
                     <li id="l-cook"> 
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8101316/"
-							title="Genetic Testing for Parkinson Disease"
-							target="_blank"
+                            title="Genetic Testing for Parkinson Disease"
+                            target="_blank"
                         >Genetic Testing for Parkinson Disease</a>, Lola Cook, et al.
                         <p>
                             In some cases, identification of PD variants may aid in diagnosis and management and prediction of disease course.
@@ -947,9 +946,9 @@ documentElement.addEventListener("touchstart", clickHandler);
         </ol>
         Deeper yet:
         <ol>
-        	<li>Genetic testing for personal health (<a href="https://www.innerbody.com/dna-testing/dna-health-testing"
-        	>Finding the Best DNA Health Test</a>).
-        	<li>Advanced hormone tests (<a href="https://dutchtest.com/info-dutch-complete/">Dutch Complete</a>).
+            <li>Genetic testing for personal health (<a href="https://www.innerbody.com/dna-testing/dna-health-testing"
+            >Finding the Best DNA Health Test</a>).
+            <li>Advanced hormone tests (<a href="https://dutchtest.com/info-dutch-complete/">Dutch Complete</a>).
             <li>Healthy immune system (dendritic cells (DCs)) (detailed lymphocytes subsets, activation, and tracking) (COSTIM bioassay to test potency of <abbr title="dendritic cells">DCs</abbr>) by measuring their co-stimulatory activity.) (antibody response exam).
             <li>Stable blood glucose levels maintained by insulin sensitivity (<abbr 
             title="Oral Glucose Tolerance Test">OGTT</abbr>).
@@ -957,7 +956,7 @@ documentElement.addEventListener("touchstart", clickHandler);
             <li>Optimal mitochondrial function providing energy for cellular activities.
             (<a href="https://aonm.org/mitochondrial-testing/">mitochondrial testing</a>).
             <li>Healthy methylation (Genova Diagnostics Methylation Panel).
-		</ol>
+        </ol>
             Focusing on the brain:
         <ol>
             <li>Precise and sensitive regulation of neurotransmitter synthesis via enzyme pathways and receptor feedback mechanisms.
@@ -994,15 +993,15 @@ documentElement.addEventListener("touchstart", clickHandler);
                 The complexities of human health optimization demand self-education. You need to do the work. But first, you need to learn. 
             </p>
             <p>
-            	Following are some example questions that strip away all assumptions you may have to address the complexities of becoming an <em>active participant</em> in your health. Don't take them at face value; question the question. Derive better questions.
+                Following are some example questions that strip away all assumptions you may have to address the complexities of becoming an <em>active participant</em> in your health. Don't take them at face value; question the question. Derive better questions.
             </p>
         </section>
 
-		<!-- section id="how-to-interview-neurologist">
-			<h3>Questions to Ask a Potential Neurologist</h3>
-				How can I test my mitochondrial function?
-				
-		</section -->
+        <!-- section id="how-to-interview-neurologist">
+            <h3>Questions to Ask a Potential Neurologist</h3>
+                How can I test my mitochondrial function?
+                
+        </section -->
         <section id="hypothetical-care-team">
             <h3>
                 Hypothetical Care Team
@@ -1025,89 +1024,89 @@ documentElement.addEventListener("touchstart", clickHandler);
              Some doctors are constrained by institutional protocols. Expectations and requirements imposed by their healthcare employers may dissuade them from self-questioning and information-seeking extrinsic to the institution's protocols or professionally ordained purview. 
              </p>
              <p>
-             	Assessing provider competence requires more than just checking credentials, years of experience, or conference attendance; it demands a nuanced and thorough approach.
-			</p>
-			<p>
-				To effectively assess someone's competence, approach the interview from a position of informed knowledge.
+                Assessing provider competence requires more than just checking credentials, years of experience, or conference attendance; it demands a nuanced and thorough approach.
+            </p>
+            <p>
+                To effectively assess someone's competence, approach the interview from a position of informed knowledge.
              </p>
              
              <p>
-            	Inquiring openly and observing without revealing your own level of understanding is a strategic approach to competence assessment. When given the opportunity to speak freely, how do they err?
-			</p>
-			
-			<p>
+                Inquiring openly and observing without revealing your own level of understanding is a strategic approach to competence assessment. When given the opportunity to speak freely, how do they err?
+            </p>
+            
+            <p>
 That strategy can work, provided you have the depth and breadth of understanding to evaluate and scrutinize the veracity of the information your interlocutor emits.
             </p>
             
             <p>
 Prepare detailed questions that delve into the neurologist's expertise in your specific area of concern. 
-			</p>
-			<h4>"In your initial assessment of a patient suspected to have Parkinson's Disease, what tests and evaluations do you conduct?"</h4>
+            </p>
+            <h4>"In your initial assessment of a patient suspected to have Parkinson's Disease, what tests and evaluations do you conduct?"</h4>
 
-			<h4>
-			✅ Good answers must include:
-			</h4>
-			<ul class="good-answers">
-				<li> Diagnostic Imaging (MRI or CT scan to rule out other conditions that may mimic Parkinson's Disease (e.g., stroke, tumor).)
-				<li> Syn-One skin biopsy
-				<li> DaTscan (Dopamine Transporter Scan)
-			</ul>
-			<p>
-				&mdash; and that is beyond the very basic fundamentals of:&mdash;
-			</p>
+            <h4>
+            ✅ Good answers must include:
+            </h4>
+            <ul class="good-answers">
+                <li> Diagnostic Imaging (MRI or CT scan to rule out other conditions that may mimic Parkinson's Disease (e.g., stroke, tumor).)
+                <li> Syn-One skin biopsy
+                <li> DaTscan (Dopamine Transporter Scan)
+            </ul>
+            <p>
+                &mdash; and that is beyond the very basic fundamentals of:&mdash;
+            </p>
 
-			<ul class="baseline-answers">
-				<li> Detailed medical history and symptom review.
-				<li> Thorough motor symptoms exam 
-				<li> Non-motor symptoms (sleep disturbances, autonomic dysfunction, mood disorders).
-			</ul>
+            <ul class="baseline-answers">
+                <li> Detailed medical history and symptom review.
+                <li> Thorough motor symptoms exam 
+                <li> Non-motor symptoms (sleep disturbances, autonomic dysfunction, mood disorders).
+            </ul>
 
-			<h4>
-			❌ Bad Answers:
-			</h4>
-			<ul class="bad-answers">
-				<li> Omitting the genetic testing aspect entirely without context or justification.
-				<li> Failing to mention the importance of ruling out other conditions via imaging and blood tests.
-				<li> Lack of mention of the dopaminergic medication trial as a diagnostic tool.
-				<li> Generalization without specifying the detailed steps of the neurological examination and symptom review.
-			</ul>
+            <h4>
+            ❌ Bad Answers:
+            </h4>
+            <ul class="bad-answers">
+                <li> Omitting the genetic testing aspect entirely without context or justification.
+                <li> Failing to mention the importance of ruling out other conditions via imaging and blood tests.
+                <li> Lack of mention of the dopaminergic medication trial as a diagnostic tool.
+                <li> Generalization without specifying the detailed steps of the neurological examination and symptom review.
+            </ul>
 
-			<h4>"Why do you include or exclude genetic testing in your initial assessment for Parkinson's Disease?"</h4>
+            <h4>"Why do you include or exclude genetic testing in your initial assessment for Parkinson's Disease?"</h4>
 
-			<h4>✅ Good answers:</h4>
-			<p>
-				Genetic testing. A good response <em>must</em> acknowledge the importance of genetic factors in creating custom-tailored solutions and for testing one's offspring for inherited traits. 
-			</p>
+            <h4>✅ Good answers:</h4>
+            <p>
+                Genetic testing. A good response <em>must</em> acknowledge the importance of genetic factors in creating custom-tailored solutions and for testing one's offspring for inherited traits. 
+            </p>
 
-			<h4>"How do you address non-motor symptoms in the management of Parkinson's Disease?"</h4>
-			<p>
-			Ask about a few treatments that you're familiar with (photobiomodulation, turmeric, etc), and their mechanism of action.
-			</p>
+            <h4>"How do you address non-motor symptoms in the management of Parkinson's Disease?"</h4>
+            <p>
+            Ask about a few treatments that you're familiar with (photobiomodulation, turmeric, etc), and their mechanism of action.
+            </p>
 
-			<h4>❌ Bad answers:</h4>
-			<ul class="bad-answers">
-				<li>
-					 Not accurately explaining mechanisms of action in simple terms. If you can't explain it in simple terms, he likely doesn't understand it very well himself.
-				</li>
-				<li>
- 					 Dismissive statements; generalizations about "alterative" or "complementary" treatments. Such statements betray ignorance about treatments with proven efficacy and known mechanisms of action.
-				</li>
-			</ul>
+            <h4>❌ Bad answers:</h4>
+            <ul class="bad-answers">
+                <li>
+                     Not accurately explaining mechanisms of action in simple terms. If you can't explain it in simple terms, he likely doesn't understand it very well himself.
+                </li>
+                <li>
+                     Dismissive statements; generalizations about "alterative" or "complementary" treatments. Such statements betray ignorance about treatments with proven efficacy and known mechanisms of action.
+                </li>
+            </ul>
 
-			<h4>"Can you provide an example of how you adapted a treatment plan based on new research findings in Parkinson's Disease?"</h4>
+            <h4>"Can you provide an example of how you adapted a treatment plan based on new research findings in Parkinson's Disease?"</h4>
 
-			<p>
-				✅ A good response <em>must</em> show a clear and recent example of a new treatment the provider employed for a patient, with clearly articulated evidence and rationale, and the results of having done that. 
-			</p>
-			
-			<h4>Summary</h4>
-				<p>
-			These questions and expected answers help ensure that the doctor not only follows a comprehensive and current approach to diagnosing Parkinson’s Disease but also demonstrates critical thinking and a nuanced understanding of the disease. Doctors are people and are not immune to the irrational trappings of common mental errors.
-				</p>
-	
-				<p>
-						Seek a neurologist with the autonomy and openness to exploring novel, evidence-based treatments beyond the standard of care.
-				</p>      
+            <p>
+                ✅ A good response <em>must</em> show a clear and recent example of a new treatment the provider employed for a patient, with clearly articulated evidence and rationale, and the results of having done that. 
+            </p>
+            
+            <h4>Summary</h4>
+                <p>
+            These questions and expected answers help ensure that the doctor not only follows a comprehensive and current approach to diagnosing Parkinson’s Disease but also demonstrates critical thinking and a nuanced understanding of the disease. Doctors are people and are not immune to the irrational trappings of common mental errors.
+                </p>
+    
+                <p>
+                        Seek a neurologist with the autonomy and openness to exploring novel, evidence-based treatments beyond the standard of care.
+                </p>      
         </section>
         <section id="tips-for-selecting-providers">
                 <h3>Tips for Selecting Providers</h3>
@@ -1254,9 +1253,9 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                 release, improves mitochondrial function, and improves sleep, which improves overall health, leading to a better sense of well-being and better exercise capacity and recovery.
             </p>
             -->
-	</section>
+    </section>
 
-	<section id="etiological-problems">
+    <section id="etiological-problems">
             <h3>The Best Approach</h3>
             <p>
                 The best possible individual results can be predicted by a comprehensive, evidence-based approach. Seek care that is etiologically-sound, evidence-based, patient-centered, integrated, and comprehensive. Exercise measured skepticism and examine the veracity of claims made by all healthcare providers.
@@ -1411,7 +1410,7 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                 <h4>COMT Inhibitors</h4>
                 
                 <p>
-                	COMT inhibitors are a class of medications that prolong the effect of levodopa by inhibiting the breakdown of dopamine in the brain. They work by blocking the action of the enzyme catechol-O-methyltransferase (COMT), which breaks down catecholamines, including dopamine, norepinephrine, and epinephrine, resulting in sustained levels of these catecholamines.
+                    COMT inhibitors are a class of medications that prolong the effect of levodopa by inhibiting the breakdown of dopamine in the brain. They work by blocking the action of the enzyme catechol-O-methyltransferase (COMT), which breaks down catecholamines, including dopamine, norepinephrine, and epinephrine, resulting in sustained levels of these catecholamines.
                 </p>
                 <p>
                     Tolcapone, a COMT inhibitor, has been associated with a higher risk of liver damage, which can be severe in some cases.
@@ -1475,7 +1474,7 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                 </p>
                 
                 <p>
-                	Testosterone is also neuroprotective and 5-10% of it converts to estradiol via aromatase. Thus, <abbr title="Testosterone Replacement Therapy">TRT</abbr> can be used in men to raise testosterone to <em>optimal</em> levels (~800ng/dl), resulting in a greater amount of aromatization to estradiol. <cite class="reflink">[<a 
+                    Testosterone is also neuroprotective and 5-10% of it converts to estradiol via aromatase. Thus, <abbr title="Testosterone Replacement Therapy">TRT</abbr> can be used in men to raise testosterone to <em>optimal</em> levels (~800ng/dl), resulting in a greater amount of aromatization to estradiol. <cite class="reflink">[<a 
              href="#v-e-bianchi">v-e-bianchi</a>]</cite>
                 </p>
                 <h4>HRT References</h4>
@@ -1485,23 +1484,23 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3356083/"
                         >Male/female differences in neuroprotection and neuromodulation of brain dopamine</a>
                         <p>
-                        	Exogenous 17β-estradiol and/or progesterone treatments show neuroprotective properties against NSDA toxins while androgens fail to induce any beneficial effect.
+                            Exogenous 17β-estradiol and/or progesterone treatments show neuroprotective properties against NSDA toxins while androgens fail to induce any beneficial effect.
                         </p>
-					</li>
-					
-					<li id="v-e-bianchi">
+                    </li>
+                    
+                    <li id="v-e-bianchi">
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7568521/"
                         title="Androgen Therapy in Neurodegenerative Diseases"
                         target="_blank"
                         >Androgen Therapy in Neurodegenerative Diseases</a>, Vittorio Emanuele Bianchi, et al.
                         <p>
-                        	This thorough review cites 266 references to support a wealth of information regarding the role of testosterone in neuroprotection, neuroinflammation, and neurodgeneration.
+                            This thorough review cites 266 references to support a wealth of information regarding the role of testosterone in neuroprotection, neuroinflammation, and neurodgeneration.
                         </p>
                         <blockquote>
-							<p>
-								&ldquo;T improves the survival of human neurons and astrocytes, acting directly on the mitochondrial membrane, inhibiting the generation of reactive oxygen and nitrogen species, as well as sirtuin-1 expression. Conversely, the absence of T may contribute to the neurodegenerative process as observed in animal models of PD and AD and may decrease the density of spinal synapses in the hippocampus. These pathological effects were reversed following treatment with T or DHT; 17β-estradiol, likely, partially mediates these effects.&rdquo;
-							</p>
-						</blockquote>
+                            <p>
+                                &ldquo;T improves the survival of human neurons and astrocytes, acting directly on the mitochondrial membrane, inhibiting the generation of reactive oxygen and nitrogen species, as well as sirtuin-1 expression. Conversely, the absence of T may contribute to the neurodegenerative process as observed in animal models of PD and AD and may decrease the density of spinal synapses in the hippocampus. These pathological effects were reversed following treatment with T or DHT; 17β-estradiol, likely, partially mediates these effects.&rdquo;
+                            </p>
+                        </blockquote>
                     </li>
                 </ol>
             </section>
@@ -1615,55 +1614,55 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                     </li>
                 </ol>
         </section>
-		<section id="stem-cell">
-			<h4 class="neuroprotective neurorestorative">Stem Cells (MSC, iPSC)</h4>
-			<h5>Mesenchymal Stem Cells (MSCs)</h5>
-			<p>
-				Systemic injection of mesenchymal stem cells therapy helps restore dopaminergic neurons. <cite class="reflink">[<a 
-		 href="#h-j-park">h-j-park</a>]</cite>
-			</p>
-			
-			<p>
-				The concomitant use of cell therapy and photobiomodulation therapy can improve the symptoms of PD. <cite class="reflink">[<a 
-		 href="#b-ahrabi">b-ahrabi</a>]</cite>
-			</p>
-			
-			<h5>Induced pluripotent stem cell (iPSCs)</h5>
-			<p>
-				Induced pluripotent stem cells (iPSCs) are generated by reprogramming adult somatic cells, such as skin or blood cells, to express the same genes as embryonic stem cells in a process is called <dfn>induced pluripotency</dfn>.
-		   </p>
-		   <p> 	
-				 iPSCs have the ability to differentiate into any cell type in the body, similar to embryonic stem cells, but they are generated from adult cells, which makes them a promising source for regenerative medicine and tissue engineering. intracerebrally injected to the striatum and substantia nigra of PD patients.
-				
-			</p>
-			<h5>Mesenchymal Stem Cells References:</h5>
-			<ol class="reference-list">
-				<li id="w-chen">
-					 <a href="https://pubmed.ncbi.nlm.nih.gov/30346716/"
-					 title="Progress in Dopaminergic Cell Replacement and Regenerative Strategies for Parkinson's Disease"
-					 target="_blank">Progress in Dopaminergic Cell Replacement and Regenerative Strategies for Parkinson's Disease</a>
-					<p>
-						"Stable cell sources, such as Embryonic stem cells (ESCs) and induced pluripotent stem cell (iPSCs), are far more suitable for clinical application than hfVM- and embryonic or fetal brain-derived NSCs."
-					</p>
-				</li>
-				<li id="h-j-park">
+        <section id="stem-cell">
+            <h4 class="neuroprotective neurorestorative">Stem Cells (MSC, iPSC)</h4>
+            <h5>Mesenchymal Stem Cells (MSCs)</h5>
+            <p>
+                Systemic injection of mesenchymal stem cells therapy helps restore dopaminergic neurons. <cite class="reflink">[<a 
+         href="#h-j-park">h-j-park</a>]</cite>
+            </p>
+            
+            <p>
+                The concomitant use of cell therapy and photobiomodulation therapy can improve the symptoms of PD. <cite class="reflink">[<a 
+         href="#b-ahrabi">b-ahrabi</a>]</cite>
+            </p>
+            
+            <h5>Induced pluripotent stem cell (iPSCs)</h5>
+            <p>
+                Induced pluripotent stem cells (iPSCs) are generated by reprogramming adult somatic cells, such as skin or blood cells, to express the same genes as embryonic stem cells in a process is called <dfn>induced pluripotency</dfn>.
+           </p>
+           <p>  
+                 iPSCs have the ability to differentiate into any cell type in the body, similar to embryonic stem cells, but they are generated from adult cells, which makes them a promising source for regenerative medicine and tissue engineering. intracerebrally injected to the striatum and substantia nigra of PD patients.
+                
+            </p>
+            <h5>Mesenchymal Stem Cells References:</h5>
+            <ol class="reference-list">
+                <li id="w-chen">
+                     <a href="https://pubmed.ncbi.nlm.nih.gov/30346716/"
+                     title="Progress in Dopaminergic Cell Replacement and Regenerative Strategies for Parkinson's Disease"
+                     target="_blank">Progress in Dopaminergic Cell Replacement and Regenerative Strategies for Parkinson's Disease</a>
+                    <p>
+                        "Stable cell sources, such as Embryonic stem cells (ESCs) and induced pluripotent stem cell (iPSCs), are far more suitable for clinical application than hfVM- and embryonic or fetal brain-derived NSCs."
+                    </p>
+                </li>
+                <li id="h-j-park">
 Mesenchymal stem cells therapy exerts neuroprotection in a progressive animal model of Parkinson's disease
-				 <a href="https://pubmed.ncbi.nlm.nih.gov/18665911/"
-				 title="Mesenchymal Stem Cells as a Source of Dopaminergic Neurons: A Potential Cell Based Therapy for Parkinson's Disease"
-				 >Mesenchymal Stem Cells as a Source of Dopaminergic Neurons: A Potential Cell Based Therapy for Parkinson's Disease</a>, Hyun Jung Park, et al.
-				 </li>
-				 
-				<li id="b-ahrabi">
-					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9841383/"
-					title="Photobiomodulation Therapy and Cell Therapy Improved Parkinson’s Diseases by Neuro-regeneration and Tremor Inhibition"
-					target="_blank"
-					>Photobiomodulation Therapy and Cell Therapy Improved Parkinson’s Diseases by Neuro-regeneration and Tremor Inhibition</a>, Behnaz Ahrabi, et al.
-					<p>
-						This review study showed concomitant use of cell therapy and photobiomodulation therapy can improve the symptoms of PD.
-					</p>
-				</li>
-			 </ol>
-		</section>
+                 <a href="https://pubmed.ncbi.nlm.nih.gov/18665911/"
+                 title="Mesenchymal Stem Cells as a Source of Dopaminergic Neurons: A Potential Cell Based Therapy for Parkinson's Disease"
+                 >Mesenchymal Stem Cells as a Source of Dopaminergic Neurons: A Potential Cell Based Therapy for Parkinson's Disease</a>, Hyun Jung Park, et al.
+                 </li>
+                 
+                <li id="b-ahrabi">
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9841383/"
+                    title="Photobiomodulation Therapy and Cell Therapy Improved Parkinson’s Diseases by Neuro-regeneration and Tremor Inhibition"
+                    target="_blank"
+                    >Photobiomodulation Therapy and Cell Therapy Improved Parkinson’s Diseases by Neuro-regeneration and Tremor Inhibition</a>, Behnaz Ahrabi, et al.
+                    <p>
+                        This review study showed concomitant use of cell therapy and photobiomodulation therapy can improve the symptoms of PD.
+                    </p>
+                </li>
+             </ol>
+        </section>
         <section id="physical-therapy-exercise">
             <h3>
                 Physical Therapy / Exercise
@@ -1716,22 +1715,22 @@ Mesenchymal stem cells therapy exerts neuroprotection in a progressive animal mo
             </p>
             
             <p>
-            	Whole body irradiation with red light improves sleep quality. Used before sleep may offer better sleep effects. <cite class="reflink">[<a href="#jiexiu-zhao">jiexiu-zhao</a>]</cite>
+                Whole body irradiation with red light improves sleep quality. Used before sleep may offer better sleep effects. <cite class="reflink">[<a href="#jiexiu-zhao">jiexiu-zhao</a>]</cite>
             </p>
 
             <p>
-            	Red light reaches the motor cortex, influences stem cell function, offers neuroprotection, restores functional activity, improves motor behaviours and reduces clinical signs, reduces gliosis and induces expression of trophic growth factors. 
-            	<cite class="reflink">[<a href="#c-hamilton">c-hamilton</a>]</cite>
+                Red light reaches the motor cortex, influences stem cell function, offers neuroprotection, restores functional activity, improves motor behaviours and reduces clinical signs, reduces gliosis and induces expression of trophic growth factors. 
+                <cite class="reflink">[<a href="#c-hamilton">c-hamilton</a>]</cite>
             </p>
             
             <h4>Red Light on the Body</h4>
             <p>
                 Parkinson’s disease kidney impairment happens from the start but becomes more of a problem during later stages of the disease. Start early; don't wait.
             </p>
-			<p>
-				Red light improves renal function by improving renal blood flow and improving cell signalling in that area. PD impairs kidney function through &alpha;-synuclein aggregation accumulation and inflammation, autonomic nervous system (ANS) dysfunction, and dopamine depletion (dopamine influences renal blood flow, blood pressure, and kidney function.)
-			</p>
-			
+            <p>
+                Red light improves renal function by improving renal blood flow and improving cell signalling in that area. PD impairs kidney function through &alpha;-synuclein aggregation accumulation and inflammation, autonomic nervous system (ANS) dysfunction, and dopamine depletion (dopamine influences renal blood flow, blood pressure, and kidney function.)
+            </p>
+            
             <h4>Near-Infrared (NIR) vs Red Light Therapy</h4>
 
             <p>
@@ -1787,14 +1786,14 @@ Mesenchymal stem cells therapy exerts neuroprotection in a progressive animal mo
                 </li>
                 
                 <li id="t-a-henderson"> 
-					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552256/"
-					title="Near-infrared photonic energy penetration: can infrared phototherapy effectively reach the human brain?"
-					target="_blank"
-					>Near-infrared photonic energy penetration: can infrared phototherapy effectively reach the human brain?</a>, Theodore A Henderson, Larry D Morries
-					<p>
-						Showed that higher wattage NIR lasers can deliver therapeutic effects to greater depths of the brain without tissue heating or damage. 
-					</p>
-				</li>
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552256/"
+                    title="Near-infrared photonic energy penetration: can infrared phototherapy effectively reach the human brain?"
+                    target="_blank"
+                    >Near-infrared photonic energy penetration: can infrared phototherapy effectively reach the human brain?</a>, Theodore A Henderson, Larry D Morries
+                    <p>
+                        Showed that higher wattage NIR lasers can deliver therapeutic effects to greater depths of the brain without tissue heating or damage. 
+                    </p>
+                </li>
                     
                 <li id="c-hamilton">
                     <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128061/"
@@ -1810,150 +1809,150 @@ Mesenchymal stem cells therapy exerts neuroprotection in a progressive animal mo
                     <a href="https://pubmed.ncbi.nlm.nih.gov/34215216/">Improvements in clinical signs of Parkinson's disease using photobiomodulation: a prospective proof-of-concept study</a>, Ann Liebert, et al.
                     
                     <p>
-                    	This small study showed <abbr title="photobiomodulation">PBM</abbr> was safe and effective for symptoms of PD including mobility, cognition, dynamic balance and fine motor skill. Improvements were maintained for as long as treatment continued, for up to one year
+                        This small study showed <abbr title="photobiomodulation">PBM</abbr> was safe and effective for symptoms of PD including mobility, cognition, dynamic balance and fine motor skill. Improvements were maintained for as long as treatment continued, for up to one year
                     </p>
                 </li>
             </ol>
         </section>
         
-		<section id="how-to-build-a-supplement-plan">
-			<h3>How to Build a Supplement Plan</h3>
-		
-			<p>
-				This general-purpose solution serves as a customizable starting point to address health with PD from multiple angles, targeting each of the underlying <a href="#etiological-problems">Etiological Problems</a>.
-			</p>
-			
-			<h4>Mixing and Storing Powders</h4>
-			
-			<p>The mixed powders "Mitochondrial Mix", "Cacao Mix", and "Post-Workout" powders must be made in batches and should be stored in a cool, dry place with a desiccant pack (like silica gel) inside the powder to prevent clumping and contamination (mold). Silica packs are commonly shipped with the raw powders and supplements and can be reused.
-			</p>
-			
-			<h4>Weighing and Mixing Powders</h4>
-			<p>
-				A sturdy gram scale or reliable, accurate food scale that measures to the nearest 0.01g (10mg) is necessary to ensure accuracy. To help ensure proper ingredient dispersal, mix the smaller ingredients first and blend in the larger ingredients.
-			</p>
-			
-			
-			<h4>Daily Supplements (3x daily)</h4>
-			<ol>
-				 <li>Ubiquinol &mdash; 300mg 
-				 <li>PQQ &mdash; 30mg
-				 <li>CDP Choline &mdash; 1000mg 
-				 <li>Active B Complex (Integrative Therapeutics)
-				 <li>Nattokinase &mdash; 100mg
-				 <li>Vitamin K2 &mdash; 500mcg
-			</ol>
+        <section id="how-to-build-a-supplement-plan">
+            <h3>How to Build a Supplement Plan</h3>
+        
+            <p>
+                This general-purpose solution serves as a customizable starting point to address health with PD from multiple angles, targeting each of the underlying <a href="#etiological-problems">Etiological Problems</a>.
+            </p>
+            
+            <h4>Mixing and Storing Powders</h4>
+            
+            <p>The mixed powders "Mitochondrial Mix", "Cacao Mix", and "Post-Workout" powders must be made in batches and should be stored in a cool, dry place with a desiccant pack (like silica gel) inside the powder to prevent clumping and contamination (mold). Silica packs are commonly shipped with the raw powders and supplements and can be reused.
+            </p>
+            
+            <h4>Weighing and Mixing Powders</h4>
+            <p>
+                A sturdy gram scale or reliable, accurate food scale that measures to the nearest 0.01g (10mg) is necessary to ensure accuracy. To help ensure proper ingredient dispersal, mix the smaller ingredients first and blend in the larger ingredients.
+            </p>
+            
+            
+            <h4>Daily Supplements (3x daily)</h4>
+            <ol>
+                 <li>Ubiquinol &mdash; 300mg 
+                 <li>PQQ &mdash; 30mg
+                 <li>CDP Choline &mdash; 1000mg 
+                 <li>Active B Complex (Integrative Therapeutics)
+                 <li>Nattokinase &mdash; 100mg
+                 <li>Vitamin K2 &mdash; 500mcg
+            </ol>
 
-			<h4 id="mitochondrial-powder">Mitochondrial Mix Powder &mdash; 10 Days</h4>
-			<p>
-				This 10-day serving can be taken 2x daily; once with the morning supplements; once later.
-			</p>
-			<ol>
-				<li>Uridine Monophosphate &mdash; 5g
-				<li>Coffeeberry extract &mdash; 2.5g
-				<li>NMN &mdash; 10g
-				<li>NR &mdash; 5g
-				<li>Niacin &mdash; 2g
-				<li>Lion's Mane &mdash; 10g
-				<li>Cordyceps &mdash; 10g
-				<li>Matcha (ceremonial grade) &mdash; 7g
-				<li>Micronized Creatine Monohydrate (CreaPure®) &mdash; 30g
-				<li>Inulin &mdash; &mdash; 30g
-				<li>Base: Organic Greens Powder &mdash; 50g
-				<li>Base: Organic Fruits Powder &mdash; 50g (e.g. "Navitas Superfood+ Immunity Blend")
-			</ol>
+            <h4 id="mitochondrial-powder">Mitochondrial Mix Powder &mdash; 10 Days</h4>
+            <p>
+                This 10-day serving can be taken 2x daily; once with the morning supplements; once later.
+            </p>
+            <ol>
+                <li>Uridine Monophosphate &mdash; 5g
+                <li>Coffeeberry extract &mdash; 2.5g
+                <li>NMN &mdash; 10g
+                <li>NR &mdash; 5g
+                <li>Niacin &mdash; 2g
+                <li>Lion's Mane &mdash; 10g
+                <li>Cordyceps &mdash; 10g
+                <li>Matcha (ceremonial grade) &mdash; 7g
+                <li>Micronized Creatine Monohydrate (CreaPure®) &mdash; 30g
+                <li>Inulin &mdash; &mdash; 30g
+                <li>Base: Organic Greens Powder &mdash; 50g
+                <li>Base: Organic Fruits Powder &mdash; 50g (e.g. "Navitas Superfood+ Immunity Blend")
+            </ol>
 
-			<h4>Cacao Mix Powder &mdash; 10 Days</h4>
-			<p>
-				This ~10-day serving can be taken in hot water 1-2x daily, earlier in the day. Add coconut oil and organic ginger juice</p>
-			
-			<p>Do not cook it; add to below-boiling temperature water.
-			</p>
-			<ol>
-				<li>Niacin &mdash; 1g
-				<li>Turmeric &mdash; 5g
-				<li>Matcha &mdash; 7g
-				<li>Lion's Mane &mdash;10g
-				<li>Cordyceps &mdash; 10g
-				<li>Ceylon cinnamon &mdash; 12g
-				<li>Raw Cacao &mdash; 100g
-			</ol>
+            <h4>Cacao Mix Powder &mdash; 10 Days</h4>
+            <p>
+                This ~10-day serving can be taken in hot water 1-2x daily, earlier in the day. Add coconut oil and organic ginger juice</p>
+            
+            <p>Do not cook it; add to below-boiling temperature water.
+            </p>
+            <ol>
+                <li>Niacin &mdash; 1g
+                <li>Turmeric &mdash; 5g
+                <li>Matcha &mdash; 7g
+                <li>Lion's Mane &mdash;10g
+                <li>Cordyceps &mdash; 10g
+                <li>Ceylon cinnamon &mdash; 12g
+                <li>Raw Cacao &mdash; 100g
+            </ol>
 
-			<h4>Post-Workout Mixed Powder &mdash; 10 Days</h4>
-			<p>This can be pre-mixed and stored in the refrigerator</p>
-			<p>Mix in water with Organic Ginger Juice before drinking.</p>
-			<ol>
-				<li>NMN &mdash; 5g
-				<li>NR &mdash; 2.5g
-				<li>Niacin &mdash; 1g
-				<li>Beta Alanine &mdash; 10g
-				<li>HMB &mdash; 10g
-				<li>Rhodiola Rosea &mdash; 2.5g
-				<li>Sodium Bicarbonate &mdash; 5g
-				<li>Turmeric &mdash; 7g
-				<li>TMG (Betaine) &mdash; 10g
-				<li>Natto powder &mdash; 5g
-				<li>Lion's Mane &mdash; 10g
-				<li>Inulin &mdash; 30g
-				<li>Ceylon cinnamon &mdash; 12g
-				<li>Micronized Creatine Monohydrate (CreaPure®) &mdash; 30g
-				<li>BCAA 4:1:1 &mdash; 40g
-				<li>L-Glutamine &mdash; 50g
-				<li>Base: Organic Greens Powder &mdash; 50g
-				<li>Organic Fruits Powder &mdash; 50g (e.g. "Navitas Superfood+ Immunity Blend")
-				<li>Collagen peptides &mdash; 50g
-				<li>Whey protein isolate &mdash; 300g
-			</ol>
+            <h4>Post-Workout Mixed Powder &mdash; 10 Days</h4>
+            <p>This can be pre-mixed and stored in the refrigerator</p>
+            <p>Mix in water with Organic Ginger Juice before drinking.</p>
+            <ol>
+                <li>NMN &mdash; 5g
+                <li>NR &mdash; 2.5g
+                <li>Niacin &mdash; 1g
+                <li>Beta Alanine &mdash; 10g
+                <li>HMB &mdash; 10g
+                <li>Rhodiola Rosea &mdash; 2.5g
+                <li>Sodium Bicarbonate &mdash; 5g
+                <li>Turmeric &mdash; 7g
+                <li>TMG (Betaine) &mdash; 10g
+                <li>Natto powder &mdash; 5g
+                <li>Lion's Mane &mdash; 10g
+                <li>Inulin &mdash; 30g
+                <li>Ceylon cinnamon &mdash; 12g
+                <li>Micronized Creatine Monohydrate (CreaPure®) &mdash; 30g
+                <li>BCAA 4:1:1 &mdash; 40g
+                <li>L-Glutamine &mdash; 50g
+                <li>Base: Organic Greens Powder &mdash; 50g
+                <li>Organic Fruits Powder &mdash; 50g (e.g. "Navitas Superfood+ Immunity Blend")
+                <li>Collagen peptides &mdash; 50g
+                <li>Whey protein isolate &mdash; 300g
+            </ol>
 
-			<h4>Dinner Supplements 🍽️</h4>
-			<p>
-			Fat-soluble substances are better absorbed when taken with dietary fats.
-			</p>
-			<ol>
-				 <li>Mixed Tocopherols/Tocotrienols
-				 <li>K2 &mdash; 500mcg
-				 <li>D3 &mdash; 4000 IU
-				 <li>Urolithin-A 1000mg
-				 <li>Resveratrol &mdash; 500mg
-				 <li>Fisetin &mdash; 500mg
-				 <li>Sulforaphane &mdash; 50mg
-				 <li>Quercetin &mdash; 500mg
-				 <li>NAC &mdash; 100mg 💤
-				 <li>Geranyl geraniol &mdash; 500mg
-			</ol>
+            <h4>Dinner Supplements 🍽️</h4>
+            <p>
+            Fat-soluble substances are better absorbed when taken with dietary fats.
+            </p>
+            <ol>
+                 <li>Mixed Tocopherols/Tocotrienols
+                 <li>K2 &mdash; 500mcg
+                 <li>D3 &mdash; 4000 IU
+                 <li>Urolithin-A 1000mg
+                 <li>Resveratrol &mdash; 500mg
+                 <li>Fisetin &mdash; 500mg
+                 <li>Sulforaphane &mdash; 50mg
+                 <li>Quercetin &mdash; 500mg
+                 <li>NAC &mdash; 100mg 💤
+                 <li>Geranyl geraniol &mdash; 500mg
+            </ol>
 
-			<h4>Dinner Foods</h4>
-			<ol>
-				<li>Natto powder &mdash; 2g
-				<li>Turmeric &mdash; 1.5g
-				<li>Saffron &mdash; 30mg
-				<li>DHA:EPA 2:1 &mdash; 5000mg (Nordic Naturals Children's DHA)
-				<li>Free Range Eggs &mdash; ~2-5
-			</ol>
+            <h4>Dinner Foods</h4>
+            <ol>
+                <li>Natto powder &mdash; 2g
+                <li>Turmeric &mdash; 1.5g
+                <li>Saffron &mdash; 30mg
+                <li>DHA:EPA 2:1 &mdash; 5000mg (Nordic Naturals Children's DHA)
+                <li>Free Range Eggs &mdash; ~2-5
+            </ol>
 
-			<h4>Sleep Supplements (7:00pm - 9:00pm) 💤</h4>
-			<ol>
-				 <li>Melatonin (Sleep3) &mdash; 10mg
-				 <li>5-HTP &mdash; 100mg
-				 <li>GABA &mdash; 1000mg &mdash; 2000mg
-				 <li>Magnesium Threonate &mdash; 300mg
-				 <li>Chelated Magnesium &mdash; 300mg
-			</ol>
-			
-		</section>
+            <h4>Sleep Supplements (7:00pm - 9:00pm) 💤</h4>
+            <ol>
+                 <li>Melatonin (Sleep3) &mdash; 10mg
+                 <li>5-HTP &mdash; 100mg
+                 <li>GABA &mdash; 1000mg &mdash; 2000mg
+                 <li>Magnesium Threonate &mdash; 300mg
+                 <li>Chelated Magnesium &mdash; 300mg
+            </ol>
+            
+        </section>
         <section id="food-and-supplements">
             <h3>
                 Foods and Supplements
             </h3>
-			<p>
-				Supplements can fight the progression of PD by addressing the <a href="#problems-list">mechanisms of various problems</a>.
-			</p>
-			<p>
-				I have first-hand experience taking most of these supplements.
-			</p>
-			<p>
-				The supplements are presented with an overview following the legend below.
-			</p>
+            <p>
+                Supplements can fight the progression of PD by addressing the <a href="#problems-list">mechanisms of various problems</a>.
+            </p>
+            <p>
+                I have first-hand experience taking most of these supplements.
+            </p>
+            <p>
+                The supplements are presented with an overview following the legend below.
+            </p>
 
             <h4>The Role of Nutrition</h4>
             <p>
@@ -1980,7 +1979,7 @@ Mesenchymal stem cells therapy exerts neuroprotection in a progressive animal mo
             <p>
                 It is necessary to work with doctors who focus on what works. Focus on the facts and evidence, consider risk/reward, and work on total health. Avoid doctors who won't look at the evidence you present them.
             </p>
-			
+            
             <section id="treatment-legend">
                 <h3>Treatment Legend:</h3>
                 <h3>Supplement Name</h3>
@@ -2089,7 +2088,7 @@ Mesenchymal stem cells therapy exerts neuroprotection in a progressive animal mo
                 </p>
                 
                 <p>
-                	Neuroprotective impacts of creatine and of creatine + CoQ10 were decreased in PD patients with cognitive decline. <cite class="reflink">[<a href="#hyukki-chang">hyukki-chang</a>]</cite>
+                    Neuroprotective impacts of creatine and of creatine + CoQ10 were decreased in PD patients with cognitive decline. <cite class="reflink">[<a href="#hyukki-chang">hyukki-chang</a>]</cite>
                 </p>
                 <h4>Creatine + Exercise</h4>
                 <p>
@@ -2197,53 +2196,53 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8538722/
             </section>
             
             <section id="cinnamon">
-				<h4>Cinnamon</h4>
-				<ul class="treatment-rating">
-					<li>Mechanisms: Neuroprotective, Antidiabetic
-					<li>Dose: 4g ED
-					<li>Fat-soluble: ✅
-					<li>🩸🧠BBB: ✅
-					<li>Safety: 9/10 (90% σ)
-					<li>Efficacy: 3/10 (50% σ)
-				</ul>
-				
-				<h5>Antidiabetic Effects</h5>
-				<p>
-					Cinnamon exhibits anti-hyperglycemic properties, with the most significant effects observed in Ceylon cinnamon. These effects are species-specific.  <cite class="reflink">[<a href="#n-j-hayward">n-j-hayward</a>]</cite>
-				</p>
-				
-				<p>
-					It does this by mimicking insulin receptor kinase, increasing glucose uptake, and glycogen synthase activity and increasing GLP-1 concentrations. <cite class="reflink">[<a href="#n-kizilaslan">n-kizilaslan</a></cite>, <cite class="reflink"><a href="#j-hlebowicz">j-hlebowicz</a>]</cite>
-				</p>
-						
-				<h5>Neuroprotective Effects</h5>
-				
-				<p>
-					Glucose metabolism is impaired in Parkinson's Disease (PD). Improved glucose response and blood glucose levels from cinnamon's antidiabetic effects may benefit PD patients. <cite class="reflink">[<a href="#a-marques">a-marques</a>]</cite>
-				</p>
-				<p>
-					Ingested cinnamon metabolizes to sodium benzoate (NaB). Both cinnamon and NaB upregulate neuroprotective molecules (Parkin and DJ-1) and protect the nigrostriatum in a mouse model.  <cite class="reflink">[<a href="#e-angelopoulou">e-angelopoulou</a>]</cite>
-				</p>
-				<p>
-					However, translating the mouse dosage to humans, 100 mg/kg to a 12x k-factor results in 1.2 g/kg. For a 50 lb human, this equates to 60 grams of cinnamon daily, an impractical amount. Consuming 3g daily is only 5% of the suggested dose, offering minimal neuroprotection.  <cite class="reflink">[<a href="#e-angelopoulou">e-angelopoulou</a>]</cite>
-				</p>
-				
+                <h4>Cinnamon</h4>
+                <ul class="treatment-rating">
+                    <li>Mechanisms: Neuroprotective, Antidiabetic
+                    <li>Dose: 4g ED
+                    <li>Fat-soluble: ✅
+                    <li>🩸🧠BBB: ✅
+                    <li>Safety: 9/10 (90% σ)
+                    <li>Efficacy: 3/10 (50% σ)
+                </ul>
+                
+                <h5>Antidiabetic Effects</h5>
+                <p>
+                    Cinnamon exhibits anti-hyperglycemic properties, with the most significant effects observed in Ceylon cinnamon. These effects are species-specific.  <cite class="reflink">[<a href="#n-j-hayward">n-j-hayward</a>]</cite>
+                </p>
+                
+                <p>
+                    It does this by mimicking insulin receptor kinase, increasing glucose uptake, and glycogen synthase activity and increasing GLP-1 concentrations. <cite class="reflink">[<a href="#n-kizilaslan">n-kizilaslan</a></cite>, <cite class="reflink"><a href="#j-hlebowicz">j-hlebowicz</a>]</cite>
+                </p>
+                        
+                <h5>Neuroprotective Effects</h5>
+                
+                <p>
+                    Glucose metabolism is impaired in Parkinson's Disease (PD). Improved glucose response and blood glucose levels from cinnamon's antidiabetic effects may benefit PD patients. <cite class="reflink">[<a href="#a-marques">a-marques</a>]</cite>
+                </p>
+                <p>
+                    Ingested cinnamon metabolizes to sodium benzoate (NaB). Both cinnamon and NaB upregulate neuroprotective molecules (Parkin and DJ-1) and protect the nigrostriatum in a mouse model.  <cite class="reflink">[<a href="#e-angelopoulou">e-angelopoulou</a>]</cite>
+                </p>
+                <p>
+                    However, translating the mouse dosage to humans, 100 mg/kg to a 12x k-factor results in 1.2 g/kg. For a 50 lb human, this equates to 60 grams of cinnamon daily, an impractical amount. Consuming 3g daily is only 5% of the suggested dose, offering minimal neuroprotection.  <cite class="reflink">[<a href="#e-angelopoulou">e-angelopoulou</a>]</cite>
+                </p>
+                
                 <ol class="reference-list">
                     <li id="n-j-hayward">
-                    	<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6900266/"
-                    	title="Cinnamon Shows Antidiabetic Properties that Are Species-Specific: Effects on Enzyme Activity Inhibition and Starch Digestion"
-                    	target="_blank"
-                    	>Cinnamon Shows Antidiabetic Properties that Are Species-Specific: Effects on Enzyme Activity Inhibition and Starch Digestion</a>, Nicholas J. Hayward, et al.
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6900266/"
+                        title="Cinnamon Shows Antidiabetic Properties that Are Species-Specific: Effects on Enzyme Activity Inhibition and Starch Digestion"
+                        target="_blank"
+                        >Cinnamon Shows Antidiabetic Properties that Are Species-Specific: Effects on Enzyme Activity Inhibition and Starch Digestion</a>, Nicholas J. Hayward, et al.
                     </li>
                     
                     <li id="n-kizilaslan">
-                    	<a href="https://pubmed.ncbi.nlm.nih.gov/31372918/"
-                    	title="Cinnamon Shows Antidiabetic Properties that Are Species-Specific: Effects on Enzyme Activity Inhibition and Starch Digestion"
-                    	target="_blank"
-                    	>The Effect of Different Amounts of Cinnamon Consumption on Blood Glucose in Healthy Adult Individuals</a>, Nildem Kizilaslan
-                    	<p>
-                    		3–6 g of cinnamon consumption was found to affect certain blood parameters of individuals positively. 
-                    	</p>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/31372918/"
+                        title="Cinnamon Shows Antidiabetic Properties that Are Species-Specific: Effects on Enzyme Activity Inhibition and Starch Digestion"
+                        target="_blank"
+                        >The Effect of Different Amounts of Cinnamon Consumption on Blood Glucose in Healthy Adult Individuals</a>, Nildem Kizilaslan
+                        <p>
+                            3–6 g of cinnamon consumption was found to affect certain blood parameters of individuals positively. 
+                        </p>
                     </li>
                     <li id="j-hlebowicz">
                         <a href="https://pubmed.ncbi.nlm.nih.gov/19158209/"
@@ -2251,11 +2250,11 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8538722/
                         target="_blank"
                         >Effects of 1 and 3 g cinnamon on gastric emptying, satiety, and postprandial blood glucose, insulin, glucose-dependent insulinotropic polypeptide, glucagon-like peptide 1, and ghrelin concentrations in healthy subjects]</a>
                         <p>
-							Ingestion of 3 g cinnamon reduced postprandial serum insulin and increased GLP-1 concentrations without significantly affecting blood glucose, GIP, the ghrelin concentration, satiety, or GER in healthy subjects. The results indicate a relation between the amount of cinnamon consumed and the decrease in insulin concentration.
+                            Ingestion of 3 g cinnamon reduced postprandial serum insulin and increased GLP-1 concentrations without significantly affecting blood glucose, GIP, the ghrelin concentration, satiety, or GER in healthy subjects. The results indicate a relation between the amount of cinnamon consumed and the decrease in insulin concentration.
                         </p>
                         
                         <p>
-                        	(<dfn>GIP</dfn>, is <dfn>glucose-dependent insulinotropic polypeptide</dfn>, an <dfn>incretin</dfn> hormone secreted by <dfn title="K Cells or GIP cells are enteroendocrine cells found in the small intestine">K cells</dfn> in the upper small intestine in response to nutrient ingestion, particularly glucose.)
+                            (<dfn>GIP</dfn>, is <dfn>glucose-dependent insulinotropic polypeptide</dfn>, an <dfn>incretin</dfn> hormone secreted by <dfn title="K Cells or GIP cells are enteroendocrine cells found in the small intestine">K cells</dfn> in the upper small intestine in response to nutrient ingestion, particularly glucose.)
                     </li>
                     
                     <li id="a-marques">
@@ -2264,7 +2263,7 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8538722/
                         target="_blank"
                         >Glucose dysregulation in Parkinson's disease: Too much glucose or not enough insulin?</a>
                         <p>
-                        	Glucose control is impaired in moderate to advanced non-diabetic PD patients, due to impaired adaptive insulin response which may be a novel non-motor consequence of PD associated dysautonomia.
+                            Glucose control is impaired in moderate to advanced non-diabetic PD patients, due to impaired adaptive insulin response which may be a novel non-motor consequence of PD associated dysautonomia.
                         </p>
                     </li>
                     
@@ -2275,9 +2274,9 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8538722/
                         >Cinnamon and its Metabolite Protect the Nigrostriatum in a Mouse
 Model of Parkinson’s Disease Via Astrocytic GDNF</a>
 
-						<p>
-							A mouse model induced PD with MPTP, mice were treated with either cinnamon or NaB dissolved in 0.5% methylcellulose at individual doses (100 mg/kg, orally) once daily for 7 days and following behavior analysis the mice were sacrificed for biochemical studies.
-						</p>
+                        <p>
+                            A mouse model induced PD with MPTP, mice were treated with either cinnamon or NaB dissolved in 0.5% methylcellulose at individual doses (100 mg/kg, orally) once daily for 7 days and following behavior analysis the mice were sacrificed for biochemical studies.
+                        </p>
                     </li>
 
                 </ol>
@@ -2342,7 +2341,7 @@ Sterols, which are also fat-soluble compounds.
                             This double-blind RCT found that elderly men and women who took a daily 350mg capsule containing 5 mg/g erinacine A (active ingredient) demonstrated better cognitive performance and functioning.
                         </p>
                     </li>
-					<li id="sarah-docherty">[sarah-docherty]
+                    <li id="sarah-docherty">[sarah-docherty]
                         <a href="https://www.mdpi.com/2072-6643/15/22/4842"
                         title="The Acute and Chronic Effects of Lion’s Mane Mushroom Supplementation on Cognitive Function, Stress and Mood in Young Adults: A Double-Blind, Parallel Groups, Pilot Study">Lion’s Mane Supplementation on Cognitive Function, Stress, and Mood in Young Adults</a>, Sarah Docherty, et al.
                         
@@ -2352,7 +2351,7 @@ Sterols, which are also fat-soluble compounds.
                     </li>
                     
                     <li id="puei-lene-lai">[puei-lene-lai]
-                    	<a href="https://www.mdpi.com/2072-6643/15/22/4842"
+                        <a href="https://www.mdpi.com/2072-6643/15/22/4842"
                         title="Neurotrophic Properties of the Lion’s Mane
 Medicinal Mushroom, Hericium erinaceus (Higher
 Basidiomycetes) from Malaysia">Neurotrophic Properties of the Lion’s Mane
@@ -2382,17 +2381,17 @@ compounds that induced the secretion of extracellular NGF in NG108-15 cells, the
                 
                 <h4>BBB</h4>
                 <p>
-	                Cordycepin of (2′-Deoxyadenosine) is a small molecule (<abbr title="molecular weight">MW</abbr> ~251 <abbr title="Daltons &ndash; unit of molecular mass">Da</abbr>) that can cross the BBB and improve its tight junction. <cite class="reflink">[<a href="#j-yuan">j-yuan</a>]</cite>
-    			</p>
-    			
-    			<h4>Immunomodulation</h4>
-    			<p>
-    				Beta-glucans, a type of polysaccharide found in the cell walls of many mushrooms including Cordyceps, are potent immunomodulators. <cite class="reflink">[<a href="#c-cerletti">c-cerletti</a>]</cite>
-    			</p>
-    			
-    			<p>
-    				Both cordycepin and adenosine can be used to mitigate excessive inflammation. <cite class="reflink">[<a href="#s-shin">s-shin</a>]</cite> <cite class="reflink">[<a href="#s-j-jung">s-j-jung</a>]</cite>
-    			</p>
+                    Cordycepin of (2′-Deoxyadenosine) is a small molecule (<abbr title="molecular weight">MW</abbr> ~251 <abbr title="Daltons &ndash; unit of molecular mass">Da</abbr>) that can cross the BBB and improve its tight junction. <cite class="reflink">[<a href="#j-yuan">j-yuan</a>]</cite>
+                </p>
+                
+                <h4>Immunomodulation</h4>
+                <p>
+                    Beta-glucans, a type of polysaccharide found in the cell walls of many mushrooms including Cordyceps, are potent immunomodulators. <cite class="reflink">[<a href="#c-cerletti">c-cerletti</a>]</cite>
+                </p>
+                
+                <p>
+                    Both cordycepin and adenosine can be used to mitigate excessive inflammation. <cite class="reflink">[<a href="#s-shin">s-shin</a>]</cite> <cite class="reflink">[<a href="#s-j-jung">s-j-jung</a>]</cite>
+                </p>
                 <ol class="reference-list">
                     <li id="y-sun">
                         <a 
@@ -2404,23 +2403,23 @@ href="https://www.sciencedirect.com/science/article/pii/S1756464620304989"
                             Found cordycepin exerts neuroprotective effects via an anti-apoptotic mechanism based on the mitochondrial pathway in a rotenone-induced PD rat model. It suppresses inflammatory cytokines that lead to <dfn>pyroptosis</dfn>, or <dfn>"fiery falling"</dfn>, which describes the bursting of pro-inflammatory chemical signals from the dying cell.
                         </p>
                         <p>
-                        	Toll-like receptor 4 (TLR4) is a receptor involved in the innate immune response and inflammation. Activation of TLR4 triggers downstream signaling pathways, including <abbr title="Nuclear factor kappa-light-chain-enhancer of activated B cells ">NF-κB</abbr> activation. Cordycepin inhibits TLR4 activation, reducing initiation of inflammatory responses in the brain.
+                            Toll-like receptor 4 (TLR4) is a receptor involved in the innate immune response and inflammation. Activation of TLR4 triggers downstream signaling pathways, including <abbr title="Nuclear factor kappa-light-chain-enhancer of activated B cells ">NF-κB</abbr> activation. Cordycepin inhibits TLR4 activation, reducing initiation of inflammatory responses in the brain.
                         </p>
                         <p>
-                        	Cordycepin inhibits the activation of the <abbr title="NOD-, LRR- and pyrin domain-containing protein 3) &mdash; immune system protein">NLRP3</abbr> inflammasome. This inhibition reduces the production and release of IL-1β and IL-18, which are potent mediators of inflammation-induced neurotoxicity.
+                            Cordycepin inhibits the activation of the <abbr title="NOD-, LRR- and pyrin domain-containing protein 3) &mdash; immune system protein">NLRP3</abbr> inflammasome. This inhibition reduces the production and release of IL-1β and IL-18, which are potent mediators of inflammation-induced neurotoxicity.
                         </p>
                     </li>
                     
                     <li id="j-yuan">
-						<a 
-							title="Cordycepin attenuates traumatic brain injury-induced impairments of blood-brain barrier integrity in rats"
-							target="_blank"
-	href="https://pubmed.ncbi.nlm.nih.gov/27646481/"
-							>Cordycepin attenuates traumatic brain injury-induced impairments of blood-brain barrier integrity in rats</a>, Jing Yuan, et al.
-							
-						<p>
-							Cordycepin has protective effects against brain damage induced by <abbr title="Traumatic Brain Injury">TBI</abbr>. Its protection of BBB integrity is likely achieved through the recovery of tight junction proteins, inhibition of local inflammation, and prevention of <abbr title="NADPH oxidase, an enzyme that reduces NADPH, increasing inflammation">NOX</abbr> activity.
-						</p>
+                        <a 
+                            title="Cordycepin attenuates traumatic brain injury-induced impairments of blood-brain barrier integrity in rats"
+                            target="_blank"
+    href="https://pubmed.ncbi.nlm.nih.gov/27646481/"
+                            >Cordycepin attenuates traumatic brain injury-induced impairments of blood-brain barrier integrity in rats</a>, Jing Yuan, et al.
+                            
+                        <p>
+                            Cordycepin has protective effects against brain damage induced by <abbr title="Traumatic Brain Injury">TBI</abbr>. Its protection of BBB integrity is likely achieved through the recovery of tight junction proteins, inhibition of local inflammation, and prevention of <abbr title="NADPH oxidase, an enzyme that reduces NADPH, increasing inflammation">NOX</abbr> activity.
+                        </p>
                     </li>
                     
                      <li id="s-shin">
@@ -2430,17 +2429,17 @@ href="https://www.sciencedirect.com/science/article/pii/S1756464620304989"
                         >Role of Cordycepin and Adenosine on the Phenotypic Switch of Macrophages via Induced Anti-inflammatory Cytokines</a>, Seulmee Shin, et al.
                         
                         <p>
-                        	This in-vitro study found cordycepin and adenosine regulated the phenotypic switch on macrophages and suggested that cordycepin and adenosine may potentially be used as immunomodulatory agents in the treatment of inflammatory disease.
+                            This in-vitro study found cordycepin and adenosine regulated the phenotypic switch on macrophages and suggested that cordycepin and adenosine may potentially be used as immunomodulatory agents in the treatment of inflammatory disease.
                         </p>
                         <p>
-                        	By interacting with immune cells such as macrophages and dendritic cells, cordycepin and adenosine promote <dfn title="A process by which a cell engulfs a particle, such as a bacterium, dead cell, or foreign substance, and digests it">phagocytosis</dfn> and enhance immune responses against pathogens.
+                            By interacting with immune cells such as macrophages and dendritic cells, cordycepin and adenosine promote <dfn title="A process by which a cell engulfs a particle, such as a bacterium, dead cell, or foreign substance, and digests it">phagocytosis</dfn> and enhance immune responses against pathogens.
                         </p>
                     </li>
                     
                     <li id="c-cerletti">
-                    	<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8308413/"
-                    	title="Edible Mushrooms and Beta-Glucans: Impact on Human Health"
-                    	target="_blank">Edible Mushrooms and Beta-Glucans: Impact on Human Health</a>, Chiara Cerletti, et al.
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8308413/"
+                        title="Edible Mushrooms and Beta-Glucans: Impact on Human Health"
+                        target="_blank">Edible Mushrooms and Beta-Glucans: Impact on Human Health</a>, Chiara Cerletti, et al.
                     </li>
                     
                     <li id="s-j-jung">
@@ -2449,7 +2448,7 @@ href="https://www.sciencedirect.com/science/article/pii/S1756464620304989"
                         target="_blank"
                         >Immunomodulatory effects of a mycelium extract of Cordyceps (Paecilomyces hepiali; CBG-CS-2): a randomized and double-blind clinical trial</a>, Su-Jin Jung, et al.
                         <p>
-                        	The results of this randomized and double-blind clinical trial suggest that CBG-CS-2, a strain of Cordyceps (Paecilomyces hepiali), is safe and effective for enhancing cell-mediated immunity in healthy adults.
+                            The results of this randomized and double-blind clinical trial suggest that CBG-CS-2, a strain of Cordyceps (Paecilomyces hepiali), is safe and effective for enhancing cell-mediated immunity in healthy adults.
                         </p>
                     </li>
                 </ol>
@@ -2991,7 +2990,7 @@ href="https://www.sciencedirect.com/science/article/pii/S1756464620304989"
                 
                 <h5>Iron in Parkinson's Disease</h5>
                 <p>
-                	Alpha-synuclein pathology disrupts iron homeostasis in PD. High iron levels harm dopaminergic neurons, inducing cell death and leading to more severe motor deficits with mutant α-synuclein. <cite class="reflink">[<a 
+                    Alpha-synuclein pathology disrupts iron homeostasis in PD. High iron levels harm dopaminergic neurons, inducing cell death and leading to more severe motor deficits with mutant α-synuclein. <cite class="reflink">[<a 
              href="#f-jia">f-jia</a>, <a 
              href="#p-lingor">p-lingor</a></cite>
                 </p>
@@ -3057,7 +3056,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 <h4>References</h4>
                 <ol class="reference-list">
                 
-                	<li id="b-salehi">
+                    <li id="b-salehi">
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6723188/"
                         title="Insights on the Use of α-Lipoic Acid for Therapeutic Purposes"
                         target="_blank"
@@ -3068,7 +3067,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         </p>
                     </li>
                     
-					<li id="d-a-carlson">
+                    <li id="d-a-carlson">
                         <a href="https://pubmed.ncbi.nlm.nih.gov/18069903/"
                         title="The plasma pharmacokinetics of R-(+)-lipoic acid administered as sodium R-(+)-lipoate to healthy human subjects"
                         target="_blank"
@@ -3099,7 +3098,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                             The study revealed nearly 60% of the non-diabetic study participants may have undiagnosed insulin resistance &mdash; despite having normal blood sugar levels.
                         </p>
                     </li>
-					<li id="w-j-lee">
+                    <li id="w-j-lee">
                         <a href="https://pubmed.ncbi.nlm.nih.gov/15913551/"
                         title="Alpha-lipoic acid increases insulin sensitivity by activating AMPK in skeletal muscle"
                         target="_blank"
@@ -3123,16 +3122,16 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         href="https://pubmed.ncbi.nlm.nih.gov/28168622/">
                             Alpha-synuclein and iron: two keys unlocking Parkinson's disease</a>, Paul Lingor, et al.
                             
-                    	<p>
-                    		This short review, focuses on two disease mechanisms: alpha-synuclein pathology and dysfunction of iron homeostasis, as well as their intricate interaction.
-                    	</p>
+                        <p>
+                            This short review, focuses on two disease mechanisms: alpha-synuclein pathology and dysfunction of iron homeostasis, as well as their intricate interaction.
+                        </p>
                     </li>
-					<li id="f-jia">
+                    <li id="f-jia">
                         <a href="https://www.frontiersin.org/articles/10.3389/fnagi.2018.00097/full">
                             High Dietary Iron Supplement Induces the Nigrostriatal Dopaminergic Neurons Lesion in Transgenic Mice Expressing Mutant A53T Human Alpha-Synuclein</a>, Fengju Jia, et al.
                             
                     <p>
-                    	These results suggested high dietary iron supplement could induce nigral dopaminergic neurons lesion in A53T mice, which might be due to the vulnerability of SN to accumulate iron.
+                        These results suggested high dietary iron supplement could induce nigral dopaminergic neurons lesion in A53T mice, which might be due to the vulnerability of SN to accumulate iron.
                     </p>
                     </li>
                     <li id="h-zhang">
@@ -3277,7 +3276,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         Changes in serotonin signaling happen in the early stages of Parkinson's. It is imperative to work on this system as early as possible. Do not wait for GI symptoms to develop.
                     </p>
                     <p>
-                    	Dopamine Replacement Therapy (DRT) commonly used to treat Parkinson’s can cause involuntary movements; <dfn>"L-DOPA-induced dyskinesia (LID)"</dfn>. 5-HTP supplementation helps balance and restore serotonin to reduce the severity of these symptoms by modulating serotonin levels and dopamine release.
+                        Dopamine Replacement Therapy (DRT) commonly used to treat Parkinson’s can cause involuntary movements; <dfn>"L-DOPA-induced dyskinesia (LID)"</dfn>. 5-HTP supplementation helps balance and restore serotonin to reduce the severity of these symptoms by modulating serotonin levels and dopamine release.
                     </p>
                     
                     <p>
@@ -3294,20 +3293,20 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     To elaborate, the aforementioned pathways include Dopamine, norepinephrine, epinephrine, glutathione, S-adenosylmethionine (SAMe), methionine, cysteine, tryptophan, serotonin, and vitamin B6 affect each other and contribute to neurological function, oxidative stress regulation, mood regulation, and overall health. 
                     </p>
                     <p>
-                    	Minimizing DRT and supporting other neurotransmitter systems avoids the impossible challenge of micromanaging every neurotransmitter pathway.
+                        Minimizing DRT and supporting other neurotransmitter systems avoids the impossible challenge of micromanaging every neurotransmitter pathway.
                     </p>
                     <p>
                         Diet, supplementation, and regular monitoring must be balanced to slow disease progression.
                     </p>
                     
                     <figure>
-	                    <img src="img/5-htp-competitive-inhibitors.jpeg" alt="Diagram of Competitive Neurotransmitter Inhibitors">
-	                    <figcaption>
-							<p>
-								<strong>Competitive Neurotransmitter Inhibitors:</strong> 5-HTP is converted into serotonin in the brain. It inhibits the release of glutamate, mitigates oxidation, and modulates dopamine release.
-							</p>
-						</figcaption>
-					</figure>
+                        <img src="img/5-htp-competitive-inhibitors.jpeg" alt="Diagram of Competitive Neurotransmitter Inhibitors">
+                        <figcaption>
+                            <p>
+                                <strong>Competitive Neurotransmitter Inhibitors:</strong> 5-HTP is converted into serotonin in the brain. It inhibits the release of glutamate, mitigates oxidation, and modulates dopamine release.
+                            </p>
+                        </figcaption>
+                    </figure>
 
                     <p>
                         The effects of PD on the serotonergic system are vastly understated. Several studies have shown serotonergic dysfunction in Parkinson's disease is associated with the development of motor and non-motor symptoms and complications.
@@ -3318,41 +3317,41 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     </p>
                     <h5>Serotonin and 5-HTP References</h5>
                     <ol class="reference-list">
-						<li>
-							<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3201695/"
-							title="Serotonergic Dysfunction in Parkinson's Disease and Its Relevance to Disability"
-							target="_blank"
-							>Serotonergic Dysfunction in Parkinson's Disease and Its Relevance to Disability</a>
-							<p>
-								This study confirms the lack of any autoregulatory feedback control in serotonergic neurons to regulate L-DOPA-derived dopamine release contributes to L-DOPA-induced dyskinesia (LID).
-							</p>
-						</li>
+                        <li>
+                            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3201695/"
+                            title="Serotonergic Dysfunction in Parkinson's Disease and Its Relevance to Disability"
+                            target="_blank"
+                            >Serotonergic Dysfunction in Parkinson's Disease and Its Relevance to Disability</a>
+                            <p>
+                                This study confirms the lack of any autoregulatory feedback control in serotonergic neurons to regulate L-DOPA-derived dopamine release contributes to L-DOPA-induced dyskinesia (LID).
+                            </p>
+                        </li>
 
                         <li>
-							<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7289026/"
-							title="Interactions Between the Serotonergic and Other Neurotransmitter Systems in the Basal Ganglia: Role in Parkinson’s Disease and Adverse Effects of L-DOPA"
-							target="_blank"
-							>Interactions Between the Serotonergic and Other Neurotransmitter Systems in the Basal Ganglia: Role in Parkinson’s Disease and Adverse Effects of L-DOPA</a>
-							<p>
-							Parkinson’s disease (PD) is characterized by the progressive loss of dopaminergic neurons in the substantia nigra. However, other non-dopaminergic neuronal systems such as the serotonergic system are also involved. Serotonergic dysfunction is associated with non-motor symptoms and complications, including anxiety, depression, dementia, and sleep disturbances. 
-							</p>
-							<p>
-								The lack of any autoregulatory feedback control in serotonergic neurons to regulate L-DOPA-derived dopamine release contributes to the appearance of L-DOPA-induced dyskinesia (LID). 
-							</p>
-						</li>
+                            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7289026/"
+                            title="Interactions Between the Serotonergic and Other Neurotransmitter Systems in the Basal Ganglia: Role in Parkinson’s Disease and Adverse Effects of L-DOPA"
+                            target="_blank"
+                            >Interactions Between the Serotonergic and Other Neurotransmitter Systems in the Basal Ganglia: Role in Parkinson’s Disease and Adverse Effects of L-DOPA</a>
+                            <p>
+                            Parkinson’s disease (PD) is characterized by the progressive loss of dopaminergic neurons in the substantia nigra. However, other non-dopaminergic neuronal systems such as the serotonergic system are also involved. Serotonergic dysfunction is associated with non-motor symptoms and complications, including anxiety, depression, dementia, and sleep disturbances. 
+                            </p>
+                            <p>
+                                The lack of any autoregulatory feedback control in serotonergic neurons to regulate L-DOPA-derived dopamine release contributes to the appearance of L-DOPA-induced dyskinesia (LID). 
+                            </p>
+                        </li>
 
                         <li>
-							<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4827589/"
-							title="Parkinson’s disease managing reversible neurodegeneration (retracted)"
-							target="_blank"
-							>Parkinson’s disease managing reversible neurodegeneration (retracted)</a>
-							<p>
-								This study explains the interactions between serotonin and dopamine along with their precursors in synthesis, transport, and metabolism. 
-							</p>
-							<p>
-								The study was retracted for conflict of interest, not factual inaccuracies.
-							</p>
-						</li>
+                            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4827589/"
+                            title="Parkinson’s disease managing reversible neurodegeneration (retracted)"
+                            target="_blank"
+                            >Parkinson’s disease managing reversible neurodegeneration (retracted)</a>
+                            <p>
+                                This study explains the interactions between serotonin and dopamine along with their precursors in synthesis, transport, and metabolism. 
+                            </p>
+                            <p>
+                                The study was retracted for conflict of interest, not factual inaccuracies.
+                            </p>
+                        </li>
                     </ol>
                 </section>
             
@@ -3373,14 +3372,14 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     <p>
                         Melatonin protects neurons against oxidative stress, a problem exacerbated by Parkinson's Disease (PD) that leads to progressive neurodegeneration (PN). It interacts with nuclear receptors and signaling pathways to regulate gene transcription. This causes an increase in the production of superoxide dismutase (SOD), glutathione peroxidase, and glutathione reductase.
                     </p>
-                	
-					<p>
-						 Neuroinflammation leads to increased ROS production. Increased ROS production contributes to neuronal damage which perpetuates further neuroinflammation. Melatonin reduces inflammation, thereby reducing oxidative stress.
-					</p>
-					
-					<p>
-						Melatonin directly scavenges free radicals, reducing the oxidative burden on cells and allowing antioxidant enzymes to function more efficiently.
-					</p>
+                    
+                    <p>
+                         Neuroinflammation leads to increased ROS production. Increased ROS production contributes to neuronal damage which perpetuates further neuroinflammation. Melatonin reduces inflammation, thereby reducing oxidative stress.
+                    </p>
+                    
+                    <p>
+                        Melatonin directly scavenges free radicals, reducing the oxidative burden on cells and allowing antioxidant enzymes to function more efficiently.
+                    </p>
                     <p>
                         Melatonin receptors MT1 and MT2 in the substantia nigra are reduced in PD patients. Supplementing melatonin helps amend this deficit.
                     </p>
@@ -3414,7 +3413,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     </p>
                     <h5>Supplementation</h5>
                     <p>
-                    	Melatonin is safe to take. Excessive doses over 10-15mg may cause next-day tiredness and headache.
+                        Melatonin is safe to take. Excessive doses over 10-15mg may cause next-day tiredness and headache.
 
 
                     <p>
@@ -3427,14 +3426,14 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     <figure>
                     <img src="img/sleep3.png" alt="Sleep3 &mdash; Nature's Bounty Sleep3 Melatonin 10mg, Maximum Strength 100% Drug Free Sleep Aid, Dietary Supplement, L-Theanine & Nighttime Herbal Blend Time Release Technology, 60 Tri-Layered Tablets">
                     <figcaption>
-						<p>
-							<a
-								href="https://www.amazon.com/gp/product/B07PXT5LYR/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07DJJXPDD&amp;linkId=fcbfe06c3bf2c5b2709c3b7afef8459"
-								>Sleep3 &mdash; Nature's Bounty &mdash; Time-released Melatonin &mdash; 10mg</a>
-						</p>
+                        <p>
+                            <a
+                                href="https://www.amazon.com/gp/product/B07PXT5LYR/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07DJJXPDD&amp;linkId=fcbfe06c3bf2c5b2709c3b7afef8459"
+                                >Sleep3 &mdash; Nature's Bounty &mdash; Time-released Melatonin &mdash; 10mg</a>
+                        </p>
                     </figcaption>
-                	</figure>
-                	
+                    </figure>
+                    
                     <h5>Melatonin References</h5>
                     <ol class="reference-list">
                         <li>
@@ -3442,34 +3441,34 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     >Melatonin as a pharmacological agent against neuronal loss in experimental models of Huntington's disease, Alzheimer's disease and 
                     parkinsonism</a>
                     
-                    		<p>
-                    			Melatonin easily crosses the BBB and stimulates a variety of antioxidative enzymes including superoxide dismutase, glutathione peroxidase and glutathione reductase. 
+                            <p>
+                                Melatonin easily crosses the BBB and stimulates a variety of antioxidative enzymes including superoxide dismutase, glutathione peroxidase and glutathione reductase. 
                         </li>
 
                         <li>
-                        	<a href="https://pubmed.ncbi.nlm.nih.gov/16179266/"
-                        	title="Role of Melatonin in Neurodegenerative Diseases"
-                        	target="_blank">Role of Melatonin in Neurodegenerative Diseases</a>
-                        	<p>
-                        	This review concluded that melatonin preserves mitochondrial homeostasis, reduces free radical generation, e.g., by enhancing mitochondrial glutathione levels, and safeguards proton potential and ATP synthesis by stimulating complex I and IV activities.
-                        	</p>
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/16179266/"
+                            title="Role of Melatonin in Neurodegenerative Diseases"
+                            target="_blank">Role of Melatonin in Neurodegenerative Diseases</a>
+                            <p>
+                            This review concluded that melatonin preserves mitochondrial homeostasis, reduces free radical generation, e.g., by enhancing mitochondrial glutathione levels, and safeguards proton potential and ATP synthesis by stimulating complex I and IV activities.
+                            </p>
                         <li>
-                        	<a href="https://www.parkinsonalliance.org/grantsgiven/2000-23/"
-                        	target="_blank"
-                        	title="Superoxide Dismutase Activity in Early and Advanced Parkinson's Disease">Superoxide Dismutase Activity in Early and Advanced Parkinson's Disease</a>
-                        	<p>
-                        		 A defect in SOD activity develops over time in PD.
-                        	</p>
+                            <a href="https://www.parkinsonalliance.org/grantsgiven/2000-23/"
+                            target="_blank"
+                            title="Superoxide Dismutase Activity in Early and Advanced Parkinson's Disease">Superoxide Dismutase Activity in Early and Advanced Parkinson's Disease</a>
+                            <p>
+                                 A defect in SOD activity develops over time in PD.
+                            </p>
                         </li>
                         <li>
-							<a href="https://www.frontiersin.org/articles/10.3389/fnagi.2020.00053/full"
-							title="Contra-Directional Expression of Plasma Superoxide Dismutase with Lipoprotein Cholesterol and High-Sensitivity C-reactive Protein as Important Markers of Parkinson’s Disease Severity"
-							target="_blank"
-							>[Contra-Directional Expression of Plasma Superoxide Dismutase with Lipoprotein Cholesterol and High-Sensitivity C-reactive Protein as Important Markers of Parkinson’s Disease Severity</a>
-							<p>
-								&ldquo;Superoxide dismutase (SOD) is one of the most important antioxidant enzymes both inside and outside cell membranes, and it catalyzes the dismutation of superoxide radicals (O2−) to hydrogen peroxide (H2O2), which is converted to water and oxygen by catalase and glutathione peroxidase.&rdquo;
-							</p>
-						</li>
+                            <a href="https://www.frontiersin.org/articles/10.3389/fnagi.2020.00053/full"
+                            title="Contra-Directional Expression of Plasma Superoxide Dismutase with Lipoprotein Cholesterol and High-Sensitivity C-reactive Protein as Important Markers of Parkinson’s Disease Severity"
+                            target="_blank"
+                            >[Contra-Directional Expression of Plasma Superoxide Dismutase with Lipoprotein Cholesterol and High-Sensitivity C-reactive Protein as Important Markers of Parkinson’s Disease Severity</a>
+                            <p>
+                                &ldquo;Superoxide dismutase (SOD) is one of the most important antioxidant enzymes both inside and outside cell membranes, and it catalyzes the dismutation of superoxide radicals (O2−) to hydrogen peroxide (H2O2), which is converted to water and oxygen by catalase and glutathione peroxidase.&rdquo;
+                            </p>
+                        </li>
                     </ol>
                 </section>
             </section>
@@ -4227,7 +4226,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         title="Vitamin B12 modulates Parkinson’s disease LRRK2 kinase activity through allosteric regulation and confers neuroprotection"
                         target="_blank">Vitamin B12 modulates Parkinson’s disease LRRK2 kinase activity through allosteric regulation and confers neuroprotection</a>
                         <p>
-                        	Vitamin B-12 protected dopaminergic neurons from toxicity induced by LRRK2 and its mutant form, LRRK2-G2019S. The effect was shown to improve deficits in dopamine transmission in LRRK2-PD mouse models.
+                            Vitamin B-12 protected dopaminergic neurons from toxicity induced by LRRK2 and its mutant form, LRRK2-G2019S. The effect was shown to improve deficits in dopamine transmission in LRRK2-PD mouse models.
                         </p>
                     </li>
                      <li>
@@ -4236,7 +4235,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         target="_blank"
                         >Vitamin B12 Ameliorates the Pathological Phenotypes of Multiple Parkinson’s Disease Models by Alleviating Oxidative Stress</a>
                         <p>
-                        	This multiple model study demonstrated that Vitamin B12 significantly ameliorated oxidative stress by reducing ROS and alleviating reductants in a cellular PD model. In vivo, VB12 rescued the movement deficit of C. elegans and the mouse PD model. Mechanistically, VB12 reduced JNK phosphorylation and improved the mitochondrial biogenesis regulator PGC-1α. 
+                            This multiple model study demonstrated that Vitamin B12 significantly ameliorated oxidative stress by reducing ROS and alleviating reductants in a cellular PD model. In vivo, VB12 rescued the movement deficit of C. elegans and the mouse PD model. Mechanistically, VB12 reduced JNK phosphorylation and improved the mitochondrial biogenesis regulator PGC-1α. 
                         </p>
                     </li>
                 </ol>
@@ -4595,7 +4594,7 @@ water maze.
                     Senolytics are used to selectively induce the death of senescent cells. Senolytic means "senescent cell destruction".
                 </p>
 
-				<h5>Senolytics in Parkinson's Disease</h5>
+                <h5>Senolytics in Parkinson's Disease</h5>
                 <p>
                     Senolytics inhibit and help degrade &alpha;-synuclein aggregation.
                 </p>
@@ -4830,18 +4829,18 @@ water maze.
                     </ol>
                 </section>
                 <section id="sulforaphane">
-                	<h3>Sulforaphane — TODO</h3>
+                    <h3>Sulforaphane — TODO</h3>
                 </section>
                 <section id="apigenin">
-                	<h3>Apigenin — TODO</h3>
+                    <h3>Apigenin — TODO</h3>
                 </section>
                 
                 
                 <section id="piperlongum">
-                	<h3>Piperlongumin — TODO</h3>
-                	<!-- 
-                	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6087492/
-                	>
+                    <h3>Piperlongumin — TODO</h3>
+                    <!-- 
+                    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6087492/
+                    >
                 </section>
                 
                 <section id="theaflavin">
@@ -4860,7 +4859,7 @@ water maze.
         </section>
     </section>
     </section>
-	<section id="summary">
+    <section id="summary">
         <h2>Summary</h2>
 
         <p>
@@ -4868,7 +4867,7 @@ water maze.
         </p>
         
         <p>
-        	Lies designed to foster good self-estimation provide a false sense of reality, create dependence on external validation, impact relationships, and lead to missed opportunities for improvement. This guide lays solid foundation for cutting through the bullshit. The responsibility now rests with you to take proactive steps forward.
+            Lies designed to foster good self-estimation provide a false sense of reality, create dependence on external validation, impact relationships, and lead to missed opportunities for improvement. This guide lays solid foundation for cutting through the bullshit. The responsibility now rests with you to take proactive steps forward.
         </p>
         
     </section>
