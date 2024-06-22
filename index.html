@@ -44,6 +44,7 @@ abbr[title]::after, dfn[title]::after {
     left: 100%;
     padding: .5em .46em .5em .5em;
     background-color: light-dark(#EEE, #555);
+    color: light-dark(#444, #EEE);
     font-size: smaller;
     border-radius: .4em;
     transition: opacity 0.3s ease-in;
@@ -481,6 +482,8 @@ documentElement.addEventListener("touchstart", clickHandler);
                             <li><a href="#fisetin">Fisetin</a></li>
                             <li><a href="#quercetin">Quercetin</a></li>
                             <li><a href="#sulforaphane">Sulforaphane</a></li>
+                            <li><a href="#piperlongumin">Piperlongumin</a></li>
+                            <li><a href="#apigenin">Apigenin</a></li>
                             <li><a href="#theaflavin">Theaflavin</a></li>
                         </ul>
                     </li>
@@ -721,10 +724,9 @@ documentElement.addEventListener("touchstart", clickHandler);
                     <a href="https://pubs.acs.org/doi/10.1021/bi010616g"
                     title="Effect of Familial Parkinson's Disease Point Mutations A30P and A53T on the Structural Properties, Aggregation, and Fibrillation of Human α-Synuclein"
                     target="_blank"
-                    >Effect of Familial Parkinson's Disease Point Mutations <dfn title="a point mutation in the alpha-synuclein (SNCA) gene, which is associated with autosomal dominant Parkinson’s disease">A30P</dfn> and <dfn title="Alpha-53-Thr mutation: point mutation in the human alpha-synuclein (α-synuclein) gene, associated with early-onset familial PD">A53T</dfn> on the Structural Properties, Aggregation, and Fibrillation of Human α-Synuclein</a>, Jie Li, et al.
+                    >Effect of Familial Parkinson's Disease Point Mutations A30P and A53T on the Structural Properties, Aggregation, and Fibrillation of Human α-Synuclein</a>, Jie Li, et al.
                     <p>
-                        This rodent study showed that the A53T and A30P genetic mutations
-in α-synuclein have increased propensity to aggregate compared with the wild-type protein, and this strongly supports the direct and critical role of α-synuclein aggregation in the etiology of Parkinson’s disease. 
+                        This rodent study showed that the <dfn title="Alpha-53-Thr mutation: point mutation in the human alpha-synuclein (α-synuclein) gene, associated with early-onset familial PD">A53T</dfn> and <dfn title="a point mutation in the alpha-synuclein (SNCA) gene, which is associated with autosomal dominant Parkinson’s disease">A30P</dfn> genetic mutations in α-synuclein have increased propensity to aggregate compared with the wild-type protein, and this strongly supports the direct and critical role of α-synuclein aggregation in the etiology of Parkinson’s disease. 
                     </p>
                     <p>
                         They note α-synuclein in PD arose from gene-linkage experiments in familial early-onset Parkinson’s disease, which revealed the A53T mutation.
@@ -2871,21 +2873,19 @@ href="https://www.sciencedirect.com/science/article/pii/S1756464620304989"
                     ALCAR directly affects mitochondrial respiration.
                 </p>
                 <p>
-                    ALCAR protects dopaminergic neurons by reducing neuroinflammation, apoptosis, astrogliosis (damage to  astrocytes (glial cells)), and oxidative stress. For PD, ALCAR protects cells against the accumulation of alpha-synuclein.
+                    ALCAR protects dopaminergic neurons by reducing neuroinflammation, apoptosis, astrogliosis (damage to  astrocytes (glial cells)), and oxidative stress. For PD, ALCAR protects cells against the accumulation of alpha-synuclein. <cite class="reflink">[<a href="#s-a-majd">s-a-majd</a>]</cite>
                 </p>
 
                 <p>
                     A 1990 Italian study on a small group of patients, published in the International Journal of Pharmacology research, titled &ldquo;
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/2387661/">
-                        Clinical pharmacodynamics of acetyl-L-carnitine in patients with Parkinson's disease
-                    </a>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/2387661/"
+                    >Clinical pharmacodynamics of acetyl-L-carnitine in patients with Parkinson's disease</a>
                     &rdquo;, found 1&ndash;2g of ALCAR improved the H response, sleep stages and spindling in test (non-placebo) subjects. The H-response, also known as the Hoffmann reflex or H-reflex, is a type of reflexive muscle response triggered by a specific type of nerve stimulation applied to a muscle characterized by a specific latency and amplitude (size) of the muscle response.
                 </p>
                 <p>
                     A later 2018, &ldquo;
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/30906386/">
-                        a multicenter, randomized double-blind, placebo-controlled clinical trial for efficacy of acetyl-L-carnitine in patients with dementia-associated with cerebrovascular disease
-                    </a>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/30906386/"
+                    >multicenter, randomized double-blind, placebo-controlled clinical trial for efficacy of acetyl-L-carnitine in patients with dementia-associated with cerebrovascular disease</a>.
                     &rdquo;, found 1.5g of ALCAR significantly improved cognitive assessment.
                 </p>
                 
@@ -2905,17 +2905,17 @@ href="https://www.sciencedirect.com/science/article/pii/S1756464620304989"
                 </ul>
 
                 <h5>References</h5>
-                <ol>
+                <ol class="reference-list">
                     <li id="akihiro-inano">
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/14595704/">
-                            Acetyl-L-carnitine permeability across the blood-brain barrier and involvement of carnitine transporter OCTN2
-                        </a>
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/14595704/"
+                        target="_blank"
+                        >Acetyl-L-carnitine permeability across the blood-brain barrier and involvement of carnitine transporter OCTN2</a>, Akihiro Inano, et al.
                     </li>
 
-                    <li>
-                        <a href="https://pubmed.ncbi.nlm.nih.gov/28199883/">
-                            Acetyl-l-carnitine protects dopaminergic nigrostriatal pathway in 6-hydroxydopamine-induced model of Parkinson's disease in the rat
-                        </a>
+                    <li id="s-a-majd">
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/28199883/"
+                        target="_blank"
+                        >Acetyl-l-carnitine protects dopaminergic nigrostriatal pathway in 6-hydroxydopamine-induced model of Parkinson's disease in the rat</a>, Siamak Afshin-Majd, et al.
                     </li>
                </ol>
             </section>
@@ -4800,6 +4800,18 @@ water maze.
                 <section id="sulforaphane">
                 	<h3>Sulforaphane — TODO</h3>
                 </section>
+                <section id="apigenin">
+                	<h3>Apigenin — TODO</h3>
+                </section>
+                
+                
+                <section id="sulforaphane">
+                	<h3>Piperlongumin — TODO</h3>
+                	<!-- 
+                	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6087492/
+                	>
+                </section>
+                
                 <section id="theaflavin">
                     <h4>Theaflavin</h4>
                     <p>
@@ -4823,7 +4835,7 @@ water maze.
         </p>
         
         <p>
-        Lies designed to you to make you feel good about yourself provide a false sense of reality, create dependence on external validation, impact relationships, and lead to missed opportunities for improvement. This guide lays solid foundation for cutting through the bullshit. It's up to you to take it from here.
+        Lies designed to you to make you feel good about yourself provide a false sense of reality, create dependence on external validation, impact relationships, and lead to missed opportunities for improvement. This guide lays solid foundation for cutting through the bullshit. The responsibility now rests with you to take proactive steps forward.
         </p>
         
     </section>
