@@ -43,23 +43,30 @@ abbr[title], dfn[title] {
 }
 
 abbr[title]::after, dfn[title]::after {
-	opacity: 0.0000000001;
     position: absolute;
-    bottom: 100%;
-    left: 100%;
+    inset-block-end: 100%;
     padding: .5em .46em .5em .5em;
     background-color: light-dark(#EEE, #555);
     color: light-dark(#444, #EEE);
     font-size: smaller;
     border-radius: .4em;
-    transition: opacity 0.3s ease-in;
+    transition: all 0.3s ease-in;
     content: attr(title);
-    z-index: -1;
+    opacity: 0.000001;
+    width: 0;
+    height: 0;
 }
 
 abbr[title]:hover::after, dfn[title]:hover::after {
-    z-index: 1;
 	opacity: 0.9999999;
+	z-index: auto;
+	width: unset;
+	height: unset;
+    transition: all 0.3s ease-out;
+}
+
+@position-try --popover {
+  inset-area: top-right;
 }
 
 a:link, a:visited {
@@ -335,6 +342,7 @@ nav a:hover {
     
     <script type="module">
 const documentElement = document.documentElement;
+
 const clickHandler = event => {
 	const target = event.target;
 	if (!target) return;
@@ -811,7 +819,7 @@ documentElement.addEventListener("touchstart", clickHandler);
             </p>
             <h3>Syn-One</h3>
             <p>
-                The Syn-One skin biopsy detects the presence of phosphorylated alpha-synuclein in the skin. This is a much more accurate test than the AlphaSyn-SAA, and is usually used as confirmation, rather than a preventive diagnostic.
+                The Syn-One skin biopsy detects the presence of phosphorylated alpha-synuclein in the skin. This is a much more accurate test than the AlphaSyn-SAA, and is usually used as confirmation, rather than a preventive diagnostic. 
             </p>
             <section id="genetic-testing">
                 <h4>Genetic Testing</h4>
@@ -1246,9 +1254,9 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                 release, improves mitochondrial function, and improves sleep, which improves overall health, leading to a better sense of well-being and better exercise capacity and recovery.
             </p>
             -->
-		</section>
+	</section>
 
-		<section id="etiological-problems">
+	<section id="etiological-problems">
             <h3>The Best Approach</h3>
             <p>
                 The best possible individual results can be predicted by a comprehensive, evidence-based approach. Seek care that is etiologically-sound, evidence-based, patient-centered, integrated, and comprehensive. Exercise measured skepticism and examine the veracity of claims made by all healthcare providers.
@@ -1462,16 +1470,39 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                 </p>
 
                 <p>
-                    Estrogen can be used in women. Testosterone is also neuroprotective and converts partially to estradiol, so can be used in men.
+                    Estrogen can be used in women.  <cite class="reflink">[<a 
+             href="#m-borque">m-borque</a>]</cite>
+                </p>
+                
+                <p>
+                	Testosterone is also neuroprotective and 5-10% of it converts to estradiol via aromatase. Thus, <abbr title="Testosterone Replacement Therapy">TRT</abbr> can be used in men to raise testosterone to <em>optimal</em> levels (~800ng/dl), resulting in a greater amount of aromatization to estradiol. <cite class="reflink">[<a 
+             href="#v-e-bianchi">v-e-bianchi</a>]</cite>
                 </p>
                 <h4>HRT References</h4>
-                <ol>
-                    <li><a href="https://www.alzforum.org/news/research-news/estrogen-and-neuroprotection-matter-time"
-                    >Estrogen and Neuroprotection: A Matter of Time?</a>
+                
+                <ol class="reference-list">
+                    <li id="m-borque">
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3356083/"
+                        >Male/female differences in neuroprotection and neuromodulation of brain dopamine</a>
+                        <p>
+                        	Exogenous 17β-estradiol and/or progesterone treatments show neuroprotective properties against NSDA toxins while androgens fail to induce any beneficial effect.
+                        </p>
+					</li>
+					
+					<li id="v-e-bianchi">
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7568521/"
+                        title="Androgen Therapy in Neurodegenerative Diseases"
+                        target="_blank"
+                        >Androgen Therapy in Neurodegenerative Diseases</a>, Vittorio Emanuele Bianchi, et al.
+                        <p>
+                        	This thorough review cites 266 references to support a wealth of information regarding the role of testosterone in neuroprotection, neuroinflammation, and neurodgeneration.
+                        </p>
+                        <blockquote>
+							<p>
+								&ldquo;T improves the survival of human neurons and astrocytes, acting directly on the mitochondrial membrane, inhibiting the generation of reactive oxygen and nitrogen species, as well as sirtuin-1 expression. Conversely, the absence of T may contribute to the neurodegenerative process as observed in animal models of PD and AD and may decrease the density of spinal synapses in the hippocampus. These pathological effects were reversed following treatment with T or DHT; 17β-estradiol, likely, partially mediates these effects.&rdquo;
+							</p>
+						</blockquote>
                     </li>
-                    <li>
-                        <a href="https://www.frontiersin.org/journals/endocrinology/articles/10.3389/fendo.2011.00035/full">Male/female differences in neuroprotection and neuromodulation of brain dopamine</a>
-                        </li>
                 </ol>
             </section>
             <section id="pregnenolone">
@@ -1584,58 +1615,55 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                     </li>
                 </ol>
         </section>
-            <section id="stem-cell">
-                <h4 class="neuroprotective neurorestorative">Stem Cells (MSC, iPSC)</h4>
-                <h5>Mesenchymal Stem Cells (MSCs)</h5>
-                <p>
-                    Systemic injection of mesenchymal stem cells therapy helps restore dopaminergic neurons. <cite class="reflink">[<a 
-             href="#h-j-park">h-j-park</a>]</cite>
-                </p>
-                
-                <p>
-                	The concomitant use of cell therapy and photobiomodulation therapy can improve the symptoms of PD. <cite class="reflink">[<a 
-             href="#b-ahrabi">b-ahrabi</a>]</cite>
-                </p>
-                
-                <h5>Induced pluripotent stem cell (iPSCs)</h5>
-                <p>
-                	Induced pluripotent stem cells (iPSCs) are generated by reprogramming adult somatic cells, such as skin or blood cells, to express the same genes as embryonic stem cells in a process is called <dfn>induced pluripotency</dfn>.
-               </p>
-               <p> 	
-                	 iPSCs have the ability to differentiate into any cell type in the body, similar to embryonic stem cells, but they are generated from adult cells, which makes them a promising source for regenerative medicine and tissue engineering. intracerebrally injected to the striatum and substantia nigra of PD patients.
-                	
-                </p>
-                <h5>Mesenchymal Stem Cells References:</h5>
-                <ol class="reference-list">
-                    <li id="w-chen">
-                    	 <a href="https://pubmed.ncbi.nlm.nih.gov/30346716/"
-                    	 title="Progress in Dopaminergic Cell Replacement and Regenerative Strategies for Parkinson's Disease"
-                    	 target="_blank">Progress in Dopaminergic Cell Replacement and Regenerative Strategies for Parkinson's Disease</a>
-                        <p>
-                        	"Stable cell sources, such as Embryonic stem cells (ESCs) and induced pluripotent stem cell (iPSCs), are far more suitable for clinical application than hfVM- and embryonic or fetal brain-derived NSCs."
-                        </p>
-                    </li>
-                    <li id="h-j-park">
-    Mesenchymal stem cells therapy exerts neuroprotection in a progressive animal model of Parkinson's disease
-                     <a href="https://pubmed.ncbi.nlm.nih.gov/18665911/"
-                     title="Mesenchymal Stem Cells as a Source of Dopaminergic Neurons: A Potential Cell Based Therapy for Parkinson's Disease"
-                     >Mesenchymal Stem Cells as a Source of Dopaminergic Neurons: A Potential Cell Based Therapy for Parkinson's Disease</a>, Hyun Jung Park, et al.
-                     </li>
-                     
-                    <li id="b-ahrabi">
-						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9841383/"
-						title="Photobiomodulation Therapy and Cell Therapy Improved Parkinson’s Diseases by Neuro-regeneration and Tremor Inhibition"
-						target="_blank"
-						>Photobiomodulation Therapy and Cell Therapy Improved Parkinson’s Diseases by Neuro-regeneration and Tremor Inhibition</a>, Behnaz Ahrabi, et al.
-						<p>
-							This review study showed concomitant use of cell therapy and photobiomodulation therapy can improve the symptoms of PD.
-						</p>
-                	</li>
-                 </ol>
-                <!-- p>
-                    Senolytics can be used to induce the death of senescent cells.
-                </p -->
-            </section>
+		<section id="stem-cell">
+			<h4 class="neuroprotective neurorestorative">Stem Cells (MSC, iPSC)</h4>
+			<h5>Mesenchymal Stem Cells (MSCs)</h5>
+			<p>
+				Systemic injection of mesenchymal stem cells therapy helps restore dopaminergic neurons. <cite class="reflink">[<a 
+		 href="#h-j-park">h-j-park</a>]</cite>
+			</p>
+			
+			<p>
+				The concomitant use of cell therapy and photobiomodulation therapy can improve the symptoms of PD. <cite class="reflink">[<a 
+		 href="#b-ahrabi">b-ahrabi</a>]</cite>
+			</p>
+			
+			<h5>Induced pluripotent stem cell (iPSCs)</h5>
+			<p>
+				Induced pluripotent stem cells (iPSCs) are generated by reprogramming adult somatic cells, such as skin or blood cells, to express the same genes as embryonic stem cells in a process is called <dfn>induced pluripotency</dfn>.
+		   </p>
+		   <p> 	
+				 iPSCs have the ability to differentiate into any cell type in the body, similar to embryonic stem cells, but they are generated from adult cells, which makes them a promising source for regenerative medicine and tissue engineering. intracerebrally injected to the striatum and substantia nigra of PD patients.
+				
+			</p>
+			<h5>Mesenchymal Stem Cells References:</h5>
+			<ol class="reference-list">
+				<li id="w-chen">
+					 <a href="https://pubmed.ncbi.nlm.nih.gov/30346716/"
+					 title="Progress in Dopaminergic Cell Replacement and Regenerative Strategies for Parkinson's Disease"
+					 target="_blank">Progress in Dopaminergic Cell Replacement and Regenerative Strategies for Parkinson's Disease</a>
+					<p>
+						"Stable cell sources, such as Embryonic stem cells (ESCs) and induced pluripotent stem cell (iPSCs), are far more suitable for clinical application than hfVM- and embryonic or fetal brain-derived NSCs."
+					</p>
+				</li>
+				<li id="h-j-park">
+Mesenchymal stem cells therapy exerts neuroprotection in a progressive animal model of Parkinson's disease
+				 <a href="https://pubmed.ncbi.nlm.nih.gov/18665911/"
+				 title="Mesenchymal Stem Cells as a Source of Dopaminergic Neurons: A Potential Cell Based Therapy for Parkinson's Disease"
+				 >Mesenchymal Stem Cells as a Source of Dopaminergic Neurons: A Potential Cell Based Therapy for Parkinson's Disease</a>, Hyun Jung Park, et al.
+				 </li>
+				 
+				<li id="b-ahrabi">
+					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9841383/"
+					title="Photobiomodulation Therapy and Cell Therapy Improved Parkinson’s Diseases by Neuro-regeneration and Tremor Inhibition"
+					target="_blank"
+					>Photobiomodulation Therapy and Cell Therapy Improved Parkinson’s Diseases by Neuro-regeneration and Tremor Inhibition</a>, Behnaz Ahrabi, et al.
+					<p>
+						This review study showed concomitant use of cell therapy and photobiomodulation therapy can improve the symptoms of PD.
+					</p>
+				</li>
+			 </ol>
+		</section>
         <section id="physical-therapy-exercise">
             <h3>
                 Physical Therapy / Exercise
@@ -4809,7 +4837,7 @@ water maze.
                 </section>
                 
                 
-                <section id="sulforaphane">
+                <section id="piperlongum">
                 	<h3>Piperlongumin — TODO</h3>
                 	<!-- 
                 	https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6087492/
@@ -4822,7 +4850,7 @@ water maze.
                         Theaflavin, from black tea, is senolytic.
                     </p>
                 </section>
-                <!-- section id="blueberry">
+                <section id="blueberry">
                     <h4>Blueberry</h4>
                 
                 Blueberry juice augments exercise-induced neuroprotection in a Parkinson’s disease model through modulation of GDNF levels
@@ -4831,15 +4859,16 @@ water maze.
             </section>
         </section>
     </section>
+    </section>
 	<section id="summary">
         <h2>Summary</h2>
 
         <p>
-            Ultimately, your health is your responsibility. Parkinson's Disease is your problem. This guide is an outline designed to assist with with the best possible knowledge to address this problem, to maximize their health span, and do so based on the latest scientific research, not healthcare dogma; not lies designed to make you feel good about yourself.
+            Ultimately, your health is your responsibility. Parkinson's Disease is the patient's problem. This guide is an outline designed to assist with with the best possible knowledge to address this problem, to maximize their health span, and do so based on the latest scientific research, not healthcare dogma and not lies or empty promises designed to make you feel good about yourself.
         </p>
         
         <p>
-        Lies designed to you to make you feel good about yourself provide a false sense of reality, create dependence on external validation, impact relationships, and lead to missed opportunities for improvement. This guide lays solid foundation for cutting through the bullshit. The responsibility now rests with you to take proactive steps forward.
+        	Lies designed to foster good self-estimation provide a false sense of reality, create dependence on external validation, impact relationships, and lead to missed opportunities for improvement. This guide lays solid foundation for cutting through the bullshit. The responsibility now rests with you to take proactive steps forward.
         </p>
         
     </section>
