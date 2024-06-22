@@ -147,6 +147,7 @@ section, header {
     background-color: light-dark(#FFFFFFCC, #5555);
     animation: highlightFade 4s ease forwards; /* Play the animation */
 }
+
 section section {
     background-color: inherit;
 }
@@ -384,7 +385,15 @@ const clickHandler = event => {
     }
 };
 documentElement.addEventListener("click", clickHandler);
-documentElement.addEventListener("touchstart", clickHandler);
+documentElement.addEventListener("touchstart", clickHandler); 
+
+addEventListener("hashchange", (ev) => {
+	const navRight = nav.getBoundingClientRect().right;
+	const rightPageMargin = innerWidth - navRight;
+	if (rightPageMargin < 50) {
+		nav.classList.remove("open");
+	}
+});
     </script>
 </head>
 <body>
