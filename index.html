@@ -55,6 +55,7 @@ abbr[title]::after, dfn[title]::after {
     opacity: 0.000001;
     width: 0;
     height: 0;
+    z-index: -1;
 }
 
 abbr[title]:hover::after, dfn[title]:hover::after {
@@ -916,48 +917,49 @@ documentElement.addEventListener("touchstart", clickHandler);
         <h2>A Brief Introduction to Health</h2>
 
         <p>
-            Knowledge is crucial to achieving predictable success, as the predictability of solving problems that are not well understood is low.
+            Knowledge is crucial for achieving predictable success.
         </p>
     
         <p>
-            Optimal health describes a state of physical and mental functioning, not merely absence of disease. Healthcare professionals often describe optimal health from a very high-level with with crude descriptors. We could do better.
+            <dfn>Optimal</dfn> health describes a state of physical and neurological functioning, not merely absence of disease.However, healthcare professionals often describe it using broad and oversimplified terms. 
         </p>
         <p>
-            The first step to optimizing one's health is understanding his general condition and some basic understanding of cellular health, neurology, and the human organism (we've barely scratched the surface). 
-        </p>        
+            The first step in optimizing health involves understanding the general condition and acquiring basic knowledge of cellular health, neurology, and the human organism (we've barely scratched the surface). 
+        </p>
     
-        <ol>
-            <li>Balanced hormone levels
-            <li>Efficient metabolism (basic <abbr title="Basic Metabolic Panel">BMP</abbr>)
-            <li>Healthy blood pressure and cholesterol levels
-            <li>Strong immune system
-            <li>Health Blood markers (<abbr title="Complete Blood Count">CBC</abbr>)
-        </ol>
+		<h3>Health Assessments</h3>
+		<ol>
+			<li>Balanced hormone levels</li>
+			<li>Efficient metabolism (<abbr title="Basic Metabolic Panel">BMP</abbr>)</li>
+			<li>Healthy blood pressure and cholesterol levels</li>
+			<li>Healthy Blood markers (<abbr title="Complete Blood Count">CBC</abbr>)</li>
+			<li>Strong immune system (<abbr title="Complete Blood Count with White Blood Cell Count">CBC with <abbr title="White Blood Cell Count">WBC</abbr></abbr>)</li>
+		</ol>
+
     
         But we could go deeper:
-        <ol>
-            <li>Resting heart rate below 60 beats per minute
-            <li>Well-functioning organs and systems, including cardiovascular, respiratory, digestive systems (<abbr title="Comprehensive Metabolic Panel">CMP</abbr>)
-            <li>Normal blood pressure (around 120/80 mmHg)
-            <li><del>crude lipid profile with low LDL and high HDL cholesterol</del>
-            <li>More useful lipid profile <em>high</em> <abbr title="Large, Buoyant Low-Density Lipoprotein">lbLDL</abbr> and <abbr title="Large, Buoyant Low-Density Lipoprotein">lbHDL</abbr>, low <abbr title="Small, Dense Low-Density Lipoprotein">sdLDL</abbr> and <abbr title="Small, Dense High-Density Lipoprotein">sdHDL</abbr>, and high ratio of <abbr title="Large, Buoyant High-Density Lipoprotein">lbHDL</abbr> to <abbr title="Large, Buoyant Low-Density Lipoprotein">lbLDL</abbr>
-            <li>Healthy body composition; low visceral fat (<abbr title="dual-energy X-ray absorptiometry">DEXA</abbr>)
-            <li>Optimal levels of inflammation and oxidative stress (Cytokine Markers and Inflammatory Markers tests).
-        </ol>
+		<ol>
+			<li>Resting heart rate below 60 beats per minute (fitness trackers)</li>
+			<li>Well-functioning organs and systems, including cardiovascular, respiratory, and digestive systems (<abbr title="Comprehensive Metabolic Panel">CMP</abbr>)</li>
+			<li>Normal blood pressure (around 120/80 mmHg)</li>
+			<li><del>Crude lipid profile with low LDL and high HDL cholesterol</del></li>
+			<li>More useful lipid profile <em>high</em> <abbr title="Large, Buoyant Low-Density Lipoprotein">lbLDL</abbr> and <abbr title="Large, Buoyant Low-Density Lipoprotein">lbHDL</abbr>, low <abbr title="Small, Dense Low-Density Lipoprotein">sdLDL</abbr> and <abbr title="Small, Dense High-Density Lipoprotein">sdHDL</abbr>, and high ratio of <abbr title="Large, Buoyant High-Density Lipoprotein">lbHDL</abbr> to <abbr title="Large, Buoyant Low-Density Lipoprotein">lbLDL</abbr> (Cardio IQ® Advanced Lipid Panel)</li>
+			<li>Healthy body composition; low visceral fat (<abbr title="dual-energy X-ray absorptiometry">DEXA</abbr>)</li>
+			<li>Optimal levels of inflammation and oxidative stress (Test panels: Cytokine Markers, Inflammatory Markers, Oxidative Stress Markers Panel (for <abbr title="Malondialdehyde, to indirectly measure oxidative damage (of ROS and RNS)">MDA</abbr>))</li>
+		</ol>
+
         Deeper yet:
-        <ol>
-            <li>Genetic testing for personal health (<a href="https://www.innerbody.com/dna-testing/dna-health-testing"
-            >Finding the Best DNA Health Test</a>).
-            <li>Advanced hormone tests (<a href="https://dutchtest.com/info-dutch-complete/">Dutch Complete</a>).
-            <li>Healthy immune system (dendritic cells (DCs)) (detailed lymphocytes subsets, activation, and tracking) (COSTIM bioassay to test potency of <abbr title="dendritic cells">DCs</abbr>) by measuring their co-stimulatory activity.) (antibody response exam).
-            <li>Stable blood glucose levels maintained by insulin sensitivity (<abbr 
-            title="Oral Glucose Tolerance Test">OGTT</abbr>).
-            <li>Adequate cellular repair mechanisms ensuring tissue integrity and longevity.
-            <li>Optimal mitochondrial function providing energy for cellular activities.
-            (<a href="https://aonm.org/mitochondrial-testing/">mitochondrial testing</a>).
-            <li>Healthy methylation (Genova Diagnostics Methylation Panel).
-        </ol>
-            Focusing on the brain:
+		<ol>
+			<li>Genetic testing for personal health (<a href="https://www.innerbody.com/dna-testing/dna-health-testing">Finding the Best DNA Health Test</a>).</li>
+			<li>Advanced hormone tests (<a href="https://dutchtest.com/info-dutch-complete/">Dutch Complete</a>).</li>
+			<li>Healthy immune system, focusing on dendritic cells (<abbr title="DCs">DCs</abbr>), with detailed analysis of lymphocyte subsets, activation, and tracking using the <abbr title="COSTIM Bioassay">COSTIM</abbr> to measure co-stimulatory activity (<abbr title="Antibody Response Exam">ARE</abbr>).</li>
+
+			<li>Stable blood glucose levels maintained by insulin sensitivity (<abbr title="Oral Glucose Tolerance Test">OGTT</abbr>, <abbr title="Continuous Glucose Monitor">CGM</abbr>).</li>
+			<li>Adequate cellular repair mechanisms ensuring tissue integrity and longevity (<a title="TruAge COMPLETE at-home epigenetic test" href="https://shop.trudiagnostic.com/products/truage-complete-epigenetic-collection">TruAge</a>).</li>
+			<li>Optimal mitochondrial function providing energy for cellular activities (<a href="https://aonm.org/mitochondrial-testing/">mitochondrial testing</a>).</li>
+			<li>Healthy methylation (Genova Diagnostics Methylation Panel).</li>
+		</ol>   
+		Focusing on the brain:
         <ol>
             <li>Precise and sensitive regulation of neurotransmitter synthesis via enzyme pathways and receptor feedback mechanisms.
             <li>Low neuroinflammation through balanced cytokine production and microglial modulation (Cytokine Panel, Multiplex ELISA)
@@ -1195,7 +1197,6 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
         
         <section id="holistic-approach">
             <h3>Holistic Approach</h3>
-            
             <p>
                 The holistic approach is patient-centered care that aims to address the underlying causes of disease and promote overall health. However, some holistic providers use implausible or disproven strategies (e.g. homeopathy, reiki, "mind, body, spirit", etc). 
             </p>
