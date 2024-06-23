@@ -130,6 +130,15 @@ dt {
 .step:last-child {
 	background-color: #ff9e9e;
 }
+
+.arrow {
+	width: 2vi;
+	height: 2vi;
+	border-left: 1vi solid #333;
+	border-bottom: 1vi solid #333;
+	transform: rotate(-45deg);
+	margin: 0 1vi;
+}
     
 section > figure {
     border-width: 0.1vh;
@@ -756,13 +765,13 @@ addEventListener("hashchange", (ev) => {
 			
 			<div class="diagram">
 				<div class="step">SATB1 inhibition</div>
-				&rarr;
-				<div class="step">increased p21</div>
-				&rarr;
-				<div class="step">decreased CDKs</div>
-			   &rarr;
-				<div class="step">accumulation of senescent cells</div>
-				&rarr;
+				➡
+				<div class="step">⬆ p21</div>
+				➡
+				<div class="step">⬇ CDKs</div>
+			    ➡
+				<div class="step">⬆ senescent cells</div>
+				➡
 				<div class="step">SATB1 inhibition</div>
 			</div>
             <h5>Interruption of Progressive Neurodegeneration (PN)</h5>
