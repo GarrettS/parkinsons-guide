@@ -56,6 +56,11 @@ abbr[title], dfn[title] {
     text-decoration-style: dotted;
 }
 
+abbr[title]:hover, dfn[title]:hover {
+    background-color: light-dark(lighter, darker);
+
+}
+
 abbr[title]::after, dfn[title]::after {
     position: absolute;
     inset-block-end: 100%;
@@ -65,23 +70,17 @@ abbr[title]::after, dfn[title]::after {
     font-size: smaller;
     border-radius: .4em;
     transition: all 0.3s ease-in;
-    content: attr(title);
-    opacity: 0.000001;
-    width: 0;
-    height: 0;
-    z-index: -1;
+    content: '';
+    opacity: 0;
 }
 
 abbr[title]:hover::after, dfn[title]:hover::after {
     opacity: 0.9999999;
+    content: attr(title);
     z-index: auto;
     width: unset;
     height: unset;
-    transition: all 0.3s ease-out;
-}
-
-@position-try --popover {
-  inset-area: top-right;
+    transition: opacity 0.3s ease-out;
 }
 
 a:link, a:visited {
@@ -708,26 +707,24 @@ addEventListener("hashchange", (ev) => {
                 PD's multifactorial effects involve aging, genetics, and environmental factors associated with dopaminergic neuronal death. <cite class="reflink">[<a href="#k-burton">k-burton</a>]</cite>
             </p>
             <p>
-                Neurotoxins, such as rotenone and <a href="https://www.syngenta.com/en/paraquat-in-the-media">paraquat</a>, along with gene mutations of <abbr title="Parkinsonism-Associated Deglycase 1 or Park7">DJ-1</abbr>, <abbr title="PTEN-induced Kinase 1">PINK1</abbr>, parkin, <abbr title="Leucine-Rich Repeat Kinase 2 gene">LRRK2</abbr>, and <abbr title="Synuclein Alpha Gene">SNCA</abbr> genes, contribute to several cellular issues. These include mitochondria complex I inhibition, ATP depletion, and <abbr title="Reactive Oxygen Species">ROS</abbr>  accumulation. They also cause mitochondrial depolarization and dysfunction. Together, these factors promote neuronal death in the substantia nigra of PD patients. <cite class="reflink">[<a href="#jae-hyeon-park">jae-hyeon-park</a>]</cite><cite class="reflink">[<a href="f-pan-montojo">F. Pan-Montojo</a>]</cite>
-            </p>
-            <p>
-                This is difficult. Reread that until it makes sense.
+               Gene mutations of <abbr title="Parkinsonism-Associated Deglycase 1 or Park7">DJ-1</abbr>, <abbr title="PTEN-induced Kinase 1">PINK1</abbr>, parkin, <abbr title="Leucine-Rich Repeat Kinase 2 gene">LRRK2</abbr>, and <abbr title="Synuclein Alpha Gene">SNCA</abbr> genes, contribute to several cellular issues. Together, these factors promote neuronal death in the substantia nigra of PD patients. <cite class="reflink">[<a href="m-vlag">m-vlag</a>]</cite>
             </p>
             
             <p>
                 Epigenetic factors can influence mutations in <abbr title="Leucine-Rich Repeat Kinase 2 gene"
                 >LRRK2</abbr> (<abbr title="Leucine-Rich Repeat Kinase 2 gene with a Glycine to Serine substitution at position 2019"
                 >LRRK2-G2019S</abbr>) and cause encoding mutations in <abbr title="Leucine-Rich Repeat Kinase 2 gene"
-                >LRRK2</abbr> and <abbr title="Synuclein Alpha Gene">SNCA</abbr> genes that affect the production and pathogenicity of mutant &alpha;-synuclein. <cite class="reflink">[<a href="#christine-klein">christine-klein</a>]</cite>
+                >LRRK2</abbr> and <abbr title="Synuclein Alpha Gene">SNCA</abbr> genes that affect the production and pathogenicity of mutant &alpha;-synuclein. <cite class="reflink">[<a href="#christine-klein">christine-klein</a>, <a href="#alpha-synuclein-net">alpha-synuclein-net</a>]</cite>
             </p>
             <p>
                 Vitamin B12, for example, is an external factor that prevents LRRK2-G2019S-potentiated &alpha;-synuclein accumulation in dopaminergic neurons. <cite class="reflink">[<a href="#a-schaffner">a-schaffner</a>]</cite>
             </p>
             
-            <h5>The Role of Pesticides</h5>
+            <h5>The Role of Pesticides</h5> 
             <p>
-                Pesticide and herbicide exposure causes &alpha;-synuclein overexpression in certain individuals. Herbicide rotenone and pesticide paraquat so reliably induce PD that they are used to induce PD in rodent model experiments. 
+                Pesticide and herbicide exposure causes mitochondrial dysfunction and in certain individuals, &alpha;-synuclein overexpression and mitochondrial dysfunction. Herbicide rotenone and pesticide paraquat so reliably induce PD that they are used to induce PD in rodent model experiments. <cite class="reflink">[<a href="#jae-hyeon-park">jae-hyeon-park</a>, <a href="#f-pan-montojo">F. Pan-Montojo</a>]</cite> 
             </p>
+            
             <p>
                 <abbr title="Special AT-rich sequence-binding protein 1">SATB1</abbr> a cell regulator, represses the expression of p21 in dopaminergic neurons. P21 is a pro-senescence factor that maintains the viability of senescent cells under persistent DNA damage response.  <cite class="reflink">[<a href="#markus-riessland">markus-riessland</a>]</cite>
             </p>
@@ -829,6 +826,14 @@ addEventListener("hashchange", (ev) => {
                     </p>
                 </li>
                 
+                <li id="m-vlag">
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7496448/"
+                        title="The contribution of Parkin, PINK1 and DJ‐1 genes to selective neuronal degeneration in Parkinson's disease"
+                        target="_blank"
+                        >The contribution of Parkin, PINK1 and DJ‐1 genes to selective neuronal degeneration in Parkinson's disease</a>, Marc van der Vlag, et al.
+
+                    </li>
+                    
                 <li id="markus-riessland"> 
                     <a href="https://pubmed.ncbi.nlm.nih.gov/30858560/"
                     title="Loss of SATB1 Induces p21-Dependent Cellular Senescence in Post-mitotic Dopaminergic Neurons"
