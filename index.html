@@ -30,6 +30,7 @@ body {
     min-height: 100%;
     overflow-x: hidden;
     position: relative;
+    background-size: cover;
 }
 
 body > #metadata {
@@ -103,10 +104,6 @@ dl {
 dt {
     font-style: italic;
 }
-.block-image {
-    display: block;
-    margin: auto;
-}
 
 section > figure {
     border-width: 0.1vh;
@@ -117,8 +114,11 @@ section > figure {
 }
 
 figure img.block-image {
-	max-width: 70vw;
+	max-width: 100%;
+    display: block;
+    margin: auto;
 }
+
 ol.reference-list > li[id]::before {
     font-size: 60%;
     font-style: italic;
@@ -3354,7 +3354,8 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     </p>
                     
                     <figure>
-                        <img src="img/5-htp-competitive-inhibitors.jpeg" alt="Diagram of Competitive Neurotransmitter Inhibitors">
+                        <img src="img/5-htp-competitive-inhibitors.jpeg" alt="Diagram of Competitive Neurotransmitter Inhibitors"
+                        class="block-image">
                         <figcaption>
                             <p>
                                 <strong>Competitive Neurotransmitter Inhibitors:</strong> 5-HTP is converted into serotonin in the brain. It inhibits the release of glutamate, mitigates oxidation, and modulates dopamine release.
@@ -4654,11 +4655,16 @@ water maze.
                         NAD can be injected intramuscularly, subcutaneously, or intravenously via a drip. It is popular, safe, generally enjoyed, and very well-tolerated. 
                     </p>
                          
-                    <p>
-                        <a href="https://www.peptidesciences.com/nad-100mg">NAD+ 750mg &mdash; Peptide Sciences</a> (wait for 15% off sale) Peptide Sciences is the place for peptides. Compared to others, only PS sells lyophilized peptides.
-                    </p>
+                    <ul class="product-list">
+                    <li>
                     <figure>
-                        <img src="./img/nad__750mg.png" alt="peptide sciences NAD+" height="280">
+                        <img src="./img/nad__750mg_30.png" alt="peptide sciences NAD+">
+                        <figcaption>
+							<p>
+							<a href="https://www.peptidesciences.com/nadplus-750mg"
+							target="_blank">NAD+ 750mg &mdash; Peptide Sciences</a> (wait for 15% off sale) Peptide Sciences is the place for peptides. Compared to others, only PS sells lyophilized peptides.
+							</p>
+                        </figcaption>
                     </figure>
                 <h4>NAD+ Injection References</h4>
                 <ol>
@@ -4771,7 +4777,8 @@ water maze.
                         In PD, there is an abnormally higher number of damaged mitochondria. Damaged mitochondria accumulate alpha-synuclein and contribute to the formation of Lewy bodies. Inducing mitophagy helps clear these harmful mitochondria and restore cellular energy production. This process protects against dopaminergic neurodegeneration.
                     </p>
                     <figure>
-                        <img src="img/urolithin-a-activity.png">
+                        <img src="img/urolithin-a-activity.png"
+                        class="block-image">
                     
                         <figcaption>
                             <p>
