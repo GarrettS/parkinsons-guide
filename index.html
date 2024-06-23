@@ -104,6 +104,33 @@ dt {
     font-style: italic;
 }
 
+
+/* SATB1 diagram  */
+.diagram {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 1vi;
+	font-weight: 900; /* Bold arrows */
+}
+.step {
+	padding: 1vi;
+	border: 1px solid #333;
+	background-color: #f0f0f0;
+	text-align: center;
+	flex-grow: 1;
+	margin: 1vi;
+	font-weight: normal;
+	font-size: 1.8vi;
+}
+
+.step:first-child {
+	background-color: #9effa6; 
+}
+.step:last-child {
+	background-color: #ff9e9e;
+}
+    
 section > figure {
     border-width: 0.1vh;
     border-style: solid;
@@ -713,15 +740,35 @@ addEventListener("hashchange", (ev) => {
             <p>
                 Vitamin B12, for example, is an external factor that prevents LRRK2-G2019S-potentiated &alpha;-synuclein accumulation in dopaminergic neurons. <cite class="reflink">[<a href="#a-schaffner">a-schaffner</a>]</cite>
             </p>
-            
+                        
+            <h4>Cell Dysregulation by SATB1 Inhibition</h4>
 			<p>
                 Special AT-rich sequence-binding protein 1 (SATB1), a cell regulator, represses the expression of p21 in dopaminergic neurons. P21 is a pro-senescence factor that maintains the viability of senescent cells under persistent DNA damage response.  <cite class="reflink">[<a href="#markus-riessland">markus-riessland</a>]</cite>
             </p>
+
             <p>
-                When SATB1 is inhibited, as observed in PD, increased p21 levels lead to decreased Cyclin-Dependent Kinases (CDKs) and the accumulation of senescent cells, including senescent dopaminergic neurons. These senescent cells significantly contribute to the pathology of PD. <cite class="reflink">[<a href="#markus-riessland">markus-riessland</a>]</cite>
+                <abbr title="Special AT-rich sequence-binding protein 1">SATB1</abbr> is inhibited in PD resulting in more p21, decreased <abbr 
+                title="cyclin-dependent kinases">CDKs</abbr>, and accumulation of senescent cells. Senescent dopaminergic neurons contribute to the downward spiral of PN.
+                <cite class="reflink">[<a href="#markus-riessland">markus-riessland</a>]</cite>
             </p>
-
-
+                      
+			<h2 style="text-align: center;">SATB1 Pathway Diagram</h2>
+			
+			<div class="diagram">
+				<div class="step">SATB1 inhibition</div>
+				&rarr;
+				<div class="step">increased p21</div>
+				&rarr;
+				<div class="step">decreased CDKs</div>
+			   &rarr;
+				<div class="step">accumulation of senescent cells</div>
+				&rarr;
+				<div class="step">SATB1 inhibition</div>
+			</div>
+            <h5>Interruption of Progressive Neurodegeneration (PN)</h5>
+			<p>
+				<abbr title="progressive neurodegeneration">PN</abbr> can be interrupted with senolytics, mitochondrial support, antioxidants, and other neuroprotective approaches described herein.
+			</p>
             <h4>The Role of Pesticides</h4> 
             <p>
                 Pesticide and herbicide exposure causes mitochondrial dysfunction and in certain individuals, &alpha;-synuclein overexpression and mitochondrial dysfunction. Herbicide rotenone and pesticide paraquat so reliably induce PD that they are used to induce PD in rodent model experiments. <cite class="reflink">[<a href="#jae-hyeon-park">jae-hyeon-park</a>, <a href="#f-pan-montojo">F. Pan-Montojo</a>]</cite> 
