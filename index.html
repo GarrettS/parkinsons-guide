@@ -9,6 +9,41 @@
 
 	<link rel="stylesheet" type="text/css" href="css/diagrams.css">
 <style>
+:root {
+	--body-background-color: #E2D8D6;
+	--body-color: #111111cc;
+	--body-border-color: #DDDDDDcc;
+
+	--section-figure-border-color: #333333;
+	--section-figure-bg-color: #FFFFFF33;
+
+	--psuedo-target-bg-color: #FFFFFFCC;
+
+	--treatment-legend-h3-bg-color: #FFFFFFCC;
+
+	--tooltip-color: #444;
+	--tooltip-bg-color: #EEE;
+	color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --body-background-color: #331F1B;
+        --body-color: #ffffffc2;
+        --body-border-color: #330500cc;
+    
+		--section-figure-border-color: #333333;
+		--section-figure-bg-color: #FFFFFF33;
+		
+		--psuedo-target-bg-color:  #5555;
+
+		--treatment-legend-h3-bg-color: #401C16EE;
+
+    	--tooltip-color: #EEE;
+        --tooltip-bg-color: #555;
+    }
+}
+
 html {
     margin: 0;
     padding: 0;
@@ -16,14 +51,13 @@ html {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-	color-scheme: light dark;
+    color-scheme: light dark;
 }
 
 body {
-    background-color: light-dark(#E2D8D6, #331F1B);
-    color: light-dark(#111111cc, #ffffffc2);
-    border-color: light-dark(#DDDDDDcc, #330500cc);
-
+    background-color: var(--body-background-color);
+    color: var(--body-color);
+    border-color: var(--body-border-color);
     font-family: georgia, "Open Sans", Helvetica;
     position: relative;
     font-size: calc(10px + 1.5vi);
@@ -69,8 +103,8 @@ abbr[title]::after, dfn[title]::after {
     position: absolute;
     inset-block-end: 100%;
     padding: .5em .46em .5em .5em;
-    background-color: light-dark(#EEE, #555);
-    color: light-dark(#444, #EEE);
+    background-color: var(--tooltip-bg-color);
+    color: var(--tooltip-color);
     font-size: smaller;
     border-radius: .4em;
     transition: all 0.3s ease-in;
@@ -111,8 +145,8 @@ dt {
 section > figure {
     border-width: 0.1vh;
     border-style: solid;
-    border-color: light-dark(#333333, #333333);
-    background-color: light-dark(#FFFFFF33, #FFFFFF33);
+    border-color: var(--section-figure-border-color);
+    background-color: var(--section-figure-bg-color);
     padding: 2vi 3vi;
 }
 
@@ -142,7 +176,7 @@ section, header {
 }
 
 *:target {
-    background-color: light-dark(#FFFFFFCC, #5555);
+    background-color: var(--psuedo-target-bg-color);
     animation: highlightFade 4s ease forwards; /* Play the animation */
 }
 
@@ -212,7 +246,7 @@ section section {
 }
 
 #treatment-legend > h3:first-child {
-    background-color: light-dark(#FFFFFFCC, #401C16EE);
+    background-color: var(--treatment-legend-h3-bg-color);
     border-color: #777;
     border-width: 1px;
     border-style: solid;
