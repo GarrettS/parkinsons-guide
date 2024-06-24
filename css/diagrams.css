@@ -80,12 +80,12 @@
 }
 
 #drt-diagram > .concept > h6 {
-    font-size:1.4vi;
+    font-size: calc(12px + 0.4vi);
     margin: 0.2vi 0 0.2vi 0
 }    
 
 #drt-diagram > .concept > p {
-    font-size: 1vi;
+    font-size: calc(10px + 0.3vi);
     margin: 0.1vi 0 0.1vi 0
 }
 #drt-diagram .arrow {
@@ -93,9 +93,9 @@
     z-index: 100;
     top: 42%;
     width: 1.4vi; 
-    height: 6px;  
+    height: 6px;
     background: linear-gradient(to right, white, #232323); 
-    right: -1.58vi;
+    right: -1.4vi;
 }
 #drt-diagram .arrow::after {
     content: '';
