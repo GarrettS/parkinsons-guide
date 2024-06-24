@@ -1,0 +1,108 @@
+.diagram-header {
+    text-align: center;
+}
+.diagram {
+    max-width: 90%;
+    width: 90%;
+    border-radius: 8px;
+    margin: auto;
+    position: relative; 
+    padding: 20px;
+    background: #fff;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1), 
+            5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#satb-diagram {	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1vi;
+	font-weight: 900; /* Bold arrows */
+ }
+
+.arrow {
+	font-size: 120%;
+	margin: 0.4vi;
+}
+.step {
+	padding: 0.9vi  0.8vi;
+	outline: 1px solid #333;
+	background-color: #f0f0f0;
+	text-align: center;
+	flex-grow: 1;
+	margin: 1vi;
+	font-weight: 550;
+	font-size: 2.4vi;
+	display: flex;
+	align-items: center;
+	height: 5.5vi;
+	border-radius: 8px;
+	margin: 0 10px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.step:first-child {
+	background-color: #9effa6; 
+}
+.step:last-child {
+	background-color: #ff9e9e;
+}
+
+
+
+#drt-diagram {
+    padding: 20px 30px 20px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+     /* Responsive grid columns */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: min-content; 
+    gap: 22px; 
+}
+
+@container (min-width: 1085px) {
+    #drt-diagram {
+        padding-right: 20px;
+    }
+}
+
+#drt-diagram > .concept {
+    padding: 14px 10px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    position: relative; /* Ensure relative positioning for arrows */
+}
+
+#drt-diagram > .concept > h6 {
+    font-size:1.4vi;
+    margin: 0.2vi 0 0.2vi 0
+}    
+
+#drt-diagram > .concept > p {
+    font-size: 1vi;
+    margin: 0.1vi 0 0.1vi 0
+}
+#drt-diagram .arrow {
+    position: absolute;
+    z-index: 100;
+    top: 42%;
+    width: 1.4vi; /* Adjust arrow width as needed */
+    height: 6px; /* Adjust arrow height as needed */
+    background: linear-gradient(to right, white, #232323); /* Gradient from white to black */
+    right: -1.58vi;
+}
+#drt-diagram .arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px; /* Adjust right position for the arrowhead */
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 12px solid #222; /* Arrowhead color */
+}

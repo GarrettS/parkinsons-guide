@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Parkinson's Guide</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
+	<link rel="stylesheet" type="text/css" href="css/diagrams.css">
 <style>
 html {
     margin: 0;
@@ -102,41 +103,6 @@ dl {
 }
 dt {
     font-style: italic;
-}
-
-
-/* SATB1 diagram  */
-.diagram {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	margin-top: 1vi;
-	font-weight: 900; /* Bold arrows */
-}
-
-.arrow {
-	font-size: 120%;
-	margin: 0.4vi;
-}
-.step {
-	padding: 0.9vi  0.8vi;
-	outline: 1px solid #333;
-	background-color: #f0f0f0;
-	text-align: center;
-	flex-grow: 1;
-	margin: 1vi;
-	font-weight: 550;
-	font-size: 2.4vi;
-	display: flex;
-	align-items: center;
-	height: 5.5vi;
-}
-
-.step:first-child {
-	background-color: #9effa6; 
-}
-.step:last-child {
-	background-color: #ff9e9e;
 }
 
 section > figure {
@@ -394,7 +360,7 @@ nav a:hover {
         cursor: default;
     }
 }
-    </style>
+</style>
     
     <script type="module">
 const documentElement = document.documentElement;
@@ -759,10 +725,11 @@ addEventListener("hashchange", (ev) => {
                 title="cyclin-dependent kinases">CDKs</abbr>, and accumulation of senescent cells. Senescent dopaminergic neurons contribute to the downward spiral of PN.
                 <cite class="reflink">[<a href="#markus-riessland">markus-riessland</a>]</cite>
             </p>
-                      
-			<h2 style="text-align: center;">SATB1 Pathway Diagram</h2>
+                     
+        	 
+			<h5 class="diagram-header">SATB1 Pathway Diagram</h5>
 			
-			<div class="diagram">
+			<div id="satb-diagram" class="diagram">
 				<div class="step">SATB1 inhibition</div>
 				&rarr;
 				<div class="step"><b class="arrow">&uarr;</b> p21</div>
@@ -1498,10 +1465,36 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
                 <p>
                     Dopamine is but one of many neurochemical systems in the midbrain. Focusing solely on the dopaminergic system without considering other neurotransmitter systems leads to progressive neurodegeneration (PN) exacerbating motor and non-motor symptoms.
                 </p>
-                        
+                
+                <h5 class="diagram-header">DRT Neurodegeneration Cycle Diagram</h5>
+				<div id="drt-diagram" class="diagram">
+					<div class="concept">
+						<h6>Dopamine Agonists</h6>
+						<p>Dopamine agonists inhibit fibrillization by interacting with α-synuclein.</p>
+						<div class="arrow"></div>
+					</div>
+				
+					<div class="concept">
+						<h6>Fibrillization Inhibition</h6>
+						<p>Stops cellular damage, senescent cells, and neurodegeneration.</p>
+						<div class="arrow"></div>
+					</div>
+				
+					<div class="concept">
+						<h6>Problems</h6>
+						<p>Dopamine's interacts with α-synuclein causing α-synuclein oligomers, cellular damage and neurodegeneration.</p>
+						<div class="arrow"></div>
+					</div>
+				
+					<div class="concept">
+						<h6>Harmful Cycle</h6>
+						<p>The cycle continues with increased dopamine use leading back to cellular damage and neurodegeneration.</p>
+					</div>
+				</div>
+
                 <h4>Dopamine Replacement Therapy &mdash; Summary</h4>
                 <p>
-                    Therefore, while dopamine replacement is beneficial, its use can be minimized to the least effective dose with a multi-faceted approach that addresses neuroprotection, neurorestoration, antioxidation, and mitochondrial health.
+                    DRT should be used at the minimum effective dose (MED). This can be done using a holistic approach to address neuroprotection, neurorestoration, antioxidation, and mitochondrial health.
                 </p>
             </section>           
             <section id="comt-inhibitors">   
@@ -5056,5 +5049,7 @@ water maze.
         </p>
         
     </section>
+    
+    
 </body>
 </html>
