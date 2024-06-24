@@ -21,11 +21,12 @@
 	font-weight: 900; /* Bold arrows */
  }
 
-.arrow {
+#satb-diagram .arrow {
 	font-size: 120%;
 	margin: 0.4vi;
 }
-.step {
+
+#satb-diagram .step {
 	padding: 0.9vi  0.8vi;
 	outline: 1px solid #333;
 	background-color: #f0f0f0;
@@ -38,14 +39,14 @@
 	align-items: center;
 	height: 5.5vi;
 	border-radius: 8px;
-	margin: 0 10px;
+	margin: 0 1vi;
 	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.step:first-child {
+#satb-diagram .step:first-child {
 	background-color: #9effa6; 
 }
-.step:last-child {
+#satb-diagram .step:last-child {
 	background-color: #ff9e9e;
 }
 
