@@ -2,67 +2,98 @@
     text-align: center;
 }
 .diagram {
+    position: relative;
     max-width: 90%;
     width: 90%;
-    border: 1px solid #aaaa;
+    border: 1px solid light-dark(#5c5c5c, #000);
     border-radius: 8px;
     margin: auto;
-    position: relative; 
     padding: 20px;
-    background: #fff;
-    box-shadow: inset -2vi -2vi 7vi rgb(100 100 100 / 40%),
-            5px 5px 10px rgba(0, 0, 0, 0.4);
+    background: light-dark(#fafafa, #222);
+    box-shadow: inset -2vi -2vi 7vi light-dark(rgb(60 60 60 / 40%), rgb(40 40 40 / 60%)),
+                5px 5px 10px light-dark(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
-#satb-diagram {	
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-top: 1vi;
-	font-weight: 900; /* Bold arrows */
- }
+#satb-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vi;
+    font-weight: 900; /* Bold arrows */
+}
 
-#satb-diagram .arrow {
-	font-size: 120%;
-	margin: 0.4vi;
+.arrow {
+    position: absolute;
+    z-index: 100;
+    top: 42%;
+    min-width: 1.4vi;
+    height: 6px;
+    background: linear-gradient(to right, light-dark(white, #4c4c4c), light-dark(#333, #ccc));
+    right: -1.4vi;
+}
+
+.arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 12px solid light-dark(#000, #ccc); /* Arrowhead color */
+}
+
+#satb-diagram {
+    column-gap: 0;
+
+}
+
+#satb-diagram .updown-arrow {
+    font-size: 120%;
+    margin: 0.4vi;
 }
 
 #satb-diagram .step {
-    border: 0.8px solid #777;
-	padding: 0.9vi 1.2vi  0.8vi 0.7vi;
-	outline: 1px solid #333;
-	background-color: #f0f0f0;
-	text-align: center;
-	flex-grow: 1;
-	margin: 1vi;
-	font-weight: 550;
-	font-size: 2.2vi;
-	display: flex;
-	align-items: center;
-	height: 5.5vi;
-	border-radius: 8px;
-	margin: 0 0.4vi;
-	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    position: relative;
+    border: 1px solid light-dark(#5a5a5aCC, #111c);
+    padding: 0.9vi 1.2vi 0.8vi 0.7vi;
+    background-color: light-dark(#e6e6e6, #333);
+    text-align: center;
+    flex-grow: 1;
+    margin: 1vi calc(0.5vi + 7px);
+    font-weight: 550;
+    font-size: 2.2vi;
+    display: flex;
+    height: 5.5vi;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px light-dark(rgba(0, 0, 0, 0.4), rgba(11, 11, 11, 0.5));
+
 }
 
 #satb-diagram .step:first-child {
-	background-color: #9effa6;
-	padding: 0.9vi 0.7vi;
+    background-color: light-dark(#8fd88f, #4c8f4c);
+    padding: 0.9vi 0.7vi;
 }
+#satb-diagram .step:first-child .arrow {
+    background: linear-gradient(to right, light-dark(#88d888, #4c8f4c), light-dark(#111, #eee));
+}
+
 #satb-diagram .step:last-child {
-	background-color: #ff9e9e;
-	padding: 0.9vi 0.7vi;
+    background-color: light-dark(#e68d8d, #8f4c4c);
+    padding: 0.9vi 0.7vi;
 }
 
 #drt-diagram {
     padding: 20px 30px 20px 20px;
-    background-color: #fff;
+    background-color: light-dark(#fafafa, #1b1b1b);
     border-radius: 8px;
-     /* Responsive grid columns */
+    /* Responsive grid columns */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-auto-rows: min-content; 
-    gap: 22px; 
+    grid-auto-rows: min-content;
+    gap: 22px;
 }
 
 @container (min-width: 1085px) {
@@ -72,40 +103,26 @@
 }
 
 #drt-diagram > .concept {
-    padding: 14px 10px 10px 10px;
-    border: 1px solid #ccc;
+    padding: 10px;
+    border: 1px solid light-dark(#999, #666);
     border-radius: 8px;
-    background-color: #f9f9f9;
-    position: relative; 
+    background-color: light-dark(#f0f0f0, #2c2c2c);
+    position: relative;
 }
 
 #drt-diagram > .concept > h6 {
+    color: light-dark(#092209, #4c8f4c);
     font-size: calc(12px + 0.4vi);
-    margin: 0.2vi 0 0.2vi 0
-}    
+    margin: 0.2vi 0 0.5vi 0;
+    padding-bottom: 0.2vi;
+    border-bottom-style: solid;
+    border-bottom-width: calc(1px + 0.1vi);
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, 
+        light-dark(#092209cc, #4c8f4cCC), light-dark(#111c, #111c))
+}
 
 #drt-diagram > .concept > p {
     font-size: calc(10px + 0.3vi);
-    margin: 0.1vi 0 0.1vi 0
-}
-#drt-diagram .arrow {
-    position: absolute;
-    z-index: 100;
-    top: 42%;
-    width: 1.4vi; 
-    height: 6px;
-    background: linear-gradient(to right, white, #232323); 
-    right: -1.4vi;
-}
-#drt-diagram .arrow::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -10px; 
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: 7px solid transparent;
-    border-bottom: 7px solid transparent;
-    border-left: 12px solid #222; /* Arrowhead color */
+    margin: 0.1vi 0 0.1vi 0;
 }
