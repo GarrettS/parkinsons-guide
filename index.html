@@ -19,6 +19,7 @@ html {
 body {
     background-color: light-dark(#E2D8D6, #331F1B);
     color: light-dark(#111111cc, #ffffffc2);
+    border-color: light-dark(#DDDDDDcc, #330500cc);
 
     font-family: georgia, "Open Sans", Helvetica;
     position: relative;
@@ -27,7 +28,6 @@ body {
     padding-left: 4vi;
     border-style: solid;
     border-width: 1px;
-    border-color: light-dark(#DDDDDDcc, #330500cc);
     min-height: 100%;
     overflow-x: hidden;
     position: relative;
@@ -730,14 +730,19 @@ addEventListener("hashchange", (ev) => {
 			<h5 class="diagram-header">SATB1 Pathway Diagram</h5>
 			
 			<div id="satb-diagram" class="diagram">
-				<div class="step">SATB1 Inhibition</div>
-				&rarr;
-				<div class="step"><b class="arrow">&uarr;</b> p21</div>
-				&rarr;
-				<div class="step"><b class="arrow">&darr;</b> CDKs</div>
-			    &rarr;
-				<div class="step"><b class="arrow">&uarr;</b> Senescent Cells</div>
-				&rarr;
+				<div class="step">SATB1 Inhibition
+					<div class="arrow"></div>
+				</div>
+				<div class="step"><b class="updown-arrow">&uarr;</b> p21
+					<div class="arrow"></div>
+				</div>
+				<div class="step"><b class="updown-arrow">&darr;</b> CDKs
+					<div class="arrow"></div>
+				</div>
+				<div class="step"><b class="updown-arrow">&uarr;</b> Senescent Cells
+					<div class="arrow"></div>
+				</div>
+				
 				<div class="step">SATB1 Inhibition</div>
 			</div>
             <p>
@@ -1489,13 +1494,13 @@ Prepare detailed questions that delve into the neurologist's expertise in your s
 				
 					<div class="concept">
 						<h6>Problems</h6>
-						<p>Dopamine interacts with α-synuclein causing oligomers, cellular damage and neurodegeneration.</p>
+						<p>Dopamine interacts with α-synuclein causing oligomers, cell damage and neurodegeneration.</p>
 						<div class="arrow"></div>
 					</div>
 				
 					<div class="concept">
 						<h6>Harmful Cycle</h6>
-						<p>The cycle continues with increased dopamine use leading back to cellular damage and neurodegeneration.</p>
+						<p>The cycle continues with increased dopamine use leading back to cell damage and neurodegeneration.</p>
 					</div>
 				</div>
 
