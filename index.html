@@ -23,6 +23,8 @@
 
 	--tooltip-color: #444;
 	--tooltip-bg-color: #EEE;
+	--abbr-hover-bg-color: lighter;
+	
 	color-scheme: light dark;
 }
 
@@ -41,6 +43,7 @@
 
     	--tooltip-color: #EEE;
         --tooltip-bg-color: #555;
+		--abbr-hover-bg-color: darker;
     }
 }
 
@@ -95,8 +98,7 @@ abbr[title], dfn[title] {
 }
 
 abbr[title]:hover, dfn[title]:hover {
-    background-color: light-dark(lighter, darker);
-
+    background-color: --abbr-hover-bg-color;
 }
 
 abbr[title]::after, dfn[title]::after {
