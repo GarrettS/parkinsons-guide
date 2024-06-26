@@ -50,7 +50,6 @@
 html {
     margin: 0;
     padding: 0;
-    font-size: 0;
     height: 100%;
     width: 100%;
     overflow-x: hidden;
@@ -63,7 +62,7 @@ body {
     border-color: var(--body-border-color);
     font-family: georgia, "Open Sans", Helvetica;
     position: relative;
-    font-size: calc(10px + 1.5vi);
+    font-size: clamp(12px, 2vi, 32px);
     margin: 0;
     padding-left: 4vi;
     border-style: solid;
@@ -654,7 +653,7 @@ addEventListener("hashchange", (ev) => {
                 Wild-type &alpha;-synuclein can be removed by lysosomes. Mutant forms of α-synuclein resist degradation and inhibit the degradation of other substrates.
             </p>
             <p>
-               &alpha;-synuclein oligomers, as well as other &alpha;-synuclein variants, disrupt mitochondrial function. The oligomers prevent autophagy by blocking lysosomal degradation, disrupt membrane homeostasis (they poke holes in the cell), inhibit endoplasmic reticulum (ER) function, and synapses (connections between neurons), and cause inflammation that further damages cellular function. 
+               &alpha;-synuclein oligomers, as well as other &alpha;-synuclein variants, disrupt mitochondrial function. The oligomers prevent autophagy by blocking lysosomal degradation, disrupting membrane homeostasis (they poke holes in the cell), inhibiting endoplasmic reticulum (ER) function and synapses (connections between neurons), and causing inflammation that further damages cellular function. 
             </p>
         
             <!-- TODO: Where does this go??
