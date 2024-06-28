@@ -23,7 +23,8 @@
 
 	--tooltip-color: #444;
 	--tooltip-bg-color: #EEE;
-	/*--abbr-hover-bg-color: lighten;*/
+	--abbr-bg-color: inherit;
+	--abbr-hover-bg-color: lighten(--abbr-bg-color, 60%);
 	
 	color-scheme: light dark;
 }
@@ -43,7 +44,7 @@
 
     	--tooltip-color: #EEE;
         --tooltip-bg-color: #555;
-		/*--abbr-hover-bg-color: darken;*/
+		--abbr-hover-bg-color: lighten(--abbr-bg-color, 60%);
     }
 }
 
@@ -91,13 +92,14 @@ address.author strong {
 }
 
 abbr[title], dfn[title] {
+	background-color: var(--abbr-bg-color);
     position: relative;
     text-decoration: underline;
     text-decoration-style: dotted;
 }
 
 abbr[title]:hover, dfn[title]:hover {
-    background-color: --abbr-hover-bg-color;
+    background-color: var(--abbr-hover-bg-color, 10%);
 }
 
 abbr[title]::after, dfn[title]::after {
@@ -3356,7 +3358,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
 						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2882509/"
 						title="Alpha-lipoic acid increases energy expenditure by enhancing AMPK-PGC-1α signalling in the skeletal muscle of aged mice"
 						target="_blank"
-						>Alpha-lipoic acid increases energy expenditure by enhancing AMPK-PGC-1α signalling in the skeletal muscle of aged mice</a>
+						>Alpha-lipoic acid increases energy expenditure by enhancing AMPK-PGC-1α signalling in the skeletal muscle of aged mice</a>, Yi Wang, et al.
 						<p>
 						
 						</p>
