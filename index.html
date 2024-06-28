@@ -23,8 +23,7 @@
 
 	--tooltip-color: #444;
 	--tooltip-bg-color: #EEE;
-	--abbr-bg-color: inherit;
-	--abbr-hover-bg-color: lighten(--abbr-bg-color, 60%);
+	--abbr-hover-bg-color: hsl(10 31% 19% / 1);
 	
 	color-scheme: light dark;
 }
@@ -44,7 +43,7 @@
 
     	--tooltip-color: #EEE;
         --tooltip-bg-color: #555;
-		--abbr-hover-bg-color: lighten(--abbr-bg-color, 60%);
+		--abbr-hover-bg-color: hsl(10 31% 11% / 1);
     }
 }
 
@@ -92,19 +91,22 @@ address.author strong {
 }
 
 abbr[title], dfn[title] {
-	background-color: var(--abbr-bg-color);
     position: relative;
     text-decoration: underline;
     text-decoration-style: dotted;
+    transition: background-color 0.3s ease-out;
 }
 
 abbr[title]:hover, dfn[title]:hover {
-    background-color: var(--abbr-hover-bg-color, 10%);
+    background-color: var(--abbr-hover-bg-color);
 }
 
 abbr[title]::after, dfn[title]::after {
     position: absolute;
-    inset-block-end: 100%;
+    left: 0;
+    bottom: 100%;
+    right: unset;
+    top: unset;
     padding: .5em .46em .5em .5em;
     background-color: var(--tooltip-bg-color);
     color: var(--tooltip-color);
@@ -115,15 +117,15 @@ abbr[title]::after, dfn[title]::after {
     opacity: 0;
     z-index: 1;
     pointer-events: none;
-    display: inline-table;
+    display: block;
     box-sizing: border-box;
+    width: fit-content;
+	block-size: fit-content;
 }
 
 abbr[title]:hover::after, dfn[title]:hover::after {
     opacity: 0.9999999;
-    width: unset;
-    height: unset;
-    transition: opacity 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 a:link, a:visited {
@@ -392,9 +394,13 @@ nav a:hover {
 
 <style id="tipsheet">
 [data-tip-r]:hover::after {
-    right: -1.25em;
+	left: unset;
+    right: -.22em;
+    transition: all .3s ease-in;
 }
 [data-tip-t]:hover::after {
+    bottom: unset;
+    transition: all .3s ease-in;
 	top: 3ex;
 }
 </style>
@@ -428,28 +434,45 @@ addEventListener("hashchange", (ev) => {
 
 
 addEventListener("mouseover", tooltipPositionFixer);
+addEventListener("transitionend", tooltipPositionResetter);
+
+const TOOLTIP_ACTUATOR_SELECTOR = "dfn[title], abbr[title]";
 
 function tooltipPositionFixer(ev) {
 	const target = ev.target;
-	if (!target?.matches("dfn[title], abbr[title]")) return;
+	
+
+	const targetBox = target.getBoundingClientRect();
+	const afterStyle = window.getComputedStyle(target, '::after');
+
+	const wasClippedRight = isClippedRight(targetBox, afterStyle);
+	const wasClippedTop = isClippedTop(targetBox, afterStyle);
+	if (wasClippedRight) {
+		target.setAttribute("data-tip-r", 1);
+	}
+	if (wasClippedTop) {
+		target.setAttribute("data-tip-t", 1);
+	}
+}
+
+function tooltipPositionResetter(ev) {
+	const target = ev.target;
+	if (!target.matches(TOOLTIP_ACTUATOR_SELECTOR) || target.matches(":hover")) return;
+	target.removeAttribute("data-tip-r");
+	target.removeAttribute("data-tip-l");
+}
+
+
+function resetDefaultPosition(target) {
 	
 	target.removeAttribute("data-tip-r");
 	target.removeAttribute("data-tip-t");
-	
-	const targetBox = target.getBoundingClientRect();
-	const afterStyle = window.getComputedStyle(target,'::after');
-	if (isClippedRight(targetBox, afterStyle)) {
-		target.setAttribute("data-tip-r", 1);
-	}
-	if (isClippedTop(targetBox, afterStyle)) {
-		target.setAttribute("data-tip-t", 1);
-	}
 }
 
 function isClippedRight(targetBox, afterStyle) {
 	const targetRight = targetBox.right;
 	const tooltipRight = targetRight + parseInt(afterStyle.width, 10);
-	const bodyRight = document.documentElement.clientWidth;
+	const bodyRight = window.innerWidth;
 	return tooltipRight + 3.5 >  bodyRight;
 }
 
@@ -1074,7 +1097,7 @@ function isClippedTop(targetBox, afterStyle) {
 			<li>Efficient metabolism (<abbr title="Basic Metabolic Panel">BMP</abbr>)</li>
 			<li>Healthy blood pressure and cholesterol levels</li>
 			<li>Healthy Blood markers (<abbr title="Complete Blood Count">CBC</abbr>)</li>
-			<li>Strong immune system (<abbr title="Complete Blood Count with White Blood Cell Count">CBC</abbr> with <abbr title="White Blood Cell Count">WBC</abbr>)</li>
+			<li>Strong immune system (<dfn title="CBC with White Blood Cell Differential">CBC with WBC differential</dfn>)</li>
 		</ol>
 
     
@@ -1093,7 +1116,7 @@ function isClippedTop(targetBox, afterStyle) {
 		<ol>
 			<li>Genetic testing for personal health (<a href="https://www.innerbody.com/dna-testing/dna-health-testing">Finding the Best DNA Health Test</a>).</li>
 			<li>Advanced hormone tests (<a href="https://dutchtest.com/info-dutch-complete/">Dutch Complete</a>).</li>
-			<li>Healthy immune system, focusing on dendritic cells (<abbr title="DCs">DCs</abbr>), with detailed analysis of lymphocyte subsets, activation, and tracking using the <abbr title="COSTIM Bioassay">COSTIM</abbr> to measure co-stimulatory activity (<abbr title="Antibody Response Exam">ARE</abbr>).</li>
+			<li>Healthy immune system, focusing on dendritic cells (DCs), with detailed analysis of lymphocyte subsets, activation, and tracking using the <abbr title="Co-Stimulatory Activity Test for Immune Modulation">COSTIM</abbr> bioassay to measure co-stimulatory activity. Antibody Response Exam (ARE) via <abbr title="Enzyme-Linked Immunosorbent Assay">ELISA</abbr> to measure autoantibodies in the blood.</li>
 
 			<li>Stable blood glucose levels maintained by insulin sensitivity (<abbr title="Oral Glucose Tolerance Test">OGTT</abbr>, <abbr title="Continuous Glucose Monitor">CGM</abbr>).</li>
 			<li>Adequate cellular repair mechanisms ensuring tissue integrity and longevity (<a title="TruAge COMPLETE at-home epigenetic test" href="https://shop.trudiagnostic.com/products/truage-complete-epigenetic-collection">TruAge</a>).</li>
