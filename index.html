@@ -111,14 +111,16 @@ abbr[title]::after, dfn[title]::after {
     font-size: smaller;
     border-radius: .4em;
     transition: all 0.3s ease-in;
-    content: '';
+    content: attr(title);
     opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    display: inline-table;
+    box-sizing: border-box;
 }
 
 abbr[title]:hover::after, dfn[title]:hover::after {
     opacity: 0.9999999;
-    content: attr(title);
-    z-index: auto;
     width: unset;
     height: unset;
     transition: opacity 0.3s ease-out;
@@ -361,11 +363,6 @@ nav > ul > li:last-child {
     margin-bottom: 4dvh;
 }
 
-nav a {
-    color: #fff;
-    container: sidebar / normal;
-}
-
 nav.open {
     transform: translateX(0);
 }
@@ -391,17 +388,16 @@ nav.open > ul {
 nav a:hover {
     color: #9cf;
 }
-*/
+</style>
 
-@container sidebar (min-width: 200px) {
-      h3 {
-        writing-mode: unset !important;
-        position: static;
-        cursor: default;
-    }
+<style id="tipsheet">
+[data-tip-r]:hover::after {
+    right: -1.25em;
+}
+[data-tip-t]:hover::after {
+	top: 3ex;
 }
 </style>
-    
     <script type="module">
 const documentElement = document.documentElement;
 
@@ -429,6 +425,40 @@ addEventListener("hashchange", (ev) => {
 		nav.classList.remove("open");
 	}
 });
+
+
+addEventListener("mouseover", tooltipPositionFixer);
+
+function tooltipPositionFixer(ev) {
+	const target = ev.target;
+	if (!target?.matches("dfn[title], abbr[title]")) return;
+	
+	target.removeAttribute("data-tip-r");
+	target.removeAttribute("data-tip-t");
+	
+	const targetBox = target.getBoundingClientRect();
+	const afterStyle = window.getComputedStyle(target,'::after');
+	if (isClippedRight(targetBox, afterStyle)) {
+		target.setAttribute("data-tip-r", 1);
+	}
+	if (isClippedTop(targetBox, afterStyle)) {
+		target.setAttribute("data-tip-t", 1);
+	}
+}
+
+function isClippedRight(targetBox, afterStyle) {
+	const targetRight = targetBox.right;
+	const tooltipRight = targetRight + parseInt(afterStyle.width, 10);
+	const bodyRight = document.documentElement.clientWidth;
+	return tooltipRight + 3.5 >  bodyRight;
+}
+
+
+function isClippedTop(targetBox, afterStyle) {
+	const targetTop = targetBox.top;
+	const pseudoEltTop = parseInt(afterStyle.top, 10);
+	return targetTop + pseudoEltTop <  0;
+}
     </script>
 </head>
 <body>
