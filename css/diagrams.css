@@ -75,23 +75,23 @@
     position: absolute;
     z-index: 1;
     top: 42%;
-    min-width: 1.4vi;
-    height: 6px;
+    min-width: calc(9px + .9vi);
+    height: calc(2.7px + .27vi);
     background: linear-gradient(to right, var(--arrow-gradient-start), var(--arrow-gradient-middle));
-    right: -1.4vi;
+    right: calc(-9px - .9vi);
 }
 
 .arrow::after {
     content: '';
     position: absolute;
-    top: 50%;
-    right: -10px;
-    transform: translateY(-50%);
+    top: 51%;
+    right: calc(-3.4px - 0.34vi);
+    transform: translateY(-48%);
     width: 0;
     height: 0;
-    border-top: 7px solid transparent;
-    border-bottom: 7px solid transparent;
-    border-left: 12px solid var(--arrowhead-color); /* Arrowhead color */
+    border-top:  calc(3.9px + .39vi) solid transparent;
+    border-bottom: calc(3.9px + .39vi) solid transparent;
+    border-left: calc(4.3px + .43vi) solid var(--arrowhead-color); /* Arrowhead color */
 }
 
 #satb-diagram {
