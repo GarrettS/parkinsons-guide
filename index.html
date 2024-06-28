@@ -94,7 +94,7 @@ abbr[title], dfn[title] {
     position: relative;
     text-decoration: underline;
     text-decoration-style: dotted;
-    transition: background-color 0.3s ease-out;
+    transition: background-color 1s ease-out;
 }
 
 abbr[title]:hover, dfn[title]:hover {
@@ -455,20 +455,6 @@ function tooltipPositionFixer(ev) {
 	}
 }
 
-function tooltipPositionResetter(ev) {
-	const target = ev.target;
-	if (!target.matches(TOOLTIP_ACTUATOR_SELECTOR) || target.matches(":hover")) return;
-	target.removeAttribute("data-tip-r");
-	target.removeAttribute("data-tip-l");
-}
-
-
-function resetDefaultPosition(target) {
-	
-	target.removeAttribute("data-tip-r");
-	target.removeAttribute("data-tip-t");
-}
-
 function isClippedRight(targetBox, afterStyle) {
 	const targetRight = targetBox.right;
 	const tooltipRight = targetRight + parseInt(afterStyle.width, 10);
@@ -476,12 +462,32 @@ function isClippedRight(targetBox, afterStyle) {
 	return tooltipRight + 3.5 >  bodyRight;
 }
 
-
 function isClippedTop(targetBox, afterStyle) {
 	const targetTop = targetBox.top;
 	const pseudoEltTop = parseInt(afterStyle.top, 10);
 	return targetTop + pseudoEltTop <  0;
 }
+
+/** FIXME:
+	In theory, this actuator hover-off post-transition 
+	should prevent the tooltip from flickering back into place.
+*/
+const tooltipOffCriteria = (ev) => {
+	const target = ev.target;
+	return (target.matches(TOOLTIP_ACTUATOR_SELECTOR) 
+				&& !target.matches(":hover")
+				&& ev.elapsedTime === 1);
+};
+function tooltipPositionResetter(ev) {
+	const target = ev.target;
+	if (!tooltipOffCriteria(ev)) return;
+	resetDefaultPosition(target);
+}
+function resetDefaultPosition(target) {
+	target.removeAttribute("data-tip-r");
+	target.removeAttribute("data-tip-t");
+}
+
     </script>
 </head>
 <body>
@@ -1122,7 +1128,7 @@ function isClippedTop(targetBox, afterStyle) {
 			<li>Adequate cellular repair mechanisms ensuring tissue integrity and longevity (<a title="TruAge COMPLETE at-home epigenetic test" href="https://shop.trudiagnostic.com/products/truage-complete-epigenetic-collection">TruAge</a>).</li>
 			<li>Optimal mitochondrial function providing energy for cellular activities (<a href="https://aonm.org/mitochondrial-testing/">mitochondrial testing</a>).</li>
 			<li>Healthy methylation (Genova Diagnostics Methylation Panel).</li>
-			<li>Omega-3 Blood Test (<a href="https://requestatest.com/omega-3-blood-test">OmegaCheck®</a>)
+			<li>Omega-3 Blood Test (<a target="_blank" href="https://requestatest.com/omega-3-blood-test">OmegaCheck®</a>)
 			</li>
 
 		</ol>
@@ -1142,7 +1148,7 @@ function isClippedTop(targetBox, afterStyle) {
             <li>Measurement of neurotransmitter levels in bodily fluids with chromatography.
             <li>PET imaging with specific radiotracers to assess microglial activation and neuroinflammation.
             <li>Analysis of cytokine levels in blood or cerebrospinal fluid through <abbr title="Enzyme-Linked ImmunoSorbent Assay">ELISA</abbr> or <abbr title="Polymerase Chain Reaction">PCR methods</abbr>.
-            <li>Evaluation of mitochondrial function through assays measuring ATP production, membrane potential, and oxidative stress levels (ATP Bioluminescence Assay, <a href="https://www.caymanchem.com/product/701010">MitoCheck</a>, ROS Detection Assay Kit, JC-1 Assay, Glutathione Test (<a href="https://www.labcorp.com/tests/007700/glutathione-total">CPT: 82978</a>), CellTiter-Glo Luminescent Cell Viability Assay (<a href="https://www.promega.com/products/cell-health-assays/cell-viability-and-cytotoxicity-assays/celltiter_glo-luminescent-cell-viability-assay/">CellTiter-Glo®</a>))
+            <li>Evaluation of mitochondrial function through assays measuring ATP production, membrane potential, and oxidative stress levels (ATP Bioluminescence Assay, <a target="_blank" href="https://www.caymanchem.com/product/701010">MitoCheck</a>, ROS Detection Assay Kit, JC-1 Assay, Glutathione Test (<a target="_blank" href="https://www.labcorp.com/tests/007700/glutathione-total">CPT: 82978</a>), CellTiter-Glo Luminescent Cell Viability Assay (<a target="_blank" href="https://www.promega.com/products/cell-health-assays/cell-viability-and-cytotoxicity-assays/celltiter_glo-luminescent-cell-viability-assay/">CellTiter-Glo®</a>))
         </ol>
         
         <p>
