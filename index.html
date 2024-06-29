@@ -96,15 +96,18 @@ abbr[title], dfn[title] {
     position: relative;
     text-decoration: underline;
     text-decoration-style: dotted;
-    transition: background-color 0.6s ease-out;
     border-radius: 0.5vi;
     padding:  0.3vi;
     margin: -0.3vi;
     text-decoration-color: var(--abbr-text-decoraction-color);
+    cursor: text;
+    transition: background-color 0.6s ease-out;
 }
 
 abbr[title]:hover, dfn[title]:hover {
+	cursor: default;
     background-color: var(--abbr-hover-bg-color);
+    transition: opacity 0.001s;
 }
 
 abbr[title]::after, dfn[title]::after {
@@ -129,7 +132,9 @@ abbr[title]::after, dfn[title]::after {
 	block-size: fit-content;
 }
 
-abbr[title]:hover::after, dfn[title]:hover::after {
+abbr[title]:hover::after, dfn[title]:hover::after, 
+	dfn[data-tip-r], dfn[data-tip-t],
+	abbr[data-tip-r], abbr[data-tip-t]  {
     opacity: 0.9999999;
     transition: all 0.3s ease-out;
 }
@@ -404,12 +409,12 @@ nav a:hover {
 </style>
 
 <style id="tipsheet">
-[data-tip-r]:hover::after {
+abbr[title][itemprop^=r]::after, dfn[title][itemprop^=r]::after {
 	left: unset;
     right: -.22em;
     transition: all .3s ease-in;
 }
-[data-tip-t]:hover::after {
+abbr[title][itemprop$=t]::after, dfn[title][itemprop$=t]::after {
     bottom: unset;
     transition: all .3s ease-in;
 	top: 3ex;
@@ -442,27 +447,50 @@ addEventListener("hashchange", (ev) => {
 		nav.classList.remove("open");
 	}
 });
+</script>
 
+<script type="module">
+document.addEventListener("mouseover", tooltipPositionFixer);
+document.addEventListener("transitionend", tooltipPositionResetter);
+window.addEventListener("resize", windowChanged);
+window.addEventListener("scroll", windowChanged);
+window.addEventListener("orientationchange", windowChanged);
 
-addEventListener("mouseover", tooltipPositionFixer);
-addEventListener("transitionend", tooltipPositionResetter);
+let isWindowChanged = false;
+function windowChanged(ev) {
+	isWindowChanged = true;
+}
 
 const TOOLTIP_ACTUATOR_SELECTOR = "dfn[title], abbr[title]";
+
+const tipActuatorMouseLeave = (ev) => {
+	ev.target.removeAttribute("itemprop");
+};
 
 function tooltipPositionFixer(ev) {
 	const target = ev.target;
 	
-
-	const targetBox = target.getBoundingClientRect();
-	const afterStyle = window.getComputedStyle(target, '::after');
-
-	const wasClippedRight = isClippedRight(targetBox, afterStyle);
-	const wasClippedTop = isClippedTop(targetBox, afterStyle);
-	if (wasClippedRight) {
-		target.setAttribute("data-tip-r", 1);
+	if(target.hasAttribute("itemprop") && !isWindowChanged) return;
+	if (isWindowChanged) {
+		target.removeAttribute("itemprop");
+		isWindowChanged = false;
 	}
-	if (wasClippedTop) {
-		target.setAttribute("data-tip-t", 1);
+	if (target.matches(TOOLTIP_ACTUATOR_SELECTOR)) {
+		const targetBox = target.getBoundingClientRect();
+		const afterStyle = window.getComputedStyle(target, '::after');
+	
+		const wasClippedRight = isClippedRight(targetBox, afterStyle);
+		const wasClippedTop = isClippedTop(targetBox, afterStyle);
+		
+			target.removeAttribute("itemprop");
+		if (wasClippedRight) {
+		// Cannot use "data-" prop here ,as it causes transitionend to not fire
+		// on the ABBR and DFN elements. So, use itemprop.
+			target.setAttribute("itemprop", 'r');
+		}
+		if (wasClippedTop) {
+			target.setAttribute("itemprop", target.getAttribute("itemprop")+"t");
+		}
 	}
 }
 
@@ -485,18 +513,18 @@ function isClippedTop(targetBox, afterStyle) {
 */
 const tooltipOffCriteria = (ev) => {
 	const target = ev.target;
-	return (target.matches(TOOLTIP_ACTUATOR_SELECTOR) 
-				&& !target.matches(":hover")
-				&& ev.elapsedTime >= .6);
+	const matchesCriteria = false === target.matches(":hover") 
+				&& "text" === getComputedStyle(target).cursor
+				&& .6 === ev.elapsedTime;
+
+	return matchesCriteria;
 };
 function tooltipPositionResetter(ev) {
 	const target = ev.target;
-	if (!tooltipOffCriteria(ev)) return;
-	resetDefaultPosition(target);
+	if (tooltipOffCriteria(ev)) resetDefaultPosition(target);
 }
 function resetDefaultPosition(target) {
-	target.removeAttribute("data-tip-r");
-	target.removeAttribute("data-tip-t");
+	target.removeAttribute("itemprop");
 }
 
     </script>
