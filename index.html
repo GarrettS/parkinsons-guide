@@ -23,7 +23,8 @@
 
 	--tooltip-color: #444;
 	--tooltip-bg-color: #EEE;
-	--abbr-hover-bg-color: hsl(10 31% 19% / 1);
+	--abbr-text-decoraction-color: hsl(0deg 3% 25% / 50%);
+	--abbr-hover-bg-color: hsl(10deg 17% 96% / 73%);
 	
 	color-scheme: light dark;
 }
@@ -43,6 +44,7 @@
 
     	--tooltip-color: #EEE;
         --tooltip-bg-color: #555;
+        --abbr-text-decoraction-color: hsl(12deg 5% 80% / 50%);
 		--abbr-hover-bg-color: hsl(10 31% 11% / 1);
     }
 }
@@ -94,7 +96,11 @@ abbr[title], dfn[title] {
     position: relative;
     text-decoration: underline;
     text-decoration-style: dotted;
-    transition: background-color 1s ease-out;
+    transition: background-color 0.6s ease-out;
+    border-radius: 0.5vi;
+    padding:  0.3vi;
+    margin: -0.3vi;
+    text-decoration-color: var(--abbr-text-decoraction-color);
 }
 
 abbr[title]:hover, dfn[title]:hover {
@@ -132,6 +138,7 @@ a:link, a:visited {
     color: inherit;
     text-decoration: underline;
     font-weight: bold;
+    font-size: 90%;
 }
 
 cite.reflink {
@@ -476,7 +483,7 @@ const tooltipOffCriteria = (ev) => {
 	const target = ev.target;
 	return (target.matches(TOOLTIP_ACTUATOR_SELECTOR) 
 				&& !target.matches(":hover")
-				&& ev.elapsedTime === 1);
+				&& ev.elapsedTime >= .6);
 };
 function tooltipPositionResetter(ev) {
 	const target = ev.target;
@@ -705,10 +712,10 @@ function resetDefaultPosition(target) {
             </figure>
             <p>
                 Alpha-synuclein is abundant primarily in the brain, especially in the neocortex, hippocampus, and substantia nigra (SN). Smaller amounts are found in the heart, muscles, and other tissues. It is transported into and out of the
-                brain by the blood-brain barrier. <cite class="reflink">[<a href="#yu-ting-sui">yu-ting-sui</a>]</cite>
+                brain by the blood-brain barrier. <cite class="reflink">[<a href="#yu-ting-sui">Y. Sui</a>]</cite>
             </p>
             <p>
-                Six mutations of &alpha;-synuclein are currently associated with familial parkinsonism. Mutant &alpha;-synuclein forms aggregates more readily than wild-type (normal) &alpha;-synuclein. <cite class="reflink">[<a href="#v-c-ruf">v-c-ruf</a>], <a href="#jie-li">jie-li</a>]</cite>
+                Six mutations of &alpha;-synuclein are currently associated with familial parkinsonism. Mutant &alpha;-synuclein forms aggregates more readily than wild-type (normal) &alpha;-synuclein. <cite class="reflink">[<a href="#v-c-ruf">V. Ruf</a>], <a href="#jie-li">J. Li</a>]</cite>
             </p>
             <p>
                 Wild-type &alpha;-synuclein can be removed by lysosomes. Mutant forms of α-synuclein resist degradation and inhibit the degradation of other substrates.
@@ -794,13 +801,13 @@ function resetDefaultPosition(target) {
             </p>
             -->
             <p>
-                In PD, aging, environmental hazards, and genetics interact pathologically. The pathological hallmarks of PD include dopaminergic neuronal death, &alpha;-synuclein aggregates, mitochondrial dysfunction, reactive oxygen species (ROS), apoptosis, and neuroinﬂammation. These problems, along with aging, genetics, and environmental factors, contribute to the disease progression. <cite class="reflink">[<a href="#k-burton">k-burton</a>]</cite>
+                In PD, aging, environmental hazards, and genetics interact pathologically. The pathological hallmarks of PD include dopaminergic neuronal death, &alpha;-synuclein aggregates, mitochondrial dysfunction, reactive oxygen species (ROS), apoptosis, and neuroinﬂammation. These problems, along with aging, genetics, and environmental factors, contribute to the disease progression. <cite class="reflink">[<a href="#k-burton">K. Burton</a>]</cite>
             </p>
             
             
             <h4>Genetic Factors</h4>
             <p>
-               Gene mutations of <abbr title="Parkinsonism-Associated Deglycase 1 or Park7">DJ-1</abbr>, <abbr title="PTEN-induced Kinase 1">PINK1</abbr>, parkin, <abbr title="Leucine-Rich Repeat Kinase 2 gene">LRRK2</abbr>, and <abbr title="Synuclein Alpha Gene">SNCA</abbr> genes, contribute to several cellular issues. Together, these factors promote neuronal death in the substantia nigra of PD patients. <cite class="reflink">[<a href="m-vlag">m-vlag</a>]</cite>
+               Gene mutations of <abbr title="Parkinsonism-Associated Deglycase 1 or Park7">DJ-1</abbr>, <abbr title="PTEN-induced Kinase 1">PINK1</abbr>, parkin, <abbr title="Leucine-Rich Repeat Kinase 2 gene">LRRK2</abbr>, and <abbr title="Synuclein Alpha Gene">SNCA</abbr> genes, contribute to several cellular issues. Together, these factors promote neuronal death in the substantia nigra of PD patients. <cite class="reflink">[<a href="#m-vlag">M. Vlag</a>]</cite>
             </p>
             
             <p>
@@ -864,15 +871,16 @@ function resetDefaultPosition(target) {
                 References
             </h4>
             <ol class="reference-list">
-                <li id="f-nouri-emamzadeh">
-                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5122110/"
-                    title="Alpha-synuclein structure, functions, and interactions"
+
+                <li id="yu-ting-sui"> 
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/25278492/"
+                    title="Alpha synuclein is transported into and out of the brain by the blood-brain barrier"
                     target="_blank"
-                    >Alpha-synuclein structure, functions, and interactions</a>, Fatemeh Nouri Emamzadeh.
+                    >Alpha synuclein is transported into and out of the brain by the blood-brain barrier</a>, Yu-Ting Sui, et al.
                     <p>
-                        Upon clinical diagnosis of PD, serious damage has already been done to nerve cells of the substantia nigra pars compacta. This underscores the importance of early testing and genetic testing. 
+                        This rodent model study showed α-synuclein is transported across the BBB bidirectionally, in both the brain-to-blood and blood-to-brain directions.
                     </p>
-                </li>
+                </li>     
                 <li id="v-c-ruf">
                     <a href="https://pubmed.ncbi.nlm.nih.gov/30605594/"
                     title="Different Effects of α-Synuclein Mutants on Lipid Binding and Aggregation Detected by Single Molecule Fluorescence Spectroscopy and ThT Fluorescence-Based Measurements"
@@ -880,15 +888,6 @@ function resetDefaultPosition(target) {
                     >Different Effects of α-Synuclein Mutants on Lipid Binding and Aggregation Detected by Single Molecule Fluorescence Spectroscopy and ThT Fluorescence-Based Measurements</a>, Viktoria C Ruf, et al.
                     <p>
                     This study showed the differential mechanisms of metals, such as iron, in α-synuclein pathology at the molecular level.
-                    </p>
-                </li>
-                <li id="alpha-synuclein-net">
-                    <a href="https://alpha-synuclein.net/mutations/"
-                    title="ALPHA-SYNUCLEIN: MUTATIONS"
-                    target="_blank"
-                    >ALPHA-SYNUCLEIN: MUTATIONS</a>
-                    <p>
-                        Individuals who developed a triplication of the <abbr title="Synuclein Alpha Gene">SNCA gene</abbr>, as opposed to a duplication, displayed more severe symptoms including early-onset parkinsonism with dementia. This indicates that there is a “dose-dependent” correlation between the progression of PD and <abbr title="Synuclein Alpha">SNCA</abbr> gene dosage. <cite class="reflink">[<a href="#alpha-synuclein-net">alpha-synuclein-net</a>]</cite>
                     </p>
                 </li>
                 <li id="jie-li">
@@ -903,13 +902,57 @@ function resetDefaultPosition(target) {
                         They note α-synuclein in PD arose from gene-linkage experiments in familial early-onset Parkinson’s disease, which revealed the A53T mutation.
                     </p>
                 </li>
-                <li id="f-pan-montojo">
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/23205266/"
-                    title="Environmental toxins trigger PD-like progression via increased alpha-synuclein release from enteric neurons in mice"
+				<li id="k-burton"> 
+					<a href="https://www.medscape.com/viewarticle/994849"
+					title="Why Genetic Testing May Be Our Best Shot at Progress in PD"
+					target="_blank"
+					>Why Genetic Testing May Be Our Best Shot at Progress in PD</a>, Kelli Whitlock Burton
+					<p>
+						Previous studies have shown that some genetic variants increase the risk for PD after exposure to environmental factors such as pesticides. Research has also shown that patient genotype can indicate survival time and treatment approaches.
+					</p>
+				</li>
+                <li id="m-vlag">
+					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7496448/"
+					title="The contribution of Parkin, PINK1 and DJ‐1 genes to selective neuronal degeneration in Parkinson's disease"
+					target="_blank"
+					>The contribution of Parkin, PINK1 and DJ‐1 genes to selective neuronal degeneration in Parkinson's disease</a>, Marc van der Vlag, et al.
+
+				</li>
+                <li id="christine-klein"> 
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3253033/"
+                    title="Genetics of Parkinson’s Disease"
                     target="_blank"
-                    >Environmental toxins trigger PD-like progression via increased alpha-synuclein release from enteric neurons in mice</a>, F. Pan-Montojo, et al.
+                    >Genetics of Parkinson’s Disease</a>, Christine Klein and Ana Westenberger.
                     <p>
-                        This rodent model showed that pharmacologically increasing SIRT3, as recommended in this article, can counteract α-synuclein-induced mitochondrial dysfunction by reducing α-synucleinyn oligomers and normalizing mitochondrial bioenergetics. 
+                        This 2014 paper provides compelling arguments that the identification of PD gene mutations, especially in patients with early-onset PD, can provide information on prognosis and will affect treatment choices in cases of PD that were initially suspected to be psychogenic. <em>Why is this 10-year-old paper not the standard of care!?</em>
+                    </p>
+                </li>
+
+                <li id="alpha-synuclein-net">
+                    <a href="https://alpha-synuclein.net/mutations/"
+                    title="ALPHA-SYNUCLEIN: MUTATIONS"
+                    target="_blank"
+                    >ALPHA-SYNUCLEIN: MUTATIONS</a>
+                    <p>
+                        Individuals who developed a triplication of the <abbr title="Synuclein Alpha Gene">SNCA gene</abbr>, as opposed to a duplication, displayed more severe symptoms including early-onset parkinsonism with dementia. This indicates that there is a “dose-dependent” correlation between the progression of PD and <abbr title="Synuclein Alpha">SNCA</abbr> gene dosage. <cite class="reflink">[<a href="#alpha-synuclein-net">alpha-synuclein-net</a>]</cite>
+                    </p>
+                </li>
+                <li id="a-schaffner"> 
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/30858560/"
+                    title="Vitamin B12 modulates Parkinson's disease LRRK2 kinase activity through allosteric regulation and confers neuroprotection"
+                    target="_blank"
+                    >Vitamin B12 modulates Parkinson's disease LRRK2 kinase activity through allosteric regulation and confers neuroprotection</a>, Schaffner, et al
+                    <p>
+                        This in vitro study found that adenosylcobalamin (a form of B-12) protects dopaminergic neurons from LRRK2-G2019S-induced neurotoxicity in C. elegans.
+                    </p>
+                </li>
+                <li id="markus-riessland"> 
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/30858560/"
+                    title="Loss of SATB1 Induces p21-Dependent Cellular Senescence in Post-mitotic Dopaminergic Neurons"
+                    target="_blank"
+                    >Loss of SATB1 Induces p21-Dependent Cellular Senescence in Post-mitotic Dopaminergic Neurons</a>, Riessland, et al.
+                    <p>
+                        Moreover, we found that SATB1 directly represses the expression of the pro-senescence factor p21 in dopaminergic neurons. Our data implicate senescence of dopamine neurons as a contributing factor in the pathology of Parkinson's disease.
                     </p>
                 </li>
                 <li id="jae-hyeon-park"> 
@@ -920,53 +963,16 @@ function resetDefaultPosition(target) {
                     <p>
                         This rodent model showed that pesticides can initiate the progression of PD pathology and that this progression is based on the transneuronal and <dfn>"retrograde axonal transport"</dfn> (that &alpha;-synuclein goes back into the cell) of alpha-synuclein. If confirmed in patients, this study would have crucial implications for strategies used to prevent and treat PD.
                     </p>
-                </li>
-                <li id="christine-klein"> 
-                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3253033/"
-                    title="Genetics of Parkinson’s Disease"
+                </li>                           
+                <li id="f-pan-montojo">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/23205266/"
+                    title="Environmental toxins trigger PD-like progression via increased alpha-synuclein release from enteric neurons in mice"
                     target="_blank"
-                    >Genetics of Parkinson’s Disease</a>, Christine Klein and Ana Westenberger.
+                    >Environmental toxins trigger PD-like progression via increased alpha-synuclein release from enteric neurons in mice</a>, F. Pan-Montojo, et al.
                     <p>
-                        This 2014 paper provides compelling arguments that the identification of PD gene mutations, especially in patients with early-onset PD, can provide information on prognosis and will affect treatment choices in cases of PD that were initially suspected to be psychogenic. <em>Why is this 10-year-old paper not the standard of care!?</em>
+                        This rodent model showed that pharmacologically increasing SIRT3, as recommended in this article, can counteract α-synuclein-induced mitochondrial dysfunction by reducing α-synucleinyn oligomers and normalizing mitochondrial bioenergetics. 
                     </p>
                 </li>
-                <li id="yu-ting-sui"> 
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/25278492/"
-                    title="Alpha synuclein is transported into and out of the brain by the blood-brain barrier"
-                    target="_blank"
-                    >Alpha synuclein is transported into and out of the brain by the blood-brain barrier</a>, Yu-Ting Sui, et al.
-                    <p>
-                        This rodent model study showed α-synuclein is transported across the BBB bidirectionally, in both the brain-to-blood and blood-to-brain directions.
-                    </p>
-                </li>
-                <li id="adam-schaffner"> 
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/30858560/"
-                    title="Vitamin B12 modulates Parkinson's disease LRRK2 kinase activity through allosteric regulation and confers neuroprotection"
-                    target="_blank"
-                    >Vitamin B12 modulates Parkinson's disease LRRK2 kinase activity through allosteric regulation and confers neuroprotection</a>, Schaffner, et al
-                    <p>
-                        This in vitro study found that adenosylcobalamin (a form of B-12) protects dopaminergic neurons from LRRK2-G2019S-induced neurotoxicity in C. elegans.
-                    </p>
-                </li>
-                
-                <li id="m-vlag">
-                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7496448/"
-                        title="The contribution of Parkin, PINK1 and DJ‐1 genes to selective neuronal degeneration in Parkinson's disease"
-                        target="_blank"
-                        >The contribution of Parkin, PINK1 and DJ‐1 genes to selective neuronal degeneration in Parkinson's disease</a>, Marc van der Vlag, et al.
-
-                    </li>
-                    
-                <li id="markus-riessland"> 
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/30858560/"
-                    title="Loss of SATB1 Induces p21-Dependent Cellular Senescence in Post-mitotic Dopaminergic Neurons"
-                    target="_blank"
-                    >Loss of SATB1 Induces p21-Dependent Cellular Senescence in Post-mitotic Dopaminergic Neurons</a>, Riessland, et al.
-                    <p>
-                        Moreover, we found that SATB1 directly represses the expression of the pro-senescence factor p21 in dopaminergic neurons. Our data implicate senescence of dopamine neurons as a contributing factor in the pathology of Parkinson's disease.
-                    </p>
-                </li>
-                                
 
             </ol>
         </section>
@@ -974,7 +980,7 @@ function resetDefaultPosition(target) {
             <h3>Testing and Diagnosis</h3>
             
             <p>
-            Upon clinical diagnosis of PD (via <abbr title="Unified Parkinson's Disease Rating Scale">UPDRS</abbr> score), serious damage has already been done to nerve cells of the substantia nigra. This underscores the importance of early testing and genetic testing. 
+            Upon clinical diagnosis of PD (via <abbr title="Unified Parkinson's Disease Rating Scale">UPDRS</abbr> score), serious damage has already been done to nerve cells of the substantia nigra. This underscores the importance of early testing and genetic testing. <cite class="reflink">[<a href="#f-nouri-emamzadeh"></a>]</cite>
             </p>
 
             <p>
@@ -995,9 +1001,9 @@ function resetDefaultPosition(target) {
                 </p>
                 <p>
                     Genetic testing for PD can help better inform and guide its treatment.
-                    Genes associated with PD may have varying effects on disease progression. (See also: <a href="https://www.michaeljfox.org/what-know-about-f-testing"
+                    Genes associated with PD may have varying effects on disease progression. (See also: <a href="https://www.michaeljfox.org/what-know-about-genetic-testing"
                     target="_blank"
-                    >What to Know about Genetic Testing</a>)
+                    >What to Know about Genetic Testing</a>) <cite class="reflink">[<a href="#l-cook">L. Cook</a>]</cite>
                 </p>
         
                 <p>
@@ -1061,15 +1067,16 @@ function resetDefaultPosition(target) {
                 </p>
         
                 <ol class="reference-list">
-                    <li id="k-burton"> 
-                        <a href="https://www.medscape.com/viewarticle/994849"
-                        title="Why Genetic Testing May Be Our Best Shot at Progress in PD"
-                        target="_blank"
-                        >Why Genetic Testing May Be Our Best Shot at Progress in PD</a>, Kelli Whitlock Burton
-                        <p>
-                            Previous studies have shown that some genetic variants increase the risk for PD after exposure to environmental factors such as pesticides. Research has also shown that patient genotype can indicate survival time and treatment approaches.
-                        </p>
-                    </li>
+	                <li id="f-nouri-emamzadeh">
+						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5122110/"
+						title="Alpha-synuclein structure, functions, and interactions"
+						target="_blank"
+						>Alpha-synuclein structure, functions, and interactions</a>, Fatemeh Nouri Emamzadeh.
+						<p>
+							Upon clinical diagnosis of PD, serious damage has already been done to nerve cells of the substantia nigra pars compacta. This underscores the importance of early testing and genetic testing. 
+						</p>
+					</li>
+
                     <li id="l-cook"> 
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8101316/"
                             title="Genetic Testing for Parkinson Disease"
@@ -1343,7 +1350,7 @@ function resetDefaultPosition(target) {
             </p>
             <dl>
                 <dt>Symptomatic Approach
-                <dd>addresses symptoms rather than slowing or stopping their progression.
+                <dd>addresses symptoms rather than slowing or stopping their progression
                 
                 <dt>Disease-Progression Approach
                 <dd>manages progression of the disease once it has already developed
