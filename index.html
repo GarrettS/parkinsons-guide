@@ -16,13 +16,15 @@
 
     --section-figure-border-color: #333333;
     --section-figure-bg-color: #FFFFFF33;
-
+	
     --psuedo-target-bg-color: #FFFFFFCC;
 
     --treatment-legend-h3-bg-color: #FFFFFFCC;
 
     --tooltip-color: #444;
     --tooltip-bg-color: #EEE;
+    --tooltip-border-color: #5555;
+    --tooltip-shadow-color: #3333;
     --abbr-text-decoraction-color: hsl(0deg 3% 25% / 50%);
     --abbr-hover-bg-color: hsl(10deg 17% 96% / 73%);
     
@@ -121,7 +123,7 @@ abbr[title]::after, dfn[title]::after {
     color: var(--tooltip-color);
     font-size: smaller;
     border-radius: .4em;
-    transition: all 0.3s allow-discrete;
+    transition: all 0.3s;
     content: attr(title);
     opacity: 0;
     z-index: 1;
@@ -130,6 +132,8 @@ abbr[title]::after, dfn[title]::after {
     box-sizing: border-box;
     width: fit-content;
     block-size: fit-content;
+    filter: drop-shadow(.1vi .1vi var(--tooltip-shadow-color));
+    border: 1px solid  var(--tooltip-border-color);
 }
 
 abbr[title]:hover::after, dfn[title]:hover::after, 
