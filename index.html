@@ -4,29 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Parkinson's Guide</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
-	<meta name="color-scheme" content="light dark">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
+    <meta name="color-scheme" content="light dark">
 
-	<link rel="stylesheet" type="text/css" href="css/diagrams.css">
+    <link rel="stylesheet" type="text/css" href="css/diagrams.css">
 <style>
 :root {
-	--body-background-color: #E2D8D6;
-	--body-color: #111111cc;
-	--body-border-color: #DDDDDDcc;
+    --body-background-color: #E2D8D6;
+    --body-color: #111111cc;
+    --body-border-color: #DDDDDDcc;
 
-	--section-figure-border-color: #333333;
-	--section-figure-bg-color: #FFFFFF33;
+    --section-figure-border-color: #333333;
+    --section-figure-bg-color: #FFFFFF33;
 
-	--psuedo-target-bg-color: #FFFFFFCC;
+    --psuedo-target-bg-color: #FFFFFFCC;
 
-	--treatment-legend-h3-bg-color: #FFFFFFCC;
+    --treatment-legend-h3-bg-color: #FFFFFFCC;
 
-	--tooltip-color: #444;
-	--tooltip-bg-color: #EEE;
-	--abbr-text-decoraction-color: hsl(0deg 3% 25% / 50%);
-	--abbr-hover-bg-color: hsl(10deg 17% 96% / 73%);
-	
-	color-scheme: light dark;
+    --tooltip-color: #444;
+    --tooltip-bg-color: #EEE;
+    --abbr-text-decoraction-color: hsl(0deg 3% 25% / 50%);
+    --abbr-hover-bg-color: hsl(10deg 17% 96% / 73%);
+    
+    color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,17 +35,17 @@
         --body-color: #ffffffc2;
         --body-border-color: #330500cc;
     
-		--section-figure-border-color: #333333;
-		--section-figure-bg-color: #FFFFFF33;
-		
-		--psuedo-target-bg-color:  #5555;
+        --section-figure-border-color: #333333;
+        --section-figure-bg-color: #FFFFFF33;
+        
+        --psuedo-target-bg-color:  #5555;
 
-		--treatment-legend-h3-bg-color: #401C16EE;
+        --treatment-legend-h3-bg-color: #401C16EE;
 
-    	--tooltip-color: #EEE;
+        --tooltip-color: #EEE;
         --tooltip-bg-color: #555;
         --abbr-text-decoraction-color: hsl(12deg 5% 80% / 50%);
-		--abbr-hover-bg-color: hsl(10 31% 11% / 1);
+        --abbr-hover-bg-color: hsl(10 31% 11% / 1);
     }
 }
 
@@ -76,20 +76,20 @@ body {
 }
 
 body > #metadata {
-	font-size: smaller;
-	margin: 0;
+    font-size: smaller;
+    margin: 0;
 }
 
 body > #metadata p {
-	margin-top 0;
+    margin-top 0;
 }
 
 address.author {
-	display: inline;
+    display: inline;
 }
 
 address.author strong {
-	font-style: normal;
+    font-style: normal;
 }
 
 abbr[title], dfn[title] {
@@ -105,7 +105,7 @@ abbr[title], dfn[title] {
 }
 
 abbr[title]:hover, dfn[title]:hover {
-	cursor: default;
+    cursor: default;
     background-color: var(--abbr-hover-bg-color);
     transition: opacity 0.001s;
 }
@@ -129,12 +129,12 @@ abbr[title]::after, dfn[title]::after {
     display: block;
     box-sizing: border-box;
     width: fit-content;
-	block-size: fit-content;
+    block-size: fit-content;
 }
 
 abbr[title]:hover::after, dfn[title]:hover::after, 
-	dfn[data-tip-r], dfn[data-tip-t],
-	abbr[data-tip-r], abbr[data-tip-t]  {
+    dfn[data-tip-r], dfn[data-tip-t],
+    abbr[data-tip-r], abbr[data-tip-t]  {
     opacity: 0.9999999;
     transition: all 0.3s ease-out;
 }
@@ -170,13 +170,13 @@ section > figure {
 }
 
 figure img.block-image {
-	max-width: 100%;
+    max-width: 100%;
     display: block;
     margin: auto;
 }
 
 ol.reference-list > li {
-	margin-top: 1ex;
+    margin-top: 1ex;
 }
 
 ol.reference-list > li[id]::before {
@@ -410,14 +410,14 @@ nav a:hover {
 
 <style id="tipsheet">
 abbr[title][itemprop^=r]::after, dfn[title][itemprop^=r]::after {
-	left: unset;
+    left: unset;
     right: -.22em;
     transition: all .3s ease-in;
 }
 abbr[title][itemprop$=t]::after, dfn[title][itemprop$=t]::after {
     bottom: unset;
     transition: all .3s ease-in;
-	top: 3ex;
+    top: 3ex;
 }
 </style>
     <script type="module">
@@ -441,11 +441,11 @@ documentElement.addEventListener("click", clickHandler);
 documentElement.addEventListener("touchstart", clickHandler); 
 
 addEventListener("hashchange", (ev) => {
-	const navRight = nav.getBoundingClientRect().right;
-	const rightPageMargin = innerWidth - navRight;
-	if (rightPageMargin < 50) {
-		nav.classList.remove("open");
-	}
+    const navRight = nav.getBoundingClientRect().right;
+    const rightPageMargin = innerWidth - navRight;
+    if (rightPageMargin < 50) {
+        nav.classList.remove("open");
+    }
 });
 </script>
 
@@ -458,88 +458,88 @@ window.addEventListener("orientationchange", windowChanged);
 
 let isWindowChanged = false;
 function windowChanged(ev) {
-	isWindowChanged = true;
+    isWindowChanged = true;
 }
 
 const TOOLTIP_ACTUATOR_SELECTOR = "dfn[title], abbr[title]";
 
 const tipActuatorMouseLeave = (ev) => {
-	ev.target.removeAttribute("itemprop");
+    ev.target.removeAttribute("itemprop");
 };
 
 function tooltipPositionFixer(ev) {
-	const target = ev.target;
-	
-	if(target.hasAttribute("itemprop") && !isWindowChanged) return;
-	if (isWindowChanged) {
-		target.removeAttribute("itemprop");
-		isWindowChanged = false;
-	}
-	if (target.matches(TOOLTIP_ACTUATOR_SELECTOR)) {
-		const targetBox = target.getBoundingClientRect();
-		const afterStyle = window.getComputedStyle(target, '::after');
-	
-		const wasClippedRight = isClippedRight(targetBox, afterStyle);
-		const wasClippedTop = isClippedTop(targetBox, afterStyle);
-		
-			target.removeAttribute("itemprop");
-		if (wasClippedRight) {
-		// Cannot use "data-" prop here ,as it causes transitionend to not fire
-		// on the ABBR and DFN elements. So, use itemprop.
-			target.setAttribute("itemprop", 'r');
-		}
-		if (wasClippedTop) {
-			target.setAttribute("itemprop", target.getAttribute("itemprop")+"t");
-		}
-	}
+    const target = ev.target;
+    
+    if(target.hasAttribute("itemprop") && !isWindowChanged) return;
+    if (isWindowChanged) {
+        target.removeAttribute("itemprop");
+        isWindowChanged = false;
+    }
+    if (target.matches(TOOLTIP_ACTUATOR_SELECTOR)) {
+        const targetBox = target.getBoundingClientRect();
+        const afterStyle = window.getComputedStyle(target, '::after');
+    
+        const wasClippedRight = isClippedRight(targetBox, afterStyle);
+        const wasClippedTop = isClippedTop(targetBox, afterStyle);
+        
+            target.removeAttribute("itemprop");
+        if (wasClippedRight) {
+        // Cannot use "data-" prop here ,as it causes transitionend to not fire
+        // on the ABBR and DFN elements. So, use itemprop.
+            target.setAttribute("itemprop", 'r');
+        }
+        if (wasClippedTop) {
+            target.setAttribute("itemprop", target.getAttribute("itemprop")+"t");
+        }
+    }
 }
 
 function isClippedRight(targetBox, afterStyle) {
-	const targetRight = targetBox.right;
-	const tooltipRight = targetRight + parseInt(afterStyle.width, 10);
-	const bodyRight = window.innerWidth;
-	return tooltipRight + 3.5 >  bodyRight;
+    const targetRight = targetBox.right;
+    const tooltipRight = targetRight + parseInt(afterStyle.width, 10);
+    const bodyRight = window.innerWidth;
+    return tooltipRight + 3.5 >  bodyRight;
 }
 
 function isClippedTop(targetBox, afterStyle) {
-	const targetTop = targetBox.top;
-	const pseudoEltTop = parseInt(afterStyle.top, 10);
-	return targetTop + pseudoEltTop <  0;
+    const targetTop = targetBox.top;
+    const pseudoEltTop = parseInt(afterStyle.top, 10);
+    return targetTop + pseudoEltTop <  0;
 }
 
 /** FIXME:
-	In theory, this actuator hover-off post-transition 
-	should prevent the tooltip from flickering back into place.
+    In theory, this actuator hover-off post-transition 
+    should prevent the tooltip from flickering back into place.
 */
 const tooltipOffCriteria = (ev) => {
-	const target = ev.target;
-	const matchesCriteria = false === target.matches(":hover") 
-				&& "text" === getComputedStyle(target).cursor
-				&& .6 === ev.elapsedTime;
+    const target = ev.target;
+    const matchesCriteria = false === target.matches(":hover") 
+                && "text" === getComputedStyle(target).cursor
+                && .6 === ev.elapsedTime;
 
-	return matchesCriteria;
+    return matchesCriteria;
 };
 function tooltipPositionResetter(ev) {
-	const target = ev.target;
-	if (tooltipOffCriteria(ev)) resetDefaultPosition(target);
+    const target = ev.target;
+    if (tooltipOffCriteria(ev)) resetDefaultPosition(target);
 }
 function resetDefaultPosition(target) {
-	target.removeAttribute("itemprop");
+    target.removeAttribute("itemprop");
 }
 
     </script>
 </head>
 <body>
     <header id="metadata">
-	    <h1>Parkinson's Disease Guide</h1>
-		<p>
-			<strong>Working Draft</strong>, 
-			<time datetime="2024-06-27">2024-06-27</time>
-		<p>
-		<address class="author">
-			<strong>Editor:</strong> Garrett Smith
-		</address>
-	</header>
+        <h1>Parkinson's Disease Guide</h1>
+        <p>
+            <strong>Working Draft</strong>, 
+            <time datetime="2024-06-27">2024-06-27</time>
+        <p>
+        <address class="author">
+            <strong>Editor:</strong> Garrett Smith
+        </address>
+    </header>
     <nav id="nav">
         <div><h3 tabindex="0" id="nav-heading">Menu</h3></div>
         <ul>
@@ -850,7 +850,7 @@ function resetDefaultPosition(target) {
             </p>
                         
             <h4>Cell Dysregulation by SATB1 Inhibition</h4>
-			<p>
+            <p>
                 Special AT-rich sequence-binding protein 1 (SATB1), a cell regulator, represses the expression of p21 in dopaminergic neurons. P21 is a pro-senescence factor that maintains the viability of senescent cells under persistent DNA damage response.  <cite class="reflink">[<a href="#markus-riessland">markus-riessland</a>]</cite>
             </p>
 
@@ -860,38 +860,38 @@ function resetDefaultPosition(target) {
                 <cite class="reflink">[<a href="#markus-riessland">markus-riessland</a>]</cite>
             </p>
                      
-        	 
-			<h5 class="diagram-header">SATB1 Pathway Diagram</h5>
-			
-			<div id="satb-diagram" class="diagram">
-				<div class="step">SATB1 Inhibition
-					<div class="arrow"></div>
-				</div>
-				<div class="step"><b class="updown-arrow">&darr;</b> p21
-					<div class="arrow"></div>
-				</div>
-				<div class="step"><b class="updown-arrow">&darr;</b> CDKs
-					<div class="arrow"></div>
-				</div>
-				<div class="step"><b class="updown-arrow">&uarr;</b> Senescent Cells
-					<div class="arrow"></div>
-				</div>
-				
-				<div class="step">SATB1 Inhibition</div>
-			</div>
+             
+            <h5 class="diagram-header">SATB1 Pathway Diagram</h5>
+            
+            <div id="satb-diagram" class="diagram">
+                <div class="step">SATB1 Inhibition
+                    <div class="arrow"></div>
+                </div>
+                <div class="step"><b class="updown-arrow">&darr;</b> p21
+                    <div class="arrow"></div>
+                </div>
+                <div class="step"><b class="updown-arrow">&darr;</b> CDKs
+                    <div class="arrow"></div>
+                </div>
+                <div class="step"><b class="updown-arrow">&uarr;</b> Senescent Cells
+                    <div class="arrow"></div>
+                </div>
+                
+                <div class="step">SATB1 Inhibition</div>
+            </div>
             <p>
                 Senescent cells cease to function and divide, damaging healthy neighboring cells by secreting inflammatory factors and contributing to further tissue dysfunction and senescence.
             </p>
 
             <h5>Interruption of Progressive Neurodegeneration (PN)</h5>
-			<p>
-				<abbr title="progressive neurodegeneration">PN</abbr> can be interrupted with senolytics, mitochondrial support, antioxidants, and other neuroprotective approaches described herein.
-			</p>
-			
-			<h4>Mitochondrial Dysfunction</h4>
-			<p>
-				Mitochondrial dysfunction more significantly contributes to senescence than SATB1 inhibition. In fact, it is one of the primary causal factors of disease progression. Solutions to mitochondrial dysfunction are addressed with respective proportion herein. 
-			</p>
+            <p>
+                <abbr title="progressive neurodegeneration">PN</abbr> can be interrupted with senolytics, mitochondrial support, antioxidants, and other neuroprotective approaches described herein.
+            </p>
+            
+            <h4>Mitochondrial Dysfunction</h4>
+            <p>
+                Mitochondrial dysfunction more significantly contributes to senescence than SATB1 inhibition. In fact, it is one of the primary causal factors of disease progression. Solutions to mitochondrial dysfunction are addressed with respective proportion herein. 
+            </p>
 
 
             <h4>The Role of Pesticides</h4> 
@@ -934,22 +934,22 @@ function resetDefaultPosition(target) {
                         They note α-synuclein in PD arose from gene-linkage experiments in familial early-onset Parkinson’s disease, which revealed the A53T mutation.
                     </p>
                 </li>
-				<li id="k-burton"> 
-					<a href="https://www.medscape.com/viewarticle/994849"
-					title="Why Genetic Testing May Be Our Best Shot at Progress in PD"
-					target="_blank"
-					>Why Genetic Testing May Be Our Best Shot at Progress in PD</a>, Kelli Whitlock Burton
-					<p>
-						Previous studies have shown that some genetic variants increase the risk for PD after exposure to environmental factors such as pesticides. Research has also shown that patient genotype can indicate survival time and treatment approaches.
-					</p>
-				</li>
+                <li id="k-burton"> 
+                    <a href="https://www.medscape.com/viewarticle/994849"
+                    title="Why Genetic Testing May Be Our Best Shot at Progress in PD"
+                    target="_blank"
+                    >Why Genetic Testing May Be Our Best Shot at Progress in PD</a>, Kelli Whitlock Burton
+                    <p>
+                        Previous studies have shown that some genetic variants increase the risk for PD after exposure to environmental factors such as pesticides. Research has also shown that patient genotype can indicate survival time and treatment approaches.
+                    </p>
+                </li>
                 <li id="m-vlag">
-					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7496448/"
-					title="The contribution of Parkin, PINK1 and DJ‐1 genes to selective neuronal degeneration in Parkinson's disease"
-					target="_blank"
-					>The contribution of Parkin, PINK1 and DJ‐1 genes to selective neuronal degeneration in Parkinson's disease</a>, Marc van der Vlag, et al.
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7496448/"
+                    title="The contribution of Parkin, PINK1 and DJ‐1 genes to selective neuronal degeneration in Parkinson's disease"
+                    target="_blank"
+                    >The contribution of Parkin, PINK1 and DJ‐1 genes to selective neuronal degeneration in Parkinson's disease</a>, Marc van der Vlag, et al.
 
-				</li>
+                </li>
                 <li id="christine-klein"> 
                     <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3253033/"
                     title="Genetics of Parkinson’s Disease"
@@ -1099,15 +1099,15 @@ function resetDefaultPosition(target) {
                 </p>
         
                 <ol class="reference-list">
-	                <li id="f-nouri-emamzadeh">
-						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5122110/"
-						title="Alpha-synuclein structure, functions, and interactions"
-						target="_blank"
-						>Alpha-synuclein structure, functions, and interactions</a>, Fatemeh Nouri Emamzadeh.
-						<p>
-							Upon clinical diagnosis of PD, serious damage has already been done to nerve cells of the substantia nigra pars compacta. This underscores the importance of early testing and genetic testing. 
-						</p>
-					</li>
+                    <li id="f-nouri-emamzadeh">
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5122110/"
+                        title="Alpha-synuclein structure, functions, and interactions"
+                        target="_blank"
+                        >Alpha-synuclein structure, functions, and interactions</a>, Fatemeh Nouri Emamzadeh.
+                        <p>
+                            Upon clinical diagnosis of PD, serious damage has already been done to nerve cells of the substantia nigra pars compacta. This underscores the importance of early testing and genetic testing. 
+                        </p>
+                    </li>
 
                     <li id="l-cook"> 
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8101316/"
@@ -1136,43 +1136,43 @@ function resetDefaultPosition(target) {
             The first step in optimizing health involves understanding the general condition and acquiring basic knowledge of cellular health, neurology, and the human organism (we've barely scratched the surface). 
         </p>
     
-		<h3>Health Assessments:</h3>
-		<ol>
-			<li>Balanced hormone levels</li>
-			<li>Efficient metabolism (<abbr title="Basic Metabolic Panel">BMP</abbr>)</li>
-			<li>Healthy blood pressure and cholesterol levels</li>
-			<li>Healthy Blood markers (<abbr title="Complete Blood Count">CBC</abbr>)</li>
-			<li>Strong immune system (<dfn title="CBC with White Blood Cell Differential">CBC with WBC differential</dfn>)</li>
-		</ol>
+        <h3>Health Assessments:</h3>
+        <ol>
+            <li>Balanced hormone levels</li>
+            <li>Efficient metabolism (<abbr title="Basic Metabolic Panel">BMP</abbr>)</li>
+            <li>Healthy blood pressure and cholesterol levels</li>
+            <li>Healthy Blood markers (<abbr title="Complete Blood Count">CBC</abbr>)</li>
+            <li>Strong immune system (<dfn title="CBC with White Blood Cell Differential">CBC with WBC differential</dfn>)</li>
+        </ol>
 
     
         <h4>But We Could Go Deeper:</h4>
-		<ol>
-			<li>Resting heart rate below 60 beats per minute (fitness trackers)</li>
-			<li>Well-functioning organs and systems, including cardiovascular, respiratory, and digestive systems (<abbr title="Comprehensive Metabolic Panel">CMP</abbr>)</li>
-			<li>Normal blood pressure (around 120/80 mmHg)</li>
-			<li><del>Crude lipid profile with low LDL and high HDL cholesterol</del></li>
-			<li>More useful lipid profile with <em>high</em> <abbr title="Large, Buoyant Low-Density Lipoprotein">lbLDL</abbr> and <abbr title="Large, Buoyant Low-Density Lipoprotein">lbHDL</abbr>, low <abbr title="Small, Dense Low-Density Lipoprotein">sdLDL</abbr> and <abbr title="Small, Dense High-Density Lipoprotein">sdHDL</abbr>, and a high ratio of <abbr title="Large, Buoyant High-Density Lipoprotein">lbHDL</abbr> to <abbr title="Large, Buoyant Low-Density Lipoprotein">lbLDL</abbr> (Cardio IQ® Advanced Lipid Panel)</li>
-			<li>Healthy body composition; low visceral fat (<abbr title="dual-energy X-ray absorptiometry">DEXA</abbr>)</li>
-			<li>Optimal levels of inflammation and oxidative stress (Test panels: Cytokine Markers, Inflammatory Markers, Oxidative Stress Markers Panel (for <abbr title="Malondialdehyde, to indirectly measure oxidative damage (of ROS and RNS)">MDA</abbr>))</li>
-		</ol>
+        <ol>
+            <li>Resting heart rate below 60 beats per minute (fitness trackers)</li>
+            <li>Well-functioning organs and systems, including cardiovascular, respiratory, and digestive systems (<abbr title="Comprehensive Metabolic Panel">CMP</abbr>)</li>
+            <li>Normal blood pressure (around 120/80 mmHg)</li>
+            <li><del>Crude lipid profile with low LDL and high HDL cholesterol</del></li>
+            <li>More useful lipid profile with <em>high</em> <abbr title="Large, Buoyant Low-Density Lipoprotein">lbLDL</abbr> and <abbr title="Large, Buoyant Low-Density Lipoprotein">lbHDL</abbr>, low <abbr title="Small, Dense Low-Density Lipoprotein">sdLDL</abbr> and <abbr title="Small, Dense High-Density Lipoprotein">sdHDL</abbr>, and a high ratio of <abbr title="Large, Buoyant High-Density Lipoprotein">lbHDL</abbr> to <abbr title="Large, Buoyant Low-Density Lipoprotein">lbLDL</abbr> (Cardio IQ® Advanced Lipid Panel)</li>
+            <li>Healthy body composition; low visceral fat (<abbr title="dual-energy X-ray absorptiometry">DEXA</abbr>)</li>
+            <li>Optimal levels of inflammation and oxidative stress (Test panels: Cytokine Markers, Inflammatory Markers, Oxidative Stress Markers Panel (for <abbr title="Malondialdehyde, to indirectly measure oxidative damage (of ROS and RNS)">MDA</abbr>))</li>
+        </ol>
 
         <h4>Deeper Yet:</h4>
-		<ol>
-			<li>Genetic testing for personal health (<a href="https://www.innerbody.com/dna-testing/dna-health-testing">Finding the Best DNA Health Test</a>).</li>
-			<li>Advanced hormone tests (<a href="https://dutchtest.com/info-dutch-complete/">Dutch Complete</a>).</li>
-			<li>Healthy immune system, focusing on dendritic cells (DCs), with detailed analysis of lymphocyte subsets, activation, and tracking using the <abbr title="Co-Stimulatory Activity Test for Immune Modulation">COSTIM</abbr> bioassay to measure co-stimulatory activity. Antibody Response Exam (ARE) via <abbr title="Enzyme-Linked Immunosorbent Assay">ELISA</abbr> to measure autoantibodies in the blood.</li>
+        <ol>
+            <li>Genetic testing for personal health (<a href="https://www.innerbody.com/dna-testing/dna-health-testing">Finding the Best DNA Health Test</a>).</li>
+            <li>Advanced hormone tests (<a href="https://dutchtest.com/info-dutch-complete/">Dutch Complete</a>).</li>
+            <li>Healthy immune system, focusing on dendritic cells (DCs), with detailed analysis of lymphocyte subsets, activation, and tracking using the <abbr title="Co-Stimulatory Activity Test for Immune Modulation">COSTIM</abbr> bioassay to measure co-stimulatory activity. Antibody Response Exam (ARE) via <abbr title="Enzyme-Linked Immunosorbent Assay">ELISA</abbr> to measure autoantibodies in the blood.</li>
 
-			<li>Stable blood glucose levels maintained by insulin sensitivity (<abbr title="Oral Glucose Tolerance Test">OGTT</abbr>, <abbr title="Continuous Glucose Monitor">CGM</abbr>).</li>
-			<li>Adequate cellular repair mechanisms ensuring tissue integrity and longevity (<a title="TruAge COMPLETE at-home epigenetic test" href="https://shop.trudiagnostic.com/products/truage-complete-epigenetic-collection">TruAge</a>).</li>
-			<li>Optimal mitochondrial function providing energy for cellular activities (<a href="https://aonm.org/mitochondrial-testing/">mitochondrial testing</a>).</li>
-			<li>Healthy methylation (Genova Diagnostics Methylation Panel).</li>
-			<li>Omega-3 Blood Test (<a target="_blank" href="https://requestatest.com/omega-3-blood-test">OmegaCheck®</a>)
-			</li>
+            <li>Stable blood glucose levels maintained by insulin sensitivity (<abbr title="Oral Glucose Tolerance Test">OGTT</abbr>, <abbr title="Continuous Glucose Monitor">CGM</abbr>).</li>
+            <li>Adequate cellular repair mechanisms ensuring tissue integrity and longevity (<a title="TruAge COMPLETE at-home epigenetic test" href="https://shop.trudiagnostic.com/products/truage-complete-epigenetic-collection">TruAge</a>).</li>
+            <li>Optimal mitochondrial function providing energy for cellular activities (<a href="https://aonm.org/mitochondrial-testing/">mitochondrial testing</a>).</li>
+            <li>Healthy methylation (Genova Diagnostics Methylation Panel).</li>
+            <li>Omega-3 Blood Test (<a target="_blank" href="https://requestatest.com/omega-3-blood-test">OmegaCheck®</a>)
+            </li>
 
-		</ol>
-		
-		<h4>Focusing on the Brain:</h4>
+        </ol>
+        
+        <h4>Focusing on the Brain:</h4>
         <ol>
             <li>Low neuroinflammation through balanced cytokine production and microglial modulation (Cytokine Panel, Multiplex ELISA)
             <li>Synaptic plasticity for quick learning and memory formation (<abbr title="Brain-derived Neurotrophic Factor">BDNF</abbr> test, <abbr title="Mini-Mental State Examination">MMSE</abbr>, <abbr title="Montreal Cognitive Assessment">MoCA</abbr>, <abbr title="Digit Symbol Substitution Test">DSST</abbr>, Stroop Test, etc).
@@ -1233,7 +1233,7 @@ function resetDefaultPosition(target) {
             
             <h3>How to Interview Neurologists</h3>
             <p>
-            	Doctors are constrained by institutional protocols. Expectations and requirements of their healthcare employers may dissuade them from considering options beyond their institution's protocols. 
+                Doctors are constrained by institutional protocols. Expectations and requirements of their healthcare employers may dissuade them from considering options beyond their institution's protocols. 
              </p>
              <p>
                 Assessing provider competence requires more than just checking credentials, years of experience, or conference attendance; it demands a nuanced and thorough approach.
@@ -1247,86 +1247,86 @@ function resetDefaultPosition(target) {
             </p>
             
             <p>
-				The effectiveness of that strategy depends on one's knowledge and comprehension &mdash; specifically the depth and breadth of understanding and the ability to evaluate and scrutinize the accuracy of information provided by the person being asked (interlocutor).
+                The effectiveness of that strategy depends on one's knowledge and comprehension &mdash; specifically the depth and breadth of understanding and the ability to evaluate and scrutinize the accuracy of information provided by the person being asked (interlocutor).
             </p>
             
             <p>
-				Better results are achieved by preparing detailed questions that delve into the neurologist's expertise in the specific area of concern.
+                Better results are achieved by preparing detailed questions that delve into the neurologist's expertise in the specific area of concern.
             </p>
             
             <section>
-				<h3>Q &amp; A</h3>
-				<p>
-					Following are some unassuming hypothetical example questions from the perspective of an <em>active participant</em>. These questions should be critically examined and may be used as the basis for better questions.
-				</p>
-	
-				<h4>"In your initial assessment of a patient suspected to have Parkinson's Disease, what tests and evaluations do you conduct?"</h4>
-	
-				<h4>
-				✅ Good answers must include:
-				</h4>
-				<ul class="good-answers">
-					<li> Diagnostic imaging with DaTscan (Dopamine Transporter Scan) and <abbr title="Functional Magnetic Resonance Imaging">fMRI</abbr> to map dopamine distribution in the brain and assess broader brain function, respectively.
-					<li> Syn-One skin biopsy
-				</ul>
-				<p>
-					&mdash; and that is beyond the very basic fundamentals of:&mdash;
-				</p>
-	
-				<ul class="baseline-answers">
-					<li> Detailed medical history and symptom review.
-					<li> Thorough examination of motor symptoms.
-					<li> Evaluation of non-motor symptoms such as sleep disturbances, autonomic dysfunction, and mood disorders.
-				</ul>
-	
-				<h4>
-				❌ Bad Answers:
-				</h4>
-				<ul class="bad-answers">
-					<li> Not mentioning genetic testing without providing context or justification.
-					<li> 
-						Preferring simpler imaging over more detailed <abbr title="Functional Magnetic Resonance Imaging">fMRI</abbr> and DaTscan imaging.
-						<p>
-							DaTscan (Dopamine Transporter scan) is a specialized form of <abbr title="Single Photon Emission Computed Tomography">SPECT</abbr> optimized to detect changes in dopamine transporter density and is useful in the broader assessment of the condition.
-						</p>
-						<p>
-							 <abbr title="Functional Magnetic Resonance Imaging">fMRI</abbr> scans map out broader brain networks affected by PD, beyond just dopamine pathways. This information might help inform broader strategies, including supplementation.
-						</p>
-					</li>
-					<li>
-						Generalization without specifying the detailed steps of the neurological examination and symptom review.
-					</li>
-					
-				</ul>
-	
-				<h4>"Why do you include or exclude genetic testing in your initial assessment for Parkinson's Disease?"</h4>
-	
-				<h4>✅ Good answers:</h4>
-				<p>
-					Acknowledgement of the importance of genetic factors in (1) creating custom-tailored solutions and (2) for testing one's offspring for inherited traits. 
-				</p>
-	
-				<h4>"How do you address non-motor symptoms in the management of Parkinson's Disease?"</h4>
-				<p>
-					Treatments that the patient understands well and fall outside conventional medicine, along with their mechanisms of action, should be asked about.
-				</p>
-	
-				<h4>❌ Bad answers:</h4>
-				<ul class="bad-answers">
-	
-					<li>
-						Dismissive generalizations about 'alternative' treatments — reveals bias or knowledge gaps regarding effective treatments and their mechanisms of action.
-					</li>
-					<li>
-						 If the doctor can't explain the mechanisms of action (e.g., of turmeric, photobiomodulation) in simple terms, he likely doesn't understand them well himself.
-					</li>
-				</ul>
-	
-				<h4>"Can you provide an example of how you adapted a treatment plan based on new research findings in Parkinson's Disease?"</h4>
-	
-				<p>
-					✅ A good response should include a recent example of implementing new research-based treatment, with evidence, rationale, and measured results.
-				</p>
+                <h3>Q &amp; A</h3>
+                <p>
+                    Following are some unassuming hypothetical example questions from the perspective of an <em>active participant</em>. These questions should be critically examined and may be used as the basis for better questions.
+                </p>
+    
+                <h4>"In your initial assessment of a patient suspected to have Parkinson's Disease, what tests and evaluations do you conduct?"</h4>
+    
+                <h4>
+                ✅ Good answers must include:
+                </h4>
+                <ul class="good-answers">
+                    <li> Diagnostic imaging with DaTscan (Dopamine Transporter Scan) and <abbr title="Functional Magnetic Resonance Imaging">fMRI</abbr> to map dopamine distribution in the brain and assess broader brain function, respectively.
+                    <li> Syn-One skin biopsy
+                </ul>
+                <p>
+                    &mdash; and that is beyond the very basic fundamentals of:&mdash;
+                </p>
+    
+                <ul class="baseline-answers">
+                    <li> Detailed medical history and symptom review.
+                    <li> Thorough examination of motor symptoms.
+                    <li> Evaluation of non-motor symptoms such as sleep disturbances, autonomic dysfunction, and mood disorders.
+                </ul>
+    
+                <h4>
+                ❌ Bad Answers:
+                </h4>
+                <ul class="bad-answers">
+                    <li> Not mentioning genetic testing without providing context or justification.
+                    <li> 
+                        Preferring simpler imaging over more detailed <abbr title="Functional Magnetic Resonance Imaging">fMRI</abbr> and DaTscan imaging.
+                        <p>
+                            DaTscan (Dopamine Transporter scan) is a specialized form of <abbr title="Single Photon Emission Computed Tomography">SPECT</abbr> optimized to detect changes in dopamine transporter density and is useful in the broader assessment of the condition.
+                        </p>
+                        <p>
+                             <abbr title="Functional Magnetic Resonance Imaging">fMRI</abbr> scans map out broader brain networks affected by PD, beyond just dopamine pathways. This information might help inform broader strategies, including supplementation.
+                        </p>
+                    </li>
+                    <li>
+                        Generalization without specifying the detailed steps of the neurological examination and symptom review.
+                    </li>
+                    
+                </ul>
+    
+                <h4>"Why do you include or exclude genetic testing in your initial assessment for Parkinson's Disease?"</h4>
+    
+                <h4>✅ Good answers:</h4>
+                <p>
+                    Acknowledgement of the importance of genetic factors in (1) creating custom-tailored solutions and (2) for testing one's offspring for inherited traits. 
+                </p>
+    
+                <h4>"How do you address non-motor symptoms in the management of Parkinson's Disease?"</h4>
+                <p>
+                    Treatments that the patient understands well and fall outside conventional medicine, along with their mechanisms of action, should be asked about.
+                </p>
+    
+                <h4>❌ Bad answers:</h4>
+                <ul class="bad-answers">
+    
+                    <li>
+                        Dismissive generalizations about 'alternative' treatments — reveals bias or knowledge gaps regarding effective treatments and their mechanisms of action.
+                    </li>
+                    <li>
+                         If the doctor can't explain the mechanisms of action (e.g., of turmeric, photobiomodulation) in simple terms, he likely doesn't understand them well himself.
+                    </li>
+                </ul>
+    
+                <h4>"Can you provide an example of how you adapted a treatment plan based on new research findings in Parkinson's Disease?"</h4>
+    
+                <p>
+                    ✅ A good response should include a recent example of implementing new research-based treatment, with evidence, rationale, and measured results.
+                </p>
             </section>
             <h4>Summary</h4>
                 <p>
@@ -1521,7 +1521,7 @@ function resetDefaultPosition(target) {
                 <dd>Protecting neuronal structure and function</dd>
 
                 <dt class="antioxidant">Antioxidant</dt>
-                <dd>Reducing oxidative stress</dd>
+                <dd>Oxidative stress causes a-Synuclein aggregation and neuroinflammation in PD. <cite class="reflink">[<a href="#s-j-won">S.J. Won</a>]</cite></dd>
 
                 <dt class="anti-inflammatory">Anti-inflammatory</dt>
                 <dd>Reducing inflammation</dd>
@@ -1533,6 +1533,17 @@ function resetDefaultPosition(target) {
                 Supplements, peptides, therapies, drugs, and stem cells can mitigate &alpha;-synuclein overexpression, reduce mutant &alpha;-synuclein, strengthen the mitochondria, reduce the side effects of LD/dopa decarboxylase (DDC), decrease the need for LD/dopa decarboxylase, reduce ROS, improve mood, improve sleep, improve recovery.
             </p -->
 
+            <ol class="reference-list">
+                <li id="s-j-won">
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9774295/"
+                    title="Neuronal Oxidative Stress Promotes α-Synuclein Aggregation In Vivo"
+                    target="_blank"
+                    >Neuronal Oxidative Stress Promotes α-Synuclein Aggregation In Vivo</a>, Seok Joon Won, et al.
+                    <p>
+                    
+                    </p>
+                </li>
+            </ol>
         </section>
     <section id="treatment-plan">
         <h2>
@@ -1629,31 +1640,31 @@ function resetDefaultPosition(target) {
                 </p>
                 
                 <h5 class="diagram-header">DRT Neurodegeneration Cycle Diagram</h5>
-				<div id="drt-diagram" class="diagram">
-					<div class="concept">
-						<h6>Dopamine Agonists</h6>
-						<p>Dopamine agonists inhibit fibrillization by interacting with α-synuclein.</p>
-						<div class="arrow"></div>
-					</div>
-				
-					<div class="concept">
-						<h6>Fibrillization Inhibition</h6>
-						<p>Stops cellular damage, senescence, and neurodegeneration. 
-						</p>
-						<div class="arrow"></div>
-					</div>
-				
-					<div class="concept">
-						<h6>Problems</h6>
-						<p>Dopamine interacts with α-synuclein causing non-fibrillar oligomers, cell damage and neurodegeneration.</p>
-						<div class="arrow"></div>
-					</div>
-				
-					<div class="concept">
-						<h6>Harmful Cycle</h6>
-						<p>The cycle continues with increased dopamine use leading back to cell damage and neurodegeneration.</p>
-					</div>
-				</div>
+                <div id="drt-diagram" class="diagram">
+                    <div class="concept">
+                        <h6>Dopamine Agonists</h6>
+                        <p>Dopamine agonists inhibit fibrillization by interacting with α-synuclein.</p>
+                        <div class="arrow"></div>
+                    </div>
+                
+                    <div class="concept">
+                        <h6>Fibrillization Inhibition</h6>
+                        <p>Stops cellular damage, senescence, and neurodegeneration. 
+                        </p>
+                        <div class="arrow"></div>
+                    </div>
+                
+                    <div class="concept">
+                        <h6>Problems</h6>
+                        <p>Dopamine interacts with α-synuclein causing non-fibrillar oligomers, cell damage and neurodegeneration.</p>
+                        <div class="arrow"></div>
+                    </div>
+                
+                    <div class="concept">
+                        <h6>Harmful Cycle</h6>
+                        <p>The cycle continues with increased dopamine use leading back to cell damage and neurodegeneration.</p>
+                    </div>
+                </div>
 
                 <h4>Dopamine Replacement Therapy &mdash; Summary</h4>
                 <p>
@@ -1663,7 +1674,7 @@ function resetDefaultPosition(target) {
                 <h5>References</h5>
                 <ol class="reference-list">
                 
-                	<li id="dorszewska">
+                    <li id="dorszewska">
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3958954/"
                         title="Molecular Effects of L-dopa Therapy in Parkinson’s Disease"
                         target="_blank"
@@ -1753,17 +1764,17 @@ function resetDefaultPosition(target) {
                 <h4 class="neuroprotective">HRT &mdash; Estrogen and Testosterone</h4>
             
             
-            	<h5>Early Menopause and PD</h5>
-            	<p>
-            		Early menopause has been observed with statistical significance across women with PD. Postmenopausal hormone therapy (HT) has been associated with a reduced PD risk in several studies. The neuroprotective effects of estrogen replacement have shown positive results in animal models of PD and in early menopausal women with PD.
-            	</p>
+                <h5>Early Menopause and PD</h5>
+                <p>
+                    Early menopause has been observed with statistical significance across women with PD. Postmenopausal hormone therapy (HT) has been associated with a reduced PD risk in several studies. The neuroprotective effects of estrogen replacement have shown positive results in animal models of PD and in early menopausal women with PD.
+                </p>
 
-				<p>
-					A retrospective chart review of a computerized patient database was performed at Columbia-Presbyterian. The review included only women who had symptoms of presumed PD for less than 5 years and who had not yet been on L-dopa. This research found a positive association between estrogen use and lower symptom severity in women with early PD who were not yet taking L-dopa. This indicates that estrogen therapy may be beneficial for women with early PD who entered menopause early and have not yet started <abbr title="Dopamine Replacement Therapy">DRT</abbr>. <cite class="reflink">[<a href="#r-pullman">R Saunders-Pullman</a>]</cite>
-				</p>
-				<p>
-					 In a rodent model of PD, estrogen replacement reduced dopaminergic neuron loss, promoted maturation of <dfn title="the breakdown and degradation of cellular components by the cell itself">autophagy</dfn>, improved motor function and other symptoms, and slowed disease progression. <cite class="reflink">[<a href="#x-li">X.Z. Li</a>]</cite>
-				</p>
+                <p>
+                    A retrospective chart review of a computerized patient database was performed at Columbia-Presbyterian. The review included only women who had symptoms of presumed PD for less than 5 years and who had not yet been on L-dopa. This research found a positive association between estrogen use and lower symptom severity in women with early PD who were not yet taking L-dopa. This indicates that estrogen therapy may be beneficial for women with early PD who entered menopause early and have not yet started <abbr title="Dopamine Replacement Therapy">DRT</abbr>. <cite class="reflink">[<a href="#r-pullman">R Saunders-Pullman</a>]</cite>
+                </p>
+                <p>
+                     In a rodent model of PD, estrogen replacement reduced dopaminergic neuron loss, promoted maturation of <dfn title="the breakdown and degradation of cellular components by the cell itself">autophagy</dfn>, improved motor function and other symptoms, and slowed disease progression. <cite class="reflink">[<a href="#x-li">X.Z. Li</a>]</cite>
+                </p>
                 <p>
                     The use of estrogen replacement in early menopausal women with PD is worth considering. <cite class="reflink">[<a href="#m-borque">M. Borque</a>]</cite>
                 </p>
@@ -1813,7 +1824,7 @@ function resetDefaultPosition(target) {
                         </p>
                         <blockquote>
                             <p>
-                                &ldquo;T improves the survival of human neurons and astrocytes, acting directly on the mitochondrial membrane, inhibiting the generation of reactive oxygen and nitrogen species, as well as sirtuin-1 expression. Conversely, the absence of T may contribute to the neurodegenerative process as observed in animal models of PD and AD, and may decrease the density of spinal synapses in the hippocampus. These pathological effects were reversed following treatment with T or DHT; 17β-estradiol, likely, partially mediates these effects.&rdquo;
+                                <q>T improves the survival of human neurons and astrocytes, acting directly on the mitochondrial membrane, inhibiting the generation of reactive oxygen and nitrogen species, as well as sirtuin-1 expression. Conversely, the absence of T may contribute to the neurodegenerative process as observed in animal models of PD and AD, and may decrease the density of spinal synapses in the hippocampus. These pathological effects were reversed following treatment with T or DHT; 17β-estradiol, likely, partially mediates these effects.</q>
                             </p>
                         </blockquote>
                     </li>
@@ -1917,16 +1928,16 @@ function resetDefaultPosition(target) {
                 <dfn>Cell replacement</dfn> is the injection of dopamine cells into the brain to replace those that are lost or dying. 
             </p>
             <ol class="reference-list">
-				<li>
-					<a href="https://www.parkinson.org/blog/research/gene-cell-based-therapies"
-					title="Exploring the Potential of Gene and Cell-Based Therapies in Parkinson’s"
-					target="_blank"
-					>Exploring the Potential of Gene and Cell-Based Therapies in Parkinson’s</a>, (Anonymous)
-					<p>
-					
-					</p>
-				</li>
-			</ol>
+                <li>
+                    <a href="https://www.parkinson.org/blog/research/gene-cell-based-therapies"
+                    title="Exploring the Potential of Gene and Cell-Based Therapies in Parkinson’s"
+                    target="_blank"
+                    >Exploring the Potential of Gene and Cell-Based Therapies in Parkinson’s</a>, (Anonymous)
+                    <p>
+                    
+                    </p>
+                </li>
+            </ol>
         </section>
         <section id="stem-cell">
             <h4 class="neuroprotective neurorestorative">Stem Cells (MSC, iPSC)</h4>
@@ -1950,7 +1961,7 @@ function resetDefaultPosition(target) {
             </p>
             
             <p>
-            	Few clinics use iPSCs. <a href="https://stemaid.com/">Stemaid</a> is one of them. Stemaid is located in San José del Cabo, Mexico. <a href="https://cynata.com/contact-us">Cynata</a> in Victoria, Australia is another. I cannot attest to anything about either of these clinics.
+                Few clinics use iPSCs. <a href="https://stemaid.com/">Stemaid</a> is one of them. Stemaid is located in San José del Cabo, Mexico. <a href="https://cynata.com/contact-us">Cynata</a> in Victoria, Australia is another. I cannot attest to anything about either of these clinics.
             </p>
             
             <h5>Mesenchymal Stem Cells References:</h5>
@@ -1968,8 +1979,8 @@ function resetDefaultPosition(target) {
                  title="Mesenchymal stem cells therapy exerts neuroprotection in a progressive animal model of Parkinson's disease."
                  >Mesenchymal stem cells therapy exerts neuroprotection in a progressive animal model of Parkinson's disease.</a>, Hyun Jung Park, et al.
                  <p>
-                 	
-                 	</p>
+                    
+                    </p>
                  </li>
                  
                 <li id="b-ahrabi">
@@ -2029,7 +2040,7 @@ function resetDefaultPosition(target) {
             </p>
             
             <p>
-            	Although numerous positive results have been observed in humans, depth penetration of the lightwaves is a concern. NIR light penetrates deeper than NIR, and coherent NIR (<abbr title="Light Amplification by Stimulated Emission of Radiation">laser</abbr>) even deeper. Cellular effects observed in rodents with NIR light can't be extrapolated to the much larger head thickness (and midbrain depth) of humans. <cite class="reflink">[<a href="#y-lampl">Y. Lampl</a>]</cite>
+                Although numerous positive results have been observed in humans, depth penetration of the lightwaves is a concern. NIR light penetrates deeper than NIR, and coherent NIR (<abbr title="Light Amplification by Stimulated Emission of Radiation">laser</abbr>) even deeper. Cellular effects observed in rodents with NIR light can't be extrapolated to the much larger head thickness (and midbrain depth) of humans. <cite class="reflink">[<a href="#y-lampl">Y. Lampl</a>]</cite>
             </p>
             <h4>Timing</h4>
             <p>
@@ -2040,10 +2051,10 @@ function resetDefaultPosition(target) {
                 Whole body irradiation with red light improves sleep quality. Used before sleep may offer better sleep effects. <cite class="reflink">[<a href="#jiexiu-zhao">Jiexiu Zhao</a>]</cite>
             </p>
 
-			<h4>Frequency</h4>
-			<p>
-				PBM in Alzheimer’s and Parkinson’s disease models have necessitated repeated daily exposure to show beneficial results. In-home device offer convenience, comfort, and affordability.
-			</p>
+            <h4>Frequency</h4>
+            <p>
+                PBM in Alzheimer’s and Parkinson’s disease models have necessitated repeated daily exposure to show beneficial results. In-home device offer convenience, comfort, and affordability.
+            </p>
             <p>
                 Red light reaches the motor cortex, influences stem cell function, offers neuroprotection, restores functional activity, improves motor behaviors and reduces clinical signs, reduces <dfn title="Gliosos &mdash; when glial cells, CNS cells that support nerve cells, proliferate or hypertrophy in response to damage">gliosis</dfn>, and induces expression of trophic growth factors. 
                 <cite class="reflink">[<a href="#c-hamilton">C. Hamilton</a>]</cite>
@@ -2074,16 +2085,16 @@ function resetDefaultPosition(target) {
             <ol class="reference-list">
                 
                 <li id="m-r-hamblin1">
-					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5523874/"
-					title="title"
-					target="Mechanisms and applications of the anti-inflammatory effects of photobiomodulation"
-					>Mechanisms and applications of the anti-inflammatory effects of photobiomodulation</a>, Michael R Hamblin.
-					<p>
-						Cytochrome c Oxidase (CCO) absorbs NIR light, leading to increased <abbr title="electron transport chain">ETC</abbr> activity and greater production of ATP.
-					</p>
-				</li>
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5523874/"
+                    title="title"
+                    target="Mechanisms and applications of the anti-inflammatory effects of photobiomodulation"
+                    >Mechanisms and applications of the anti-inflammatory effects of photobiomodulation</a>, Michael R Hamblin.
+                    <p>
+                        Cytochrome c Oxidase (CCO) absorbs NIR light, leading to increased <abbr title="electron transport chain">ETC</abbr> activity and greater production of ATP.
+                    </p>
+                </li>
                 <li id="nizamutdinov1">
-					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9400541/"
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9400541/"
                         title="Transcranial near-infrared light in treatment of neurodegenerative diseases"
                         target="_blank"
                         >Transcranial near-infrared light in treatment of neurodegenerative diseases</a>, Damir Nizamutdinov, et al.
@@ -2092,14 +2103,14 @@ function resetDefaultPosition(target) {
                         </p>
                     </li>
                 <li id="meng">
-					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6705158/"
-					title="Low-Level Laser Therapy Rescues Dendrite Atrophy via Upregulating BDNF Expression: Implications for Alzheimer's Disease"
-					target="_blank"
-					>Low-Level Laser Therapy Rescues Dendrite Atrophy via Upregulating BDNF Expression: Implications for Alzheimer's Disease</a>, Chengbo Meng, et al.
-					<p>
-						Synaptogenesis was found.
-					</p>
-				</li>
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6705158/"
+                    title="Low-Level Laser Therapy Rescues Dendrite Atrophy via Upregulating BDNF Expression: Implications for Alzheimer's Disease"
+                    target="_blank"
+                    >Low-Level Laser Therapy Rescues Dendrite Atrophy via Upregulating BDNF Expression: Implications for Alzheimer's Disease</a>, Chengbo Meng, et al.
+                    <p>
+                        Synaptogenesis was found.
+                    </p>
+                </li>
                 <li id="jiexiu-zhao">
                     <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3499892/"
                     title="Red light and the sleep quality and endurance performance of Chinese female basketball players
@@ -2140,8 +2151,8 @@ function resetDefaultPosition(target) {
                 
                 <li id="t-a-henderson"> 
                     <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4552256/"
-						title="Near-infrared photonic energy penetration: can infrared phototherapy effectively reach the human brain?"
-						target="_blank"
+                        title="Near-infrared photonic energy penetration: can infrared phototherapy effectively reach the human brain?"
+                        target="_blank"
                     >Near-infrared photonic energy penetration: can infrared phototherapy effectively reach the human brain?</a>, Theodore A Henderson, Larry D Morries.
                     <p>
                         Showed that higher-wattage NIR lasers can deliver therapeutic effects to greater depths of the brain without tissue heating or damage. 
@@ -2157,31 +2168,31 @@ function resetDefaultPosition(target) {
                 </li>
                 
                 <li id="j-c-heo">
-					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6625994/"
-						title="Photobiomodulation (660 nm) therapy reduces oxidative stress and induces BDNF expression in the hippocampus"
-						target="Photobiomodulation (660 nm) therapy reduces oxidative stress and induces BDNF expression in the hippocampus"
-					>Photobiomodulation (660 nm) therapy reduces oxidative stress and induces BDNF expression in the hippocampus</a>, Jin-Chul Heo, et al.
-					<p>
-						These data demonstrate that PBMT inhibits hippocampal damage induced by oxidative stress and increases the expression of BDNF in the hippocampus, a part of the brain used for learning and memory, located deep in temporal lobe. 
-					</p>
-					<p>
-						In order to examine the cellular process in the hippocampus, mice were used. Although the data are impressive, the problem with extrapolating data to humans is the size of the human head is much larger, thereby damping the intensity of the NIR waves as they aim towards the deep brain regions. A possible workaround is to aim the light towards the back, to target the CSF.
-					</p>
-				</li>
-				
-				<li id="y-lampl">
-					<a href="https://pubmed.ncbi.nlm.nih.gov/17463313/"
-						title="Infrared laser therapy for ischemic stroke: a new treatment strategy: results of the NeuroThera Effectiveness and Safety Trial-1 (NEST-1)"
-					target="_blank"
-					>Infrared laser therapy for ischemic stroke: a new treatment strategy: results of the NeuroThera Effectiveness and Safety Trial-1 (NEST-1)</a>, Yair Lampl, et al.
-					<p>
-						The NeuroThera Laser System therapeutic approach involves use of infrared laser technology and has shown significant and sustained beneficial effects in animal models of ischemic stroke. 
-					</p>
-				</li>
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6625994/"
+                        title="Photobiomodulation (660 nm) therapy reduces oxidative stress and induces BDNF expression in the hippocampus"
+                        target="Photobiomodulation (660 nm) therapy reduces oxidative stress and induces BDNF expression in the hippocampus"
+                    >Photobiomodulation (660 nm) therapy reduces oxidative stress and induces BDNF expression in the hippocampus</a>, Jin-Chul Heo, et al.
+                    <p>
+                        These data demonstrate that PBMT inhibits hippocampal damage induced by oxidative stress and increases the expression of BDNF in the hippocampus, a part of the brain used for learning and memory, located deep in temporal lobe. 
+                    </p>
+                    <p>
+                        In order to examine the cellular process in the hippocampus, mice were used. Although the data are impressive, the problem with extrapolating data to humans is the size of the human head is much larger, thereby damping the intensity of the NIR waves as they aim towards the deep brain regions. A possible workaround is to aim the light towards the back, to target the CSF.
+                    </p>
+                </li>
+                
+                <li id="y-lampl">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/17463313/"
+                        title="Infrared laser therapy for ischemic stroke: a new treatment strategy: results of the NeuroThera Effectiveness and Safety Trial-1 (NEST-1)"
+                    target="_blank"
+                    >Infrared laser therapy for ischemic stroke: a new treatment strategy: results of the NeuroThera Effectiveness and Safety Trial-1 (NEST-1)</a>, Yair Lampl, et al.
+                    <p>
+                        The NeuroThera Laser System therapeutic approach involves use of infrared laser technology and has shown significant and sustained beneficial effects in animal models of ischemic stroke. 
+                    </p>
+                </li>
                 <li id="c-hamilton">
                     <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128061/"
-						title="Exploring the use of transcranial photobiomodulation in Parkinson's disease patients"
-						target="_blank"
+                        title="Exploring the use of transcranial photobiomodulation in Parkinson's disease patients"
+                        target="_blank"
                     >Exploring the use of transcranial photobiomodulation in Parkinson's disease patients</a>, Catherine Hamilton, et al.
                     <p>
                         This study found photobiomodulation reaches the motor cortex, influences stem cell function, offers neuroprotection, restores functional activity, improves motor behaviors, reduces clinical signs of PD, reduces gliosis, and induces expression of trophic growth factors.
@@ -2348,8 +2359,8 @@ function resetDefaultPosition(target) {
             </p>
             
             <p>
-	            Instead of "talking to your doctor", the development of an individualized treatment plan involves a multi-specialist team collaborating on nutrition, lifestyle, supplementation, medication, and regular testing and monitoring of symptoms and biochemical markers to assess and adjust interventions.
-    		</p>        
+                Instead of "talking to your doctor", the development of an individualized treatment plan involves a multi-specialist team collaborating on nutrition, lifestyle, supplementation, medication, and regular testing and monitoring of symptoms and biochemical markers to assess and adjust interventions.
+            </p>        
             <p>
                 <dfn>Antifibrillogenics</dfn> mitigate the formation of α-synuclein fibrils. Anti-aggregants aim to prevent the accumulation of fibrils and other misfolded proteins in Lewy bodies. By preventing the formation of α-synuclein fibrils and aggregates, these compounds address the underlying pathology of Parkinson's disease at a more fundamental level.
             </p>
@@ -2419,7 +2430,7 @@ function resetDefaultPosition(target) {
                 <h4>References</h4>
                 <ol class="reference-list">
                 
-                	<li id="g-lizzo">
+                    <li id="g-lizzo">
                       <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9261343/"
                       title="A Randomized Controlled Clinical Trial in Healthy Older Adults to Determine Efficacy of Glycine and N-Acetylcysteine Supplementation on Glutathione Redox Status and Oxidative Damage"
                         target="_blank">A Randomized Controlled Clinical Trial in Healthy Older Adults to Determine Efficacy of Glycine and N-Acetylcysteine Supplementation on Glutathione Redox Status and Oxidative Damage</a>, Giulia Lizzo, et al.
@@ -2476,7 +2487,7 @@ function resetDefaultPosition(target) {
                 </p>
                 <h4>Creatine + Exercise</h4>
                 <p>
-                    Creatine is recommended as an adjuvant therapy with an exercise program to maximize overall effectiveness. Creatine has well-established benefits on muscular strength, exercise recovery, mitochondrial function, and anti-oxidant effects. Exercise plays a fundamental role in health optimization. <cite class="reflink">[<a href="#hyukki-chang">hyukki-chang</a>]</cite>
+                    Creatine is recommended as an adjuvant therapy with an exercise program to maximize overall effectiveness. Creatine has well-established benefits on muscular strength, exercise recovery, mitochondrial function, and antioxidant effects. Exercise plays a fundamental role in health optimization. <cite class="reflink">[<a href="#hyukki-chang">hyukki-chang</a>]</cite>
                 </p>
 
                 <p>
@@ -2858,16 +2869,11 @@ href="https://www.sciencedirect.com/science/article/pii/S1756464620304989"
                     <li>Dose: 1-3g daily 🍽️💤
                     <li>🩸🧠BBB: <cite class="reflink">[<a href="#n-sharma">N. Sharma</a>]</cite>
                     <li>Safety: 8/10 (80% σ)
-                    <li>Efficacy: 6/10 (70% σ)
+                    <li>Efficacy: 7/10 (70% σ)
                 </ul>
                 
-                    <h5>Introduction to Turmeric and Curcuminoids</h5>
                     <p>
-                        Turmeric is a rhizome of the Curcuma longa plant.
-                    </p>
-
-                    <p>
-                        Curcumin is the most well-known and studied curcuminoind found in turmeric. Other curcuminoids contribute to turmeric's health benefits. Herein, the terms <em>curcumin</em> and <em>turmeric</em> are used interchangeably.
+                        Turmeric is a rhizome of the Curcuma longa plant. Curcumin is the most well-known and studied curcuminoind found in turmeric. Other curcuminoids contribute to turmeric's health benefits. Herein, the terms <em>curcumin</em> and <em>turmeric</em> are used interchangeably.
                     </p>
                     
                     <p>
@@ -2876,13 +2882,20 @@ href="https://www.sciencedirect.com/science/article/pii/S1756464620304989"
 
                     <h4>How Turmeric Helps PD</h4>
                     <p>
-                        Several studies in different experimental models of PD strongly support the use of curcumin in PD. Specifically, with neuroprotection, neurogenesis, antifibrillogenic, and anti-aggregation. These actions contribute to a healthier brain, improved cognitive function, and a staving off of progressive neurodegeneration (PN).
+                        Turmeric helps with neuroprotection, neurogenesis. <cite class="reflink">[<a href="#s-mishra">S Mishra</a>]</cite>
                     </p>
 
+                    <p>
+                        Curcumin inhibits a-synuclein aggregation through inhibition of oxidative stress generation, replenishing <abbr title="Glutathione">GSH</abbr> levels, and preventing glial-associated inflammatory response. By preventing misfolding and aggregation, curcumin inhibits fibril formation that damage neurons and lead to neurodegeneration. <cite class="reflink">[<a href="#n-sharma">N. Sharma</a>]</cite> <cite class="reflink">[<a href="#x-geng">X. Geng</a>]</cite>
+                    </p>
+                    
+                    <p>
+                        Curcumin rescues α-synuclein from aggregation by increasing its <dfn>reconfiguration rate</dfn>. α-synuclein is prone to aggregation because it misfolds and, subsequently, its reconfiguration rate is slow enough to expose hydrophobic residues on the same time scale that bimolecular association occur. α-synuclein misfolding exposes hydrophobic regions of the protein that are normally hidden in the correctly folded protein. These exposed hydrophobic areas can then interact with similar regions on other proteins, leading to aggregation, eventually forming Lewy bodies. Curcumin mitigates this problem by preventing the misfolding. <cite class="reflink">[<a href="#b-ahmad">B. Ahmad</a>]</cite>
+                    </p>
                     <h4>Supplementation (Eating Turmeric)</h4>
 
                     <p>
-                        Turmeric is very safe at 1-3g daily. Excessively high doses may cause stomach upset or strain the kidneys.
+                        Turmeric is very safe at 1-3g daily. Excessively high doses may cause stomach upset or strain the kidneys. Much smaller doses have not shown positive effects. <cite class="reflink">[<a href="#h-ghodsi">H. Ghodsi</a>]</cite>
                     </p>
 
                     <h4>Challenges with Curcumin Absorption</h4>
@@ -2892,12 +2905,12 @@ href="https://www.sciencedirect.com/science/article/pii/S1756464620304989"
                 
                     <h4>Self-Emulsifying Drug Delivery Systems SEDDS</h4>
                     <p> 
-                        Self-Emulsifying Drug Delivery Systems (SEDDS) are lipid-based formulations that create an emulsion to improve the oral bioavailability of lipophilic substances like curcumin.
+                        Self-Emulsifying Drug Delivery Systems (SEDDS) are lipid-based formulations that create emulsions to improve the oral bioavailability of lipophilic substances like curcumin. The increased bioavailability means that a greater effect can be achieved without increasing the dose, thereby reducing the risk of side effects from overconsumption.
                     </p>
                 
                     <h4>Enhancing Absorption with Food</h4>
                     <p>                         
-                        Turmeric is good in curries, with vegetables and coconut oil, offering both flavor and health benefits. This formulation with food offers much better absorption as a SEDDS. Turmeric can also be blended into warm milk with other spices, as <dfn>"golden milk"</dfn>.
+                        Turmeric is good in curries, with vegetables and coconut oil, offering both flavor and health benefits. This formulation with food offers much better absorption as a SEDDS. Turmeric can be added to eggs, soups and other dishes, blended into warm milk with other spices, as <dfn>"golden milk"</dfn>, and added to cacao beverages. It can be added to prepared mustard as a garnish. 
                     </p>
                     
                     <h4>Safety Concerns</h4>
@@ -2922,10 +2935,19 @@ href="https://www.sciencedirect.com/science/article/pii/S1756464620304989"
                             </p>
                         </li>
                         
-                        <li>
-                            <a href="https://www.frontiersin.org/articles/10.3389/fnagi.2022.984895/full" 
+                        <li id="s-mishra">
+                            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2781139/"
+                            title="The effect of curcumin (turmeric) on Alzheimer's disease: An overview"
+                            target="_blank"
+                            >The effect of curcumin (turmeric) on Alzheimer's disease: An overview</a>, Shrikant Mishra and Kalpana Palanivelu.
+                            <p>
+                            
+                            </p>
+                        </li>
+                        <li id="x-geng">
+                            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9372469/" 
                             title="A novel curcumin oil solution can better alleviate the motor activity defects and neuropathological damage of a Parkinson’s disease mouse model"
-                            target="_blank">Curcumin oil solution on the prevention of movement disorders</a>
+                            target="_blank">A novel curcumin oil solution can better alleviate the motor activity defects and neuropathological damage of a Parkinson’s disease mouse model</a>, Xiwen Geng, et al.
                             
                             <p>
                                 This rodent study provided comprehensive strong evidence regarding the effect of a novel curcumin oil solution on the prevention of movement disorders. 
@@ -2938,18 +2960,18 @@ href="https://www.sciencedirect.com/science/article/pii/S1756464620304989"
                             </p>
                         </li>
                         
-                        <li>
-                            <a href="https://pubmed.ncbi.nlm.nih.gov/22267729/" 
-                            title="Curcumin prevents aggregation in &alpha;-synuclein by increasing the reconfiguration rate"
-                            target="_blank">Curcumin prevents aggregation</a>
+                        <li id="b-ahmad">
+                            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3308736/" 
+                            title="Curcumin Prevents Aggregation in α-Synuclein by Increasing Reconfiguration Rate"
+                            target="_blank">Curcumin Prevents Aggregation in α-Synuclein by Increasing Reconfiguration Rate</a>, Basir Ahmad and Lisa J. Lapidus.
                             <p>
                                 This rodent study found curcumin rescues the protein from aggregation by increasing the reconfiguration rate into a faster regime.
                             </p>
                         </li>
-                        <li>
+                        <li id="h-ghodsi">
                             <a href="https://www.sciencedirect.com/science/article/abs/pii/S0303846722001810?via%3Dihub" 
                             title="Evaluation of curcumin as add-on therapy in patients with Parkinson's disease: A pilot randomized, triple-blind, placebo-controlled trial"
-                            target="_blank">Nanomicelle curcumin as an add-on therapy in patients with PD</a>
+                            target="_blank">Evaluation of curcumin as add-on therapy in patients with Parkinson's disease: A pilot randomized, triple-blind, placebo-controlled trial</a>, Hamidreza Ghodsi, et al.
                             
                             <p>
                                 This human study tested the effects of a novel <dfn>nanomicelle</dfn> curcumin preparation. Although it was well-tolerated, it was not successful in improving quality of life and clinical symptoms of PD patients.
@@ -3357,7 +3379,7 @@ href="https://www.sciencedirect.com/science/article/pii/S1756464620304989"
                 </ul>
 
                 <p>
-                	Alpha-Lipoic Acid (r-ALA) reduces mitochondrial dysfunction and oxidative damage, thereby protecting dopaminergic neurons in Parkinson's disease. <cite class="reflink">-<a href="#j-liu">J. Liu</a>]</cite>
+                    Alpha-Lipoic Acid (r-ALA) reduces mitochondrial dysfunction and oxidative damage, thereby protecting dopaminergic neurons in Parkinson's disease. <cite class="reflink">-<a href="#j-liu">J. Liu</a>]</cite>
                 </p>
                 
                 <h4>Supplement Forms: s- and r-Enantiomers, and Binding</h4>
@@ -3449,7 +3471,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 <h4>References</h4>
                 <ol class="reference-list">
                 
-                	<li id="j-liu">
+                    <li id="j-liu">
                         <a href="https://pubmed.ncbi.nlm.nih.gov/17605107/"
                         title="The effects and mechanisms of mitochondrial nutrient alpha-lipoic acid on improving age-associated mitochondrial and cognitive dysfunction: an overview"
                         target="_blank"
@@ -3461,7 +3483,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                             The also found that <q>co-administration of LA with other mitochondrial nutrients, such as acetyl-L-carnitine and coenzyme Q10, appears more effective in improving cognitive dysfunction and reducing oxidative mitochondrial dysfunction &hellip;</q>
                         </p>
                     </li>
-                	
+                    
                     <li id="b-salehi">
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6723188/"
                         title="Insights on the Use of α-Lipoic Acid for Therapeutic Purposes"
@@ -3471,7 +3493,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                             The R enantiomer of ALA shows better pharmacokinetic parameters, including increased bioavailability as compared to its S enantiometer.
                         </p>
                     </li>
-						
+                        
                     <li id="d-a-carlson">
                         <a href="https://pubmed.ncbi.nlm.nih.gov/18069903/"
                         title="The plasma pharmacokinetics of R-(+)-lipoic acid administered as sodium R-(+)-lipoate to healthy human subjects"
@@ -3483,14 +3505,14 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     </li>
                     
                     <li id="y-wang">
-						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2882509/"
-						title="Alpha-lipoic acid increases energy expenditure by enhancing AMPK-PGC-1α signalling in the skeletal muscle of aged mice"
-						target="_blank"
-						>Alpha-lipoic acid increases energy expenditure by enhancing AMPK-PGC-1α signalling in the skeletal muscle of aged mice</a>, Yi Wang, et al.
-						<p>
-						
-						</p>
-					</li>
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2882509/"
+                        title="Alpha-lipoic acid increases energy expenditure by enhancing AMPK-PGC-1α signalling in the skeletal muscle of aged mice"
+                        target="_blank"
+                        >Alpha-lipoic acid increases energy expenditure by enhancing AMPK-PGC-1α signalling in the skeletal muscle of aged mice</a>, Yi Wang, et al.
+                        <p>
+                        
+                        </p>
+                    </li>
                     <li id="w-j-lee">
                         <a href="https://pubmed.ncbi.nlm.nih.gov/15913551/"
                         title="Alpha-lipoic acid increases insulin sensitivity by activating AMPK in skeletal muscle"
@@ -3499,7 +3521,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         <p>
                             This study suggests that ALA-induced improvement of insulin sensitivity is mediated by activation of AMPK and reduced triglyceride accumulation in skeletal muscle.
                         </p>
-                    </li>					
+                    </li>                   
                     
                     <li id="e-hogg">
                         <a href="https://pubmed.ncbi.nlm.nih.gov/29614702/"
@@ -3516,9 +3538,9 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5897504/"
                         target="_blank">High Dietary Iron Supplement Induces the Nigrostriatal Dopaminergic Neurons Lesion in Transgenic Mice Expressing Mutant A53T Human Alpha-Synuclein</a>, Fengju Jia, et al.
                             
-						<p>
-							These results suggested high dietary iron supplement could induce nigral dopaminergic neuron lesions in A53T mice, which might be due to the vulnerability of SN to accumulate iron.
-						</p>
+                        <p>
+                            These results suggested high dietary iron supplement could induce nigral dopaminergic neuron lesions in A53T mice, which might be due to the vulnerability of SN to accumulate iron.
+                        </p>
                     </li>
                     <li id="p-lingor">
                         <a title="Alpha-synuclein and iron: two keys unlocking Parkinson's disease"
@@ -3571,13 +3593,13 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         </p-->
                     </li>
                     
-					<li id="d-g-burke">
+                    <li id="d-g-burke">
                         <a href="https://pubmed.ncbi.nlm.nih.gov/14669930/"
                         title="Effect of alpha-lipoic acid combined with creatine monohydrate on human skeletal muscle creatine and phosphagen concentration"
                         target="_blank"
                         >Effect of alpha-lipoic acid combined with creatine monohydrate on human skeletal muscle creatine and phosphagen concentration</a>, Darren G Burke, et al.
                         <p>
-                        	This small human trial found that co-ingestion of alpha-lipoic acid with creatine and a small amount of sucrose can enhance muscle total creatine content as compared to the ingestion of creatine and sucrose or creatine alone.
+                            This small human trial found that co-ingestion of alpha-lipoic acid with creatine and a small amount of sucrose can enhance muscle total creatine content as compared to the ingestion of creatine and sucrose or creatine alone.
                         </p>
                     </li>
                 </ol>
@@ -4240,7 +4262,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                                                           
                 
                 <p>
-                	GG suppresses inflammation and modifies gut microbiota composition. <cite class="reflink">[<a href="#e-chung">e-chung</a>]</cite> 
+                    GG suppresses inflammation and modifies gut microbiota composition. <cite class="reflink">[<a href="#e-chung">e-chung</a>]</cite> 
                 </p>                     
                 <h4>GG and Parkinson’s Disease</h4>
                 <p>
@@ -4311,7 +4333,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         target="_blank"
                         >Potential role of geranylgeraniol in managing statin-associated muscle symptoms: a COVID-19 related perspective</a>, Barrie Tan, Kok-Yong Chin.
                         <p>
-                        	CoQ10 supplementation has not been shown to reverse  statin-associated muscle symptoms, therefore, this paper proposes GG for CoQ10 synthesis.
+                            CoQ10 supplementation has not been shown to reverse  statin-associated muscle symptoms, therefore, this paper proposes GG for CoQ10 synthesis.
                         </p>
                     </li>
                     <li id="h-j-ho">
@@ -4341,7 +4363,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 <h3>
                     Docosahexaenoic Acid (DHA)
                 </h3>
-				<ul>
+                <ul>
                     <li>Mechanisms: Anti-inflammatory, Neuroprotective, Mitochondrial
                     <li>Dose: 300mg ED 🍽️
                     <li>Fat-soluble: ✅
@@ -4350,31 +4372,31 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     <li>Efficacy: 7/10 (95% σ)
                 </ul>
                 <p>
-                	Docosahexaenoic acid (DHA) is an essential omega-3 fatty acid found in eggs, fish, krill, and algae, and produced in small amounts in humans. DHA is necessary for normal brain function, for cognition, memory, and attention.
+                    Docosahexaenoic acid (DHA) is an essential omega-3 fatty acid found in eggs, fish, krill, and algae, and produced in small amounts in humans. DHA is necessary for normal brain function, for cognition, memory, and attention.
                 </p>
                 
                 <p>
-                	DHA inhibits neuroinflammation by inhibiting ROS and raising glutathione levels. <cite class="reflink">[<a href="#h-j-lee">H.J. Lee</a>]</cite>
-                	
-                	
+                    DHA inhibits neuroinflammation by inhibiting ROS and raising glutathione levels. <cite class="reflink">[<a href="#h-j-lee">H.J. Lee</a>]</cite>
+                    
+                    
                 </p>
                 
                 <h4>DHA in Parkinson's Disease</h4>
-				<p>
-					Daily DHA has been shown to protect against core symptoms of PD in rodents, including deficits in postural stability, gait integrity, and dopamine neurochemistry in motor areas of the striatum. <cite class="reflink">[<a href="#n-m-chitre">N.M. Chitre</a>]</cite>
-				</p>
+                <p>
+                    Daily DHA has been shown to protect against core symptoms of PD in rodents, including deficits in postural stability, gait integrity, and dopamine neurochemistry in motor areas of the striatum. <cite class="reflink">[<a href="#n-m-chitre">N.M. Chitre</a>]</cite>
+                </p>
 
                 <p>
                     DHA exhibits a neuroprotective dose-dependent response. <cite class="reflink">[<a href="#y-p-zhang">Y.P. Zhang</a>]</cite> 
                 </p>
                 
                 <p>
-                	DHA crosses the BBB in passive diffusion. This means that relatively high plasma levels of DHA are needed to raise its brain DHA levels. When plasma DHA levels increased by 200%, <abbr title="Cerebrospinal Fluid">CSF</abbr> DHA increased by only 28%. <cite class="reflink">[<a href="i-c-arellanes">I.C. Arellanes</a>]</cite> 
+                    DHA crosses the BBB in passive diffusion. This means that relatively high plasma levels of DHA are needed to raise its brain DHA levels. When plasma DHA levels increased by 200%, <abbr title="Cerebrospinal Fluid">CSF</abbr> DHA increased by only 28%. <cite class="reflink">[<a href="i-c-arellanes">I.C. Arellanes</a>]</cite> 
                 </p>
                 <h4>DHA + Uridine</h4>
                 
                 <p>
-                	Phosphatidylcholine, the most abundant phospholipid in the brain, requires three compounds: choline; a pyrimidine such as uridine; and a polyunsaturated fatty acid (PUFA) such as DHA. &ldquo;When all three of the nutrients are provided concurrently, the resulting increase in PC production is greater than the sum of the increases produced by giving each separately.&rdquo; <cite class="reflink">[<a href="r-j-wurtman">R.J. Wurtman</a>]</cite> 
+                    Phosphatidylcholine, the most abundant phospholipid in the brain, requires three compounds: choline; a pyrimidine such as uridine; and a polyunsaturated fatty acid (PUFA) such as DHA. &ldquo;When all three of the nutrients are provided concurrently, the resulting increase in PC production is greater than the sum of the increases produced by giving each separately.&rdquo; <cite class="reflink">[<a href="r-j-wurtman">R.J. Wurtman</a>]</cite> 
                 </p>
                 <p>
                     DHA has been shown to restore unilateral dopaminergic neurotransmission loss in this model of Parkinson's disease, and the effect was augmented when combined with Uridine (uridine-5&rsquo;-monophosphate). <cite class="reflink">[<a href="#m-cansev">M. Cansev</a>]</cite> 
@@ -4390,18 +4412,18 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 <h4>DHA Product</h4>
                 <figure>
                     <img src="img/childrens-dha.jpeg" title="Children's DHA">
-					<figcaption>
-						<p>
-						<a href="https://www.amazon.com/gp/product/B004T7DYOO/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B004T7DYOO&amp;linkId=03df93bc6eab5eeabecf94de7e16e7e4"
+                    <figcaption>
+                        <p>
+                        <a href="https://www.amazon.com/gp/product/B004T7DYOO/ref=as_li_tl?ie=UTF8&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B004T7DYOO&amp;linkId=03df93bc6eab5eeabecf94de7e16e7e4"
                 target="_blank"
                 >Nordic Naturals Children&rsquo;s DHA, Strawberry</a>
-						</p>
-					</figcaption>
-				</figure>
+                        </p>
+                    </figcaption>
+                </figure>
 
 
                 <h4>DHA + Uridine References</h4>
-				<ol class="reference-list">
+                <ol class="reference-list">
                     <li id="n-m-chitre">
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7110909/">
                             Docosahexaenoic acid protects motor function and increases dopamine synthesis in a rat model of Parkinson's disease via mechanisms associated with increased protein kinase activity in the striatum
@@ -4427,13 +4449,13 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         >Restorative effects of uridine plus docosahexaenoic acid in a rat model of Parkinson's disease</a>, Mehmet Cansev, et al.
                     </li>
 
-					<li id="r-j-wurtman">
-						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4011061//"
-							title="A Nutrient Combination that Can Affect Synapse Formation"
-							target="_blank"
-							>A Nutrient Combination that Can Affect Synapse Formation</a>, Richard J. Wurtman.
-					</li>
-					
+                    <li id="r-j-wurtman">
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4011061//"
+                            title="A Nutrient Combination that Can Affect Synapse Formation"
+                            target="_blank"
+                            >A Nutrient Combination that Can Affect Synapse Formation</a>, Richard J. Wurtman.
+                    </li>
+                    
                     <li id="s-holguin">
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2478743/"
                         title="Chronic Administration of DHA and UMP Improves the Impaired Memory of Environmentally Impoverished Rats"
@@ -4453,7 +4475,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 <h4>
                     Uridine Monophoshate (UMP)
                 </h4>
-				<ul>
+                <ul>
                     <li>Mechanisms: Anti-inflammatory, Neuroprotective, Mitochondrial, Dopaminergic side-effects
                     <li>Dose: 500mg ED 
                     <li>Fat-soluble: ❌
@@ -4464,10 +4486,10 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 <p>
                     Uridine is a type of nucleoside, a fundamental component of nucleic acids. Nucleic acids are the building blocks of life and are used for storage and transmission of genetic information.
                 </p>
-    			
-    			<p>
-					Uridine Monophoshate (UMP) is transported across the blood-brain barrier by nucleoside transporters. In the brain, UMP enhances dendritic spines and improves synaptic transmission. <cite class="reflink">[<a href="#n-agarwal">N. Agarwal</a>]</cite> 
-				</p>
+                
+                <p>
+                    Uridine Monophoshate (UMP) is transported across the blood-brain barrier by nucleoside transporters. In the brain, UMP enhances dendritic spines and improves synaptic transmission. <cite class="reflink">[<a href="#n-agarwal">N. Agarwal</a>]</cite> 
+                </p>
                         
                 <h5>How it Works</h5>
                 <p>
@@ -4477,32 +4499,32 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     Uridine increases CDP choline. UMP is one precursor to the synthesis of brain phospholipids used for cell membrane structure and function to support memory, learning, and overall cognitive function. Its use alone has been shown to increase phosphoesters in short term use in humans.  <cite class="reflink">[<a href="#n-agarwal">N. Agarwal</a>]</cite> 
                 </p>
 
-				<p>
-					Phosphoesters are phosphorus-containing compounds found in the brain involved in the regulation of various signaling pathways, including neurotransmission and synaptic plasticity, energy transfer, and nucleic acid structure.
-				</p>
-				<p>
-					As mentioned under the DHA section, research shows the best results when uridine use used in conjunction with DHA and choline.
-				</p>
+                <p>
+                    Phosphoesters are phosphorus-containing compounds found in the brain involved in the regulation of various signaling pathways, including neurotransmission and synaptic plasticity, energy transfer, and nucleic acid structure.
+                </p>
+                <p>
+                    As mentioned under the DHA section, research shows the best results when uridine use used in conjunction with DHA and choline.
+                </p>
                 <h5>
                     Uridine Monophosphate Product
                 </h5>
                 <ul class="product-list">
-					<li>
-						<a href="https://www.amazon.com/Monophosphate-Disodium-Supports-Cognitive-Mitochondrial/dp/B01BYY0QY0/ref=sr_1_4_pp?s=hpc&sr=1-4&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B086KMB9YN&amp;linkId=e758783750e802b48ff75aa147f0afa9"
-						target="_blank"
-						>Uridine Monophosphate Powder</a>
-					</li>
-				</ul>
-				
+                    <li>
+                        <a href="https://www.amazon.com/Monophosphate-Disodium-Supports-Cognitive-Mitochondrial/dp/B01BYY0QY0/ref=sr_1_4_pp?s=hpc&sr=1-4&amp;tag=garrettsmit02-20&amp;camp=1789&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B086KMB9YN&amp;linkId=e758783750e802b48ff75aa147f0afa9"
+                        target="_blank"
+                        >Uridine Monophosphate Powder</a>
+                    </li>
+                </ul>
+                
                 <h5>Uridine</h5>
                 <ol>
-					<li id="m-cansev2">
+                    <li id="m-cansev2">
                         <a href="https://pubmed.ncbi.nlm.nih.gov/16769123/"
                         title="Uridine and cytidine in the brain: Their transport and utilization"
                         target="_blank"
                         >Uridine and cytidine in the brain: Their transport and utilization</a>, Mehmet Cansev.
                         <p>
-                        	Uridine and cytidine are transported across the blood-brain barrier by nucleoside transporters. 
+                            Uridine and cytidine are transported across the blood-brain barrier by nucleoside transporters. 
                         </p>
                     </li>
                     <li id="l-wang">
@@ -4516,7 +4538,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         target="_blank"
                         >Short-term administration of uridine increases brain membrane phospholipid precursors in healthy adults: a 31-phosphorus magnetic resonance spectroscopy study at 4T</a>, Nivedita Agarwal, et al.
                         <p>
-                        	 This small study on 17 healthy males were supplemented 2g of uridine or placebo. The uridine group had significantly increased total PME and PEtn levels over the one-week period.
+                             This small study on 17 healthy males were supplemented 2g of uridine or placebo. The uridine group had significantly increased total PME and PEtn levels over the one-week period.
                         </p>
                     </li>
                 </ol>
@@ -4543,7 +4565,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 
                 <h4>Ischemic Mitigation</h4>
                 <p>
-					Citicoline prevents ischemia-induced tissue accumulation of free fatty acids and reduces infarct volume (direct measurement of the extent of tissue death or necrosis caused by an ischemic stroke), and brain edema, thus resulting in an antiapoptotic effect that is related to the mitochondrial-dependent cell death mechanism.
+                    Citicoline prevents ischemia-induced tissue accumulation of free fatty acids and reduces infarct volume (direct measurement of the extent of tissue death or necrosis caused by an ischemic stroke), and brain edema, thus resulting in an antiapoptotic effect that is related to the mitochondrial-dependent cell death mechanism.
                 </p>
                 
                 
@@ -4717,23 +4739,23 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 </ul>
                 
                 <p>
-                	High-dose thiamine has repeatedly been shown to reverse motor and non-motor symptoms in PD. <cite class="reflink">[<a href="#a-constantini">a-constantini</a>, <a href="#p-bager">p-bager</a>]</cite>
+                    High-dose thiamine has repeatedly been shown to reverse motor and non-motor symptoms in PD. <cite class="reflink">[<a href="#a-constantini">a-constantini</a>, <a href="#p-bager">p-bager</a>]</cite>
                 </p>
                 <p>
-                	<abbr title="Parkinsonism-Associated Deglycase 1 or Park7">DJ-1</abbr> gene is responsible for such as thiamin biosynthesis. Mutations in the DJ-1 gene can result in a loss of function of the protein. Genetic testing for DJ-1 mutations may help predict thiamine's usefulness. <cite class="reflink">[<a href="#k-luong">k-luong</a>]</cite>
+                    <abbr title="Parkinsonism-Associated Deglycase 1 or Park7">DJ-1</abbr> gene is responsible for such as thiamin biosynthesis. Mutations in the DJ-1 gene can result in a loss of function of the protein. Genetic testing for DJ-1 mutations may help predict thiamine's usefulness. <cite class="reflink">[<a href="#k-luong">k-luong</a>]</cite>
                 </p>
                 
                 <p>
-                	Thiamine has poor bioavailability but can cross the BBB through passive diffusion when its levels in the blood are high.
+                    Thiamine has poor bioavailability but can cross the BBB through passive diffusion when its levels in the blood are high.
                 </p>
-				<ol class="reference-list">
+                <ol class="reference-list">
                     <li id="a-constantini">
                         <a href="https://pubmed.ncbi.nlm.nih.gov/26505466/"
                         title="Long-Term Treatment with High-Dose Thiamine in Parkinson Disease: An Open-Label Pilot Study"
                         target="_blank"
                         >Long-Term Treatment with High-Dose Thiamine in Parkinson Disease: An Open-Label Pilot Study</a>, A. Costantini, et al.
                         <p>
-                        	Patients received 100 mg of thiamine, injected intramuscularly twice a week, without any change to personal therapy. All the patients were re-evaluated after 1 month and then every 3 months during treatment. Administration of parenteral high-dose thiamine was effective in reversing PD motor and nonmotor symptoms. 
+                            Patients received 100 mg of thiamine, injected intramuscularly twice a week, without any change to personal therapy. All the patients were re-evaluated after 1 month and then every 3 months during treatment. Administration of parenteral high-dose thiamine was effective in reversing PD motor and nonmotor symptoms. 
                         </p>
                     </li>
                     
@@ -4743,17 +4765,17 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         target="_blank"
                         >High-dose oral thiamine versus placebo for chronic fatigue in patients with primary biliary cholangitis: A crossover randomized clinical trial</a>, Palle Bager, et al.
                         <p>
-                        	Four weeks of high-dose (600–1800 mg daily) oral thiamine treatment in patients with PBC was well tolerated and safe. However, high-dose thiamine was not superior to placebo in reducing PBC-related fatigue.
+                            Four weeks of high-dose (600–1800 mg daily) oral thiamine treatment in patients with PBC was well tolerated and safe. However, high-dose thiamine was not superior to placebo in reducing PBC-related fatigue.
                         </p>
                     </li>
                     
-					<li id="k-luong">
+                    <li id="k-luong">
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6493530/"
                         title="The Beneficial Role of Thiamine in Parkinson Disease"
                         target="_blank"
                         >The Beneficial Role of Thiamine in Parkinson Disease</a>, Khanh v. q. Lương and Lan T. H. Nguyễn.
                         <p>
-                        	 <abbr title="Parkinsonism-Associated Deglycase 1 or Park7">DJ-1</abbr> gene is responsible for such as thiamin biosynthesis. Mutations in the DJ-1 gene can result in a loss of function of the protein. 
+                             <abbr title="Parkinsonism-Associated Deglycase 1 or Park7">DJ-1</abbr> gene is responsible for such as thiamin biosynthesis. Mutations in the DJ-1 gene can result in a loss of function of the protein. 
                         </p>
                     </li>
                 </ol>
@@ -4963,13 +4985,13 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         Preclinical studies and some clinical trials have shown promising results regarding the potential benefits of NMN supplementation in Parkinson's disease. <cite class="reflink">[<a href="#d-i-ingram">D.I. Ingram</a>, <a href="#x-chen">X. Chen</a>]</cite> 
                     </p>
 
-					<p>
-						NMN dose-dependently improves exercise performance. <cite class="reflink">[<a href="#b-lao">B. Lao</a>]</cite>
-					</p>
+                    <p>
+                        NMN dose-dependently improves exercise performance. <cite class="reflink">[<a href="#b-lao">B. Lao</a>]</cite>
+                    </p>
                     <p>
                         Long-term NMN supplementation at lower doses has shown increased NAD+ levels, improved insulin sensitivity, enhanced mitochondrial function, anti-aging effects, and cardiovascular health. <cite class="reflink">[<a href="#k-f-mills">K.F. Mills</a>]</cite>
                     </p>
-                                    	
+                                        
                     <h4>Supplementation</h4>
                     <p>
                         A typical dose of NMN is about 1g per day. It's safe and effective at much higher levels, as shown in human studies and rodent models. <cite class="reflink">[<a href="#l-yi">L. Yi</a>]</cite>
@@ -4986,22 +5008,22 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     <h4>NMN References</h4>
                     <ol class="reference-list">
                     
-                    	<li id="c-shade">
-                    		<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7238909/"
-                    		target="_blank"
-                    		title="The Science Behind NMN–A Stable, Reliable NAD+Activator and Anti-Aging Molecule">The Science Behind NMN–A Stable, Reliable NAD+Activator and Anti-Aging Molecule</a>, Christopher Shade.
-                    		
-                    	</li>
-                    	
-                    	<li id="d-i-ingram">
+                        <li id="c-shade">
+                            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7238909/"
+                            target="_blank"
+                            title="The Science Behind NMN–A Stable, Reliable NAD+Activator and Anti-Aging Molecule">The Science Behind NMN–A Stable, Reliable NAD+Activator and Anti-Aging Molecule</a>, Christopher Shade.
+                            
+                        </li>
+                        
+                        <li id="d-i-ingram">
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8778478/"
-							title="Oral Administration of Nicotinamide Mononucleotide Increases Nicotinamide Adenine Dinucleotide Level in an Animal Brain"
-							target="_blank"
-							>Oral Administration of Nicotinamide Mononucleotide Increases Nicotinamide Adenine Dinucleotide Level in an Animal Brain</a>, Donald K. Ingram.
-							<p>
-							
-							</p>
-						</li>
+                            title="Oral Administration of Nicotinamide Mononucleotide Increases Nicotinamide Adenine Dinucleotide Level in an Animal Brain"
+                            target="_blank"
+                            >Oral Administration of Nicotinamide Mononucleotide Increases Nicotinamide Adenine Dinucleotide Level in an Animal Brain</a>, Donald K. Ingram.
+                            <p>
+                            
+                            </p>
+                        </li>
                         <li id="x-wang">
                             <a href="https://pubmed.ncbi.nlm.nih.gov/27130898/"
                             target="_blank"
@@ -5013,23 +5035,23 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         </li>
                         
                         <li id="k-f-mills">
-							<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5668137/"
-							title="Long-term administration of nicotinamide mononucleotide mitigates age-associated physiological decline in mice"
-							target="_blank"
-							>Long-term administration of nicotinamide mononucleotide mitigates age-associated physiological decline in mice</a>, Kathryn F. Mills, et al.
-							<p>
-							
-							</p>
-						</li>
+                            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5668137/"
+                            title="Long-term administration of nicotinamide mononucleotide mitigates age-associated physiological decline in mice"
+                            target="_blank"
+                            >Long-term administration of nicotinamide mononucleotide mitigates age-associated physiological decline in mice</a>, Kathryn F. Mills, et al.
+                            <p>
+                            
+                            </p>
+                        </li>
                         <li id="l-yi">
-							<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9735188/"
-							title="The efficacy and safety of β-nicotinamide mononucleotide (NMN) supplementation in healthy middle-aged adults: a randomized, multicenter, double-blind, placebo-controlled, parallel-group, dose-dependent clinical trial"
-							target="_blank"
-							>The efficacy and safety of β-nicotinamide mononucleotide (NMN) supplementation in healthy middle-aged adults: a randomized, multicenter, double-blind, placebo-controlled, parallel-group, dose-dependent clinical trial</a>, Lin Yi, et al.
-							<p>
-							
-							</p>
-                    	</li>
+                            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9735188/"
+                            title="The efficacy and safety of β-nicotinamide mononucleotide (NMN) supplementation in healthy middle-aged adults: a randomized, multicenter, double-blind, placebo-controlled, parallel-group, dose-dependent clinical trial"
+                            target="_blank"
+                            >The efficacy and safety of β-nicotinamide mononucleotide (NMN) supplementation in healthy middle-aged adults: a randomized, multicenter, double-blind, placebo-controlled, parallel-group, dose-dependent clinical trial</a>, Lin Yi, et al.
+                            <p>
+                            
+                            </p>
+                        </li>
                     
                         <li id="x-chen">
                             <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7803565/"
@@ -5142,24 +5164,24 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                     <figure>
                         <img src="./img/nad__750mg_30.png" alt="peptide sciences NAD+">
                         <figcaption>
-							<p>
-							<a href="https://www.peptidesciences.com/nadplus-750mg"
-							target="_blank">NAD+ 750mg &mdash; Peptide Sciences</a> (wait for 15% off sale) Peptide Sciences is the place for peptides. Compared to others, only PS sells lyophilized peptides.
-							</p>
+                            <p>
+                            <a href="https://www.peptidesciences.com/nadplus-750mg"
+                            target="_blank">NAD+ 750mg &mdash; Peptide Sciences</a> (wait for 15% off sale) Peptide Sciences is the place for peptides. Compared to others, only PS sells lyophilized peptides.
+                            </p>
                         </figcaption>
                     </figure>
-					<h4>NAD+ Injection References</h4>
-					<ol>
-						<li>
-							<a href="https://www.frontiersin.org/articles/10.3389/fnagi.2019.00257/full"
-							title="A Pilot Study Investigating Changes in the Human Plasma and Urine NAD+ Metabolome During a 6 Hour Intravenous Infusion of NAD+"
-							target="_blank">A Pilot Study Investigating Changes in the Human Plasma and Urine NAD+ Metabolome During a 6 Hour Intravenous Infusion of NAD+</a>
-						
-							<p>
-								Eleven (Test n = 8, Control n = 3) male participants aged 30&ndash;55 years received 750 mg NAD+ in normal saline over a 6 h period. This resulted in a significant and quick elevation of intracellular NAD+.
-							</p>
-						</li>
-					</ol>
+                    <h4>NAD+ Injection References</h4>
+                    <ol>
+                        <li>
+                            <a href="https://www.frontiersin.org/articles/10.3389/fnagi.2019.00257/full"
+                            title="A Pilot Study Investigating Changes in the Human Plasma and Urine NAD+ Metabolome During a 6 Hour Intravenous Infusion of NAD+"
+                            target="_blank">A Pilot Study Investigating Changes in the Human Plasma and Urine NAD+ Metabolome During a 6 Hour Intravenous Infusion of NAD+</a>
+                        
+                            <p>
+                                Eleven (Test n = 8, Control n = 3) male participants aged 30&ndash;55 years received 750 mg NAD+ in normal saline over a 6 h period. This resulted in a significant and quick elevation of intracellular NAD+.
+                            </p>
+                        </li>
+                    </ol>
                 </section>
                 
                 <h4>NAD+ References</h4>
@@ -5340,13 +5362,13 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         
                         <li>
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8777576/"
-							title="Effect of Urolithin A Supplementation on Muscle Endurance and Mitochondrial Health in Older Adults"
-							target="_blank"
-							>Effect of Urolithin A Supplementation on Muscle Endurance and Mitochondrial Health in Older Adults</a>, Sophia Liu, et al.
-							<p>
-								Ceramides and plasma CRP were significantly lower in the Urolithin A group compared to the placebo group. (Ceramides are sphingolipids used in cellular signaling, membrane integrity, and cellular stress response. Elevated ceramides indicate inflammation and metabolic disorder.)
-							</p>
-						</li>
+                            title="Effect of Urolithin A Supplementation on Muscle Endurance and Mitochondrial Health in Older Adults"
+                            target="_blank"
+                            >Effect of Urolithin A Supplementation on Muscle Endurance and Mitochondrial Health in Older Adults</a>, Sophia Liu, et al.
+                            <p>
+                                Ceramides and plasma CRP were significantly lower in the Urolithin A group compared to the placebo group. (Ceramides are sphingolipids used in cellular signaling, membrane integrity, and cellular stress response. Elevated ceramides indicate inflammation and metabolic disorder.)
+                            </p>
+                        </li>
                     </ol>
                 </section>
 
