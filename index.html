@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
     <meta name="color-scheme" content="light dark">
 
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" type="text/css" href="css/diagrams.css">
 <style>
 :root {
@@ -303,125 +304,6 @@ section section {
     font-size: smaller;
 }
 
-/** Nav styles */
-nav {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    padding: 0;
-    margin: 0;
-    transform: translateX(calc(-100% + 3.9vi));
-    transition: transform 0.3s ease;
-    background-color: #333333FC;
-    color: #FFFC;
-    height: 100%;
-    z-index: 100;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-nav > ul {
-    position: relative;
-
-    opacity: 0.01;
-    transition: opacity 0.3s ease;
-
-    list-style: none;
-    margin: 2vi 1.4vi;
-    padding: 0 0 0 1vw;
-    width: 100%;
-    height: 10%;
-    max-height: 100%;
-    overscroll-behavior-block: contain;
-}
-
-nav > ul > li > a {
-    font-weight: bolder;
-}
-
-nav > div:first-child {
-    border-top: 1vh solid #0000;
-    writing-mode: vertical-lr;
-    background: transparent;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 3.8vw;
-    z-index: 1000;
-    font-size: 2.3vi;
-    height: 5.5em; /** accommodate "Menu" */
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-
-nav > div:first-child:hover {
-    border-top: 1vh solid #100E;
-}
-
-nav.open > div:first-child  {
-    border-color: #FFFe;
-}
-nav h3 {
-    writing-mode: vertical-lr;
-    display: inline-block;
-    position: sticky;
-    padding: 1.5vi 0.4vw 1.2vi 0.25vw;
-    margin: 0;
-    cursor: pointer;
-    z-index: 1000;
-    user-select: none;
-    font-size: 2.65vw;
-    border: 1px solid #0000;
-}
-
-nav h3:hover, nav.open h3 {
-    background-color: #3F51B5;
-    border: 1px solid #11000033;
-    border-bottom-right-radius: 0.54vw;
-    border-bottom-left-radius: 0.54vw;
-}
-
-nav h3:hover {
-    color: #fff;
-}
-
-nav > ul {
-    position: relative;
-    z-index: 1;
-}
-
-nav > ul > li:last-child {
-    margin-bottom: 4dvh;
-}
-
-nav.open {
-    transform: translateX(0);
-}
-
-nav.open > ul {
-    /* put overflow on UL, not nav, 
-    because we must keep the "Menu" tab sticky
-    */
-    min-height: 99dvh;
-    overflow-y: auto;
-    bottom: 0;
-    position: relative;
-    padding-bottom: 1dvi;
-}
-nav.open h3{
-    right: 0;
-}
-
-nav.open > ul {
-    opacity: 1;
-}
-
-nav a:hover {
-    color: #9cf;
-}
 </style>
 
 <style id="tipsheet">
@@ -550,7 +432,7 @@ function resetDefaultPosition(target) {
         <h1>Parkinson's Disease Guide</h1>
         <p>
             <strong>Working Draft</strong>, 
-            <time datetime="2024-07-09">2024-07-09</time>
+            <time datetime="2024-07-10">2024-07-10</time>
         <p>
         <address class="author">
             <strong>Editor:</strong> Garrett Smith
@@ -2500,7 +2382,7 @@ function resetDefaultPosition(target) {
                     Creatine increases mitochondrial ATP production, provides antioxidant effects, and reduces oxidative stress and mitochondrial damage. which helps it protect against neuronal damage and prevent cell death. <cite class="reflink"><a href="#c-rae">c-rae</a></cite>, <cite class="reflink"><a href="#a-c-passaquin">a-c-passaquin</a></cite>, <cite class="reflink"><a href="#hamid-arazi">hamid-arazi</a></cite>
                 </p>
 
-                <h4>Creatine + Exercise</h4>
+                <h4>Creatine and Exercise</h4>
                 <p>
                     Creatine improves muscular strength, exercise recovery, mitochondrial function, and antioxidant effects. Because exercise plays a fundamental role in health optimization, creatine should be used with exercise to improve its performance and hasten recovery. <cite class="reflink"><a href="#hyukki-chang">hyukki-chang</a></cite>
                 </p>
