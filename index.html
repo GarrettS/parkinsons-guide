@@ -380,7 +380,7 @@ function tooltipPositionFixer(ev) {
         const wasClippedRight = isClippedRight(targetBox, afterStyle);
         const wasClippedTop = isClippedTop(targetBox, afterStyle);
         
-            target.removeAttribute("itemprop");
+        target.removeAttribute("itemprop");
         if (wasClippedRight) {
         // Cannot use "data-" prop here ,as it causes transitionend to not fire
         // on the ABBR and DFN elements. So, use itemprop.
@@ -390,6 +390,7 @@ function tooltipPositionFixer(ev) {
             target.setAttribute("itemprop", target.getAttribute("itemprop")+"t");
         }
     }
+    ev.preventDefault();
 }
 
 function isClippedRight(targetBox, afterStyle) {
@@ -554,7 +555,7 @@ function resetDefaultPosition(target) {
                     <li><a href="#vitamin-b1">Vitamin B-1 (Thiamine)</a></li>
                     <li><a href="#vitamin-b6">Vitamin B-6 (Pyridoxine)</a></li>
                     <li><a href="#vitamin-b12">Vitamin B-12 (Cobalamin)</a></li>
-                    <li><a href="#tocotrienols">Tocotrienols + Tocopherols</a></li>
+                    <li><a href="#tocotrienols">Tocotrienols and Tocopherols</a></li>
                     <li>
                         <a href="#nicotinamides">NAD+, NMN, Niacin, and NR</a>
                         <ul>
@@ -2704,9 +2705,9 @@ function resetDefaultPosition(target) {
         </section>
         
         <section id="cacao">
-			<h4>RawCacao &mdash; TODO</h4>
-			
-			<ul class="treatment-rating">
+            <h4>RawCacao &mdash; TODO</h4>
+            
+            <ul class="treatment-rating">
                 <li>Mechanisms: Neuroprotective, Antidiabetic
                 <li>Dose: 7g ED
                 <li>Fat-soluble: ✅
@@ -2715,18 +2716,18 @@ function resetDefaultPosition(target) {
                 <li>Efficacy: 3/10 (40% σ)
             </ul>
             
-			<p>
-				Raw cacao is made from cold-pressed, unroasted cocoa beans, which preserves the nutritional content, in contrast to cocoa, which is heavily processed, roasted at high temperatures and often has added sugar.
-			</p>
-        	
-        	<p>
-        		Studies on raw cacao show cognitive improvement in healthy individuals. A 2024, small, single blind study out of Japan used two groups of subjects, high (HC) and low (LC) polyphenol content, finding improvements the HC group and subjected them to two bouts, each consisting of a battery of various cognitive performance tests. Comparing the two groups, they found the HC group showed comparative improvements in mental and physical fatigue, stress, boredom, sleepiness, motivation, healing, enjoyment, relaxation, concentration, and willingness after completing the second set of tests. <cite class="reflink"><a href="#a-sasaki">A. Sasaki</a></cite>
-        		
-        	</p>
-        	
-        	<p>
-				Cacao's usefulness in helping to manage neurodegenerative diseases like PD is not as strong.
-			</p>
+            <p>
+                Raw cacao is made from cold-pressed, unroasted cocoa beans, which preserves the nutritional content, in contrast to cocoa, which is heavily processed, roasted at high temperatures and often has added sugar.
+            </p>
+            
+            <p>
+                Studies on raw cacao show cognitive improvement in healthy individuals. A 2024, small, single blind study out of Japan used two groups of subjects, high (HC) and low (LC) polyphenol content, finding improvements the HC group and subjected them to two bouts, each consisting of a battery of various cognitive performance tests. Comparing the two groups, they found the HC group showed comparative improvements in mental and physical fatigue, stress, boredom, sleepiness, motivation, healing, enjoyment, relaxation, concentration, and willingness after completing the second set of tests. <cite class="reflink"><a href="#a-sasaki">A. Sasaki</a></cite>
+                
+            </p>
+            
+            <p>
+                Cacao's usefulness in helping to manage neurodegenerative diseases like PD is not as strong.
+            </p>
             <!--
                 <h4>Antifibrillogenic and Anti-aggregant</h4>
             Compounds in cacao may help prevent the formation and aggregation of α-synuclein fibrils. These include epicatechin, catechin, procyanidins, theobromine.
@@ -2768,22 +2769,22 @@ Dietary Cocoa Flavanols Enhance Mitochondrial Function in Skeletal Muscle and Mo
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8538722/
 -->
 
-			<ol class="reference-list">
-				<li id="a-sasaki">
-					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10780455/"
-					title="Cacao Polyphenol-Rich Dark Chocolate Intake Contributes to Efficient Brain Activity during Cognitive Tasks: A Randomized, Single-Blinded, Crossover, and Dose-Comparison fMRI Study"
-					target="_blank"
-					>Cacao Polyphenol-Rich Dark Chocolate Intake Contributes to Efficient Brain Activity during Cognitive Tasks: A Randomized, Single-Blinded, Crossover, and Dose-Comparison fMRI Study</a>, Akihiro Sasaki, et al.
-				</li>
-				
-				 <li id="">
+            <ol class="reference-list">
+                <li id="a-sasaki">
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10780455/"
+                    title="Cacao Polyphenol-Rich Dark Chocolate Intake Contributes to Efficient Brain Activity during Cognitive Tasks: A Randomized, Single-Blinded, Crossover, and Dose-Comparison fMRI Study"
+                    target="_blank"
+                    >Cacao Polyphenol-Rich Dark Chocolate Intake Contributes to Efficient Brain Activity during Cognitive Tasks: A Randomized, Single-Blinded, Crossover, and Dose-Comparison fMRI Study</a>, Akihiro Sasaki, et al.
+                </li>
+                
+                 <li id="">
                         <a href="https://pubmed.ncbi.nlm.nih.gov/35993474/"
                         title="title"
                         target="_blank"
                         >title</a>
                     </li>
-			</ol>
-		</section>
+            </ol>
+        </section>
             
         <section id="cinnamon">
             <h4>Cinnamon</h4>
@@ -3109,7 +3110,7 @@ href="https://pubmed.ncbi.nlm.nih.gov/27646481/"
                 </p>
                 
                 <p>
-                	Piperine and piper longumine, from black pepper and long pepper, respectively, also increase turmeric bioavailability, and the latter is also senolytic. <cite class="reflinks"><a href="#k-kesarwani">K. Kesarwani</a></cite>
+                    Piperine and piper longumine, from black pepper and long pepper, respectively, also increase turmeric bioavailability, and the latter is also senolytic. <cite class="reflinks"><a href="#k-kesarwani">K. Kesarwani</a></cite>
                 </p>
                 
                 <h4>Safety Concerns</h4>
@@ -4725,7 +4726,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
             </p>
             
             <p>
-                DHA crosses the BBB in passive diffusion. This means that relatively high plasma levels of DHA are needed to raise its brain DHA levels. When plasma DHA levels increased by 200%, <abbr title="Cerebrospinal Fluid">CSF</abbr> DHA increased by only 28%. <cite class="reflink"><a href="i-c-arellanes">I.C. Arellanes</a></cite> 
+                DHA crosses the BBB in passive diffusion. This means that relatively high plasma levels of DHA are needed to raise its brain DHA levels. When plasma DHA levels increased by 200%, <abbr title="Cerebrospinal Fluid">CSF</abbr> DHA increased by only 28%. <cite class="reflink"><a href="#i-c-arellanes">I.C. Arellanes</a></cite> 
             </p>
                             
             <h4>Side Effects</h4>
@@ -4844,7 +4845,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 
                 <h4>Uridine with DHA</h4>                
                 <p>
-                    Phosphatidylcholine (PC), the most abundant phospholipid in the brain, requires three compounds: choline; a pyrimidine such as uridine; and a polyunsaturated fatty acid (PUFA) such as DHA. <q>When all three of the nutrients are provided concurrently, the resulting increase in PC production is greater than the sum of the increases produced by giving each separately.</q> <cite class="reflink"><a href="r-j-wurtman">R.J. Wurtman</a></cite> 
+                    Phosphatidylcholine (PC), the most abundant phospholipid in the brain, requires three compounds: choline; a pyrimidine such as uridine; and a polyunsaturated fatty acid (PUFA) such as DHA. <q>When all three of the nutrients are provided concurrently, the resulting increase in PC production is greater than the sum of the increases produced by giving each separately.</q> <cite class="reflink"><a href="#r-j-wurtman">R.J. Wurtman</a></cite> 
                 </p>
                 <p>
                     DHA has been shown to restore dopaminergic neurotransmission loss in PD models, with enhanced effects when combined with UMP. <cite class="reflink"><a href="#m-cansev">M. Cansev</a></cite> 
@@ -5051,7 +5052,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                         >CDP-choline: pharmacological and clinical review</a>, J J Secades, G Frontera.
                     </li>
                     
-					<li id="u-kansakar">
+                    <li id="u-kansakar">
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10025538/"
                         title="Choline supplements: An update"
                         target="_blank"
@@ -5165,7 +5166,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 <h4>References</h4>
                 <ol class="reference-list">
                 
-                	<li id="f-amenta">
+                    <li id="f-amenta">
                         <a href="https://www.sciencedirect.com/science/article/abs/pii/B9780128158548000306/"
                         title="Chapter 30 - Choline-containing phospholipids and treatment of adult-onset dementia disorders"
                         target="_blank"
@@ -5227,7 +5228,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 
                 <h4>PS as a Self-emulsifying Drug Delivery System (SEDDS)</h4> 
                 <p>
-                	SEDDS (Self-Emulsifying Drug Delivery Systems) are formulations designed to improve the oral bioavailability of poorly water-soluble substances. While PS itself is not a SEDDS, taking it with such substances may enhance their absorption and bioavailability. This is because it is both. PS liposomes loaded with astragaloside IV and nestifin-1 were shown to facilitate their penetration of the blood-brain barrier and reduce the expression of α-synuclein, making PS liposome an effective delivery tool for other substances. <cite class="reflink"><a href="#y-kuo">Y. Kuo</a></cite>
+                    SEDDS (Self-Emulsifying Drug Delivery Systems) are formulations designed to improve the oral bioavailability of poorly water-soluble substances. While PS itself is not a SEDDS, taking it with such substances may enhance their absorption and bioavailability. This is because it is both. PS liposomes loaded with astragaloside IV and nestifin-1 were shown to facilitate their penetration of the blood-brain barrier and reduce the expression of α-synuclein, making PS liposome an effective delivery tool for other substances. <cite class="reflink"><a href="#y-kuo">Y. Kuo</a></cite>
                 </p>
 
                 <h4>Supplementation — Brain-Derived PS (Choric PS)</h4>
@@ -5237,7 +5238,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 
                 <h4>References</h4>
                 <ol class="reference-list">
-                	                     
+                                         
                     <li id="x-ma">
                         <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9382310/"
                         title="Phosphatidylserine, inflammation, and central nervous system diseases"
@@ -5493,7 +5494,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 Tocotrienols and Tocopherols
             </h4>
             <ul>
-                <li>Mechanisms: Antioxidant, Anti-inflammatory, Mitochondrial, Neuroprotective, Neurorestorative
+                <li>Mechanisms: Antioxidant, Anti-inflammatory, Mitochondrial, Neuroprotective, Neurorestorative, Anti-cancer
                 <li>Dose: 150 – 300 IU ED/EOD 🍽️
                 <li>Fat-soluble: ✅
                 <li>BBB: ✅
@@ -5502,59 +5503,108 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
             </ul>
             
             <p>
-				Tocotrienols and tocopherols are forms of vitamin E known for their antioxidant and anti-inflammatory properties. They cross the blood-brain barrier and provide neuroprotective effects that extend beyond antioxidant function, helping maintain brain health by reducing oxidative stress and inflammation, supporting mitochondrial function, and preserving neuronal integrity.
-			</p>
-			
+            Vitamin E is a group of eight fat-soluble compounds, comprising four tocopherols and four tocotrienols that offer a spectrum of benefits.
+            </p>
+            <dl>
+                <dt>Tocopherols</dt>
+				<dd><strong>α-</strong> — most common and studied form, antioxidant, immune-enhancing, vascular and skin effects</dd>
+				<dd><strong>β-</strong> — antioxidant, anti-inflammatory</dd>
+				<dd><strong>γ-</strong> — antioxidant, anti-inflammatory, neutralizes <abbr title="reactive nitrogen species">RNS</abbr></dd>
+				<dd><strong>δ-</strong> — antioxidant, anti-inflammatory, neutralizes <abbr title="reactive nitrogen species">RNS</abbr></dd>
+				<dt>Tocotrienols</dt>
+				<dd><strong>α-</strong> — strongly neuroprotective, stabilizes cellular membranes</dd>
+				<dd><strong>β-</strong> — antioxidant, anti-inflammatory</dd>
+				<dd><strong>γ-</strong> — anti-tumorogenic, antihyperlipidemic</dd>
+				<dd><strong>δ-</strong> — anti-cancer, strong antioxidant</dd>
+            </dl>
+            
+            <p>
+                Tocotrienols are neuroprotective, anti-cancer, anti-oxidative, and cholesterol-lowering in ways tocopherols aren't. Most vitamin E supplements are only alpha-tocopherol, which has the effect of reducing the body's levels of gamma tocopherol. This is bad, because unlike alpha-tocopherol, gamma-tocopherol and delta-tocopherol can scavenge reactive nitrogen species in addition to reactive oxygen species. <cite class="reflinks"><a href="#a-abraham">A. Abraham</a>, <a href="#m-clarke">M. Clarke</a>, <a href="#d-wolf">D. Wolf</a></cite>
+            </p>
+            <p> 
+                Consuming the full spectrum of all eight natural forms of vitamin E avoids problems with unilateral α-tocopherol supplementation and provides maximum synergy and health benefit. <cite class="reflinks"><a href="#c-sen">C. Sen</a></cite>
+            </p>
+
             <h5>Neuroprotective Effects</h5>
             
             <p>
-                Tocotrienols have been shown to improve learning impairment in elderly subjects. A 2018 double-blind study out of Japan showed that the combination of tocotrienols with astaxanthin improves the composite memory and verbal memory of Japanese adults who feel a memory decline. Astaxanthin and toco is anti-oxidative, but tocotrienols are more than that. <cite class="reflinks"><a href="t-sekikawa">T. Sekikawa</a></cite>
-			</p>
-			
-            <p>
-                Tocotrienols cross the BBB, exerting neuroprotective effects. Tocotrienols also reduce BBB permeability by modulating tight junction proteins and reducing oxidative and inflammatory damage to the BBB. This helps maintain its integrity, which is essential for protecting the brain. 
+                Tocotrienols have been shown to improve learning impairment in elderly subjects. A 2018 double-blind study out of Japan showed that the combination of tocotrienols with astaxanthin improves the composite memory and verbal memory of Japanese adults who feel a memory decline. Astaxanthin and vitamin E are anti-oxidative, but tocotrienols are more than that. <cite class="reflinks"><a href="#t-sekikawa">T. Sekikawa</a></cite>
             </p>
             
             <p>
-                Tocotrienols exert neuroprotective effects independent of their antioxidant activity by binding to the estrogen receptor, as shown in multiple studies. <cite class="reflinks"><a href="t-matsura">T. Matsura</a>, <a href="r-naomi">R. Naomi</a></cite>
+                Tocotrienols cross the BBB, exerting neuroprotective effects independent of their antioxidant activity by binding to the estrogen receptor, as shown in multiple studies. <cite class="reflinks"><a href="#t-matsura">T. Matsura</a>, <a href="#r-naomi">R. Naomi</a></cite>
            </p>
            
            <p>
-				Tocotrienols inhibit lipid peroxidation more effectively than tocopherols due to their better incorporation into cell membranes. This prevents oxidative degradation of lipids, protecting and preserving mitochondria and reducing mitochondrial-generated <abbr title="Reactive Oxygen Species">ROS</abbr>. Tocotrienols have been shown to induce apoptosis of cancer cells while protecting neuronal cells from glutamate- and peroxidative-induced death. <cite class="reflinks"><a href="b-aggarwal">B. Aggarwal</a></cite>
+			   Tocotrienols also reduce BBB permeability by modulating tight junction proteins and reducing oxidative and inflammatory damage to the BBB. This helps maintain its integrity, which is essential for protecting the brain. <cite class="reflinks"><a href="n-kaneai">N. Kaneai</a></cite>
+           </p>
+           
+           <p>
+                Tocotrienols more effectively inhibit lipid peroxidation compared to tocopherols, due to better incorporation into cell membranes. This action protects mitochondria and reduces oxidative stress. Tocotrienols have been shown to induce apoptosis of cancer cells while protecting neuronal cells from glutamate- and peroxidative-induced death. <cite class="reflinks"><a href="#b-aggarwal">B. Aggarwal</a> <a href="#r-c-chiste">R.C. Chiste</a></cite>
             </p>
 
-			<p>
-				A 2021 controlled rodent model study showed that α- and γ- tocotrienols improved motor function and neuronal uptake in hippocampal cells. α-tocotrienol demonstrated better neuroprotective effects than γ-tocotrienol, preserving astroglial and neuronal integrity, and reducing inflammation and neuronal degradation, preventing further reduction of dopaminergic neurons. <cite class="reflinks"><a href="m-kumari">M. Kumari</a></cite>
-			</p>
-			
-			<h4>Human Trial Underway</h4>
-			<p>
-				A large scale human trial, <a title="Tocotrienols in Parkinson's Disease (PD): A Pilot, Randomised, Placebo-controlled Trial" href="https://clinicaltrials.gov/study/NCT04491383" target="_blank"><q>Tocotrienols in Parkinson's Disease (PD): A Pilot, Randomised, Placebo-controlled Trial</q></a>, was opened on April 2021. This two-year study is designed to compare the effects of 400mg/day tocotrienols vs placebo on neuropsychological conditions using cognitive tests and bloodwork, to evaluate PD biomarkers and for safety monitoring. Tocotrienols are available over the counter, so participation in the trial is not required to use them.
-			</p>
-			
+            <p>
+                A 2021 controlled rodent model study showed that α- and γ- tocotrienols improved motor function and neuronal uptake in hippocampal cells, with α-tocotrienol demonstrating superior neuroprotective effects and preventing further reduction of dopaminergic neurons. <cite class="reflinks"><a href="#m-kumari">M. Kumari</a></cite>
+            </p>
+            
+            <h4>Human Trial Underway</h4>
+            <p>
+                A large scale human trial, <a title="Tocotrienols in Parkinson's Disease (PD): A Pilot, Randomised, Placebo-controlled Trial" href="https://clinicaltrials.gov/study/NCT04491383" target="_blank"><q>Tocotrienols in Parkinson's Disease (PD): A Pilot, Randomised, Placebo-controlled Trial</q></a>, was opened on April 2021. This two-year study is designed to compare the effects of 400mg/day tocotrienols vs placebo on neuropsychological conditions using cognitive tests and bloodwork, to evaluate PD biomarkers and for safety monitoring. Tocotrienols are available over the counter, so participation in the trial is not required to use them.
+            </p>
+            
             <h4>Supplementation and Safety</h4>
 
-			<p>
+            <p>
                 Vitamin E is best taken with dietary fat and other fat-soluble supplements.
             </p>
             <p>
                 Vitamin E can thin the blood. Individuals taking blood thinners, those with a history of stroke or brain bleeding should be cautious when taking vitamin E supplements.
             </p>
             <p>
-                Light supplementation of a blend of the four tocotrienols and four tocopherols provides benefits while avoiding these risks. Do not exceed the recommended dose. High doses of vitamin E, particularly the synthetic form dl-alpha-tocopherol, are unhelpful to neurodegenerative conditions and are toxic.
+                Light to moderate supplementation consisting of a naturally-sourced, balanced blend of the four tocotrienols and four tocopherols provides benefits while avoiding these risks. Do not exceed the recommended dose. High doses of vitamin E, particularly the synthetic form dl-alpha-tocopherol, are unhelpful to neurodegenerative conditions and are toxic.
             </p>
             
             <h4>
                 References
             </h4>
             <ol class="reference-list">
-            	<li id="t-sekikawa">
-					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7705074/"
-					title="Cognitive function improvement with astaxanthin and tocotrienol intake: a randomized, double-blind, placebo-controlled study"
-					target="_blank"
-					>Cognitive function improvement with astaxanthin and tocotrienol intake: a randomized, double-blind, placebo-controlled study</a>, Takahiro Sekikawa, et al.
-				</li>
-				
+            
+                <li id="a-abraham">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/29746786/"
+                    title="Vitamin E and its anticancer effects"
+                    target="_blank"
+                    >Vitamin E and its anticancer effects</a>, Annette Abraham, et al.
+                </li>
+                
+                <li id="c-sen">
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0024320505012361"
+                    title="Tocotrienols: Vitamin E beyond tocopherols"
+                    target="_blank"
+                    >Tocotrienols: Vitamin E beyond tocopherols</a>, Chandan K. Sen, et al.
+                </li>
+                <li id="d-wolf">
+                    <a href="https://academic.oup.com/nutritionreviews/article/64/6/295/1830820"
+                    title="How an Increased Intake of Alpha-Tocopherol Can Suppress the Bioavailability of Gamma-Tocopherol"
+                    target="_blank"
+                    >How an Increased Intake of Alpha-Tocopherol Can Suppress the Bioavailability of Gamma-Tocopherol</a>, George Wolf, DPhil.
+                </li>
+                    
+                <li id="m-clarke">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0002916523292473"
+                    title="Supplementation with mixed tocopherols increases serum and blood cell gamma-tocopherol but does not alter biomarkers of platelet activation in subjects with type 2 diabetes."
+                    target="_blank"
+                    >Supplementation with mixed tocopherols increases serum and blood cell gamma-tocopherol but does not alter biomarkers of platelet activation in subjects with type 2 diabetes.</a>, M. Clarke, et al.
+                    <p> 
+                        This <abbr title="Randomized Controlled Trial">RCT</abbr> found that supplementation with alpha-tocopherol (the common form) decreased red blood cell gamma-tocopherol, whereas mixed tocopherols increased both serum alpha-tocopherol and serum and cellular gamma-tocopherol. 
+                    </p>
+                </li>
+                <li id="t-sekikawa">
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7705074/"
+                    title="Cognitive function improvement with astaxanthin and tocotrienol intake: a randomized, double-blind, placebo-controlled study"
+                    target="_blank"
+                    >Cognitive function improvement with astaxanthin and tocotrienol intake: a randomized, double-blind, placebo-controlled study</a>, Takahiro Sekikawa, et al.
+                </li>
+                
                 <li id="t-matsura">
                     <a href="https://pubmed.ncbi.nlm.nih.gov/31619646/"
                     >Protective Effect of Tocotrienol on In Vitro and In Vivo Models of Parkinson's Disease</a>, Tatsuya Matsura.
@@ -5564,17 +5614,31 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 </li>
                 
                 <li id="r-naomi">
-					<a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2021.754086/full"
-					title="An Interactive Review on the Role of Tocotrienols in the Neurodegenerative Disorders"
+                    <a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2021.754086/full"
+                    title="An Interactive Review on the Role of Tocotrienols in the Neurodegenerative Disorders"
+                    target="_blank"
+                    >An Interactive Review on the Role of Tocotrienols in the Neurodegenerative Disorders</a>, Ruth Naomi, et al.
+                </li>
+                <li id="n-kaneai">
+					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4788404/"
+					title="Tocotrienol improves learning and memory deficit of aged rats"
 					target="_blank"
-					>An Interactive Review on the Role of Tocotrienols in the Neurodegenerative Disorders</a>, Ruth Naomi, et al.
+					>Tocotrienol improves learning and memory deficit of aged rats</a>, Nozomi Kaneai, et al.
 				</li>
-				
                 <li id="b-aggarwal">
-					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2956867/"
-					title="Tocotrienols, the Vitamin E of the 21st Century: It’s Potential Against Cancer and Other Chronic Diseases"
+                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2956867/"
+                    title="Tocotrienols, the Vitamin E of the 21st Century: It’s Potential Against Cancer and Other Chronic Diseases"
+                    target="_blank"
+                    >Tocotrienols, the Vitamin E of the 21st Century: It’s Potential Against Cancer and Other Chronic Diseases</a>, Bharat B. Aggarwal, et al.
+                </li>
+				<li id="r-c-chiste">
+					<a href="https://pubmed.ncbi.nlm.nih.gov/23140681/"
+					title="In vitro scavenging capacity of annatto seed extracts against reactive oxygen and nitrogen species"
 					target="_blank"
-					>Tocotrienols, the Vitamin E of the 21st Century: It’s Potential Against Cancer and Other Chronic Diseases</a>, Bharat B. Aggarwal, et al.
+					>In vitro scavenging capacity of annatto seed extracts against reactive oxygen and nitrogen species</a>, Renan Campos Chisté, et al.
+					<p>
+						Annatto seeds contain several carotenoids, terpenoids, tocotrienols and flavonoids, which reduce <abbr title="Reative Oxygen and Nitrogen Species">RONS</abbr>.
+					</p>
 				</li>
                 <li id="m-kumari">
                     <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8150907/"
@@ -5588,7 +5652,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
             </ol>
             
             <!--
-			<h5>
+            <h5>
                 Product
             </h5>
             <ul class="product-list">
