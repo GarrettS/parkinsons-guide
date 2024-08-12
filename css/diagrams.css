@@ -141,7 +141,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-auto-rows: min-content;
-    gap: 22px;
+    gap:  2.8%;
+}
+
+#drt-diagram .arrow {
+    width: calc(2% + 2vi);
 }
 
 @container (min-width: 1085px) {
