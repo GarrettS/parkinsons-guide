@@ -60,7 +60,8 @@ table.treatment-legend th {
 }
 
 table.treatment-legend td:has(.rating-bar) {
-    height: 4.5vi 
+    height: 3ex;
+    padding-top: 1.2vi;
 }
 
 table.treatment-legend td:first-child {
