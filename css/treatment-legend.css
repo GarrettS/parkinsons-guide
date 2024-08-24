@@ -60,7 +60,7 @@ table.treatment-legend th {
 }
 
 table.treatment-legend td:has(.rating-bar) {
-    height: 3ex;
+    height: 3.3ex;
     padding-top: 1.2vi;
 }
 
@@ -111,10 +111,10 @@ table.treatment-legend .indicator span {
 	font-family: sans-serif;
     position: relative;
     top: 1.6vi;
-    left: -2em;
+    left: -1.8em;
     white-space: nowrap;
     text-align: center;
-    font-weight: semibold;
+    font-weight: 600;
     font-size: 90%;
     filter: contrast(150%) saturate(250%);
 }
