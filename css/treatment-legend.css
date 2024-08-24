@@ -10,7 +10,8 @@
     --color-transparent-somewhat: #ff8c0033;
     --color-transparent-minimal: #ff000033;
     
-    --treatment-legend-row: #1111;
+    --treatment-legend-row: #1114;
+    --treatment-legend-odd-row: #331f1b5c;
 	--stronger-text: constrast(150%) saturate(250%);
 
     color-scheme: light dark;
@@ -44,7 +45,7 @@ table.treatment-legend tr {
 	background-color: var(--treatment-legend-row);
 }
 
-table.treatment-legend tr:nth-child(odd), table.treatment-legend tr:nth-child(odd) > th {
+table.treatment-legend tr:nth-child(odd) {
     background-color: var(--treatment-legend-odd-row);
 }
 
@@ -104,6 +105,7 @@ table.treatment-legend .indicator {
 }
 
 table.treatment-legend .indicator span {
+	font-family: sans-serif;
     position: relative;
     top: 1.6vi;
     left: -2em;
