@@ -60,7 +60,7 @@ table.treatment-legend th {
 }
 
 table.treatment-legend td:has(.rating-bar) {
-    height: 4.8vi; 
+    height: 4.5vi 
 }
 
 table.treatment-legend td:first-child {
@@ -92,10 +92,12 @@ table.treatment-legend .indicator {
     z-index: 10;
     width: 0;
     height: 0;
-    border-left: 0.4vi solid transparent;
-    border-right: 0.4vi solid transparent;
-    border-bottom: 1.3vi solid; 
-    bottom: 0;
+    border-left-width: calc(1px + 0.42vi);
+    border-right-width: calc(1px + 0.42vi);
+    border-bottom-width: calc(3px + 1.37vi);
+    border-color: transparent;
+	border-style: solid;
+    bottom: -1px;
 }
 
 .rating-bar {
