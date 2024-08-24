@@ -1,13 +1,13 @@
 :root {
     --treatment-legend-tg-bg-color: #FFFFFF11;
-    --color-very-strong: #2e8b57; /* Very Effective / Very Safe */
-    --color-strong: #ffd700; /* Effective / Safe */
-    --color-moderate: #ff8c00; /* Somewhat Effective / Fairly Safe */
+    --color-strong: #2e8b57; /* Very Effective / Very Safe */
+    --color-moderate: #ffd700; /* Effective / Safe */
+    --color-somewhat: #ff8c00; /* Somewhat Effective / Fairly Safe */
     --color-minimal: #ff0000; /* Minimally Effective / Minimal Safety */
     
-    --color-transparent-very-strong: #2e8b5733;
-    --color-transparent-strong: #ffd70033;
-    --color-transparent-moderate: #ff8c0033;
+    --color-transparent-strong: #2e8b5733;
+    --color-transparent-moderate: #ffd70033;
+    --color-transparent-somewhat: #ff8c0033;
     --color-transparent-minimal: #ff000033;
     
     --treatment-legend-row: #1111;
@@ -17,14 +17,14 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	--color-very-strong: #4cF250;
-	--color-strong: #ffFF3b;
-	--color-moderate: #ff9800;
+	--color-strong: #4cF250;
+	--color-moderate: #ffFF3b;
+	--color-somewhat: #ff9800;
 	--color-minimal: #f44336;
 
-	--color-transparent-very-strong: #4caf5033;
-	--color-transparent-strong: #ffeb3b33;
-	--color-transparent-moderate: #ff980033;
+	--color-transparent-strong: #4caf5033;
+	--color-transparent-moderate: #ffeb3b33;
+	--color-transparent-somewhat: #ff980033;
 	--color-transparent-minimal: #f4433633;
 
 	--treatment-legend-row: transparent;
@@ -59,7 +59,7 @@ table.treatment-legend th {
 }
 
 table.treatment-legend td:has(.rating-bar) {
-    height: 5vi; 
+    height: 4.8vi; 
 }
 
 table.treatment-legend td:first-child {
@@ -68,19 +68,19 @@ table.treatment-legend td:first-child {
 }
 
 table.treatment-legend .rating-bar {
-    width: 18vi;
-    height: 1vi;
+    width: 21vi;
+    height: 1.2vi;
     top: 1.3vi;
     border: 0.115vi solid black; 
     border-radius: 1.15vi; 
     position: relative;
     background: linear-gradient(to right, 
-        var(--color-transparent-very-strong) 0%, 
-        var(--color-transparent-very-strong) 25%, 
+        var(--color-transparent-strong) 0%, 
         var(--color-transparent-strong) 25%, 
-        var(--color-transparent-strong) 50%, 
+        var(--color-transparent-moderate) 25%, 
         var(--color-transparent-moderate) 50%, 
-        var(--color-transparent-moderate) 75%, 
+        var(--color-transparent-somewhat) 50%, 
+        var(--color-transparent-somewhat) 75%, 
         var(--color-transparent-minimal) 75%, 
         var(--color-transparent-minimal) 100%
     );
@@ -94,13 +94,19 @@ table.treatment-legend .indicator {
     border-left: 0.4vi solid transparent;
     border-right: 0.4vi solid transparent;
     border-bottom: 1.3vi solid; 
-    bottom: -0.115vi; 
+    bottom: 0;
+}
+
+.rating-bar {
+    position: relative;
+    margin-top: -3.1vi;
+    margin-left: 0.4vi;
 }
 
 table.treatment-legend .indicator span {
-    position: absolute;
-    top: -3vi;
-    left: 0;
+    position: relative;
+    top: 1.6vi;
+    left: -2em;
     white-space: nowrap;
     text-align: center;
     font-weight: semibold;
@@ -108,21 +114,21 @@ table.treatment-legend .indicator span {
     filter: contrast(150%) saturate(250%);
 }
 
-table.treatment-legend .rating-bar .indicator-very-strong {
-    color: var(--color-very-strong);
-    border-bottom-color: var(--color-very-strong);
-    right: 85%;
-}
-
 table.treatment-legend .rating-bar .indicator-strong {
     color: var(--color-strong);
     border-bottom-color: var(--color-strong);
-    right: 60%;
+    right: 85%;
 }
 
 table.treatment-legend .rating-bar .indicator-moderate {
     color: var(--color-moderate);
     border-bottom-color: var(--color-moderate);
+    right: 60%;
+}
+
+table.treatment-legend .rating-bar .indicator-somewhat {
+    color: var(--color-somewhat);
+    border-bottom-color: var(--color-somewhat);
     right: 35%;
 }
 
