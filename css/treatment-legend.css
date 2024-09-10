@@ -125,16 +125,28 @@ table.treatment-legend .rating-bar .indicator-strong {
     right: 85%;
 }
 
+table.treatment-legend .rating-bar .indicator-moderate-strong {
+    right: 72.5%;
+}
+
 table.treatment-legend .rating-bar .indicator-moderate {
     color: var(--color-moderate);
     border-bottom-color: var(--color-moderate);
     right: 60%;
 }
 
+table.treatment-legend .rating-bar .indicator-somewhat-moderate {
+    right: 47.5%;
+}
+
 table.treatment-legend .rating-bar .indicator-somewhat {
     color: var(--color-somewhat);
     border-bottom-color: var(--color-somewhat);
     right: 35%;
+}
+
+table.treatment-legend .rating-bar .indicator-minimal-somewhat {
+    right: 22.5%;
 }
 
 table.treatment-legend .rating-bar .indicator-minimal {
