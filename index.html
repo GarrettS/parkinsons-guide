@@ -183,11 +183,22 @@ section > figure {
     padding: 2vi 3vi;
 }
 
-figure img.block-image {
+figure > img.block-image {
     max-width: 100%;
     display: block;
     margin: auto;
 }
+
+
+img#choroid-plexus {
+	max-width: 30vi;
+}
+
+figure > img#choroid-plexus.zoomable:focus {
+	 transform: scale(1);
+	max-width: initial;
+}
+
 
 figure.flex-row {
     display: flex;
@@ -719,13 +730,39 @@ function resetDefaultPosition(target) {
                 Once aggregated, mutant α-synuclein spreads between neurons and neural networks, leading to abnormalities in synaptic structure and function before neuronal loss occurs. This process contributes to the progressive spread of the disease from initially affected brain regions to others.  <cite class="reflink"><a href="#daley">Daley</a>, <a href="#perez-acuna">Pérez-Acuña</a></cite>
             </p>
 
+			<h5>Blood–Brain Barrier Leakage</h5>
+			
+			<p>
+				Blood–Brain Barrier (BBB) permeability is a significant issue in PD, and its role in disease progression can be addressed to improve outcomes.
+			</p>
+			<p>
+				The Blood–Brain Barrier (BBB) and the cerebrospinal fluid (CSF) coordinate to clear waste products from the brain. When the BBB is damaged, this clearance process is disrupted, leading to a buildup of α-synuclein in the brain. The <abbr title="Cerebrospinal Fluid">CSF</abbr>, which normally helps remove waste from the brain, can accumulate and spread α-synuclein back into the brain if its clearance is impaired. <cite class="reflink"><a href="#al-bachari">Al-Bachari</a></cite>
+			</p>
+			<p>
+				The CSF interfaces with the BBB at the choroid plexus, where it absorbs and transports waste products from the brain, and at the arachnoid villi, where it is reabsorbed into the bloodstream.
+			</p>
+
+			<h6>Assessing BBB Permeability</h6>
+			<p>
+				Elevated levels of certain biomarkers in the CSF, such as albumin, can indirectly indicate BBB dysfunction. MRI more accurately measures BBB permeability. This is done by injecting a contrast agent and observing its movement in the brain, either using <abbr title="Dynamic Contrast-Enhanced MRI">DCE-MRI</abbr> or standard MRI.
+			</p>
+
             <h5>Choroid Plexus and CSF Spread</h5>
 			<p>
-            	Mutant α-synuclein can also spread into the cerebrospinal fluid (CSF), facilitated by the damage to the choroid plexus. The choroid plexus produces and secretes CSF and forms a blood-CSF barrier. Mutant α-synuclein may accumulate in its epithelial cells and be transported into the CSF, potentially influencing its clearance to and from the brain. <cite class="reflink"><a href="#saunders">Saunders</a></cite>
+            	Mutant α-synuclein can also spread into the <abbr title="Cerebrospinal Fluid">CSF</abbr>, facilitated by the damage to the choroid plexus. The choroid plexus produces and secretes CSF and forms a blood-CSF barrier. Mutant α-synuclein may accumulate in its epithelial cells and be transported into the CSF, potentially influencing its clearance to and from the brain. <cite class="reflink"><a href="#saunders">Saunders</a></cite>
             </p>
             <p>
             	Decreased choroid plexus volume is associated with lower levels of CSF proteins and greater cognitive impairment. This reduction can contribute to cognitive decline due to the role of CSF in waste clearance and nutrient delivery to the brain.<cite class="reflink"><a href="#tadayon">Tadayon</a></cite>
             </p>
+			<figure>
+				<img alt="Choroid Plexus" src="img/choroid-plexus.jpg" 
+				id="choroid-plexus" class="block-image zoomable" tabindex="-1">
+				<figcaption>
+					<p>
+						Choroid Plexus — a highly vascularized tissue located in each ventricle of the brain, secretes CSF.
+					</p>
+				</figcaption>
+			</figure>
             <h4>References</h4>
             <ol class="reference-list">
                 <li id="yu-ting-sui"> 
@@ -835,6 +872,13 @@ function resetDefaultPosition(target) {
                     target="_blank"
                     >α-Synuclein propagation leads to synaptic abnormalities in the cortex through microglial synapse phagocytosis</a>, Dayana Pérez-Acuña, et al.
                 </li>
+                <li id="al-bachari">
+                	<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7784911/"
+                    title="Blood–Brain Barrier Leakage Is Increased in Parkinson’s Disease"
+                    target="_blank"
+                    >Blood–Brain Barrier Leakage Is Increased in Parkinson’s Disease</a>, Sarah Al-Bachari, et al.
+                </li>
+                
                 <li id="saunders">
                     <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9678431/"
                     title="The choroid plexus: a missing link in our understanding of brain development and function"
@@ -1345,40 +1389,44 @@ function resetDefaultPosition(target) {
         <p>
             Here are some approaches to target underlying problem areas:
         </p>
-        <dl id="problems-list">
-            <dt class="antifibrillogenic">Antifibrillogenic</dt>
-            <dd>Preventing fibril formation of α-synuclein. </dd>
+		<dl id="problems-list">
+			<dt class="bbb-dysfunction">BBB Dysfunction</dt>
+			<dd>Improves BBB function and protection</dd>
+			
+			<dt class="antifibrillogenic">Antifibrillogenic</dt>
+			<dd>Preventing fibril formation of α-synuclein.</dd>
+		
+			<dt class="anti-aggregant">Anti-aggregant</dt>
+			<dd>Preventing aggregation of fibrils and other junk</dd>
+		
+			<dt class="anti-inflammatory">Anti-inflammatory</dt>
+			<dd>Reducing inflammation</dd>
+		
+			<dt class="antioxidant">Antioxidant</dt>
+			<dd>Oxidative stress causes α-synuclein aggregation and neuroinflammation in PD. <cite class="reflink"><a href="#s-j-won">S.J. Won</a></cite></dd>
+		
+			<dt class="mitochondrial">Mitochondrial</dt>
+			<dd>Promoting mitochondrial health (mitogenesis, mitophagy)</dd>
+		
+			<dt class="neuroprotective">Neuroprotective</dt>
+			<dd>Protecting neuronal structure and function</dd>
+		
+			<dt class="neurorestorative">Neurorestorative</dt>
+			<dd>Promoting recovery and regeneration of neural tissue</dd>
+		
+			<dt class="senolytic">Senolytic</dt>
+			<dd>Targeting senescent cells</dd>
+		
+			<dt class="anti-ischemic">Anti-ischemic</dt>
+			<dd>Promoting blood flow deep within the brain</dd>
+		
+			<dt class="sleep">Sleep</dt>
+			<dd>Addressing insomnia</dd>
+		
+			<dt class="dopaminergic">Dopaminergic</dt>
+			<dd>Helps DRT side-effects (e.g., dyskinesia, impulse control disorders)</dd>
+		</dl>
 
-            <dt class="anti-aggregant">Anti-aggregant</dt>
-            <dd>Preventing aggregation of fibrils and other junk</dd>
-
-            <dt class="anti-ischemic">Anti-ischemic</dt>
-            <dd>Promoting blood flow deep within the brain</dd>
-
-            <dt class="senolytic">Senolytic</dt>
-            <dd>Targeting senescent cells</dd>
-
-            <dt class="mitochondrial">Mitochondrial</dt>
-            <dd>Promoting mitochondrial health (mitogenesis, mitophagy)</dd>
-
-            <dt class="sleep">Sleep</dt>
-            <dd>Addressing insomnia</dd>
-
-            <dt class="dopaminergic">Helps DRT side-effects</dt>
-            <dd>Mitigating side effects of dopaminergic treatments (e.g., dyskinesia, impulse control disorders)</dd>
-
-            <dt class="neuroprotective">Neuroprotective</dt>
-            <dd>Protecting neuronal structure and function</dd>
-
-            <dt class="antioxidant">Antioxidant</dt>
-            <dd>Oxidative stress causes α-synuclein aggregation and neuroinflammation in PD. <cite class="reflink"><a href="#s-j-won">S.J. Won</a></cite></dd>
-
-            <dt class="anti-inflammatory">Anti-inflammatory</dt>
-            <dd>Reducing inflammation</dd>
-
-            <dt class="neurorestorative">Neurorestorative</dt>
-            <dd>Promoting recovery and regeneration of neural tissue</dd>
-        </dl>
         <!-- p>
             Supplements, peptides, therapies, drugs, and stem cells can mitigate &alpha;-synuclein overexpression, reduce mutant &alpha;-synuclein, strengthen the mitochondria, reduce the side effects of LD/dopa decarboxylase (DDC), decrease the need for LD/dopa decarboxylase, reduce ROS, improve mood, improve sleep, improve recovery.
         </p -->
@@ -3065,7 +3113,7 @@ Studies have consistently shown that individuals with PD exhibit alterations in 
             	<table class="treatment-legend">
 					<tr>
 						<th>Mechanisms</th>
-						<td>Structural Support, Anti-inflammatory, Neuroprotective</td>
+						<td>Structural Support, Anti-inflammatory, Neuroprotective, BBB Dysfunction</td>
 					</tr>
 					<tr>
 						<th>Dose</th>
@@ -7400,7 +7448,7 @@ of Parkinson’s Disease</a>, K. S. Ibrahim and E. M. El-Sayed.
                 <table class="treatment-legend">
                     <tr>
                         <th>Mechanisms</th>
-                        <td>Antioxidant, Anti-inflammatory, Mitochondrial, Neuroprotective, Neurorestorative, Anti-cancer</td>
+                        <td>Antioxidant, Anti-inflammatory, Mitochondrial, Neuroprotective, Neurorestorative, BBB Dysfunction</td>
                     </tr>
                     <tr>
                         <th>Dose</th>
