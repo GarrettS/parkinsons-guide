@@ -710,7 +710,7 @@ function resetDefaultPosition(target) {
             			
 			<h4>Alpha-Synuclein Mutations</h4>
             <p>
-                Six mutations of α;-synuclein are currently associated with familial parkinsonism. Mutant α-synuclein forms aggregates more readily than wild-type (normal) α-synuclein. <cite class="reflink"><a href="#v-c-ruf">V. Ruf</a>, <a href="#jie-li">J. Li</a></cite>
+                Six mutations of α-synuclein are currently associated with familial parkinsonism. Mutant α-synuclein forms aggregates more readily than wild-type (normal) α-synuclein. <cite class="reflink"><a href="#v-c-ruf">V. Ruf</a>, <a href="#jie-li">J. Li</a></cite>
             </p>
             <p>
 				Wild-type α-synuclein can be removed by lysosomes. Mutant forms of α-synuclein resist degradation and inhibit the degradation of other substrates.
@@ -727,81 +727,187 @@ function resetDefaultPosition(target) {
                 α-synuclein oligomers, as well as other α-synuclein variants, disrupt mitochondrial function. The oligomers prevent autophagy by blocking lysosomal degradation, disrupting membrane homeostasis (they poke holes in the cell), inhibiting endoplasmic reticulum (ER) function and synapses (connections between neurons), and causing inflammation that further damages cellular function.
             </p>
             
-            <h4>Mechanisms of Spread</h4>
-            <p>
-                Once aggregated, mutant α-synuclein spreads between neurons and neural networks, leading to abnormalities in synaptic structure and function before neuronal loss occurs. This process contributes to the progressive spread of the disease from initially affected brain regions to others.  <cite class="reflink"><a href="#daley">Daley</a>, <a href="#perez-acuna">Pérez-Acuña</a></cite>
-            </p>
-			<p>
-				Strategies to mitigate α-synuclein mutation, inhibit its aggregation and fibrillization, and increase its clearance from the body are discussed throughout this document.
-			</p>
-			<h5>Blood–Brain Barrier (BBB) and Choroid Plexus Dysfunction</h5>
-			
-			<p>
-				The Blood–Brain Barrier (BBB) and choroid plexus coordinate to maintain brain homeostasis and clear waste products, including α-synuclein. Dysfunction of these barriers is a significant factor in PD, leading to the spread and aggregation of α-synuclein. Several interventions can improve the health, integrity, and function of these barriers, and their effects can be measured. <cite class="reflink"><a href="#solar">Solár</a></cite>
-			</p>
-
-			<h5>The Blood–Brain Barrier (BBB)</h5>
-			<p>
-				The BBB is a protective layer of specialized cells that line the blood vessels of the <abbr title="central nervous system">CNS</abbr> in the brain, controlling what enters and exits the central nervous system (CNS) to maintain homeostasis, allowing necessary nutrients and oxygen to pass through while blocking toxins, pathogens, and other harmful substances.
-			</p>
-
-            <h5>Choroid Plexus and CSF</h5>
-			<p>
-				The choroid plexus secretes CSF and forms a blood-CSF barrier. As CSF circulates through the brain, it collects waste products, including misfolded proteins like α-synuclein. The waste-laden CSF is drained through specialized pathways, including the glymphatic system, and eventually filtered out by the liver and kidneys. Damage to the choroid plexus can impair CSF production and disrupt waste clearance.
-			</p>
-			
-			<h5>The Glymphatic System</h5>
-			<p>
-				The glymphatic system is a waste clearance pathway in the brain, composed of glial cells responsible for removing metabolic waste and toxins, including misfolded proteins such as α-synuclein. It functions by using CSF to flush out waste from the brain along perivascular spaces (the areas surrounding blood vessels). This system is <em>similar</em> to the body's lymphatic system but is specific to the brain, hence the term "glymphatic" (glial +‎ lymphatic). Its proper function is essential for maintaining brain health, and its impairment implicated in neurodegenerative diseases, including PD.
-			</p>
-			
-			
-			<h5>Impact of Dysfunction</h5>
-			<p>
-				 Increased BBB permeability allows contaminants and inflammatory substances from the bloodstream to enter the brain, where they first cause harm before accumulating in the CSF as the clearance system struggles to remove them. This additional waste burden impairs the clearance of metabolic byproducts like α-synuclein, contributing to their accumulation and exacerbating neurological conditions.
-			</p>
-			<p>
-				Damage to the choroid plexus impairs CSF production, further disrupting the overall waste clearance process. Worse, damage to the choroid plexus can lead to α-synuclein re-entry into the CSF, hindering its clearance from the brain. This can exacerbate cognitive decline, as decreased choroid plexus volume is associated with lower levels of CSF proteins and greater cognitive impairment. <cite class="reflink"><a href="#albachari">Al-Bachari</a></cite>, <a href="#saunders">Saunders</a>, <a href="#tadayon">Tadayon</a></cite>
-			</p>
-			
-			<p>
-            	Damage to the choroid plexus can lead to α-synuclein accumulation in its epithelial cells, affecting its re-entry into the CSF and clearance from the brain. Decreased choroid plexus volume is also associated with lower levels of CSF proteins and greater cognitive impairment. This reduction can contribute to cognitive decline due to the role of CSF in waste clearance and nutrient delivery to the brain. <cite class="reflink"> <cite class="reflink"><a href="#saunders">Saunders</a></cite>, <a href="#tadayon">Tadayon</a></cite>
-            </p>
-            
-			<figure>
-				<img alt="Choroid Plexus" src="img/choroid-plexus.jpg" 
-				id="choroid-plexus" class="block-image zoomable" tabindex="-1">
-				<figcaption>
+			<section id="mechanisms-of-spread">
+				<h4>Mechanisms of Spread</h4>
+				<p>
+					Once aggregated, mutant α-synuclein spreads between neurons and neural networks, leading to abnormalities in synaptic structure and function before neuronal loss occurs. This process contributes to the progressive spread of the disease from initially affected brain regions to others.  <cite class="reflink"><a href="#daley">Daley</a>, <a href="#perez-acuna">Pérez-Acuña</a></cite>
+				</p>
+				<p>
+					Strategies to mitigate α-synuclein mutation, inhibit its aggregation and fibrillization, and increase its clearance from the body are discussed throughout this document.
+				</p>
+				
+				<section id="brain-waste-manageent-systems">
+					<h5>Brain Waste Management System (BWMS)</h5>
 					<p>
-						Choroid Plexus — a highly vascularized tissue located in each ventricle of the brain that secretes CSF.
+						The Brain Waste Management System (BWMS) defined herein describes the coordinated system that protects the brain from harmful substances, clears waste products, and maintains homeostasis. It consists of the blood-brain barrier (BBB), choroid plexus, cerebrospinal fluid (CSF), glymphatic system, ventricles, extracellular matrix (ECM), and basement membrane. BWMS dysfunction leads to α-synuclein aggregation, inflammation, and mitochondrial damage. Various interventions can improve the integrity and function of these components, with measurable effects. <cite class="reflink"><a href="#solar">Solár</a></cite>
 					</p>
-				</figcaption>
-			</figure>
-			
-			<h5>Assessing BBB and Choroid Plexus Integrity</h5>
-			<p>
-				Elevated BBB permeability affects waste clearance, including the movement of α-synuclein. Contrast agents are used in <abbr title="Dynamic Contrast-Enhanced MRI">DCE-MRI)</abbr> to visualize changes in BBB permeability.
-			</p>
-			
-			<h5>Strengthening the BBB and Choroid Plexus</h5>
-            <p>
-				Health strategies that promote collagen formation and support the ECM may help counteract the effects and degradation of the BBB. Promoting ECM stability and collagen synthesis contributes to maintaining the structural integrity of the BBB and reduces its permeability to harmful substances, thereby mitigating a <em>major</em> etiological pathway of PD. 
-			</p>
-			
-			<p>
-				These include HRT, DHEA, pregnenolone, growth hormone, growth hormone secretogogues (tesamorelin, CJC-1295), collagen peptides (especially collagen type IV), hyaluronic acid, vitamin C, tocotrienols, vitamin K2, vitamin D3, strontium citrate, PQQ, Beta Glucan, <abbr title="Mesenchymal signalling cells">MSCs</abbr>, photobiomodulation, and last but not least, intense exercise.
-			</p>
-			
-			<h5>Increasing CSF Production</h5>
 		
-			<p>
-				Cholinergics and related supplements can support brain function and potentially influence cerebrospinal fluid (CSF) production. Higher choline levels can enhance membrane integrity and fluidity, improve BBB integrity and cellular function, and might indirectly support glymphatic system performance.
-			</p>
-			
-			<h6>Do interventions targeting collagen/ECM strengthen the glymphatic system?</h6>
-			<p>
-				Yes, interventions that improve the health of the extracellular matrix (ECM) and strengthen collagen may have a beneficial effect on the structural support around blood vessels and thus support glymphatic function. The <dfn title="the areas surrounding blood vessels">perivascular spaces</dfn> which direct CSF flow in the glymphatic system, rely on the surrounding ECM for waste clearance. In PD, these spaces enlarge, reducing waste clearance efficiency. Restoring collagen and ECM health should reduce the size of the perivascular spaces, improving glymphatic function and waste clearance of α-synuclein.
-			</p>
+		
+					<h5>The Blood–Brain Barrier (BBB)</h5>
+					<p>
+						The BBB is a protective layer of specialized cells that line the blood vessels of the central nervous system (CNS) in the brain, controlling what enters and exits the <abbr title="central nervous system">CNS</abbr> to maintain homeostasis, allowing necessary nutrients and oxygen to pass through while blocking toxins, pathogens, and other harmful substances.
+					</p>
+		
+					<h5>Choroid Plexus and CSF</h5>
+					<p>
+						The choroid plexus, located within the ventricles, is responsible for secreting <abbr title="cerebrospinal fluid">CSF</abbr> and forming a blood-CSF barrier. As CSF circulates through the brain, it collects waste products, including misfolded proteins like α-synuclein. The waste-laden CSF is then drained through specialized pathways, including the ventricles and the glymphatic system, before being filtered out by the liver and kidneys. Damage to the choroid plexus can impair CSF production and disrupt waste clearance.
+					</p>
+					
+					<h5>Ventricles</h5>
+					<p>
+						The ventricles are interconnected cavities within the brain filled with CSF. This fluid eventually moves into small structures called arachnoid granulations, tiny, finger-like extensions of the brain’s protective membrane. These granulations help reabsorb CSF into the bloodstream through the dural venous sinuses surrounding the brain, from where it is carried away by the internal jugular veins.
+					</p>
+					
+					<h5>The Glymphatic System</h5>
+					<p>
+						The glymphatic system is another waste clearance pathway in the brain, composed of glial cells responsible for removing metabolic waste and toxins, including misfolded proteins such as α-synuclein. It functions by using CSF to flush out waste from the brain along perivascular spaces (the areas surrounding blood vessels). This system is <em>similar</em> to the body's lymphatic system but is specific to the brain, hence the term "glymphatic" (glial +‎ lymphatic). Its proper function is essential for maintaining brain health, and its impairment implicated in neurodegenerative diseases, including PD.
+					</p>
+					
+					<h5>Impact of Dysfunction</h5>
+					<p>
+						 Increased BBB permeability allows contaminants and inflammatory substances from the bloodstream to enter the brain, where they first cause harm before accumulating in the CSF as the clearance system struggles to remove them. This additional waste burden impairs the clearance of metabolic byproducts like α-synuclein, contributing to their accumulation and exacerbating neurological conditions.
+					</p>
+					<p>
+						Damage to the choroid plexus impairs CSF production, further disrupting the overall waste clearance process. Worse, damage to the choroid plexus can lead to α-synuclein re-entry into the CSF, hindering its clearance from the brain. This can exacerbate cognitive decline, as decreased choroid plexus volume is associated with lower levels of CSF proteins and greater cognitive impairment. <cite class="reflink"><a href="#albachari">Al-Bachari</a>, <a href="#saunders">Saunders</a>, <a href="#tadayon">Tadayon</a></cite>
+					</p>
+					
+					<p>
+						Damage to the choroid plexus can lead to α-synuclein accumulation in its epithelial cells, affecting its re-entry into the CSF and clearance from the brain. Decreased choroid plexus volume is also associated with lower levels of CSF proteins and greater cognitive impairment. This reduction can contribute to cognitive decline due to the role of CSF in waste clearance and nutrient delivery to the brain. <cite class="reflink"> <a href="#saunders">Saunders</a>, <a href="#tadayon">Tadayon</a></cite>
+					</p>
+					
+					<figure>
+						<img alt="Choroid Plexus" src="img/choroid-plexus.jpg" 
+						id="choroid-plexus" class="block-image zoomable" tabindex="-1">
+						<figcaption>
+							<p>
+								Choroid Plexus — a highly vascularized tissue located in each ventricle of the brain that secretes CSF.
+							</p>
+						</figcaption>
+					</figure>
+					
+					<h5>Assessing BBB and Choroid Plexus Integrity</h5>
+					<p>
+						Elevated BBB permeability affects waste clearance, including the movement of α-synuclein. Contrast agents are used in <abbr title="Dynamic Contrast-Enhanced MRI">DCE-MRI)</abbr> to visualize changes in BBB permeability.
+					</p>
+					
+					<h5>Strengthening the BWMS</h5>
+					<p>
+						Health strategies that promote collagen formation and support the ECM may help counteract the effects and degradation of the BBB. Promoting ECM stability and collagen synthesis contributes to maintaining the structural integrity of the BBB and reduces its permeability to harmful substances, thereby mitigating a <em>major</em> etiological pathway of PD. 
+					</p>
+					
+					<p>
+						These include HRT, DHEA, pregnenolone, growth hormone, growth hormone secretogogues (tesamorelin, CJC-1295), collagen peptides (especially collagen type IV), hyaluronic acid, vitamin C, tocotrienols, vitamin K2, vitamin D3, strontium citrate, PQQ, beta glucan (from mushrooms), <abbr title="Mesenchymal signalling cells">MSCs</abbr>, photobiomodulation, and last but not least, intense exercise.
+					</p>
+					
+					<h5>Increasing CSF Production</h5>
+					<p>
+						Cholinergics and related supplements can support brain function and potentially influence cerebrospinal fluid (CSF) production. Higher choline levels can enhance membrane integrity and fluidity, improve BBB integrity and cellular function, and might indirectly support glymphatic system performance.
+					</p>
+					
+					<h6>Do interventions targeting collagen/ECM strengthen the glymphatic system?</h6>
+					<p>
+						Yes, interventions that improve the health of the extracellular matrix (ECM) and strengthen collagen may have a beneficial effect on the structural support around blood vessels and thus support glymphatic function. The <dfn title="the areas surrounding blood vessels">perivascular spaces</dfn> which direct CSF flow in the glymphatic system, rely on the surrounding ECM for waste clearance. In PD, these spaces enlarge, reducing waste clearance efficiency. Restoring collagen and ECM health should reduce the size of the perivascular spaces, improving glymphatic function and waste clearance of α-synuclein.
+					</p>
+				<h4>References</h4>
+            	<ol class="reference-list">
+            		<li id="perez-acuna">
+						<a href="https://molecularbrain.biomedcentral.com/articles/10.1186/s13041-023-01059-1"
+						title="α-Synuclein propagation leads to synaptic abnormalities in the cortex through microglial synapse phagocytosis"
+						target="_blank"
+						>α-Synuclein propagation leads to synaptic abnormalities in the cortex through microglial synapse phagocytosis</a>, Dayana Pérez-Acuña, et al.
+					</li>
+					<li id="solar">
+						<a href="https://fluidsbarrierscns.biomedcentral.com/articles/10.1186/s12987-020-00196-2"
+						title="Choroid plexus and the blood–cerebrospinal fluid barrier in disease"
+						target="_blank"
+						>Choroid plexus and the blood–cerebrospinal fluid barrier in disease</a>, Peter Solár, et al.
+					</li>
+					<li id="al-bachari">
+						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7784911/"
+						title="Blood–Brain Barrier Leakage Is Increased in Parkinson’s Disease"
+						target="_blank"
+						>Blood–Brain Barrier Leakage Is Increased in Parkinson’s Disease</a>, Sarah Al-Bachari, et al.
+					</li>
+					
+					<li id="saunders">
+						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9678431/"
+						title="The choroid plexus: a missing link in our understanding of brain development and function"
+						target="_blank"
+						>The choroid plexus: a missing link in our understanding of brain development and function</a>, Norman R. Saunders, et al.
+					</li>
+					<li id="tadayon">
+						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9094632/"
+						title="Choroid plexus volume is associated with levels of CSF proteins: relevance for Alzheimer’s and Parkinson’s disease"
+						target="_blank"
+						>Choroid plexus volume is associated with levels of CSF proteins: relevance for Alzheimer’s and Parkinson’s disease</a>, Ehsan Tadayon, et al.
+					</li>
+				</ol>
+			</section>
+
+			<section id="mitochondrial-dysfunction">
+				<h4>Mitochondrial Dysfunction</h4>
+				<p>
+					Damage to mitochondria can cause α-synuclein aggregation by disrupting cellular processes and increasing oxidative stress. Mitochondria, the <q>powerhouse of the cell</q>, produce ATP, the <q>energy currency of the cell</q>. When mitochondria are impaired, energy production drops and oxidative stress rises, damaging neurons. This creates a cycle where disrupted cellular processes cause protein misfolding and aggregation, which worsens oxidative stress, further accelerating mitochondrial dysfunction and neurodegeneration. <cite class="reflink"><a href="#daley">Daley</a></cite>
+				</p>
+				
+				<p>
+					Mitochondrial dysfunction disrupts the brain waste management (<abbr title="Brain Waste Management System">BWMS</abbr>), leading to accumulation of waste and a further impaired waste management system. Increased oxidative stress and misfolded proteins damage the very systems responsible for clearing this waste, further compounding the problem. 
+				</p>
+				<p>
+					Improving mitochondrial health decreases the amount of this waste burden and reduces the damage to the systems that remove it, thereby improving the clearance of waste from the brain.
+				</p>
+				
+				<h5>Mitochondrial DNA Damage</h5>
+				<p>
+					Mitochondrial DNA damage impairs its function. Ineffective autophagy and mitophagy fail to remove damaged mitochondria and proteins, which aggregate. This worsens cellular damage and leads to senescent cells, which resist lysosomal degradation due to protein aggregation. <cite class="reflink"><a href="#korolchuk">Korolchuk</a></cite>
+				</p>
+				
+				<h5>Brain Inflammation</h5>
+				<p>
+					Chronic brain inflammation, also known as <dfn title="Chronic, low-grade brain inflammation characterized by upregulation of pro-inflammatory pathways in glial cells, such as astrocytes and microglia">neuroinflammaging</dfn>, is a state of neuroinflammation and immunosenescence, a chronic, low-grade inflammatory state. This chronic, low-grade inflammatory state is both a consequence and a driver of mitochondrial dysfunction. Mitochondrial damage contributes to neuroinflammaging, while the resulting inflammation can further impair mitochondrial function, creating a vicious cycle that accelerates neurodegenerative processes.
+				</p>
+
+				<h5>Proteostasis and Chaperone Proteins</h5>
+
+				<p>
+					Proteostasis mechanisms maintain balance between the synthesis of newly synthesized proteins and the disposal of damaged and misfolded proteins that are beyond repair or refolding within a living cell.  <cite class="reflink"><a href="#lautenschlager">Lautenschläger</a></cite>
+				</p>
+				
+				<p> 
+					Chaperone proteins, like Hsp70, help correctly fold and refold proteins, including α-synuclein, reducing misfolding which leads to aggregation.
+				</p>
+				<p>
+					Mitochondrial dysfunction and Reactive Oxygen and Nitrogen Species (RONS) can cause α-synuclein to misfold and aggregate, forming toxic mutant species. Combined with calcium dysregulation and inflammation, this toxic α-synuclein contributes to neuronal death and the pathology of PD.
+					 <cite class="reflink"><a href="#s-hu">Hu</a></cite>
+				</p>
+
+				<h5>Solutions</h5>
+				<p>
+					Several strategies discussed in this document can improve mitochondrial function. These include growth hormone (GH) and its secretagogues, vitamin C, tocotrienols, vitamin K2, vitamin D3, strontium citrate, PQQ, beta-glucan, NAD+ and its precursors, creatine monohydrate, and NAC. Combining these with fasting and intense exercise may enhance results. Additionally, <abbr title="Mesenchymal signalling cells">MSCs</abbr> can be used to neuroinflammation and photobiomodulation can be used to stimulate mitochondrial function and biogenesis. 
+				</p>
+				
+				<h5>References</h5>
+				<ol class="reference-list">
+					<li id="korolchuk">
+						<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5514379/"
+						title="Mitochondria in Cell Senescence: Is Mitophagy the Weakest Link?"
+						target="_blank"
+						>Mitochondria in Cell Senescence: Is Mitophagy the Weakest Link?</a>, Viktor I. Korolchuk, et al.
+					</li>
+					<li id="lautenschlager">
+						<a href="https://www.biorxiv.org/content/10.1101/561134v2.full"
+						title="Intra-mitochondrial proteostasis is directly coupled to alpha-synuclein and Amyloid β 1-42 pathology"
+						target="_blank"
+						>Intra-mitochondrial proteostasis is directly coupled to alpha-synuclein and Amyloid β 1-42 pathology</a>, Janin Lautenschläger, et al.
+					</li>
+					 <li id="s-hu">
+						<a href="https://www.sciencedirect.com/science/article/pii/S096999612100276X"
+						title="Molecular chaperones and Parkinson's disease"
+						target="_blank"
+						>Molecular chaperones and Parkinson's disease</a>, Shenglan Hu, et al.
+					</li>
+				</ol>
+			</section>
 			
             <h4>References</h4>
             <ol class="reference-list">
@@ -905,37 +1011,6 @@ function resetDefaultPosition(target) {
                     title="Prion-like mechanisms in Parkinson Disease"
                     target="_blank"
                     >Prion-like mechanisms in Parkinson Disease</a>, Laura Volpicelli-Daley and Patrik Brundin.
-                </li>
-                <li id="perez-acuna">
-                    <a href="https://molecularbrain.biomedcentral.com/articles/10.1186/s13041-023-01059-1"
-                    title="α-Synuclein propagation leads to synaptic abnormalities in the cortex through microglial synapse phagocytosis"
-                    target="_blank"
-                    >α-Synuclein propagation leads to synaptic abnormalities in the cortex through microglial synapse phagocytosis</a>, Dayana Pérez-Acuña, et al.
-                </li>
-                <li id="solar">
-                    <a href="https://fluidsbarrierscns.biomedcentral.com/articles/10.1186/s12987-020-00196-2"
-                    title="Choroid plexus and the blood–cerebrospinal fluid barrier in disease"
-                    target="_blank"
-                    >Choroid plexus and the blood–cerebrospinal fluid barrier in disease</a>, Peter Solár, et al.
-                </li>
-                <li id="al-bachari">
-                	<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7784911/"
-                    title="Blood–Brain Barrier Leakage Is Increased in Parkinson’s Disease"
-                    target="_blank"
-                    >Blood–Brain Barrier Leakage Is Increased in Parkinson’s Disease</a>, Sarah Al-Bachari, et al.
-                </li>
-                
-                <li id="saunders">
-                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9678431/"
-                    title="The choroid plexus: a missing link in our understanding of brain development and function"
-                    target="_blank"
-                    >The choroid plexus: a missing link in our understanding of brain development and function</a>, Norman R. Saunders, et al.
-                </li>
-                <li id="tadayon">
-                    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9094632/"
-                    title="Choroid plexus volume is associated with levels of CSF proteins: relevance for Alzheimer’s and Parkinson’s disease"
-                    target="_blank"
-                    >Choroid plexus volume is associated with levels of CSF proteins: relevance for Alzheimer’s and Parkinson’s disease</a>, Ehsan Tadayon, et al.
                 </li>
             </ol>
         </section>
@@ -1645,7 +1720,7 @@ function resetDefaultPosition(target) {
                 </section>
                 
                 <section id="neurochemical-imbalances">
-                    <h5>Neurochemical and Vitamin Imbalances</h5>
+                    <h4>Neurochemical and Vitamin Imbalances</h4>
                     <p>
                         Dopamine agonists also deplete active vitamin B6 levels in the body. They do this by irreversibly binding to and permanently deactivating pyridoxal 5’-phosphate (P5P), the active form of vitamin B6. This leads to various side effects and exacerbates the progression of the disease, as B6 is essential for dopamine synthesis and is involved in other metabolic pathways.
                     </p>
@@ -1722,7 +1797,7 @@ function resetDefaultPosition(target) {
                         <abbr title="progressive neurodegeneration">PN</abbr> can be interrupted with senolytics, mitochondrial support, antioxidants, and other neuroprotective approaches described herein.
                     </p>
                     
-                    <h4>Mitochondrial Dysfunction</h4>
+                    <h5>Mitochondrial Dysfunction</h5>
                     <p>
                         Mitochondrial dysfunction more significantly contributes to senescence than SATB1 inhibition. In fact, it is one of the primary causal factors of disease progression. Solutions to mitochondrial dysfunction are addressed with respective proportion herein. 
                     </p>
@@ -2254,11 +2329,10 @@ function resetDefaultPosition(target) {
             	
             	<h5>GH, IGF-1, and MGF</h5>
             	<p>
-					Growth hormone (GH) increases levels of Insulin-like Growth Factor 1 (IGF-1), which can then be further metabolized into Mechano Growth Factor (MGF) in response to mechanical stimuli, such as intense exercise.
+					GH increases levels of Insulin-like Growth Factor 1 (IGF-1), which can then be further metabolized into Mechano Growth Factor (MGF) in response to mechanical stimuli, such as intense exercise. Mechano-growth factor is neuroprotective. (GH stimulates the liver to produce IGF-1. IGF-1 is further metabolized into MGF through alternative splicing of IGF-1 mRNA by lactate and other stress signals.)
             	</p>
-            	
 
-            	<h5>Brain Waste Management System, Collagen, and IGF-I</h5>
+            	<h5>Brain Waste Management System (BWMS), Collagen, and IGF-I</h5>
             	<p>
 					IGF-1 promotes collagen synthesis by fibroblasts, which strengthens connective tissues, including those in the BBB and choroid plexus. Increased collagen production enhances the function and structural integrity of the brain waste management system (BWMS), reducing permeability and improving waste clearance through several coordinated mechanisms of the BWMS.
             	</p>
@@ -2272,10 +2346,6 @@ function resetDefaultPosition(target) {
             	
             	<p>
             		 Lower inflammation may improve the function of the choroid plexus and its ability to produce CSF.
-            	</p>
-            	
-            	<p>
-            		Mechano-growth factor is neuroprotective.
             	</p>
             	
             	<h5>Gh Secretagogues CJC-1295 and Tesamorelin</h5>
@@ -2309,11 +2379,20 @@ function resetDefaultPosition(target) {
             </ol>
             </section>
             <section id="peptides">
+            <!-- 
             	<h4>Peptides</h4>
             	<h5>BPC-157</h5>
+            	<p>
+            		BPC-157, administered subcutaneously (Sub-Q), has shown potential in repairing BBB integrity and promoting neurovascular health, which could be beneficial in the context of PD.
+            	</p>
+            	
             	<h5>Selank</h5>
             	<h5>Semax</h5>
+            	<h5>SS-31</h5>
+            	<h5>AICAR</h5>
             	<h5>Epitalon</h5>
+            	<h5>Pinealon</h5>
+            	-->
             </section>
         </section>
         <section id="dbs" class="neuroprotective">
@@ -4981,7 +5060,7 @@ of Parkinson’s Disease</a>, K. S. Ibrahim and E. M. El-Sayed.
                 
                 <h4>How ALCAR Works</h4>
                 <p>
-                    ALCAR facilitates the transport of fatty acids into mitochondria, boosting energy production and reducing oxidative stress. This helps boost brain energy and neurotransmitter activity. Therapeutic benefits may include improved cognitive function, potential support for depression, and reduced oxidative stress, and fat loss.
+                    ALCAR facilitates the transport of fatty acids into mitochondria, boosting energy production decreases and reducing oxidative stress. This helps boost brain energy and neurotransmitter activity. Therapeutic benefits may include improved cognitive function, potential support for depression, and reduced oxidative stress, and fat loss.
                 </p>
                 
                 <h4>Performance and Recovery</h4>
