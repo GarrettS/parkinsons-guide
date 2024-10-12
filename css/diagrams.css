@@ -133,7 +133,7 @@
     padding: 0.9vi 0.7vi;
 }
 
-#drt-diagram {
+.flow-diagram {
     padding: 20px 30px 20px 20px;
     background-color: var(--drt-background-color);
     border-radius: 8px;
@@ -144,7 +144,8 @@
     gap:  2.8%;
 }
 
-#drt-diagram .arrow {
+.flow-diagram .arrow,
+ #ups-alp-diagram .arrow{
     width: calc(2% + 2vi);
 }
 
@@ -154,7 +155,7 @@
     }
 }
 
-#drt-diagram > .concept {
+.flow-diagram > .concept {
     padding: 10px;
     border: 1px solid var(--drt-concept-border-color);
     border-radius: 8px;
@@ -162,7 +163,7 @@
     position: relative;
 }
 
-#drt-diagram > .concept > h6 {
+.flow-diagram > .concept > h6 {
     color: var(--drt-concept-h6-color);
     font-size: calc(12px + 0.4vi);
     margin: 0.2vi 0 0.5vi 0;
@@ -173,7 +174,8 @@
     border-image-source: linear-gradient(to right, var(--drt-concept-h6-border-start), var(--drt-concept-h6-border-end));
 }
 
-#drt-diagram > .concept > p {
+.flow-diagram > .concept > p,
+ #ups-alp-diagram > .concept > p {
     font-size: calc(10px + 0.3vi);
     margin: 0.1vi 0 0.1vi 0;
 }

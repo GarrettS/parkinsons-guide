@@ -706,12 +706,12 @@ function resetDefaultPosition(target) {
 				</p>
 
 				<p>
-					α-synuclein oligomers and other variants disrupt mitochondrial function and block lysosomal degradation, preventing autophagy. They also damage cell membranes, impair ER function, and disrupt synapses, causing inflammation that worsens cellular damage.
+					Mutant or aggregated forms resist degradation, causing toxic buildup. This dysfunction leads to cellular stress, inflammation, waste buildup, and Lewy body formation. Over time, these damaged cells become senescent 'zombie' cells that stop functioning but won't die, releasing toxic compounds that accelerate progressive neurodegeneration (PN).
 				</p>
-				
+
 				<h4>Alpha-Synuclein Aggregation</h4>
 				<p>
-					Excess α-synuclein leads to its aggregation and formation into oligomers (misfolded proteins) and fibrils (see figure below). α-synuclein oligomers and fibrils can form Lewy bodies, abnormal aggregations that develop inside nerve cells.
+					α-synuclein aggregation leads to formation of oligomers (misfolded proteins) and fibrils (see figure below). α-synuclein oligomers and fibrils can form Lewy bodies, abnormal aggregations that develop inside nerve cells.
 				</p>
 				<figure>
 					<img src="img/alpha-synuclein.jpeg" alt="α-synuclein monomer, fibril, and oligomer." class="block-image">
@@ -721,12 +721,67 @@ function resetDefaultPosition(target) {
 						</p>
 					</figcaption>
 				</figure>
+				
+				<h5>α-Synuclein Clearance Mechanisms</h5>
+				<p>
+					In healthy cells, damaged or misfolded proteins like α-synuclein are cleared through progressive intracellular handling mechanisms, the ubiquitin-proteasome system (UPS) and the autophagy-lysosomal pathway (ALP). The UPS handles smaller misfolded proteins by tagging them with ubiquitin for degradation, while larger aggregates like α-synuclein fibrils are processed through autophagy.
+				</p>
+				
+				<p>
+					In PD, misfolded α-synuclein overwhelms both the <abbr title="ubiquitin-proteasome system">UPS</abbr> and <abbr title=autophagy-lysosomal pathway"">ALP</abbr>. As aggregates become too large for the UPS to process, they are targeted for autophagic degradation. However, α-synuclein fibrils resist lysosomal breakdown, leading to their toxic buildup within neurons. This excessive workload causes UPS and lysosomal-autophagic impairment, leading to extracellular waste, worsening neurological damage and impacting extracellular waste clearance mechanisms. 
+				</p>
+				
+				<h6>Intracellular α-Synuclein Accumulation Diagram</h6>
+				<div id="ups-alp-diagram" class="flow-diagram diagram">
+					<div class="concept step">
+						<h6>α-synuclein Misfolds</h6>
+						<p>α-synuclein misfolds, forming toxic oligomers.</p>
+						<div class="arrow"></div>
+					</div>
+				
+					<div class="concept">
+						<h6>UPS Overload</h6>
+						<p>UPS overwhelmed by excess misfolded α-synuclein. Larger oligomers block the proteasome or inhibit its activity, preventing efficient degradation.</p>
+						<div class="arrow"></div>
+					</div>
+										  
+					<div class="concept">
+						<h6>Cellular Stress</h6>
+						<p>Cellular stress from protein buildup triggers autophagy.</p>
+						<div class="arrow"></div>
+					</div>     
+												  
+					<div class="concept">
+						<h6>Autophagy Overload</h6>
+						<p>Autophagy overwhelmed as misfolded α-synuclein aggregates block autophagosomes formation and impair fusion with lysosomes.</p>
+						<div class="arrow"></div>
+					</div>
+										  
+					<div class="concept">
+						<h6>Cellular Damage</h6>
+						<p>Mitochondrial stress, oxidative damage, and inflammation from misfolded α-synuclein aggregates further impair UPS and <abbr title=autophagy-lysosomal pathway"">ALP</abbr> function, creating a vicious cycle.</p>
+						<div class="arrow"></div>
+					</div>
+					<div class="concept">
+						<h6>α-synuclein Misfolds</h6>
+						<p>A toxic cellular environment perpetuates α-synuclein misfolding, ER stress, and glial activation, causing formation of toxic α-synuclein oligomers.</p>
+					</div>
+				</div>
+                    
+				<h5>Autophagy Dysfunction and Cellular Impact</h5>
+				<p>
+					Normally, smaller misfolded proteins like α-synuclein are cleared by the UPS. However, the proteasomes in the UPS can't digest larger, insoluble aggregates that mutant α-synuclein can form over time. 
+				</p>
+				<p>
+					However, in PD, mutant or aggregated α-synuclein resists lysosomal degradation, due to their size and insolubility. This disrupts autophagy, causing the toxic accumulation of cellular waste. As autophagy fails, oxidative stress and inflammation cause mitochondrial damage and eventually cell death.
+				</p>
+				<p>
+					Extracellular α-synuclein aggregates, released by stressed or dying neurons, are cleared by microglia and astrocytes through phagocytosis. However, chronic neuroinflammation in PD reduces microglial and astrocytic efficiency in clearing extracellular aggregates, worsening protein clearance deficits. 
+				</p>
+    
 				<h5>Impact on Cellular Functions</h5>
 				<p>
 					Wild-type α-synuclein is removed through <dfn>autophagy</dfn>, a cellular process that breaks down damaged components via lysosomes. Lysosomes serve as the digestive system of the cell, degrading material taken up from outside the cell and digesting obsolete components of the cell itself.
-				</p>
-				<p>
-					Mutant or aggregated forms resist lysosomal degradation, disrupting autophagy and causing toxic buildup. This dysfunction leads to cellular stress, inflammation, waste buildup, and Lewy body formation. Over time, these damaged cells become senescent 'zombie' cells that stop functioning but won't die, releasing toxic compounds that accelerate progressive neurodegeneration (PN).
 				</p>
             </section>
             
@@ -779,7 +834,7 @@ function resetDefaultPosition(target) {
 				
 				<h5>Pesticides and Herbicides</h5>
 				<p>
-					Pesticide and herbicide exposure causes mitochondrial dysfunction and, in certain individuals, &alpha;-synuclein overexpression. Herbicide rotenone and pesticide paraquat so reliably induce PD that they are used to induce PD in rodent model experiments. <cite class="reflink"><a href="#jae-hyeon-park">Park</a>, <a href="#f-pan-montojo">Pan-Montojo</a></cite> 
+					Pesticide and herbicide exposure causes mitochondrial dysfunction and, in certain individuals, &alpha;-synuclein overexpression. Herbicide rotenone and pesticide paraquat so reliably induce PD that they are used to induce PD in rodent model experiments <cite class="reflink"><a href="#jae-hyeon-park">Park</a>, <a href="#f-pan-montojo">Pan-Montojo</a></cite>. Rotenone impairs the ubiquitin-proteasome system, leading to accumulation of misfolded proteins, including α-synuclein. <cite class="reflink"><a href="#betarbet">Betarbet</a></cite>
 				</p>
 				<h5>Drug Use</h5>
 				<p>
@@ -820,7 +875,7 @@ function resetDefaultPosition(target) {
 				<section id="brain-waste-management-systems">
 					<h5>Brain Waste Management System (BWMS)</h5>
 					<p>
-						The brain waste management system (BWMS) defined herein describes the coordinated system that protects the brain from harmful substances, clears waste products, and maintains homeostasis. It consists of the blood-brain barrier (BBB), cchoroid plexus, CSF, glymphatic system, perivascular spaces, extracellular matrix (ECM), basement membrane, and brain phagocytes. <abbr title="brain waste management system">BWMS</abbr> dysfunction leads to α-synuclein aggregation, inflammation, and mitochondrial damage. Various interventions can improve the integrity and function of these components, with measurable effects. <cite class="reflink"><a href="#solar">Solár</a></cite>
+						The brain waste management system (BWMS) defined herein describes the coordinated system that protects the brain from harmful substances, clears waste products, and maintains homeostasis. It consists of the blood-brain barrier (BBB), choroid plexus, CSF, glymphatic system, perivascular spaces, extracellular matrix (ECM), basement membrane, and brain phagocytes. <abbr title="brain waste management system">BWMS</abbr> dysfunction leads to α-synuclein aggregation, inflammation, and mitochondrial damage. Various interventions can improve the integrity and function of these components, with measurable effects. <cite class="reflink"><a href="#solar">Solár</a></cite>
 					</p>
 					 
 					<h5>Impact of Dysfunction</h5>
@@ -866,30 +921,100 @@ function resetDefaultPosition(target) {
 					<h6>How it Works</h6>
 					<p>
 						The glymphatic system moves CSF from the space around the brain into brain tissue, where it mixes with interstitial fluid (fluid between brain cells) to clear waste like misfolded proteins. This waste is then carried along the spaces surrounding blood vessels and drained into the deep cervical lymph nodes in the neck for filtration and removal by the body's lymphatic system.
-					</p>	
+					</p>
+					
+					
+					<h5>Protein Clearance Pathway Dysfunction</h5>
 
-					<h5>Brain Phagocytes</h5>
+					<h6>Ubiquitin-Proteasome System (UPS) Dysfunction</h6>
+					<p>
+						The UPS degrades smaller, soluble misfolded or damaged proteins by tagging them with ubiquitin and directing them to proteasomes for breakdown. In PD, UPS dysfunction leads to α-synuclein accumulation, which overwhelms other waste clearance pathways and triggers oxidative stress, mitochondrial dysfunction, and neurodegeneration.
+					</p>
+
+					<h6>Autophagy-Lysosomal Pathway</h6>
+
+					<p>
+						When α-synuclein aggregates are too large for the UPS, they are targeted for autophagic degradation. Autophagosomes form around these aggregates, isolating them from the rest of the cellular environment. The autophagosome then fuses with a lysosome, forming an autolysosome that degrades the aggregated proteins within the autophagosome.
+					</p>
 					
 					<p>
-						As mentioned earlier, the lysosomal system involved in autophagy helps neurons degrade internal misfolded proteins like α-synuclein and other waste. This system also supports extracellular cleanup through phagocytosis. While neurons depend on autophagy to remove their own waste, brain phagocytes, including microglia and astrocytes, rely on lysosomal phagocytosis to clear <em>external</em> waste.
+						However, in PD, lysosomal degradation becomes impacted, disrupting autophagy, causing the toxic accumulation of cellular waste. As autophagy fails, oxidative stress and inflammation increase, leading to mitochondrial damage and cell death. This accumulation contributes to extracellular waste, overburdening phagocytes and the glymphatic system, worsening neurodegeneration.
+					</p>
+
+					<h6>Brain Phagocytes</h6>
+					<p>
+						As mentioned earlier, the lysosomal system in autophagy helps neurons degrade internal misfolded proteins like α-synuclein. Lysosomes also assist phagocytes clear extracellular waste. While neurons use autophagy to clear intracellular waste, brain phagocytes, such as microglia and astrocytes, use lysosomal phagocytosis to clear <em>external</em> waste.
 					</p>
 					
 					<p>
 						Brain phagocytes, including microglia, astrocytes, and macrophages, clear cellular debris and toxic proteins. Microglia, the primary phagocytes, engulf damaged neurons, dead cells, and toxic proteins. Astrocytes help clear apoptotic cells (cells dying in a controlled manner) and excess neurotransmitters, supporting microglia in debris removal. Macrophages, present in the perivascular space, also perform phagocytosis, though they are less involved than microglia. 
 					</p>
+					
 					<p>
-						Phagocytes perform the initial cleanup, breaking down harmful proteins like α-synuclein within themselves, with the remainder either recycled or expelled for further clearance. The glymphatic system can assist by flushing extracellular remnants out of the brain via CSF.
-					</p>
-					<p>
-						In PD, α-synuclein misfolding and accumulation initiates a cascade that leads to neuroinflammation. This neuroinflammation impairs phagocytosis, which in turn exacerbates α-synuclein aggregation. The resulting cycle of α-synuclein accumulation and impaired clearance promotes further aggregation, oligomerization, and fibrillization, ultimately forming Lewy bodies and driving progressive neurodegeneration. Additionally, collagen cross-linking caused by advanced glycation endproducts (AGEs) from high blood sugar, oxidative stress, or chronic inflammation further impairs phagocytosis.
+						Phagocytes perform the initial cleanup, breaking down harmful proteins like α-synuclein within themselves, with the remainder either recycled or expelled for further clearance. The glymphatic system helps by flushing extracellular waste from the brain via CSF.
 					</p>
 					
-					<h5>Assessing BBB and Choroid Plexus Integrity</h5>
+					<p>
+						In PD, misfolded α-synuclein accumulation triggers neuroinflammation, impairing phagocytosis and worsening α-synuclein aggregation. This neuroinflammation impairs phagocytosis, which in turn exacerbates α-synuclein aggregation. This buildup of α-synuclein leads to further aggregation, oligomerization, and fibrillization, forming Lewy bodies and advancing neurodegeneration. Additionally, collagen cross-linking caused by advanced glycation endproducts (AGEs) from high blood sugar, oxidative stress, or chronic inflammation further impairs phagocytosis.
+					</p>
+
+					<div id="bwms-diagram" class="flow-diagram diagram">
+						<div class="concept">
+							<h6>α-synuclein Misfolds in Neurons</h6>
+							<p>Misfolded α-synuclein forms toxic oligomers and fibrils.</p>
+							<div class="arrow"></div>
+						</div>
+					
+						<div class="concept">
+							<h6>Impaired UPS and ALP</h6>
+							<p>UPS and <abbr title=autophagy-lysosomal pathway"">ALP</abbr> are overwhelmed, leading to toxic buildup of α-synuclein within neurons.</p>
+							<div class="arrow"></div>
+						</div>
+						<div class="concept">
+							<h6>Neuroinflammation &amp; Mitochondrial Stress ⟳</h6>
+							<p>Accumulated α-synuclein fibrils cause neuroinflammation and mitochondrial dysfunction.</p>
+							<div class="arrow"></div>
+						</div>
+					
+						<div class="concept">
+							<h6><b class="updown-arrow">&uarr;</b> BBB Permeability</h6>
+							<p>Chronic neuroinflammation weakens the BBB, allowing harmful substances into the brain from the bloodstream.</p>
+							<div class="arrow"></div>
+						</div>
+						<div class="concept">
+							<h6>Choroid Plexus Damage</h6>
+							<p>Choroid plexus damage reduces CSF production and waste clearance, allowing α-synuclein to accumulate and damage epithelial cells.</p>
+							<div class="arrow"></div>
+						</div>
+						<div class="concept">
+							<h6>Impaired Glymphatic &amp; CSF Clearance</h6>
+							<p>Waste clearance systems, like the glymphatic system and CSF, struggle to remove extracellular protein aggregates.</p>
+							<div class="arrow"></div>
+						</div>
+					
+						<div class="concept">
+							<h6>Protein Buildup &amp; Feedback Loop</h6>
+							<p>As extracellular waste builds up, it further impairs phagocytosis and clearance mechanisms, worsening neuroinflammation and α-synuclein aggregation.</p>
+							<div class="arrow"></div>
+						</div>
+					
+						<div class="concept">
+							<h6>Cycle Continues</h6>
+							<p>Neuroinflammation, mitochondrial stress, and protein accumulation create a vicious cycle, exacerbating neuronal damage.</p>
+						</div>
+					</div>
+
+					<h5>Solutions</h5>
+					<p>
+						A multifaceted approach can be used to try to stop the feedback loop, including measures to prevent α-synuclein aggregation, restore choroid plexus and BBB integrity, improve UPS and ALP function, reduce neuroinflammation, and improve mitochondrial health.
+					</p>
+					
+					<h6>Assessing BBB and Choroid Plexus Integrity</h6>
 					<p>
 						Elevated BBB permeability affects waste clearance, including the movement of α-synuclein. Contrast agents are used in <abbr title="Dynamic Contrast-Enhanced MRI">DCE-MRI)</abbr> to visualize changes in BBB permeability.
 					</p>
 					
-					<h5>Strengthening the BWMS</h5>
+					<h6>Strengthening the BWMS</h6>
 					<p>
 						Health strategies that promote collagen formation and support the <abbr title="extracellular matrix">ECM</abbr> may help counteract the effects and degradation of the BBB. Promoting <abbr title="extracellular matrix">ECM</abbr> stability and collagen synthesis contributes to maintaining the structural integrity of the BBB and reduces its permeability to harmful substances, thereby mitigating a <em>major</em> etiological pathway of PD. 
 					</p>
@@ -897,8 +1022,13 @@ function resetDefaultPosition(target) {
 					<p>
 						These include HRT, DHEA, pregnenolone, Growth hormone (GH) and secretagogues (tesamorelin, CJC-1295), collagen peptides (especially collagen type IV), hyaluronic acid, vitamin C, tocotrienols, vitamin K2, vitamin D3, PQQ, beta-glucan (from mushrooms), <abbr title="Mesenchymal signalling cells">MSCs</abbr>, photobiomodulation, and last but not least, intense exercise.
 					</p>
-										
-					<h5>Strengthening Brain Phagocytes</h5>
+					
+					<h6>Improving the UPS and ALP</h6>
+					<p>
+						Exercise, fasting, caloric restriction, and compounds like trehalose promote autophagy by enhancing cellular stress responses. mTOR inhibitors (such as rapamycin) reduce inhibitory signals on autophagy, increasing the clearance of misfolded proteins. Lithium helps stimulate autophagy and protects against neurodegeneration. Senolytics eliminate senescent cells that impair waste clearance. Mitochondrial enhancers, including Urolithin A and NAD+ boosters, support cellular energy production, further improving UPS and ALP efficiency. 
+					</p>
+					
+					<h6>Strengthening Brain Phagocytes</h6>
 					
 					<p>
 						Addressing the root cause—α-synuclein aggregation—addresses the primary disruption in phagocytosis, which in turn reduces neuroinflammation and limits neuronal damage. Reducing α-synuclein aggregation should be considered a first line of prevention to improve brain phagocytosis.
@@ -908,7 +1038,7 @@ function resetDefaultPosition(target) {
 						Other health strategies to improve brain phagocytosis include reducing neuroinflammation, increasing blood flow, and increasing neurotrophins. These include supplementing DHA, beta-glucan (from mushrooms), lion's mane, cordyceps, turmeric, ginseng, creatine, EGCG (matcha), ALCAR, phosphatidylserine, tocotrienols, and senolytics. Pyridoxamine (vitamin B6) and aminoguanidine can reduce collagen cross-linking. Growth hormone (GH) and secretagogues (tesamorelin, CJC-1295) photobiomodulation and physical exercise increase neurotrophins. Mesenchymal signaling cells reduce neuroinflammation. 
 					</p>
 					
-					<h5>Increasing CSF Production</h5>
+					<h6>Increasing CSF Production</h6>
 					<p>
 						Cholinergics and related supplements can support brain function and potentially influence cerebrospinal fluid (CSF) production. Higher choline levels can improve membrane integrity and fluidity, improve BBB integrity and cellular function, and might indirectly support glymphatic system performance.
 					</p>
@@ -1112,6 +1242,13 @@ function resetDefaultPosition(target) {
                         This rodent model showed that pharmacologically increasing SIRT3, as recommended in this article, can counteract α-synuclein-induced mitochondrial dysfunction by reducing α-synuclein oligomers and normalizing mitochondrial bioenergetics. 
                     </p>
                 </li>
+                <li id="betarbet">
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/16439141/"
+					title="Intersecting pathways to neurodegeneration in Parkinson's disease: effects of the pesticide rotenone on DJ-1, alpha-synuclein, and the ubiquitin-proteasome system"
+					target="_blank"
+					>Intersecting pathways to neurodegeneration in Parkinson's disease: effects of the pesticide rotenone on DJ-1, alpha-synuclein, and the ubiquitin-proteasome system</a>, Ranjita Betarbet, et al.
+				</li>
+                    
                 <li id="m-vlag">
                     <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7496448/"
                     title="The contribution of Parkin, PINK1 and DJ‐1 genes to selective neuronal degeneration in Parkinson's disease"
@@ -1896,7 +2033,7 @@ function resetDefaultPosition(target) {
                     </p>
                     
                     <h5 class="diagram-header">DRT Neurodegeneration Cycle Diagram</h5>
-                    <div id="drt-diagram" class="diagram">
+                    <div id="drt-diagram" class="flow-diagram diagram">
                         <div class="concept">
                             <h6>Dopamine Agonists</h6>
                             <p>Dopamine agonists initially inhibit fibrillization by interacting with α-synuclein.</p>
@@ -8286,7 +8423,7 @@ of Parkinson’s Disease</a>, K. S. Ibrahim and E. M. El-Sayed.
                 <table class="treatment-legend">
                     <tr>
                         <th>Mechanisms</th>
-                        <td>Antioxidant, Anti-inflammatory, Mitochondrial, Neuroprotective, Neurorestorative, BBB Dysfunction</td>
+                        <td>Antioxidant, Anti-inflammatory, Mitochondrial, Neuroprotective, UPS Dysfunction, BBB Dysfunction</td>
                     </tr>
                     <tr>
                         <th>Dose</th>
