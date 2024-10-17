@@ -275,13 +275,20 @@ section section {
     content: "✔️";
 }
 
-
 .supplement-table > tbody > tr:nth-child(odd) {
 	background: #eee1;
 }
 
+.supplement-table > tbody td:nth-child(2) {
+	text-align: right;
+}
+
 .supplement-table td {
 	padding: 0.2ex 0.4em;
+}
+
+.recipe-list {
+	list-style: none;
 }
 
 .product-list {
@@ -3373,13 +3380,16 @@ function resetDefaultPosition(target) {
 				</tr>
 			</tbody>
 		</table>
-
-
+		
+		<p>
+			The Daily Supplements improve mitochondrial function, support cognitive performance, and address many etiological pathways in PD. Ubiquinol and PQQ improve mitochondrial energy production and biogenesis, CDP-Choline improves dopamine release, supports phospholipid synthesis, strengthens cellular membranes and improves neurotransmitter production. The Active B Complex facilitates methylation and energy metabolism and makes up for some deficits caused by DRT. Nattokinase reduces amyloid fibrils and promotes α-synuclein ubiquitination, supporting proteasomal degradation and autophagy—a problem in PD progression—by regulating protein misfolding and enhancing cellular waste clearance. Vitamin K2 helps prevent vascular calcification and supports mitochondrial function and may indirectly improve neurological function. Berberine improves mitochondrial function, gut-derived L-dopa production, and the ubiquitin-proteasome system, reducing dependency on DRT. Thiamine further enhances mitochondrial energy production and supports neurological health.
+		</p>
+		
         <h4 id="mitochondrial-powder">Mitochondrial Mix Powder — 10-Day Supply</h4>
 		<p>
 			This 10-day serving can be taken 2x daily; once with the morning supplements; once later.
 		</p>
-		<ul>
+		<ul class="recipe-list">
 			<li>Uridine Monophosphate (UMP) — 5g</li>
 			<li>Coffeeberry Extract — 2.5g</li>
 			<li>NMN — 10g</li>
@@ -3399,9 +3409,9 @@ function resetDefaultPosition(target) {
 			Mix 24g of the powder with water. Stir thoroughly and consume twice daily — once with morning supplements and once later in the day. Store in a cool, dry place to prevent clumping.
 		</p>
     
-    	<h5>Benefits</h5>
+    	<h5>Mitochondrial Mix Benefits</h5>
 		<p>
-			The Mitochondrial Mix enhances mitochondrial function and cognitive health. <abbr title="Uridine Monophosphate">UMP</abbr> improves neurotransmission and synaptic plasticity. NMN and NR increase NAD+ levels, improving mitochondrial energy production. Niacin increases NAD+ and reduces inflammation. Cordyceps boosts ATP production and is neuroprotective and anti-inflammatory. Lion’s Mane promotes neurogenesis, and Trehalose prevents protein aggregation. Inulin supports gut health, and Coffeeberry Extract, rich in chlorogenic acids and polyphenols, improves cognitive function through antioxidant mechanisms.
+			The Mitochondrial Mix enhances mitochondrial function as well as cognitive and overall health. <abbr title="Uridine Monophosphate">UMP</abbr> improves neurotransmission and synaptic plasticity. NMN and NR increase NAD+ levels, improving mitochondrial energy production. Niacin increases NAD+ and reduces inflammation. Cordyceps boosts ATP production and is neuroprotective and anti-inflammatory. Lion’s Mane promotes neurogenesis, and Trehalose prevents protein aggregation. Inulin supports gut health, and Coffeeberry Extract, rich in chlorogenic acids and polyphenols, improves cognitive function through antioxidant mechanisms.
 		</p>
 
 
@@ -3409,7 +3419,7 @@ function resetDefaultPosition(target) {
 		<p>
 			This ~10-day serving can be taken in hot water 1-2x daily, earlier in the day. Add coconut oil and organic ginger juice.
 		</p>
-		<ul>
+		<ul class="recipe-list">
 			<li>Niacin — 1g</li>
 			<li>Turmeric — 7g</li>
 			<li>Matcha — 7g</li>
@@ -3419,8 +3429,8 @@ function resetDefaultPosition(target) {
 			<li>Ceylon Cinnamon — 12g</li>
 			<li>Redmond Real Salt — 15g</li>
 			<li>Ginger Powder — 15g</li>
-			<li>Raw Cacao — 100g</li>
 			<li>Trehalose — 20g</li>
+			<li>Raw Cacao — 100g</li>
 		</ul>
 		
 		<h5>Instructions for Cacao Mix</h5>
@@ -3428,13 +3438,13 @@ function resetDefaultPosition(target) {
 			Mix 19 g of the mixed powder to about 24 oz below-boiling water to preserve the properties of the ingredients. Add coconut oil.
 		</p>
 		
-		<h5>Summary</h5>
+		<h5>Cacao Mix Benefits</h5>
 		<p>
-			The Cacao Mix enhances neurotransmitter balance and mitochondrial function. Raw Cacao increases PEA and catechins, boosting mood and cognitive function. Cordyceps improves ATP production and is neuroprotective. Lion’s Mane supports neurogenesis and synaptic plasticity. Niacin increases NAD+ levels for mitochondrial energy, while Turmeric is anti-inflammatory, antifibrillogenic, and anti-aggregation. Ginger improves BBB function, stimulates mitophagy, and supports gastrointestinal function.
+			The Cacao Mix provides stimulating cognitive effects for neurotransmitter balance and mitochondrial function. Raw Cacao increases PEA and catechins, boosting mood and cognitive function. Cordyceps improves ATP production and is neuroprotective. Lion’s Mane supports neurogenesis and synaptic plasticity. Niacin increases NAD+ levels for mitochondrial energy, while Turmeric is anti-inflammatory, antifibrillogenic, and anti-aggregation. Ginger improves BBB function, stimulates mitophagy, and supports gastrointestinal function.
 		</p>
 
 		<h4>Pre-Workout Supplements</h4>
-		<table border="1">
+		<table border="1" class="supplement-table">
 			<tr>
 				<th>Supplement</th>
 				<th>Dose</th>
@@ -3492,7 +3502,7 @@ function resetDefaultPosition(target) {
 			</tr>
 		</table>
 
-	
+		<h5>Pre-Workout Supplements Benefits</h5>
 		<p>
 			The Pre-Workout Supplements support cognitive function, stamina, and mitochondrial energy, complementing the broader supplement regimen with athletic performance support specifically selected and relevant to PD, with no evidence linking these enhancers to increased dyskinesias. These compounds improve mental clarity, fight fatigue, and reduce stress from exercise. ALCAR and Na-r-ALA support mitochondrial efficiency, while Alpha-GPC aids acetylcholine production without worsening dyskinesias. Vinpocetine and Ginkgo Biloba improve cerebral blood flow, and Salidroside counteracts fatigue by modulating dopamine and serotonin. 
 		</p>
@@ -3501,32 +3511,34 @@ function resetDefaultPosition(target) {
 		
         <h4>Post-Workout Mixed Powder — 10-Workout Supply</h4>
         <p>This 10-day supply of powder can be pre-mixed and stored a cool, dry place.</p>
-		<ul>
+		<ul class="recipe-list">
 			<li>Niacin — 1g</li>
 			<li>NR — 2.5g</li>
 			<li>Rhodiola Rosea — 2.5g</li>
 			<li>NMN — 5g</li>
-			<li>HMB — 10g</li>
 			<li>Sodium Bicarbonate — 5g</li>
 			<li>Natto Powder — 5g</li>
 			<li>Turmeric — 7g</li>
+			<li>HMB — 10g</li>
 			<li>TMG (Betaine) — 10g</li>
 			<li>Lion's Mane — 10g</li>
 			<li>Tremella — 10g</li>
 			<li>Reishi — 10g</li>
 			<li>Chaga — 10g</li>
 			<li>Ceylon Cinnamon — 12g</li>
+			<li>Turkey Tail — 20g</li>
 			<li>Inulin — 30g</li>
-			<li>Micronized Creatine Monohydrate (CreaPure®) — 50g</li>
-			<li>BCAA 4:1:1 — 40g</li>
 			<li>Collagen Peptides — 30g</li>
 			<li>Taurine — 30g</li>
-			<li>Turkey Tail — 20g</li>
 			<li>Trehalose — 40g</li>
+			<li>BCAA 4:1:1 — 40g</li>
+			<li>Micronized Creatine Monohydrate (CreaPure®) — 50g</li>
 			<li>Organic Greens Powder — 50g</li>
 			<li>Organic Fruits Powder — 50g</li>
 			<li>Whey Protein Isolate — 300g</li>
 		</ul>
+		
+		<h5>Post-Workout Mix Benefits</h5>
         <p>
         	This Post-Workout Mix aids in muscle recovery, reduces brain inflammation, and supports mitochondrial function. BCAAs reduce brain inflammation by decreasing excess glutamate. NMN and NR boost NAD+ and repair mitochondria. Taurine is senolytic, improves mitochondrial dysfunction, and is an inhibitory neurotransmitter. TMG (Betaine) regulates GABA and glycine, increases glutathione activity, and lowers homocysteine. Turkey Tail, rich in beta-glucan and ergothioneine, supports cognitive function and protects neurons. Collagen peptides support ECM integrity and gray matter. Lion’s Mane stimulates neurogenesis.
         </p>
@@ -3629,15 +3641,15 @@ function resetDefaultPosition(target) {
 
 		
 		<h4>Golden Milk Recipe — Nighttime Anti-Inflammatory Drink — 10-Day Supply.</h4>
-		<ul>
+		<ul class="recipe-list">
 			<li>Saffron — 300mg</li>
-			<li>Ceylon Cinnamon — 12g</li>
-			<li>Ginger Powder — 12g</li>
 			<li>Lion's Mane — 10g</li>
 			<li>Tremella — 10g</li>
 			<li>Reishi — 10g</li>
 			<li>Chaga — 10g</li>
 			<li>Turkey Tail — 20g</li>
+			<li>Ceylon Cinnamon — 12g</li>
+			<li>Ginger Powder — 12g</li>
 			<li>Turmeric — 20g</li>
 			<li>Collagen Peptides — 70g</li>
 		</ul>
@@ -3647,6 +3659,7 @@ function resetDefaultPosition(target) {
             Bring 2-3 long peppers (Piper longum) to boil (enhances bioavailability) in 8 oz water. Add 8 oz milk. Add 18g of the mixed powder into warm (not boiling) water and milk. Stir thoroughly and avoid overheating to preserve the beneficial compounds. (The long peppers can be reused until they lack strength, or may be reused for cooking recipes.)
         </p>
 		
+		<h5>Golden Milk Benefits</h5>
 		<p>
 			This Golden Milk reduces inflammation and supports brain health and mitochondrial function. The turmeric and saffron improve sleep. Cinnamon improves blood glucose (which should not be elevated when sleeping). Turmeric is anti-inflammatory, antifibrillogenic, and prevents protein aggregation. Ginger enhances mitophagy, protects the BBB, and reduces inflammation. Tremella, Reishi, Lion’s Mane, and Chaga provide beta-glucan for ECM support and contain flavonoids such as apigenin, quercetin, and anthocyanins. Turkey Tail offers ergothioneine and beta-glucan to support cognitive function and protect neurons. Collagen peptides increase gray matter and improve memory. The long peppers improve curcuminoid absorption and are senolytic.
 		</p>
