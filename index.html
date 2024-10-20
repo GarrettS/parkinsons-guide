@@ -27,6 +27,8 @@
     --abbr-text-decoraction-color: hsl(0deg 3% 25% / 50%);
     --abbr-hover-bg-color: hsl(10deg 17% 96% / 73%);
     
+    --dd-solution: rgb(0, 77, 0);
+
     color-scheme: light dark;
 }
 
@@ -47,6 +49,8 @@
         --tooltip-bg-color: #555;
         --abbr-text-decoraction-color: hsl(12deg 5% 80% / 50%);
         --abbr-hover-bg-color: hsl(10 31% 11% / 1);
+        
+        --dd-solution: rgb(0, 111, 0);
     }
 }
 
@@ -175,6 +179,15 @@ dt {
     font-style: italic;
 }
 
+dd.es {
+	margin: 0.5ex 0.5ex 1.5ex 0.5ex;
+	color: var(--dd-solution);
+}
+
+dd.es::before {
+	content: "Solutions: ";
+	font-style: italic;
+}
 section > figure {
     border-width: 0.1vh;
     border-style: solid;
@@ -473,7 +486,7 @@ function resetDefaultPosition(target) {
         <h2>A Health Optimization Approach</h2>
         <p>
             <strong>Working Draft</strong>, 
-            <time datetime="2024-10-18">2024-10-18</time>
+            <time datetime="2024-10-19">2024-10-19</time>
         <p>
         <address class="author">
             <strong>Editor:</strong> Garrett Smith
@@ -489,7 +502,7 @@ function resetDefaultPosition(target) {
                     <li><a href="#causes-of-pd">Causes and Risk Factors</a>
                     	<ul>
 							<li><a href="#alpha-synuclein-pathology">Alpha-Synuclein Pathology</a></li>
-							 <li><a href="#multiple-neurotransmitter-system-damage">Multiple Neurotransmitter System Damage</a></li>
+							 <li><a href="#multiple-neurotransmitter-systems-damage">Multiple Neurotransmitter Systems Damage</a></li>
 							<li><a href="#environmental-factors">Environmental Factors</a></li>
 							<li><a href="#genetic-factors">Genetic and Epigenetic Influences</a></li>
 							<li><a href="#hormonal-loss">Hormonal Loss</a></li>
@@ -503,8 +516,7 @@ function resetDefaultPosition(target) {
 							</li>      	
                     	</ul>
                     </li>
-                    <li>
-                        <a href="#testing-for-pd">Testing for PD</a>
+                    <li><a href="#testing-for-pd">Testing for PD</a>
                         <ul>
                             <li>
                                 <a href="#genetic-testing">Genetic Testing</a>
@@ -513,16 +525,11 @@ function resetDefaultPosition(target) {
                     </li> 
                 </ul>           
             </li>
+			<li><a href="#etiological-solutions">Etiological Solutions</a></li>
+            <li><a href="#how-to-build-a-supplement-plan">How to Build a Supplement Plan</a></li>
+            <li><a href="#food">Food</a></li>
 
-            <li><a href="#care-team">How to Build a Care Team</a>
-                <ul>
-                    <li><a href="#care-team-introduction">Introduction</a></li>
-                    <li><a href="#hypothetical-care-team">Hypothetical Care Team</a></li>
-                    <li><a href="#tips-for-selecting-providers">Tips for Selecting Providers</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#treatment-approaches">Treatment Approaches</a>
+            <li><a href="#treatment-approaches">Treatment Approaches</a>
                 <ul>
                     <li><a href="#treatment-approaches-overview">Overview</a></li>
                     <li><a href="#symptomatic-approach">Symptomatic</a></li>
@@ -531,8 +538,6 @@ function resetDefaultPosition(target) {
                     <li><a href="#holistic-approach">Holistic</a></li>
                 </ul>
             </li>
-            <li><a href="#etiological-problems">Etiological Problems</a></li>
-            <li><a href="#treatment-plan">Treatment Starter Plan</a></li>
             <li><a href="#treatments">Detailed Treatments</a>
                 <ul>
                     <li>
@@ -571,8 +576,13 @@ function resetDefaultPosition(target) {
                     <li><a href="#pbm">Photobiomodulation</a></li>
                 </ul>
             </li>
-            <li><a href="#how-to-build-a-supplement-plan">How to Build a Supplement Plan</a></li>
-            <li><a href="#food">Food</a></li>
+            <li><a href="#care-team">How to Build a Care Team</a>
+                <ul>
+                    <li><a href="#care-team-introduction">Introduction</a></li>
+                    <li><a href="#hypothetical-care-team">Hypothetical Care Team</a></li>
+                    <li><a href="#tips-for-selecting-providers">Tips for Selecting Providers</a></li>
+                </ul>
+            </li>
             <li><a href="#health-diagnostics">Health Diagnostics</a></li>
             <li><a href="#supplements">Supplements</a>
                 <ul>
@@ -815,8 +825,8 @@ function resetDefaultPosition(target) {
             		Senescent cells contribute to mitochondrial dysfunction, neuroinflammation, and the spread of α-synuclein aggregates. By impairing autophagy, increasing oxidative stress, and perpetuating inflammation, they create a cycle that accelerates disease progression. 
             	</p>
             </section>
-            <section id="multiple-neurotransmitter-system-damage">
-	            <h4>Multiple Neurotransmitter System Damage</h4>
+            <section id="multiple-neurotransmitter-systems-damage">
+	            <h4>Multiple Neurotransmitter Systems Damage</h4>
 	            
 				<p>
 					In 2016, Janusz W. Błaszczyk challenged established beliefs, proposing that PD is a multisystem disorder, where GABAergic decline contributes to dopaminergic depletion in the progression of motor and non-motor symptoms. Numerous studies have since expanded on his claims. <cite class="reflink"><a href="#blaszczyk">Błaszczyk</a></cite>
@@ -919,7 +929,7 @@ function resetDefaultPosition(target) {
 					<h5>Gut-Brain Axis and Alpha-Synuclein Propagation</h5>
 					
 					<p>
-						Alpha-synuclein aggregation in the GI tract may precede motor symptoms. Misfolded α-synuclein can propagate from the enteric nervous system (ENS) in the gut to the brain via the vagus nerve, creating a direct link between the gut and the central nervous system (CNS). This pathway, part of the Braak hypothesis, suggests that α-synuclein pathology may start in the gut before reaching the brain. <cite class="reflink"><a href="#h-braak"">Braak</a>, <a href="#y-chao"">Chao</a></cite>
+						Alpha-synuclein aggregation in the GI tract may precede motor symptoms. Misfolded α-synuclein can propagate from the enteric nervous system (ENS) in the gut to the brain via the vagus nerve, creating a direct link between the gut and the central nervous system (CNS). This pathway, part of the Braak hypothesis, suggests that α-synuclein pathology may start in the gut before reaching the brain. <cite class="reflink"><a href="#h-braak">Braak</a>, <a href="#y-chao">Chao</a></cite>
 					</p>
 						
 					<p>
@@ -1538,182 +1548,677 @@ function resetDefaultPosition(target) {
 			</section>
 		</section>
     </section>
-    <section id="care-team">
-        <h2>
-            How to Build a Care Team
-        </h2>
-        <section id="care-team-introduction">
-            <h3>Introduction</h3>
+        
+    <section id="etiological-solutions">
+    	<!-- TODO: Move this to Causes, rewrite introduction-->
+        <h3>Etiological and Holistic Approach</h3>
+        <p>
+            This guide uses an etiological holistic approach. That is, it is comprehensive, evidence-based, and addresses the root causes of PD with care, precision, and skepticism — considerations that should be applied to the veracity of all healthcare claims.
+        </p>
 
-            <p>
-                Optimizing health is complex, and a PD diagnosis increases both the complexity and the need to overcome it. Conventional medicine generally fails to adequately address peripheral and autonomic nervous system (ANS) dysfunction, which typically manifests as GI issues, loss of bladder and bowel control, sleep problems, and ultimately, heart failure and death. 
-            </p>
-            <p>
-                Seeking 'alternative' approaches without critical analysis is equally flawed. The only true alternative to effective treatment is ineffective treatment, and that raises the problem of determining efficacy.
-            </p>
-            
-            <p>
-                Many medical professionals, whether conventional or alternative, fall short. Trusting them may lead you to take medications that do not improve health and may hasten disease progression. In PD, this may include beta-3 agonists, anticholinergics, or fludrocortisones. Worse, they may also offer "mind-body-spirit" treatments lacking scientific support or clear mechanisms of action.
-            </p>
-                        
-            <p>
-                It is the patient's responsibility to audit his medical team. Begin by consulting independent specialists and exploring reputable integrative medicine practices. Seek out patient communities for recommendations on doctors who prioritize a comprehensive approach.
-            </p>
+        <!-- TODO: Move to new peptides section? p>
+            Peptide therapy, by practitioner in-home visits, can be used (SS-31, AICAR, Epitalon, Pinealon).
+        </p -->
+        
+        <p>
+            Here are some approaches to target underlying problem areas:
+        </p>
+		<dl id="problems-list">
+					
+			<dt class="antifibrillogenic">Antifibrillogenic</dt>
+			<dd>Preventing fibril formation of α-synuclein.</dd>
+			<dd class="es">
+				DHA, phosphatidylserine, uridine, tocotrienols and tocopherols, curcumin, ginger, ginseng, PQQ, saffron.
+			</dd>
+		
+			<dt class="anti-aggregant">Anti-aggregant</dt>
+			<dd>Preventing aggregation of fibrils and other junk</dd>
+			<dd class="es">
+				DHA, phosphatidylserine, uridine, tocotrienols and tocopherols, curcumin, ginseng, PQQ, CDP-Choline, Alpha-GPC, saffron, sauna.
+			</dd>
 
-            <p>
-                The onus of responsibility to learn, assess claims, and take actions for your health is on you. This involves understanding the science behind treatments and engaging in self-advocacy to actively participate in the decision-making process. Skepticism isn’t just healthy; it’s essential for survival and well-being.
-            </p>
-        </section>
+			<dt class="anti-inflammatory">Anti-inflammatory</dt>
+			<dd>Reducing Neuroinflammation</dd>
+			<dd class="es">
+				DHA, phosphatidylserine, tocotrienols and tocopherols, curcumin, ginseng, PQQ, phosphatidylserine, saffron, photobiomodulation, HRT (testosterone/estradiol), exercise (moderate aerobic), sauna.
+			</dd>
+		
+			<dt class="antioxidant">Antioxidant</dt>
+			<dd>Oxidative stress causes α-synuclein aggregation and neuroinflammation in PD. <cite class="reflink"><a href="#s-j-won">S.J. Won</a></cite></dd>
+			<dd class="es">
+				Creatine, DHA, tocotrienols and tocopherols, curcumin, PQQ, ginseng, saffron, taurine, TMG, phosphatidylserine, photobiomodulation.
+			</dd>
+			
+			<dt class="bbb-dysfunction">BBB and Barrier Dysfunction</dt>
+			<dd>Improves BBB function and protection</dd>
+			<dd class="es">
+				Collagen peptides (especially collagen type IV), hyaluronic acid, CDP-Choline, Alpha-GPC, phosphatidylserine DHA, uridine, tocotrienols and tocopherols, curcumin, ginger, ginseng, PQQ, saffron, exercise (<abbr title="high-intensity interval training">HIIT</abbr>), HRT, DHEA, pregnenolone, growth hormone (GH) and secretagogues (tesamorelin, CJC-1295), vitamin C, vitamin K2, vitamin D3, beta-glucan (from mushrooms), MSCs, photobiomodulation.
+			</dd>
 
-        <!-- section id="how-to-interview-neurologist">
-            <h3>Questions to Ask a Potential Neurologist</h3>
-                How can I test my mitochondrial function?
+			<dt class="mitochondrial">Mitochondrial</dt>
+			<dd>Promoting mitochondrial health (mitogenesis, mitophagy)</dd>
+			<dd class="es">
+				Creatine, Na-r-ALA, DHA, UMP, Alpha-GPC, PQQ, <abbr title="Acetyl-L-Carnitine">ALCAR</abbr>, tocotrienols and tocopherols, berberine, ginger, ginseng, CDP-Choline, exercise (<abbr title="high-intensity interval training">HIIT</abbr>, resistance training, zone 2), B-1 (thiamine), p-5-p, B-12, photobiomodulation.
+			</dd>
+			
+			<dt class="senolytic">Senolytic</dt>
+			<dd>Targeting senescent cells; promoting autophagy; improving UPS and ALP dysfunction.</dd>
+		
+			<dd class="es">
+				Urolithin-A, resveratrol, fisetin, quercetin, surforaphane, apigenin, piperlongumine, theaflavin, blueberry (pterostilbene), Exercise (HIIT, resistance training), mitochondrial support (DHA, UMP), curcumin, PQQ, ginseng, saffron, fasting and caloric restriction, trehalose, all mitochondrial enhancers, NAD+ and precursors (NMN, NR, and Niacin). Berberine improves the ubiquitin-proteasome system.
+			</dd>
+			
+			<dt class="anti-ischemic">Anti-ischemic</dt>
+			<dd>Promoting blood flow deep within the brain</dd>
+			<dd class="es">
+				Photobiomodulation, DHA, exercise (aerobic and resistance training), fasting, GH and secretogogues, curcumin, nattokinase, ginseng, PQQ, saffron, photobiomodulation, sauna.
+			</dd>
+			
+			<dt>Cognition</dt>
+			<dd>Improving cognitive function, attention, and memory.</dd>
+			<dd class="es">
+				<abbr title="Acetyl-L-Carnitine">ALCAR</abbr>, cacao, creatine, DHA, UMP, CDP-Choline, Alpha-GPC, B-12, PQQ, K2, ubiquinol, ginseng, ginger, ginko biloba, bacopa monnieri, lion's mane, cordyceps, turkey tail, tiger milk mushroom, exercise, B-12, phosphatidylserine.
+			</dd>
+			
+			<dt class="sleep">Sleep</dt>
+			<dd>Addressing insomnia</dd>
+			<dd class="es">
+				Early exercise, photobiomodulation, phosphatidylserine, <abbr title="N-Acetylecysteine">NAC</abbr> curcumin, magnesium-L-threonate, melatonin, theanine, GABA, 5-HTP, saffron, HRT, DHEA, pregnenolone, TMG.
+			</dd>
+			
+			<dt class="gi">Gastrointestinal</dt>
+			<dd>Improves gastrointestinal health and function</dd>
+		
+			<dt class="dopaminergic">DRT Side Effects</dt>
+			<dd>Helps DRT side-effects (e.g., dyskinesia, impulse control disorders, cytotoxicity)</dd>
+			<dd class="es">
+				Phosphatidylserine, magnesium L-threonate, B-1 (thiamine), berberine, B-1 (thiamine), p-5-p, B-12.
+			</dd>
+		</dl>
+
+        <!-- p>
+            Supplements, peptides, therapies, drugs, and stem cells can mitigate &alpha;-synuclein overexpression, reduce mutant &alpha;-synuclein, strengthen the mitochondria, reduce the side effects of LD/dopa decarboxylase (DDC), decrease the need for LD/dopa decarboxylase, reduce ROS, improve mood, improve sleep, improve recovery.
+        </p -->
+
+        <h4>References</h4>
+        <ol class="reference-list">
+            <li id="s-j-won">
+                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9774295/"
+                title="Neuronal Oxidative Stress Promotes α-Synuclein Aggregation In Vivo"
+                target="_blank"
+                >Neuronal Oxidative Stress Promotes α-Synuclein Aggregation In Vivo</a>, Seok Joon Won, et al.
+                <p>
                 
-        </section -->
-        <section id="hypothetical-care-team">
-            <h3>
-                Hypothetical Care Team
-            </h3>
-            <p>
-                This is a structured, customizable framework designed for self-directed health optimization in Parkinson's Disease.
-            </p>
-
-            <ol>
-                <li>Neurologist for planning, diagnosis, and oversight.
-                <li>Functional and Integrative Medicine Specialist for planning, diagnosis, and oversight.
-                <li>Movement Specialist.
-                <li>Physical Therapist.
-                <li>Research involvement for cutting-edge options.
-                <li>Biomarker Testing Laboratory for personalized testing to monitor disease progression, treatment response, and optimization.
-            </ol>
-            
-            <h3>How to Interview Neurologists</h3>
-            <p>
-               Doctors may be limited by institutional protocols.
-             </p>
-             <p>
-                Assessing provider competence requires a more thorough approach than just checking credentials, affiliations, and years of experience.
-            </p>
-            <p>
-                Approach the interview from a position of informed knowledge without revealing too much. When given the opportunity to speak freely, how do they err?
-            </p>
-            
-            <p>
-                The effectiveness of that strategy depends on one's knowledge and comprehension — specifically the depth and breadth of understanding and the ability to evaluate and scrutinize the accuracy of the interlocutor's information.
-            </p>
-            
-            <p>
-                Better results are achieved by preparing detailed questions that delve into the neurologist's expertise in the specific area of concern.
-            </p>
-            
-            <section>
-                <h3>Q &amp; A</h3>
-                <p>
-                    Below are example questions from the perspective of an <em>active participant</em>. These questions should be critically examined and may be used as the basis for better questions.
                 </p>
-    
-                <h4><q>In your initial assessment of a patient suspected to have Parkinson's Disease, what tests and evaluations do you conduct?</q></h4>
-    
-                <h4>
-                ✅ Good answers must include:
-                </h4>
-                <ul class="good-answers">
-                    <li> Diagnostic imaging with DaTscan (Dopamine Transporter Scan) and <abbr title="Functional Magnetic Resonance Imaging">fMRI</abbr> to map dopamine distribution in the brain and assess broader brain function, respectively.
-                    <li> Syn-One skin biopsy
-                </ul>
-                <p>
-                    — and that is beyond the very basic fundamentals of:&mdash;
-                </p>
-    
-                <ul class="baseline-answers">
-                    <li> Detailed medical history and symptom review.
-                    <li> Thorough examination of motor symptoms.
-                    <li> Evaluation of non-motor symptoms such as sleep disturbances, autonomic dysfunction, and mood disorders.
-                </ul>
-    
-                <h4>
-                ❌ Bad Answers:
-                </h4>
-                <ul class="bad-answers">
-                    <li> Not mentioning genetic testing without providing context or justification.
-                    <li> 
-                        Preferring simpler imaging over more detailed <abbr title="Functional Magnetic Resonance Imaging">fMRI</abbr> and DaTscan imaging.
-                        <p>
-                            <abbr title="Dopamine Transporter Scan">DaTscan</abbr> is a specialized form of <abbr title="Single Photon Emission Computed Tomography">SPECT</abbr> optimized to detect changes in dopamine transporter density and is useful in the broader assessment of the condition.
-                        </p>
-                        <p>
-                             <abbr title="Functional Magnetic Resonance Imaging">fMRI</abbr> scans map out broader brain networks affected by PD, beyond just dopamine pathways. This information might help inform broader strategies, including supplementation.
-                        </p>
-                    </li>
-                    <li>
-                        Generalization without specifying the detailed steps of the neurological examination and symptom review.
-                    </li>
-                    
-                </ul>
-    
-                <h4><q>Why do you include or exclude genetic testing in your initial assessment for Parkinson's Disease?</q></h4>
-    
-                <h4>✅ Good answers:</h4>
-                <p>
-                    Acknowledgment of the importance of genetic factors in (1) creating custom-tailored solutions and (2) testing one's offspring for inherited traits. 
-                </p>
-    
-                <h4><q>How do you address non-motor symptoms in the management of Parkinson's Disease?</q></h4>
-                <p>
-                    Treatments that the patient understands well and fall outside conventional medicine, along with their mechanisms of action, should be asked about.
-                </p>
-    
-                <h4>❌ Bad answers:</h4>
-                <ul class="bad-answers">
-    
-                    <li>
-                        Dismissive generalizations about 'alternative' treatments that show bias or knowledge gaps.
-                    </li>
-                    <li>
-                         If the doctor can't explain the mechanisms of action (e.g., of turmeric, photobiomodulation) in simple terms, he likely doesn't understand them well himself.
-                    </li>
-                </ul>
-    
-                <h4><q>Can you provide an example of how you adapted a treatment plan based on new research findings in Parkinson's Disease?</q></h4>
-    
-                <p>
-                    ✅ A good response should include a recent example of implementing new research-based treatment, with evidence, rationale, and measured results.
-                </p>
-            </section>
-            <h4>Summary</h4>
-                <p>
-            These questions and expected answers help ensure doctors follow a comprehensive, current approach to PD but also demonstrate critical thinking and a nuanced understanding of the disease. Doctors are not immune to common mental errors.
-            </p>
-        </section>
-        <section id="tips-for-selecting-providers">
-                <h3>Tips for Selecting Providers</h3>
-                <p>
-                    Referrals can be initiated by a PCP, a neurologist, or a functional medicine specialist. The starting point is inconsequential; the objective is to assemble a comprehensive care team.
-                </p>
-                <p>
-                    Institutional protocols influence their treatment approach. Seek a neurologist with the autonomy and openness to explore novel, evidence-based treatments beyond the standard of care.
-                </p>
-                <p>
-                    Patient-centered care addressing root causes and individualized needs predicts the best results. Starting with a Functional and Integrative Medicine Specialist can be great. However, to avoid unqualified practitioners, it's essential to be well-informed.
-                </p>
-                <p>
-                    During your initial consultation with a neurologist, discuss optimizing health to minimize <abbr title="Dopamine Replacement Therapy">DRT</abbr>.  Ask about specific treatments such as <a href="#hrt" title="hormone replacement therapy">HRT</a>, <a title="Photobiomodulation" href="#pbm">PBM</a>, and <a href="#5-htp">5-HTP</a>, and how they might interact with <abbr title="Dopamine Replacement Therapy">DRT</abbr>. If the doctor cannot explain their benefits or potential interactions, consider finding another doctor.
-                </p>
-        
-                <blockquote>
-                    <p>
-                        &ldquo;It is better to know some of the questions than all of the answers.&rdquo;
-                    </p>
-                    <cite>&mdash; James Thurber</cite>
-                </blockquote>
-        
-                <p>
-                    Creating a health optimization plan is difficult, especially for PD, which requires specialized expertise. Those who approach this with seriousness and understanding can expect to achieve a better quality of life and longevity.
-                </p>
-            </section>
-
+            </li>
+        </ol>
     </section>
+
+    <section id="how-to-build-a-supplement-plan">
+        <h3>How to Build a Supplement Plan</h3>
+        <p>
+       		Supplements and dietary recommendations are components of a comprehensive health program targeting total human performance at the cellular level. This approach focuses not only on physical exercise but also on non-motor aspects such as sleep, cognitive function, and overall well-being. 
+        </p>
         
+        <p>
+        	Brief explanations of what the supplements do accompany the plan. The etiological problems they address are detailed under Causes and Risk Factors. Details on each supplement is listed under its respective section. 
+        </p>
+        <h4>First, Do No Harm</h4>
+        <p>
+            It should go without saying that, before embarking on a serious plan to improve health, other lifestyle factors must be in order. That means no smoking and no alcohol, as even 1-2 drinks per week reduce cortical thickness and grey matter. Additionally, maintaining good sleep hygiene is essential.
+        </p>
+        
+        <h4>Exercise</h4>
+        <p>
+            Without consistent physical exercise, supplementation alone will yield suboptimal results. Regular and strategic exercise, combined with proper supplementation, is essential for supporting cellular health, neurological function, and overall performance.
+        </p>
+        
+        <p>
+            The following general-purpose solution serves as a customizable starting point to address health with PD from multiple angles, targeting each of the underlying <a href="#etiological-solutions">Etiological Problems</a>.
+        </p>
+        
+        <h4>Mixing and Storing Powders</h4>
+        
+        <p>The mixed powders "Mitochondrial Mix", "Cacao Mix", and "Post-Workout" powders must be made in batches and should be stored in a cool, dry place with a desiccant pack (like silica gel) inside the powder to prevent clumping and contamination (mold). Silica packs commonly shipped with raw powders and supplements can be reused.
+        </p>
+        
+        <h4>Weighing and Mixing Powders</h4>
+        <p>
+            A sturdy gram scale or reliable, accurate food scale that measures to the nearest 0.01g (10mg) is necessary to ensure accuracy. To help ensure proper ingredient dispersal, mix the smaller ingredients first and blend in the larger ingredients.
+        </p>
+            
+        <h4>Daily Supplements (2x daily)</h4>
+		<table border="1" class="supplement-table">
+			<thead>
+				<tr>
+					<th>Supplement</th>
+					<th>Dose</th>
+					<th>Mechanism</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Ubiquinol</td>
+					<td>300mg</td>
+					<td>Mitochondrial function, Antioxidant, Improves ATP production</td>
+				</tr>
+				<tr>
+					<td>PQQ (Pyrroloquinoline Quinone)</td>
+					<td>30mg</td>
+					<td>Mitochondrial biogenesis, Antioxidant, Neuroprotective, Anti-aggregant</td>
+				</tr>
+				<tr>
+					<td>CDP-Choline (Citicoline)</td>
+					<td>500mg</td>
+					<td>Neuroprotective, Enhances dopamine release, Supports phospholipid synthesis</td>
+				</tr>
+				<tr>
+					<td>Active B Complex (Integrative Therapeutics)</td>
+					<td>1 capsule</td>
+					<td>Supports methylation, Cognitive function, Energy metabolism</td>
+				</tr>
+				<tr>
+					<td>Nattokinase</td>
+					<td>100mg</td>
+					<td>Cardiovascular health, Anti-thrombotic, Improves blood flow</td>
+				</tr>
+				<tr>
+					<td>Vitamin K2</td>
+					<td>1,000mcg</td>
+					<td>Prevents vascular calcification, Supports mitochondrial function</td>
+				</tr>
+				<tr>
+					<td>Berberine</td>
+					<td>500mg</td>
+					<td>Improves mitochondrial function, ubiquitin-proteasome function, and gut bacteria to produce L-dopa, increasing brain dopamine, and reducing DRT-induced cytotoxicity, thereby reducing overreliance of DRT and reducing its side effects.</td>
+				</tr>				
+				<tr>
+					<td>Thiamine</td>
+					<td>50mg</td>
+					<td>Supports neurological function, Enhances mitochondrial energy production</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<p>
+			The Daily Supplements improve mitochondrial function, support cognitive performance, and address many etiological pathways in PD. Ubiquinol and PQQ improve mitochondrial energy production and biogenesis, CDP-Choline improves dopamine release, supports phospholipid synthesis, strengthens cellular membranes and improves neurotransmitter production. The Active B Complex facilitates methylation and energy metabolism and makes up for some deficits caused by DRT. Nattokinase reduces amyloid fibrils and promotes α-synuclein ubiquitination, supporting proteasomal degradation and autophagy—a problem in PD progression—by regulating protein misfolding and enhancing cellular waste clearance. Vitamin K2 helps prevent vascular calcification and supports mitochondrial function and may indirectly improve neurological function. Berberine improves mitochondrial function, gut-derived L-dopa production, and the ubiquitin-proteasome system, reducing dependency on DRT. Thiamine further enhances mitochondrial energy production and supports neurological health.
+		</p>
+		
+        <h4 id="mitochondrial-powder">Mitochondrial Mix Powder — 10-Day Supply</h4>
+		<p>
+			This 10-day serving can be taken 2x daily; once with the morning supplements; once later.
+		</p>
+		<ul class="recipe-list">
+			<li>Uridine Monophosphate (UMP) — 5g</li>
+			<li>Coffeeberry Extract — 2.5g</li>
+			<li>NMN — 10g</li>
+			<li>NR — 5g</li>
+			<li>Niacin — 2g</li>
+			<li>Lion's Mane — 10g</li>
+			<li>Cordyceps — 10g</li>
+			<li>Matcha — 7g</li>
+			<li>Micronized Creatine Monohydrate (CreaPure®) — 50g</li>
+			<li>Inulin — 30g</li>
+			<li>Trehalose — 20g</li>
+			<li>Base: Organic Greens Powder — 50g</li>
+			<li>Base: Organic Fruits Powder — 50g</li>
+		</ul>
+		<h5>Instructions for Mitochondrial Mix</h5>
+		<p>
+			Mix 24g of the powder with water. Stir thoroughly and consume twice daily — once with morning supplements and once later in the day. Store in a cool, dry place to prevent clumping.
+		</p>
+    
+    	<h5>Mitochondrial Mix Benefits</h5>
+		<p>
+			The Mitochondrial Mix enhances mitochondrial function as well as cognitive and overall health. <abbr title="Uridine Monophosphate">UMP</abbr> improves neurotransmission and synaptic plasticity. NMN and NR increase NAD+ levels, improving mitochondrial energy production. Niacin increases NAD+ and reduces inflammation. Cordyceps boosts ATP production and is neuroprotective and anti-inflammatory. Lion’s Mane promotes neurogenesis, and Trehalose prevents protein aggregation. Inulin supports gut health, and Coffeeberry Extract, rich in chlorogenic acids and polyphenols, improves cognitive function through antioxidant mechanisms.
+		</p>
+
+
+		<h4>Cacao Mix Powder — 10 Day Supply</h4>
+		<p>
+			This ~10-day serving can be taken in hot water 1-2x daily, earlier in the day. Add coconut oil and organic ginger juice.
+		</p>
+		<ul class="recipe-list">
+			<li>Niacin — 1g</li>
+			<li>Turmeric — 7g</li>
+			<li>Matcha — 7g</li>
+			<li>Lion's Mane — 10g</li>
+			<li>Cordyceps — 10g</li>
+			<li>Turkey Tail — 10g</li>
+			<li>Ceylon Cinnamon — 12g</li>
+			<li>Redmond Real Salt — 15g</li>
+			<li>Ginger Powder — 15g</li>
+			<li>Trehalose — 20g</li>
+			<li>Raw Cacao — 100g</li>
+		</ul>
+		
+		<h5>Instructions for Cacao Mix</h5>
+		<p>
+			Mix 19 g of the mixed powder to about 24 oz below-boiling water to preserve the properties of the ingredients. Add coconut oil.
+		</p>
+		
+		<h5>Cacao Mix Benefits</h5>
+		<p>
+			The Cacao Mix provides stimulating cognitive effects for neurotransmitter balance and mitochondrial function. Raw Cacao increases PEA and catechins, boosting mood and cognitive function. Cordyceps improves ATP production and is neuroprotective. Lion’s Mane supports neurogenesis and synaptic plasticity. Niacin increases NAD+ levels for mitochondrial energy, while Turmeric is anti-inflammatory, antifibrillogenic, and anti-aggregation. Ginger improves BBB function, stimulates mitophagy, and supports gastrointestinal function.
+		</p>
+
+		<h4>Pre-Workout Supplements</h4>
+		<table border="1" class="supplement-table">
+			<tr>
+				<th>Supplement</th>
+				<th>Dose</th>
+				<th>Mechanism</th>
+			</tr>
+			<tr>
+				<td>ALCAR (Acetyl-L-Carnitine)</td>
+				<td>1.5g</td>
+				<td>Mitochondrial function, Enhances energy and focus, Promotes synaptic plasticity</td>
+			</tr>
+			<tr>
+				<td>Alpha-GPC</td>
+				<td>300-600mg</td>
+				<td>Choline source, Enhances acetylcholine production, Supports cognitive function</td>
+			</tr>
+			<tr>
+				<td>Vinpocetine</td>
+				<td>10-30mg</td>
+				<td>Improves cerebral blood flow, Supports memory and focus, Anti-inflammatory</td>
+			</tr>
+			<tr>
+				<td>Noopept</td>
+				<td>10-30mg</td>
+				<td>Enhances cognitive function, Promotes neurogenesis, Reduces oxidative stress</td>
+			</tr>
+			<tr>
+				<td>4’-DMA-7,8-DHF (Dihydroxyflavone, passion flower extract)</td>
+				<td>30-50mg</td>
+				<td>BDNF signaling (TrkB agonist), Enhances synaptic plasticity, Reduces neuroinflammation</td>
+			</tr>
+			<tr>
+				<td>Na-r-ALA (Na-R-Alpha-Lipoic Acid)</td>
+				<td>300-600mg (with 2-5g trehalose)</td>
+				<td>Antioxidant, Improves glucose uptake (taken with trehalose for optimal effect), Mitochondrial support</td>
+			</tr>
+			<tr>
+				<td>Triacetyluridine</td>
+				<td>25-50mg</td>
+				<td>Enhances synaptic plasticity, Dopaminergic function, Supports cognitive health</td>
+			</tr>
+			<tr>
+				<td>Ginkgo Biloba</td>
+				<td>120-240mg</td>
+				<td>Increases cerebral blood flow, Improves cognitive performance, Reduces oxidative stress</td>
+			</tr>
+			<tr>
+				<td>Tiger Milk Mushroom</td>
+				<td>500-1000mg</td>
+				<td>Contains ergosterol (regulates membrane fluidity), Beta-glucan for ECM support, Immunomodulatory</td>
+			</tr>
+			<tr>
+				<td>Bacopa Monnieri</td>
+				<td>300-500mg</td>
+				<td>Improves memory, Enhances cognitive function, Reduces oxidative stress</td>
+			</tr>
+		</table>
+
+		<h5>Pre-Workout Supplements Benefits</h5>
+		<p>
+			The Pre-Workout Supplements support cognitive function, stamina, and mitochondrial energy, complementing the broader supplement regimen with athletic performance support specifically selected and relevant to PD, with no evidence linking these enhancers to increased dyskinesias. These compounds improve mental clarity, fight fatigue, and reduce stress from exercise. ALCAR and Na-r-ALA support mitochondrial efficiency, while Alpha-GPC aids acetylcholine production without worsening dyskinesias. Vinpocetine and Ginkgo Biloba improve cerebral blood flow, and Salidroside counteracts fatigue by modulating dopamine and serotonin. 
+		</p>
+		<p> * Note: For Na-r-ALA, pairing with a carbohydrate source, like 3-5g trehalose, is recommended to optimize glucose uptake. The Mitochondrial Mix could be used as a carbohydrate source if additional trehalose is added. 
+		</p>
+		
+        <h4>Post-Workout Mixed Powder — 10-Workout Supply</h4>
+        <p>This 10-day supply of powder can be pre-mixed and stored a cool, dry place.</p>
+		<ul class="recipe-list">
+			<li>Niacin — 1g</li>
+			<li>NR — 2.5g</li>
+			<li>Rhodiola Rosea — 2.5g</li>
+			<li>NMN — 5g</li>
+			<li>Sodium Bicarbonate — 5g</li>
+			<li>Natto Powder — 5g</li>
+			<li>Turmeric — 7g</li>
+			<li>HMB — 10g</li>
+			<li>TMG (Betaine) — 10g</li>
+			<li>Lion's Mane — 10g</li>
+			<li>Tremella — 10g</li>
+			<li>Reishi — 10g</li>
+			<li>Chaga — 10g</li>
+			<li>Ceylon Cinnamon — 12g</li>
+			<li>Turkey Tail — 20g</li>
+			<li>Inulin — 30g</li>
+			<li>Collagen Peptides — 30g</li>
+			<li>Taurine — 30g</li>
+			<li>Trehalose — 40g</li>
+			<li>BCAA 4:1:1 — 40g</li>
+			<li>Micronized Creatine Monohydrate (CreaPure®) — 50g</li>
+			<li>Organic Greens Powder — 50g</li>
+			<li>Organic Fruits Powder — 50g</li>
+			<li>Whey Protein Isolate — 300g</li>
+		</ul>
+		
+		<h5>Instructions</h5>
+		<p>
+			Pre-mix this powder with water and a low-sugar probiotic (whole milk plain yogurt or kefir) and consume it immediately after exercise (bring it to the gym).
+		</p>
+		
+		<h5>Post-Workout Mix Benefits</h5>
+        <p>
+        	This Post-Workout Mix aids in muscle recovery, reduces brain inflammation, and supports mitochondrial function. BCAAs reduce brain inflammation by decreasing excess glutamate. NMN and NR boost NAD+ and repair mitochondria. Taurine is senolytic, improves mitochondrial dysfunction, and is an inhibitory neurotransmitter. TMG (Betaine) regulates GABA and glycine, increases glutathione activity, and lowers homocysteine. Turkey Tail, rich in beta-glucan and ergothioneine, supports cognitive function and protects neurons. Collagen peptides support ECM integrity and gray matter. Lion’s Mane stimulates neurogenesis. Sodium bicarbonate helps restore the acid-base balance in the body, following intensive exercise.
+        </p>
+
+        <h4>Dinner Supplements 🍽️</h4>
+        <p>
+        	Fat-soluble substances are better absorbed when taken with dietary fats.
+        </p>
+        <table border="1" class="supplement-table">
+			<thead>
+				<tr>
+					<th>Supplement</th>
+					<th>Dose</th>
+					<th>Mechanism</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>DHEA</td>
+					<td>50mg</td>
+					<td>Hormonal balance, ECM support, IGF-1 levels</td>
+				</tr>
+				<tr>
+					<td>Pregnenolone</td>
+					<td>30mg</td>
+					<td>Hormonal balance, cognitive support, ECM</td>
+				</tr>
+				<tr>
+					<td>Sesamins (Sesaminol)</td>
+					<td>100-200mg</td>
+					<td>Antioxidant, Anti-inflammatory, Supports mitochondrial function, Regulates lipid metabolism, Protects membrane structure</td>
+				</tr>
+				<tr>
+					<td>NAC</td>
+					<td>600-1200mg</td>
+					<td>Antioxidant, Glutathione precursor</td>
+				</tr>
+				<tr>
+					<td>Geranyl Geraniol</td>
+					<td>500mg</td>
+					<td>Mitochondrial function, Dopaminergic side-effect modulation</td>
+				</tr>
+				<tr>
+					<td>Urolithin-A</td>
+					<td>1000mg</td>
+					<td>Senolytic, Mitochondrial biogenesis, Anti-inflammatory</td>
+				</tr>
+				<tr>
+					<td>Resveratrol</td>
+					<td>1000mg</td>
+					<td>Senolytic, Antioxidant, Neuroprotective, Anti-inflammatory</td>
+				</tr>
+				<tr>
+					<td>Fisetin</td>
+					<td>500mg</td>
+					<td>Senolytic, Anti-inflammatory</td>
+				</tr>
+				<tr>
+					<td>Quercetin</td>
+					<td>500mg</td>
+					<td>Anti-apoptotic, Anti-inflammatory, Neuroprotective, Mitochondrial, Motor deficits</td>
+				</tr>
+				<tr>
+					<td>Sulforaphane</td>
+					<td>50mg</td>
+					<td>Senolytic, Antioxidant, Detoxification</td>
+				</tr>
+				<tr>
+					<td>Apigenin</td>
+					<td>50mg</td>
+					<td>Neuroprotective, Anti-inflammatory</td>
+				</tr>
+				<tr>
+					<td>Piperlongumine</td>
+					<td>50mg</td>
+					<td>Senolytic, Enhances bioavailability of curcumin and bioactives</td>
+				</tr>
+				<tr>
+					<td>Zeaxanthin</td>
+					<td>10mg</td>
+					<td>Neuroprotective, Antioxidant</td>
+				</tr>
+				<tr>
+					<td>Lutein</td>
+					<td>10mg</td>
+					<td>Neuroprotective, Antioxidant</td>
+				</tr>
+				<tr>
+					<td>Mixed Tocopherols/Tocotrienols</td>
+					<td>150-300 IU</td>
+					<td>Neuroprotective, <abbr title="ubiquitin proteasome system">UPS</abbr> dysfunction, BBB integrity, Mitochondrial health</td>
+				</tr>
+				<tr>
+					<td>Hyaluronic Acid (MW >1600 kDa)</td>
+					<td>100-300mg</td>
+					<td>ECM support, modulates postsynaptic calcium channels, protects dopaminergic neurons</td>
+				</tr>
+			</tbody>
+		</table>
+
+		
+		<h4>Golden Milk Recipe — Nighttime Anti-Inflammatory Drink — 10-Day Supply.</h4>
+		<ul class="recipe-list">
+			<li>Saffron — 300mg</li>
+			<li>Lion's Mane — 10g</li>
+			<li>Tremella — 10g</li>
+			<li>Reishi — 10g</li>
+			<li>Chaga — 10g</li>
+			<li>Turkey Tail — 20g</li>
+			<li>Ceylon Cinnamon — 12g</li>
+			<li>Ginger Powder — 12g</li>
+			<li>Turmeric — 20g</li>
+			<li>Collagen Peptides — 70g</li>
+		</ul>
+		
+		<h5>Instructions for Golden Milk</h5>
+        <p>
+            Bring 2-3 long peppers (Piper longum) to boil (enhances bioavailability) in 8 oz water. Add 8 oz milk. Add 18g of the mixed powder into warm (not boiling) water and milk. Stir thoroughly and avoid overheating to preserve the beneficial compounds. (The long peppers can be reused until they lack strength, or may be reused for cooking recipes.)
+        </p>
+		
+		<h5>Golden Milk Benefits</h5>
+		<p>
+			This Golden Milk reduces inflammation and supports brain health and mitochondrial function. The turmeric and saffron improve sleep. Cinnamon improves blood glucose (which should not be elevated when sleeping). Turmeric is anti-inflammatory, antifibrillogenic, and prevents protein aggregation. Ginger enhances mitophagy, protects the BBB, and reduces inflammation. Tremella, Reishi, Lion’s Mane, and Chaga provide beta-glucan for ECM support and contain flavonoids such as apigenin, quercetin, and anthocyanins. Turkey Tail offers ergothioneine and beta-glucan to support cognitive function and protect neurons. Collagen peptides increase gray matter and improve memory. The long peppers improve curcuminoid absorption and are senolytic.
+		</p>
+				
+        <h4>Sleep Supplements (7:00 pm - 9:00 pm) 💤</h4>
+		<table border="1">
+			<tr>
+				<th>Supplement</th>
+				<th>Dose</th>
+				<th>Mechanism</th>
+			</tr>
+			<tr>
+				<td>Melatonin (Sleep3)</td>
+				<td>10mg</td>
+				<td>Regulates sleep-wake cycle, Antioxidant, Neuroprotective, Mitochondrial support</td>
+			</tr>
+			<tr>
+				<td>5-HTP</td>
+				<td>50-100mg</td>
+				<td>Serotonin precursor, Supports mood and sleep, Reduces dopaminergic side effects</td>
+			</tr>
+			<tr>
+				<td>GABA</td>
+				<td>1000mg-2000mg</td>
+				<td>Inhibitory neurotransmitter, Promotes relaxation and sleep, Reduces excitotoxicity</td>
+			</tr>
+			<tr>
+				<td>Magnesium Threonate</td>
+				<td>300mg</td>
+				<td>Enhances synaptic plasticity, Supports memory and sleep, Mitochondrial function</td>
+			</tr>
+			<tr>
+				<td>Chelated Magnesium</td>
+				<td>150mg</td>
+				<td>Promotes relaxation, Supports neurotransmitter balance, Enhances muscle function</td>
+			</tr>
+			<tr>
+				<td>Theanine</td>
+				<td>250-750mg</td>
+				<td>Calming, Improves cognitive function, Promotes sleep quality and focus</td>
+			</tr>
+		</table>
+    </section>
+    <section id="food">
+        <h3>
+            Food
+        </h3>
+
+        <p>
+            Certain compounds found in food and supplements help protect against neurodegeneration, with some supporting exercise performance and others improving sleep. Some are synergistic, and some require dietary fats, like eggs or coconut oil, for absorption. This section explores dietary choices, treating food as medicine for PD.
+        </p>
+        
+		<h3>
+			 Dietary Strategies for Parkinson's Disease
+		</h3>
+		<p>
+			A diet for PD should prioritize gut health, blood sugar control, and the inclusion of bioactives that aid disease management.
+		</p>
+		<p>
+			To manage blood glucose, eliminate all refined sugars, reduce starch intake, and include protein (especially post-workout). Fats rich in <abbr title="medium chain triglycerides">MCTs</abbr>, like coconut oil, provide an efficient energy source for the brain and improve the absorption of fat-soluble compounds such as turmeric.
+		</p>
+		
+		<h4>Eliminating Sugar</h4>
+		<p>
+			Gut health can be improved by diet. Eliminating refined sugars, especially fructose and sucrose, is an important first step to improving gut health and blood glucose. Dietary sugar alters gut microbiota, leading to endotoxemia (leaky gut), low-grade systemic inflammation, metabolic dysregulation, with many downstream health effects. <cite class="reflink"><a href="#satokari">R. Satokari</a></cite>
+		</p>
+		
+		<h4>Probiotics, Fiber, and Polyphenols</h4>
+		<p>
+			 Fermented foods like yogurt and kimchi, prebiotic fibers like inulin and glucomannan, and polyphenols in foods all promote the production of beneficial short-chain fatty acids and postbiotics, which improve gut health and help regulate appetite.
+		</p>
+		
+		<p>
+			 Polyphenols, fermentation byproducts, bioactive peptides, and organic acids enhance gut health and short-chain fatty acid (<abbr title="short-chain fatty acid">SCFA</abbr>) production through various mechanisms. These mechanisms include promoting prebiotic activity, supporting beneficial bacteria growth, and beneficial fermentation byproducts and organic acids. This synergistic effect supports a balanced gut microbiome, improves digestive health, and enhances overall well-being. <cite class="reflink"><a href="#x-wang">X. Wang</a></cite>
+		</p>
+		
+		<h4>Polyphenols and SCFAs</h4>
+		<p>
+			<abbr title="short-chain fatty acid">SCFA</abbr>s are fatty acids with fewer than six carbons, produced by fermenting indigestible fibers in the gut. Polyphenols, like <abbr title="Epigallocatechin gallate">EGCG</abbr> from green tea, increase SCFA production. This reduces gut inflammation and strengthens the colon barrier, which can help prevent enteritis. <cite class="reflink"><a href="#z-wu">Z. Wu</a></cite>
+		</p>
+		
+		<p>
+			SCFAs maintain the gut lining and nourish beneficial bacteria. Dietary fiber, fermented by gut bacteria, is the primary source of SCFAs. These fatty acids help regulate appetite, reduce cravings for sugary foods, and improve blood glucose and insulin sensitivity. Lower inflammation further enhances metabolic health. <cite class="reflink"><a href="#xiong">R. Xiong</a>, <a href="#c-de-luca">C. de Luca</a></cite>
+		</p>
+		
+		<h4>Food and the Gut-Brain Axis in Parkinson's Disease</h4>
+				
+		<p>
+			Restoring balance to the gut microbiome through probiotics and prebiotics can improve gastrointestinal function. In PD, gut issues are common, and addressing them may slow neurodegeneration.
+		</p>
+		<p>
+			Recent research has explored the use of probiotics in PD, including constipation, endothelial health, and the gut-brain axis. A 2022 study titled <q>Role of Microbiota-Gut-Brain Axis in Regulating Dopaminergic Signaling</q> found that gut microbiota help maintain adequate concentrations of dopamine via bidirectional communication along the gut-brain axis. <cite class="reflink"><a href="#s-romano">S. Romano</a>, <a href="#a-h-tan">A.H. Tan</a>, <a href="#hamamah">Hamamah</a></cite>
+		</p>
+
+		<h4>Insulin Resistance (IR) in PD</h4>
+		<p>
+			According to a 2018 study, nearly 60% of non-diabetic PD patients may have undiagnosed insulin resistance, despite having normal blood sugar levels. And although higher body mass index (BMI) was associated with increased IR, even lean PD patients showed a higher percentage (41%) of IR compared to healthy adults without PD.
+		</p>
+		
+		<p>
+			Studies have consistently shown that individuals with PD exhibit alterations in their gut microbiome, characterized by reduced diversity and altered composition compared to healthy individuals. This dysbiosis may contribute to the development and progression of PD symptoms.
+		</p>
+		
+		<h4>Meal Ideas for Brain Health</h4>
+		<p>
+			These meals use ingredients known for neuroprotective, anti-inflammatory, ECM, and brain health benefits. 
+		</p>
+		
+		<h5>Meal 1: Eggs with Mushrooms</h5>
+		<ul>
+			<li>Calories: ~321-756 kcal</li>
+			<li>Protein: ~18-38 g</li>
+			<li>Carbohydrates: ~7-10 g</li>
+			<li>Fat: ~24-81 g
+				<ul>
+					<li>Min (with Wiley's 1 tsp): 24 g</li>
+					<li>Max (with Nordic Naturals 2 tbsp): 74 g</li>
+				</ul>
+			</li>
+			<li>Carbohydrates: ~9-13g</li>
+		</ul>
+		
+		<h6>Cooking Instructions</h6>
+		<p>
+			Sautée 4-6 oz organic mushrooms (3-10 shiitake, wood ear, button mushrooms) for 10 minutes with one pre-soaked long pepper (piper longum) in 2 tsp coconut oil. Add 2-5 free-range eggs with 1-2 cloves organic garlic and cook lightly on medium heat for a short duration for runny yolks, to minimize fat oxidation. Remove from heat. Add 1.5g of turmeric, 2 tbsp dried organic parsley 2 oz fresh organic broccoli sprouts, 10 threads of saffron, and 2g of powdered natto. Drizzle enough high-DHA fish oil to provide 2,000 - 5,000 mg of DHA.
+		</p>
+
+		<p>
+			For the DHA, 1 tsp of <q>Wiley's Finest Wild Alaskan Fish Oil Summit DHA Liquid - 2140mg of DHA</q> (providing ~2,140 mg DHA), or 2 tbsp of <q>Nordic Naturals Children's DHA</q> (providing approximately 2,040 mg DHA per tablespoon).
+		</p>
+
+		<h6>Egg Scramble with Mushrooms Benefits</h6>
+		<p>
+			This meal supports brain health through anti-inflammatory effects from every ingredient. Natto and free-range eggs support mitochondrial function. The eggs and mushrooms provide a source of protein. The fats help absorb fat-soluble compounds in turmeric, saffron, and supplements. Broccoli sprouts provide sulforaphane. Natto provides probiotic Bacillus subtilis for gut health. Alfalfa contains many bioactives, including kaempferol, quercetin, and other anti-inflammatory compounds. DHA in the fish oil supports membrane fluidity, brain structure, neurotransmission, synaptic plasticity, decreased neuroinflammation, mood, and cognitive function. 
+		</p>
+
+		<p>
+			The caloric and fat ranges are broad due to the flexibility in ingredient choices of eggs and oil type.
+		</p>
+
+		<h4>References</h4>
+		<ol class="reference-list">
+		
+			<li id="satokari">
+					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7284805/"
+					title="High Intake of Sugar and the Balance between Pro- and Anti-Inflammatory Gut Bacteria"
+					target="_blank"
+					>High Intake of Sugar and the Balance between Pro- and Anti-Inflammatory Gut Bacteria</a>, Reetta Satokari.
+			</li>
+			<li id="x-wang">
+				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9220293/"
+				title="Dietary Polyphenol, Gut Microbiota, and Health Benefits"
+				target="_blank"
+				>Dietary Polyphenol, Gut Microbiota, and Health Benefits</a>, Xiaofei Wang, et al.
+			</li>
+			<li id="z-wu">
+				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8424887/"
+				title="Gut microbiota from green tea polyphenol-dosed mice improves intestinal epithelial homeostasis and ameliorates experimental colitis"
+				target="_blank"
+				>Gut microbiota from green tea polyphenol-dosed mice improves intestinal epithelial homeostasis and ameliorates experimental colitis</a>, Zhenhua Wu, et al.
+			</li>
+			
+			<li id="xiong">
+				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9498509/"
+				title="Health Benefits and Side Effects of Short-Chain Fatty Acids"
+				target="_blank"
+				>Health Benefits and Side Effects of Short-Chain Fatty Acids</a>, Ruo-Gu Xiong, et al.
+			</li>
+			<li id="c-de-luca">
+				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2246086/"
+				title="Inflammation and Insulin Resistance"
+				target="_blank"
+				>Inflammation and Insulin Resistance</a>, Carl de Luca and Jerrold M. Olefsky.
+			</li>
+			
+			<li id="s-romano">
+				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7946946/"
+				title="Meta-analysis of the Parkinson’s disease gut microbiome suggests alterations linked to intestinal inflammation"
+				target="_blank"
+				>Meta-analysis of the Parkinson’s disease gut microbiome suggests alterations linked to intestinal inflammation</a>, Stefano Romano, et al.
+			</li>
+			<li id="a-h-tan">
+				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8035463/"
+				title="Probiotics for Parkinson's disease: Current evidence and future directions"
+				target="_blank"
+				>Probiotics for Parkinson's disease: Current evidence and future directions</a>, Ai Huey Tan, et al.
+			</li>
+			<li id="hamamah">
+				<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8962300/"
+				title="Role of Microbiota-Gut-Brain Axis in Regulating Dopaminergic Signaling"
+				target="_blank"
+				>Role of Microbiota-Gut-Brain Axis in Regulating Dopaminergic Signaling</a>, Sevag Hamamah, et al.
+			</li>
+		</ol>
+	</section>
     <section id="treatment-approaches">
         <h2>Treatment Approaches</h2>
         <section id="treatment-approaches-overview">
@@ -1832,119 +2337,7 @@ function resetDefaultPosition(target) {
             </p>
             -->
     </section>
-    <section id="etiological-problems">
-    	<!-- TODO: Move this to Causes, rewrite introduction-->
-        <h3>The Best Approach</h3>
-        <p>
-            The best possible individual results can be predicted by a comprehensive, evidence-based approach. Care that is etiologically sound, evidence-based, patient-centered, integrated, and comprehensive should be investigated, and skepticism should be applied regarding the veracity of claims made by all healthcare providers.
-        </p>
-
-        <!-- TODO: Move to new peptides section? p>
-            Peptide therapy, by practitioner in-home visits, can be used (SS-31, AICAR, Epitalon, Pinealon).
-        </p -->
-        
-        <p>
-            Here are some approaches to target underlying problem areas:
-        </p>
-		<dl id="problems-list">
-			<dt class="bbb-dysfunction">BBB Dysfunction</dt>
-			<dd>Improves BBB function and protection</dd>
-			
-			<dt class="antifibrillogenic">Antifibrillogenic</dt>
-			<dd>Preventing fibril formation of α-synuclein.</dd>
-		
-			<dt class="anti-aggregant">Anti-aggregant</dt>
-			<dd>Preventing aggregation of fibrils and other junk</dd>
-		
-			<dt class="anti-inflammatory">Anti-inflammatory</dt>
-			<dd>Reducing inflammation</dd>
-		
-			<dt class="antioxidant">Antioxidant</dt>
-			<dd>Oxidative stress causes α-synuclein aggregation and neuroinflammation in PD. <cite class="reflink"><a href="#s-j-won">S.J. Won</a></cite></dd>
-		
-			<dt class="mitochondrial">Mitochondrial</dt>
-			<dd>Promoting mitochondrial health (mitogenesis, mitophagy)</dd>
-		
-			<dt class="neuroprotective">Neuroprotective</dt>
-			<dd>Protecting neuronal structure and function</dd>
-		
-			<dt class="neurorestorative">Neurorestorative</dt>
-			<dd>Promoting recovery and regeneration of neural tissue</dd>
-		
-			<dt class="senolytic">Senolytic</dt>
-			<dd>Targeting senescent cells</dd>
-		
-			<dt class="anti-ischemic">Anti-ischemic</dt>
-			<dd>Promoting blood flow deep within the brain</dd>
-		
-			<dt class="sleep">Sleep</dt>
-			<dd>Addressing insomnia</dd>
-		
-			<dt class="gi">Gastrointestinal</dt>
-			<dd>Improves gastrointestinal health and function</dd>
-		
-			<dt class="dopaminergic">Dopaminergic Side Effects</dt>
-			<dd>Helps DRT side-effects (e.g., dyskinesia, impulse control disorders)</dd>
-
-		</dl>
-
-        <!-- p>
-            Supplements, peptides, therapies, drugs, and stem cells can mitigate &alpha;-synuclein overexpression, reduce mutant &alpha;-synuclein, strengthen the mitochondria, reduce the side effects of LD/dopa decarboxylase (DDC), decrease the need for LD/dopa decarboxylase, reduce ROS, improve mood, improve sleep, improve recovery.
-        </p -->
-
-        <h4>References</h4>
-        <ol class="reference-list">
-            <li id="s-j-won">
-                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9774295/"
-                title="Neuronal Oxidative Stress Promotes α-Synuclein Aggregation In Vivo"
-                target="_blank"
-                >Neuronal Oxidative Stress Promotes α-Synuclein Aggregation In Vivo</a>, Seok Joon Won, et al.
-                <p>
-                
-                </p>
-            </li>
-        </ol>
-    </section>
-    <section id="treatment-plan">
-        <h2>
-           Treatment Starter Plan
-        </h2>
-        <p>
-            The Treatment Starter Plan is a structured, customizable framework for self-directed management of Parkinson's Disease with a health-optimization mindset. 
-        </p>
-        <ol>
-            <li>Adopt a mindset to maximize health.
-            <li>Get <a href="#genetic-testing">genetic testing</a>.
-            <li>Learn <a href="#introduction-to-pd">Parkinson's Disease</a>.
-            <li>Learn <a href="#how-to-build-a-supplement-plan">How to Build a Supplement Plan</a> and explore the various <a href="#supplements">supplements</a>.</li>
-            <li>Get a <a href="#pbm">Red Light Therapy</a> device and learn how to use it.
-            <li>Learn health (<a href="#health-diagnostics">basic overview</a>).
-            <li>Look into <a href="#hormonal-interventions">Hormonal Interventions</a>.
-            <li>Build a <a href="#care-team">Care Team</a>.
-            <li>Develop an <a href="#exercise">exercise</a> plan.
-            <li>Consider early <a href="#dbs">Deep Brain Stimulation (DBS)</a> for longevity.
-            <li>Look into cellular treatments like <a href="#gene-therapy">Gene Therapy</a>, <a href="#nad-injection">NAD+ Injections</a>, and <a href="#msc">Stem Cells</a>. 
-            <li>Continue to revise.
-        </ol>
- 
-        <p>
-            The <a href="#care-team">care team</a> prioritizes patient needs over their own. For this to be effective, a thorough, detailed understanding of the condition and treatments is essential.
-        </p>
-        
-        <h4>Question Assumptions</h4>
-        <p>
-            Recognized experts may lack thoroughness. Therefore, it is important to question the methods used to reach conclusions, learn the underlying principles, and apply critical thinking to make sound, informed decisions.
-        </p>
-        
-        <p>
-            Before attempting to answer any question, examine the framing or assumptions inherent in it, and evaluate the underlying assumptions, biases, and implications embedded within the question itself. Question the question.
-        </p>
-
-        <p>
-            Carefully evaluate the risks and benefits of each step outlined above. What is missing, misleading, or wrong?
-        </p>
-    </section>
-        
+    
     <section id="treatments">
         <h2>Detailed Treatments</h2>
         <section id="medications">
@@ -2082,7 +2475,7 @@ function resetDefaultPosition(target) {
                 <section id="neurochemical-imbalances">
                     <h4>Neurochemical and Vitamin Imbalances</h4>					
             		<p>
-						The overreliance on DRT to increase dopamine levels without addressing GABAergic dysfunction can result in dyskinesias. Without proper GABAergic inhibition, excitatory signals persist in motor circuits, leading to involuntary movements. For a more detailed discussion of neurotransmitter imbalance and its broader impact, see <a href="#multiple-neurotransmitter-system-damage">Multiple Neurotransmitter System Damage</a>.
+						The overreliance on DRT to increase dopamine levels without addressing GABAergic dysfunction can result in dyskinesias. Without proper GABAergic inhibition, excitatory signals persist in motor circuits, leading to involuntary movements. For a more detailed discussion of neurotransmitter imbalance and its broader impact, see <a href="#multiple-neurotransmitter-systems-damage">Multiple Neurotransmitter Systems Damage</a>.
             		</p>
 
                     <p>
@@ -3320,572 +3713,181 @@ function resetDefaultPosition(target) {
             </ol>
         </section>
     </section>
-    <section id="how-to-build-a-supplement-plan">
-        <h3>How to Build a Supplement Plan</h3>
-        <p>
-       		Supplements and dietary recommendations are components of a comprehensive health program targeting total human performance at the cellular level. This approach focuses not only on physical exercise but also on non-motor aspects such as sleep, cognitive function, and overall well-being. 
-        </p>
-        
-        <p>
-        	Brief explanations of what the supplements do accompany the plan. The etiological problems they address are detailed under Causes and Risk Factors. Details on each supplement is listed under its respective section. 
-        </p>
-        <h4>First, Do No Harm</h4>
-        <p>
-            It should go without saying that, before embarking on a serious plan to improve health, other lifestyle factors must be in order. That means no smoking and no alcohol, as even 1-2 drinks per week reduce cortical thickness and grey matter. Additionally, maintaining good sleep hygiene is essential.
-        </p>
-        
-        <h4>Exercise</h4>
-        <p>
-            Without consistent physical exercise, supplementation alone will yield suboptimal results. Regular and strategic exercise, combined with proper supplementation, is essential for supporting cellular health, neurological function, and overall performance.
-        </p>
-        
-        <p>
-            The following general-purpose solution serves as a customizable starting point to address health with PD from multiple angles, targeting each of the underlying <a href="#etiological-problems">Etiological Problems</a>.
-        </p>
-        
-        <h4>Mixing and Storing Powders</h4>
-        
-        <p>The mixed powders "Mitochondrial Mix", "Cacao Mix", and "Post-Workout" powders must be made in batches and should be stored in a cool, dry place with a desiccant pack (like silica gel) inside the powder to prevent clumping and contamination (mold). Silica packs commonly shipped with raw powders and supplements can be reused.
-        </p>
-        
-        <h4>Weighing and Mixing Powders</h4>
-        <p>
-            A sturdy gram scale or reliable, accurate food scale that measures to the nearest 0.01g (10mg) is necessary to ensure accuracy. To help ensure proper ingredient dispersal, mix the smaller ingredients first and blend in the larger ingredients.
-        </p>
+    <section id="care-team">
+        <h2>
+            How to Build a Care Team
+        </h2>
+        <section id="care-team-introduction">
+            <h3>Introduction</h3>
+
+            <p>
+                Optimizing health is complex, and a PD diagnosis increases that. Conventional medicine fails to adequately address peripheral and autonomic nervous system (ANS) dysfunction, which typically manifests as GI issues, loss of bladder and bowel control, sleep problems, and ultimately, heart failure and death. 
+            </p>
+            <p>
+                Seeking 'alternative' approaches without critical analysis is equally flawed. The only true alternative to effective treatment is ineffective treatment, and that raises the problem of determining efficacy.
+            </p>
             
-        <h4>Daily Supplements (2x daily)</h4>
-		<table border="1" class="supplement-table">
-			<thead>
-				<tr>
-					<th>Supplement</th>
-					<th>Dose</th>
-					<th>Mechanism</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Ubiquinol</td>
-					<td>300mg</td>
-					<td>Mitochondrial function, Antioxidant, Improves ATP production</td>
-				</tr>
-				<tr>
-					<td>PQQ (Pyrroloquinoline Quinone)</td>
-					<td>30mg</td>
-					<td>Mitochondrial biogenesis, Antioxidant, Neuroprotective, Anti-aggregant</td>
-				</tr>
-				<tr>
-					<td>CDP-Choline (Citicoline)</td>
-					<td>500mg</td>
-					<td>Neuroprotective, Enhances dopamine release, Supports phospholipid synthesis</td>
-				</tr>
-				<tr>
-					<td>Active B Complex (Integrative Therapeutics)</td>
-					<td>1 capsule</td>
-					<td>Supports methylation, Cognitive function, Energy metabolism</td>
-				</tr>
-				<tr>
-					<td>Nattokinase</td>
-					<td>100mg</td>
-					<td>Cardiovascular health, Anti-thrombotic, Improves blood flow</td>
-				</tr>
-				<tr>
-					<td>Vitamin K2</td>
-					<td>1,000mcg</td>
-					<td>Prevents vascular calcification, Supports mitochondrial function</td>
-				</tr>
-				<tr>
-					<td>Berberine</td>
-					<td>500mg</td>
-					<td>Improves mitochondrial function, ubiquitin-proteasome function, and gut bacteria to produce L-dopa, increasing brain dopamine, and reducing DRT-induced cytotoxicity, thereby reducing overreliance of DRT and reducing its side effects.</td>
-				</tr>				
-				<tr>
-					<td>Thiamine</td>
-					<td>50mg</td>
-					<td>Supports neurological function, Enhances mitochondrial energy production</td>
-				</tr>
-			</tbody>
-		</table>
-		
-		<p>
-			The Daily Supplements improve mitochondrial function, support cognitive performance, and address many etiological pathways in PD. Ubiquinol and PQQ improve mitochondrial energy production and biogenesis, CDP-Choline improves dopamine release, supports phospholipid synthesis, strengthens cellular membranes and improves neurotransmitter production. The Active B Complex facilitates methylation and energy metabolism and makes up for some deficits caused by DRT. Nattokinase reduces amyloid fibrils and promotes α-synuclein ubiquitination, supporting proteasomal degradation and autophagy—a problem in PD progression—by regulating protein misfolding and enhancing cellular waste clearance. Vitamin K2 helps prevent vascular calcification and supports mitochondrial function and may indirectly improve neurological function. Berberine improves mitochondrial function, gut-derived L-dopa production, and the ubiquitin-proteasome system, reducing dependency on DRT. Thiamine further enhances mitochondrial energy production and supports neurological health.
-		</p>
-		
-        <h4 id="mitochondrial-powder">Mitochondrial Mix Powder — 10-Day Supply</h4>
-		<p>
-			This 10-day serving can be taken 2x daily; once with the morning supplements; once later.
-		</p>
-		<ul class="recipe-list">
-			<li>Uridine Monophosphate (UMP) — 5g</li>
-			<li>Coffeeberry Extract — 2.5g</li>
-			<li>NMN — 10g</li>
-			<li>NR — 5g</li>
-			<li>Niacin — 2g</li>
-			<li>Lion's Mane — 10g</li>
-			<li>Cordyceps — 10g</li>
-			<li>Matcha — 7g</li>
-			<li>Micronized Creatine Monohydrate (CreaPure®) — 50g</li>
-			<li>Inulin — 30g</li>
-			<li>Trehalose — 20g</li>
-			<li>Base: Organic Greens Powder — 50g</li>
-			<li>Base: Organic Fruits Powder — 50g</li>
-		</ul>
-		<h5>Instructions for Mitochondrial Mix</h5>
-		<p>
-			Mix 24g of the powder with water. Stir thoroughly and consume twice daily — once with morning supplements and once later in the day. Store in a cool, dry place to prevent clumping.
-		</p>
+            <p>
+                Many medical professionals, whether conventional or alternative, fall short. Trusting them may lead you to take medications that do not improve health and may hasten disease progression. In PD, this may include beta-3 agonists, anticholinergics, or fludrocortisones. Worse, they may also offer "mind-body-spirit" treatments lacking scientific support or clear mechanisms of action.
+            </p>
+                        
+            <p>
+                It is the patient's responsibility to audit his medical team. Begin by consulting independent specialists and exploring reputable integrative medicine practices. Seek out patient communities for recommendations on doctors who prioritize a comprehensive approach.
+            </p>
+
+            <p>
+                The onus of responsibility to learn, assess claims, and take actions for your health is on you. This involves understanding the science behind treatments and engaging in self-advocacy to actively participate in the decision-making process. Skepticism isn’t just healthy; it’s essential for survival and well-being.
+            </p>
+        </section>
+
+        <!-- section id="how-to-interview-neurologist">
+            <h3>Questions to Ask a Potential Neurologist</h3>
+                How can I test my mitochondrial function?
+                
+        </section -->
+        <section id="hypothetical-care-team">
+            <h3>
+                Hypothetical Care Team
+            </h3>
+            <p>
+                This is a structured, customizable framework designed for self-directed health optimization in Parkinson's Disease.
+            </p>
+
+            <ol>
+                <li>Neurologist for planning, diagnosis, and oversight.
+                <li>Functional and Integrative Medicine Specialist for planning, diagnosis, and oversight.
+                <li>Movement Specialist.
+                <li>Physical Therapist.
+                <li>Research involvement for cutting-edge options.
+                <li>Biomarker Testing Laboratory for personalized testing to monitor disease progression, treatment response, and optimization.
+            </ol>
+            
+            <h3>How to Interview Neurologists</h3>
+            <p>
+               Doctors may be limited by institutional protocols.
+             </p>
+             <p>
+                Assessing provider competence requires a more thorough approach than just checking credentials, affiliations, and years of experience.
+            </p>
+            <p>
+                Approach the interview from a position of informed knowledge without revealing too much. When given the opportunity to speak freely, how do they err?
+            </p>
+            
+            <p>
+                The effectiveness of that strategy depends on one's knowledge and comprehension — specifically the depth and breadth of understanding and the ability to evaluate and scrutinize the accuracy of the interlocutor's information.
+            </p>
+            
+            <p>
+                Better results are achieved by preparing detailed questions that delve into the neurologist's expertise in the specific area of concern.
+            </p>
+            
+            <section>
+                <h3>Q &amp; A</h3>
+                <p>
+                    Below are example questions from the perspective of an <em>active participant</em>. These questions should be critically examined and may be used as the basis for better questions.
+                </p>
     
-    	<h5>Mitochondrial Mix Benefits</h5>
-		<p>
-			The Mitochondrial Mix enhances mitochondrial function as well as cognitive and overall health. <abbr title="Uridine Monophosphate">UMP</abbr> improves neurotransmission and synaptic plasticity. NMN and NR increase NAD+ levels, improving mitochondrial energy production. Niacin increases NAD+ and reduces inflammation. Cordyceps boosts ATP production and is neuroprotective and anti-inflammatory. Lion’s Mane promotes neurogenesis, and Trehalose prevents protein aggregation. Inulin supports gut health, and Coffeeberry Extract, rich in chlorogenic acids and polyphenols, improves cognitive function through antioxidant mechanisms.
-		</p>
-
-
-		<h4>Cacao Mix Powder — 10 Day Supply</h4>
-		<p>
-			This ~10-day serving can be taken in hot water 1-2x daily, earlier in the day. Add coconut oil and organic ginger juice.
-		</p>
-		<ul class="recipe-list">
-			<li>Niacin — 1g</li>
-			<li>Turmeric — 7g</li>
-			<li>Matcha — 7g</li>
-			<li>Lion's Mane — 10g</li>
-			<li>Cordyceps — 10g</li>
-			<li>Turkey Tail — 10g</li>
-			<li>Ceylon Cinnamon — 12g</li>
-			<li>Redmond Real Salt — 15g</li>
-			<li>Ginger Powder — 15g</li>
-			<li>Trehalose — 20g</li>
-			<li>Raw Cacao — 100g</li>
-		</ul>
-		
-		<h5>Instructions for Cacao Mix</h5>
-		<p>
-			Mix 19 g of the mixed powder to about 24 oz below-boiling water to preserve the properties of the ingredients. Add coconut oil.
-		</p>
-		
-		<h5>Cacao Mix Benefits</h5>
-		<p>
-			The Cacao Mix provides stimulating cognitive effects for neurotransmitter balance and mitochondrial function. Raw Cacao increases PEA and catechins, boosting mood and cognitive function. Cordyceps improves ATP production and is neuroprotective. Lion’s Mane supports neurogenesis and synaptic plasticity. Niacin increases NAD+ levels for mitochondrial energy, while Turmeric is anti-inflammatory, antifibrillogenic, and anti-aggregation. Ginger improves BBB function, stimulates mitophagy, and supports gastrointestinal function.
-		</p>
-
-		<h4>Pre-Workout Supplements</h4>
-		<table border="1" class="supplement-table">
-			<tr>
-				<th>Supplement</th>
-				<th>Dose</th>
-				<th>Mechanism</th>
-			</tr>
-			<tr>
-				<td>ALCAR (Acetyl-L-Carnitine)</td>
-				<td>1.5g</td>
-				<td>Mitochondrial function, Enhances energy and focus, Promotes synaptic plasticity</td>
-			</tr>
-			<tr>
-				<td>Alpha-GPC</td>
-				<td>300-600mg</td>
-				<td>Choline source, Enhances acetylcholine production, Supports cognitive function</td>
-			</tr>
-			<tr>
-				<td>Vinpocetine</td>
-				<td>10-30mg</td>
-				<td>Improves cerebral blood flow, Supports memory and focus, Anti-inflammatory</td>
-			</tr>
-			<tr>
-				<td>Noopept</td>
-				<td>10-30mg</td>
-				<td>Enhances cognitive function, Promotes neurogenesis, Reduces oxidative stress</td>
-			</tr>
-			<tr>
-				<td>4’-DMA-7,8-DHF (Dihydroxyflavone, passion flower extract)</td>
-				<td>30-50mg</td>
-				<td>BDNF signaling (TrkB agonist), Enhances synaptic plasticity, Reduces neuroinflammation</td>
-			</tr>
-			<tr>
-				<td>Na-r-ALA (Na-R-Alpha-Lipoic Acid)</td>
-				<td>300-600mg (with 2-5g trehalose)</td>
-				<td>Antioxidant, Improves glucose uptake (taken with trehalose for optimal effect), Mitochondrial support</td>
-			</tr>
-			<tr>
-				<td>Triacetyluridine</td>
-				<td>25-50mg</td>
-				<td>Enhances synaptic plasticity, Dopaminergic function, Supports cognitive health</td>
-			</tr>
-			<tr>
-				<td>Ginkgo Biloba</td>
-				<td>120-240mg</td>
-				<td>Increases cerebral blood flow, Improves cognitive performance, Reduces oxidative stress</td>
-			</tr>
-			<tr>
-				<td>Tiger Milk Mushroom</td>
-				<td>500-1000mg</td>
-				<td>Contains ergosterol (regulates membrane fluidity), Beta-glucan for ECM support, Immunomodulatory</td>
-			</tr>
-			<tr>
-				<td>Bacopa Monnieri</td>
-				<td>300-500mg</td>
-				<td>Improves memory, Enhances cognitive function, Reduces oxidative stress</td>
-			</tr>
-		</table>
-
-		<h5>Pre-Workout Supplements Benefits</h5>
-		<p>
-			The Pre-Workout Supplements support cognitive function, stamina, and mitochondrial energy, complementing the broader supplement regimen with athletic performance support specifically selected and relevant to PD, with no evidence linking these enhancers to increased dyskinesias. These compounds improve mental clarity, fight fatigue, and reduce stress from exercise. ALCAR and Na-r-ALA support mitochondrial efficiency, while Alpha-GPC aids acetylcholine production without worsening dyskinesias. Vinpocetine and Ginkgo Biloba improve cerebral blood flow, and Salidroside counteracts fatigue by modulating dopamine and serotonin. 
-		</p>
-		<p> * Note: For Na-r-ALA, pairing with a carbohydrate source, like 3-5g trehalose, is recommended to optimize glucose uptake. The Mitochondrial Mix could be used as a carbohydrate source if additional trehalose is added. 
-		</p>
-		
-        <h4>Post-Workout Mixed Powder — 10-Workout Supply</h4>
-        <p>This 10-day supply of powder can be pre-mixed and stored a cool, dry place.</p>
-		<ul class="recipe-list">
-			<li>Niacin — 1g</li>
-			<li>NR — 2.5g</li>
-			<li>Rhodiola Rosea — 2.5g</li>
-			<li>NMN — 5g</li>
-			<li>Sodium Bicarbonate — 5g</li>
-			<li>Natto Powder — 5g</li>
-			<li>Turmeric — 7g</li>
-			<li>HMB — 10g</li>
-			<li>TMG (Betaine) — 10g</li>
-			<li>Lion's Mane — 10g</li>
-			<li>Tremella — 10g</li>
-			<li>Reishi — 10g</li>
-			<li>Chaga — 10g</li>
-			<li>Ceylon Cinnamon — 12g</li>
-			<li>Turkey Tail — 20g</li>
-			<li>Inulin — 30g</li>
-			<li>Collagen Peptides — 30g</li>
-			<li>Taurine — 30g</li>
-			<li>Trehalose — 40g</li>
-			<li>BCAA 4:1:1 — 40g</li>
-			<li>Micronized Creatine Monohydrate (CreaPure®) — 50g</li>
-			<li>Organic Greens Powder — 50g</li>
-			<li>Organic Fruits Powder — 50g</li>
-			<li>Whey Protein Isolate — 300g</li>
-		</ul>
-		
-		<h5>Instructions</h5>
-		<p>
-			Pre-mix this powder with water and a low-sugar probiotic (whole milk plain yogurt or kefir) and consume it immediately after exercise (bring it to the gym).
-		</p>
-		
-		<h5>Post-Workout Mix Benefits</h5>
-        <p>
-        	This Post-Workout Mix aids in muscle recovery, reduces brain inflammation, and supports mitochondrial function. BCAAs reduce brain inflammation by decreasing excess glutamate. NMN and NR boost NAD+ and repair mitochondria. Taurine is senolytic, improves mitochondrial dysfunction, and is an inhibitory neurotransmitter. TMG (Betaine) regulates GABA and glycine, increases glutathione activity, and lowers homocysteine. Turkey Tail, rich in beta-glucan and ergothioneine, supports cognitive function and protects neurons. Collagen peptides support ECM integrity and gray matter. Lion’s Mane stimulates neurogenesis. Sodium bicarbonate helps restore the acid-base balance in the body, following intensive exercise.
-        </p>
-
-        <h4>Dinner Supplements 🍽️</h4>
-        <p>
-        	Fat-soluble substances are better absorbed when taken with dietary fats.
-        </p>
-        <table border="1" class="supplement-table">
-			<thead>
-				<tr>
-					<th>Supplement</th>
-					<th>Dose</th>
-					<th>Mechanism</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>DHEA</td>
-					<td>50mg</td>
-					<td>Hormonal balance, ECM support, IGF-1 levels</td>
-				</tr>
-				<tr>
-					<td>Pregnenolone</td>
-					<td>30mg</td>
-					<td>Hormonal balance, cognitive support, ECM</td>
-				</tr>
-				<tr>
-					<td>Sesamins (Sesaminol)</td>
-					<td>100-200mg</td>
-					<td>Antioxidant, Anti-inflammatory, Supports mitochondrial function, Regulates lipid metabolism, Protects membrane structure</td>
-				</tr>
-				<tr>
-					<td>NAC</td>
-					<td>600-1200mg</td>
-					<td>Antioxidant, Glutathione precursor</td>
-				</tr>
-				<tr>
-					<td>Geranyl Geraniol</td>
-					<td>500mg</td>
-					<td>Mitochondrial function, Dopaminergic side-effect modulation</td>
-				</tr>
-				<tr>
-					<td>Urolithin-A</td>
-					<td>1000mg</td>
-					<td>Senolytic, Mitochondrial biogenesis, Anti-inflammatory</td>
-				</tr>
-				<tr>
-					<td>Resveratrol</td>
-					<td>1000mg</td>
-					<td>Senolytic, Antioxidant, Neuroprotective, Anti-inflammatory</td>
-				</tr>
-				<tr>
-					<td>Fisetin</td>
-					<td>500mg</td>
-					<td>Senolytic, Anti-inflammatory</td>
-				</tr>
-				<tr>
-					<td>Quercetin</td>
-					<td>500mg</td>
-					<td>Anti-apoptotic, Anti-inflammatory, Neuroprotective, Mitochondrial, Motor deficits</td>
-				</tr>
-				<tr>
-					<td>Sulforaphane</td>
-					<td>50mg</td>
-					<td>Senolytic, Antioxidant, Detoxification</td>
-				</tr>
-				<tr>
-					<td>Apigenin</td>
-					<td>50mg</td>
-					<td>Neuroprotective, Anti-inflammatory</td>
-				</tr>
-				<tr>
-					<td>Piperlongumine</td>
-					<td>50mg</td>
-					<td>Senolytic, Enhances bioavailability of curcumin and bioactives</td>
-				</tr>
-				<tr>
-					<td>Zeaxanthin</td>
-					<td>10mg</td>
-					<td>Neuroprotective, Antioxidant</td>
-				</tr>
-				<tr>
-					<td>Lutein</td>
-					<td>10mg</td>
-					<td>Neuroprotective, Antioxidant</td>
-				</tr>
-				<tr>
-					<td>Mixed Tocopherols/Tocotrienols</td>
-					<td>150-300 IU</td>
-					<td>Neuroprotective, <abbr title="ubiquitin proteasome system">UPS</abbr> dysfunction, BBB integrity, Mitochondrial health</td>
-				</tr>
-				<tr>
-					<td>Hyaluronic Acid</td>
-					<td>100-300mg (MW >1600 kDa)</td>
-					<td>ECM support, modulates postsynaptic calcium channels, protects dopaminergic neurons</td>
-				</tr>
-			</tbody>
-		</table>
-
-		
-		<h4>Golden Milk Recipe — Nighttime Anti-Inflammatory Drink — 10-Day Supply.</h4>
-		<ul class="recipe-list">
-			<li>Saffron — 300mg</li>
-			<li>Lion's Mane — 10g</li>
-			<li>Tremella — 10g</li>
-			<li>Reishi — 10g</li>
-			<li>Chaga — 10g</li>
-			<li>Turkey Tail — 20g</li>
-			<li>Ceylon Cinnamon — 12g</li>
-			<li>Ginger Powder — 12g</li>
-			<li>Turmeric — 20g</li>
-			<li>Collagen Peptides — 70g</li>
-		</ul>
-		
-		<h5>Instructions for Golden Milk</h5>
-        <p>
-            Bring 2-3 long peppers (Piper longum) to boil (enhances bioavailability) in 8 oz water. Add 8 oz milk. Add 18g of the mixed powder into warm (not boiling) water and milk. Stir thoroughly and avoid overheating to preserve the beneficial compounds. (The long peppers can be reused until they lack strength, or may be reused for cooking recipes.)
-        </p>
-		
-		<h5>Golden Milk Benefits</h5>
-		<p>
-			This Golden Milk reduces inflammation and supports brain health and mitochondrial function. The turmeric and saffron improve sleep. Cinnamon improves blood glucose (which should not be elevated when sleeping). Turmeric is anti-inflammatory, antifibrillogenic, and prevents protein aggregation. Ginger enhances mitophagy, protects the BBB, and reduces inflammation. Tremella, Reishi, Lion’s Mane, and Chaga provide beta-glucan for ECM support and contain flavonoids such as apigenin, quercetin, and anthocyanins. Turkey Tail offers ergothioneine and beta-glucan to support cognitive function and protect neurons. Collagen peptides increase gray matter and improve memory. The long peppers improve curcuminoid absorption and are senolytic.
-		</p>
-				
-        <h4>Sleep Supplements (7:00 pm - 9:00 pm) 💤</h4>
-		<table border="1">
-			<tr>
-				<th>Supplement</th>
-				<th>Dose</th>
-				<th>Mechanism</th>
-			</tr>
-			<tr>
-				<td>Melatonin (Sleep3)</td>
-				<td>10mg</td>
-				<td>Regulates sleep-wake cycle, Antioxidant, Neuroprotective, Mitochondrial support</td>
-			</tr>
-			<tr>
-				<td>5-HTP</td>
-				<td>50-100mg</td>
-				<td>Serotonin precursor, Supports mood and sleep, Reduces dopaminergic side effects</td>
-			</tr>
-			<tr>
-				<td>GABA</td>
-				<td>1000mg-2000mg</td>
-				<td>Inhibitory neurotransmitter, Promotes relaxation and sleep, Reduces excitotoxicity</td>
-			</tr>
-			<tr>
-				<td>Magnesium Threonate</td>
-				<td>300mg</td>
-				<td>Enhances synaptic plasticity, Supports memory and sleep, Mitochondrial function</td>
-			</tr>
-			<tr>
-				<td>Chelated Magnesium</td>
-				<td>150mg</td>
-				<td>Promotes relaxation, Supports neurotransmitter balance, Enhances muscle function</td>
-			</tr>
-			<tr>
-				<td>Theanine</td>
-				<td>250-750mg</td>
-				<td>Calming, Improves cognitive function, Promotes sleep quality and focus</td>
-			</tr>
-		</table>
-    </section>
+                <h4><q>In your initial assessment of a patient suspected to have Parkinson's Disease, what tests and evaluations do you conduct?</q></h4>
     
-    <section id="food">
-        <h3>
-            Food
-        </h3>
-
-        <p>
-            Certain compounds found in food and supplements help protect against neurodegeneration, with some supporting exercise performance and others improving sleep. Some are synergistic, and some require dietary fats, like eggs or coconut oil, for absorption. This section explores dietary choices, treating food as medicine for PD.
-        </p>
+                <h4>
+                ✅ Good answers must include:
+                </h4>
+                <ul class="good-answers">
+                    <li> Diagnostic imaging with DaTscan (Dopamine Transporter Scan) and <abbr title="Functional Magnetic Resonance Imaging">fMRI</abbr> to map dopamine distribution in the brain and assess broader brain function, respectively.
+                    <li> Syn-One skin biopsy
+                </ul>
+                <p>
+                    — and that is beyond the very basic fundamentals of:&mdash;
+                </p>
+    
+                <ul class="baseline-answers">
+                    <li> Detailed medical history and symptom review.
+                    <li> Thorough examination of motor symptoms.
+                    <li> Evaluation of non-motor symptoms such as sleep disturbances, autonomic dysfunction, and mood disorders.
+                </ul>
+    
+                <h4>
+                ❌ Bad Answers:
+                </h4>
+                <ul class="bad-answers">
+                    <li> Not mentioning genetic testing without providing context or justification.
+                    <li> 
+                        Preferring simpler imaging over more detailed <abbr title="Functional Magnetic Resonance Imaging">fMRI</abbr> and DaTscan imaging.
+                        <p>
+                            <abbr title="Dopamine Transporter Scan">DaTscan</abbr> is a specialized form of <abbr title="Single Photon Emission Computed Tomography">SPECT</abbr> optimized to detect changes in dopamine transporter density and is useful in the broader assessment of the condition.
+                        </p>
+                        <p>
+                             <abbr title="Functional Magnetic Resonance Imaging">fMRI</abbr> scans map out broader brain networks affected by PD, beyond just dopamine pathways. This information might help inform broader strategies, including supplementation.
+                        </p>
+                    </li>
+                    <li>
+                        Generalization without specifying the detailed steps of the neurological examination and symptom review.
+                    </li>
+                    
+                </ul>
+    
+                <h4><q>Why do you include or exclude genetic testing in your initial assessment for Parkinson's Disease?</q></h4>
+    
+                <h4>✅ Good answers:</h4>
+                <p>
+                    Acknowledgment of the importance of genetic factors in (1) creating custom-tailored solutions and (2) testing one's offspring for inherited traits. 
+                </p>
+    
+                <h4><q>How do you address non-motor symptoms in the management of Parkinson's Disease?</q></h4>
+                <p>
+                    Treatments that the patient understands well and fall outside conventional medicine, along with their mechanisms of action, should be asked about.
+                </p>
+    
+                <h4>❌ Bad answers:</h4>
+                <ul class="bad-answers">
+    
+                    <li>
+                        Dismissive generalizations about 'alternative' treatments that show bias or knowledge gaps.
+                    </li>
+                    <li>
+                         If the doctor can't explain the mechanisms of action (e.g., of turmeric, photobiomodulation) in simple terms, he likely doesn't understand them well himself.
+                    </li>
+                </ul>
+    
+                <h4><q>Can you provide an example of how you adapted a treatment plan based on new research findings in Parkinson's Disease?</q></h4>
+    
+                <p>
+                    ✅ A good response should include a recent example of implementing new research-based treatment, with evidence, rationale, and measured results.
+                </p>
+            </section>
+            <h4>Summary</h4>
+                <p>
+            These questions and expected answers help ensure doctors follow a comprehensive, current approach to PD but also demonstrate critical thinking and a nuanced understanding of the disease. Doctors are not immune to common mental errors.
+            </p>
+        </section>
+        <section id="tips-for-selecting-providers">
+                <h3>Tips for Selecting Providers</h3>
+                <p>
+                    Referrals can be initiated by a PCP, a neurologist, or a functional medicine specialist. The starting point is inconsequential; the objective is to assemble a comprehensive care team.
+                </p>
+                <p>
+                    Institutional protocols influence their treatment approach. Seek a neurologist with the autonomy and openness to explore novel, evidence-based treatments beyond the standard of care.
+                </p>
+                <p>
+                    Patient-centered care addressing root causes and individualized needs predicts the best results. Starting with a Functional and Integrative Medicine Specialist can be great. However, to avoid unqualified practitioners, it's essential to be well-informed.
+                </p>
+                <p>
+                    During your initial consultation with a neurologist, discuss optimizing health to minimize <abbr title="Dopamine Replacement Therapy">DRT</abbr>.  Ask about specific treatments such as <a href="#hrt" title="hormone replacement therapy">HRT</a>, <a title="Photobiomodulation" href="#pbm">PBM</a>, and <a href="#5-htp">5-HTP</a>, and how they might interact with <abbr title="Dopamine Replacement Therapy">DRT</abbr>. If the doctor cannot explain their benefits or potential interactions, consider finding another doctor.
+                </p>
         
-		<h3>
-			 Dietary Strategies for Parkinson's Disease
-		</h3>
-		<p>
-			A diet for PD should prioritize gut health, blood sugar control, and the inclusion of bioactives that aid disease management.
-		</p>
-		<p>
-			To manage blood glucose, eliminate all refined sugars, reduce starch intake, and include protein (especially post-workout). Fats rich in <abbr title="medium chain triglycerides">MCTs</abbr>, like coconut oil, provide an efficient energy source for the brain and improve the absorption of fat-soluble compounds such as turmeric.
-		</p>
-		
-		<h4>Eliminating Sugar</h4>
-		<p>
-			Gut health can be improved by diet. Eliminating refined sugars, especially fructose and sucrose, is an important first step to improving gut health and blood glucose. Dietary sugar alters gut microbiota, leading to endotoxemia (leaky gut), low-grade systemic inflammation, metabolic dysregulation, with many downstream health effects. <cite class="reflink"><a href="#satokari">R. Satokari</a></cite>
-		</p>
-		
-		<h4>Probiotics, Fiber, and Polyphenols</h4>
-		<p>
-			 Fermented foods like yogurt and kimchi, prebiotic fibers like inulin and glucomannan, and polyphenols in foods all promote the production of beneficial short-chain fatty acids and postbiotics, which improve gut health and help regulate appetite.
-		</p>
-		
-		<p>
-			 Polyphenols, fermentation byproducts, bioactive peptides, and organic acids enhance gut health and short-chain fatty acid (<abbr title="short-chain fatty acid">SCFA</abbr>) production through various mechanisms. These mechanisms include promoting prebiotic activity, supporting beneficial bacteria growth, and beneficial fermentation byproducts and organic acids. This synergistic effect supports a balanced gut microbiome, improves digestive health, and enhances overall well-being. <cite class="reflink"><a href="#x-wang">X. Wang</a></cite>
-		</p>
-		
-		<h4>Polyphenols and SCFAs</h4>
-		<p>
-			<abbr title="short-chain fatty acid">SCFA</abbr>s are fatty acids with fewer than six carbons, produced by fermenting indigestible fibers in the gut. Polyphenols, like <abbr title="Epigallocatechin gallate">EGCG</abbr> from green tea, increase SCFA production. This reduces gut inflammation and strengthens the colon barrier, which can help prevent enteritis. <cite class="reflink"><a href="#z-wu">Z. Wu</a></cite>
-		</p>
-		
-		<p>
-			SCFAs maintain the gut lining and nourish beneficial bacteria. Dietary fiber, fermented by gut bacteria, is the primary source of SCFAs. These fatty acids help regulate appetite, reduce cravings for sugary foods, and improve blood glucose and insulin sensitivity. Lower inflammation further enhances metabolic health. <cite class="reflink"><a href="#xiong">R. Xiong</a>, <a href="#c-de-luca">C. de Luca</a></cite>
-		</p>
-		
-		<h4>Food and the Gut-Brain Axis in Parkinson's Disease</h4>
-				
-		<p>
-			Restoring balance to the gut microbiome through probiotics and prebiotics can improve gastrointestinal function. In PD, gut issues are common, and addressing them may slow neurodegeneration.
-		</p>
-		<p>
-			Recent research has explored the use of probiotics in PD, including constipation, endothelial health, and the gut-brain axis. A 2022 study titled <q>Role of Microbiota-Gut-Brain Axis in Regulating Dopaminergic Signaling</q> found that gut microbiota help maintain adequate concentrations of dopamine via bidirectional communication along the gut-brain axis. <cite class="reflink"><a href="#s-romano">S. Romano</a>, <a href="#a-h-tan">A.H. Tan</a>, <a href="#hamamah">Hamamah</a></cite>
-		</p>
+                <blockquote>
+                    <p>
+                        &ldquo;It is better to know some of the questions than all of the answers.&rdquo;
+                    </p>
+                    <cite>&mdash; James Thurber</cite>
+                </blockquote>
+        
+                <p>
+                    Creating a health optimization plan is difficult, especially for PD, which requires specialized expertise. Those who approach this with seriousness and understanding can expect to achieve a better quality of life and longevity.
+                </p>
+            </section>
 
-		<h4>Insulin Resistance (IR) in PD</h4>
-		<p>
-			According to a 2018 study, nearly 60% of non-diabetic PD patients may have undiagnosed insulin resistance, despite having normal blood sugar levels. And although higher body mass index (BMI) was associated with increased IR, even lean PD patients showed a higher percentage (41%) of IR compared to healthy adults without PD.
-		</p>
-		
-		<p>
-			Studies have consistently shown that individuals with PD exhibit alterations in their gut microbiome, characterized by reduced diversity and altered composition compared to healthy individuals. This dysbiosis may contribute to the development and progression of PD symptoms.
-		</p>
-		
-		<h4>Meal Ideas for Brain Health</h4>
-		<p>
-			These meals use ingredients known for neuroprotective, anti-inflammatory, ECM, and brain health benefits. 
-		</p>
-		
-		<h5>Meal 1: Eggs with Mushrooms</h5>
-		<ul>
-			<li>Calories: ~321-756 kcal</li>
-			<li>Protein: ~18-38 g</li>
-			<li>Carbohydrates: ~7-10 g</li>
-			<li>Fat: ~24-81 g
-				<ul>
-					<li>Min (with Wiley's 1 tsp): 24 g</li>
-					<li>Max (with Nordic Naturals 2 tbsp): 74 g</li>
-				</ul>
-			</li>
-			<li>Carbohydrates: ~9-13g</li>
-		</ul>
-		
-		<h6>Cooking Instructions</h6>
-		<p>
-			Sautée 4-6 oz organic mushrooms (3-10 shiitake, wood ear, button mushrooms) for 10 minutes with one pre-soaked long pepper (piper longum) in 2 tsp coconut oil. Add 2-5 free-range eggs with 1-2 cloves organic garlic and cook lightly on medium heat for a short duration for runny yolks, to minimize fat oxidation. Remove from heat. Add 1.5g of turmeric, 2 tbsp dried organic parsley 2 oz fresh organic broccoli sprouts, 10 threads of saffron, and 2g of powdered natto. Drizzle enough high-DHA fish oil to provide 2,000 - 5,000 mg of DHA.
-		</p>
-
-		<p>
-			For the DHA, 1 tsp of <q>Wiley's Finest Wild Alaskan Fish Oil Summit DHA Liquid - 2140mg of DHA</q> (providing ~2,140 mg DHA), or 2 tbsp of <q>Nordic Naturals Children's DHA</q> (providing approximately 2,040 mg DHA per tablespoon).
-		</p>
-
-		<h6>Egg Scramble with Mushrooms Benefits</h6>
-		<p>
-			This meal supports brain health through anti-inflammatory effects from every ingredient. Natto and free-range eggs support mitochondrial function. The eggs and mushrooms provide a source of protein. The fats help absorb fat-soluble compounds in turmeric, saffron, and supplements. Broccoli sprouts provide sulforaphane. Natto provides probiotic Bacillus subtilis for gut health. Alfalfa contains many bioactives, including kaempferol, quercetin, and other anti-inflammatory compounds. DHA in the fish oil supports membrane fluidity, brain structure, neurotransmission, synaptic plasticity, decreased neuroinflammation, mood, and cognitive function. 
-		</p>
-
-		<p>
-			The caloric and fat ranges are broad due to the flexibility in ingredient choices of eggs and oil type.
-		</p>
-
-		<h4>References</h4>
-		<ol class="reference-list">
-		
-			<li id="satokari">
-					<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7284805/"
-					title="High Intake of Sugar and the Balance between Pro- and Anti-Inflammatory Gut Bacteria"
-					target="_blank"
-					>High Intake of Sugar and the Balance between Pro- and Anti-Inflammatory Gut Bacteria</a>, Reetta Satokari.
-			</li>
-			<li id="x-wang">
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9220293/"
-				title="Dietary Polyphenol, Gut Microbiota, and Health Benefits"
-				target="_blank"
-				>Dietary Polyphenol, Gut Microbiota, and Health Benefits</a>, Xiaofei Wang, et al.
-			</li>
-			<li id="z-wu">
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8424887/"
-				title="Gut microbiota from green tea polyphenol-dosed mice improves intestinal epithelial homeostasis and ameliorates experimental colitis"
-				target="_blank"
-				>Gut microbiota from green tea polyphenol-dosed mice improves intestinal epithelial homeostasis and ameliorates experimental colitis</a>, Zhenhua Wu, et al.
-			</li>
-			
-			<li id="xiong">
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9498509/"
-				title="Health Benefits and Side Effects of Short-Chain Fatty Acids"
-				target="_blank"
-				>Health Benefits and Side Effects of Short-Chain Fatty Acids</a>, Ruo-Gu Xiong, et al.
-			</li>
-			<li id="c-de-luca">
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2246086/"
-				title="Inflammation and Insulin Resistance"
-				target="_blank"
-				>Inflammation and Insulin Resistance</a>, Carl de Luca and Jerrold M. Olefsky.
-			</li>
-			
-			<li id="s-romano">
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7946946/"
-				title="Meta-analysis of the Parkinson’s disease gut microbiome suggests alterations linked to intestinal inflammation"
-				target="_blank"
-				>Meta-analysis of the Parkinson’s disease gut microbiome suggests alterations linked to intestinal inflammation</a>, Stefano Romano, et al.
-			</li>
-			<li id="a-h-tan">
-				<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8035463/"
-				title="Probiotics for Parkinson's disease: Current evidence and future directions"
-				target="_blank"
-				>Probiotics for Parkinson's disease: Current evidence and future directions</a>, Ai Huey Tan, et al.
-			</li>
-			<li id="hamamah">
-				<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8962300/"
-				title="Role of Microbiota-Gut-Brain Axis in Regulating Dopaminergic Signaling"
-				target="_blank"
-				>Role of Microbiota-Gut-Brain Axis in Regulating Dopaminergic Signaling</a>, Sevag Hamamah, et al.
-			</li>
-		</ol>
-	</section>
+    </section>
 	<section id="introduction-to-health">
 		<h2>Health Assessments</h2>
 	
@@ -3966,7 +3968,6 @@ function resetDefaultPosition(target) {
 			</p>
 		</blockquote>
 	</section>
-
 
 	<section id="supplements">
 		<h3>
@@ -8866,21 +8867,81 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
 		</section>
 		
 		<section id="vitamin-b6">
+		
 			<h3>
-				Vitamin B-6 (Pyridoxine)
+				Vitamin B-6 (Pyridoxine) or P-5-P (Pyridoxal 5-Phosphate)
 			</h3>
+			<table class="treatment-legend">
+				<tr>
+					<th>Mechanisms</th>
+					<td>DRT Side Effects, Cognition, Mitochondrial</td>
+				</tr>
+				<tr>
+					<th>Dose</th>
+					<td>10 - 50 mg</td>
+				</tr>
+				<tr>
+					<th>🩸🧠 BBB</th>
+					<td>✅ </td>
+				</tr>
+				<tr>
+					<th>Fat-soluble</th>
+					<td>❌</td>
+				</tr>
+				<tr>
+					<th>Safety</th>
+					<td>
+						<div class="rating-bar">
+							<div class="indicator indicator-very">
+								<span>Very Safe</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>Efficacy</th>
+					<td>
+						<div class="rating-bar">
+							<div class="indicator indicator-moderate">
+								<span>Moderately Effective</span>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>	
+			<p>
+				Vitamin B6, also known as pyridoxine, is used for synthesis of neurotransmitters including dopamine and serotonin, glutamatergic system regulation, and nervous system balance and maintenance.
+			</p>
+			<p>
+				Vitamin B6 is necessary for dopamine biosynthesis and may help reduce the side effects of dopaminergic treatments.
+			</p>
 			
+			<h4>P-5-P (Pyridoxal 5-Phosphate)</h4>
 			<p>
-				Vitamin B6, also known as pyridoxine, is neuroprotective, and is used in neurotransmitters synthesis, glutamatergic system regulation, and nervous system balance and maintenance.
+				P-5-P (Pyridoxal 5-Phosphate) is the active coenzyme form of vitamin B6, which bypasses the need for liver conversion. While most research focuses on B-6, p-5-p may offer advantages over it. 
 			</p>
+			
+			<h4>Relevance to Parkinson's Disease</h4>
 			<p>
-				Vitamin B6 is necessary for dopamine biosynthesis and antioxidant properties. However, high doses of vitamin B6 can cause peripheral neuropathy, and it is essential to consume it as part of a balanced diet and consult with a healthcare professional before taking supplements.
+				Supplementation of vitamin B-6, along with vitamin B-12 and folic acid, can reduce high homocysteine levels caused by levodopa metabolism, which may help in managing metabolic and clinical complications such as peripheral neuropathy and osteoporosis. <cite class="reflink"><a href="#keun">Keun</a></cite>
 			</p>
-
+			
+			<h4>Supplementation</h4>
 			<p>
-				Vitamin B6 helps in reducing the side effects of dopaminergic treatments,
+				Balanced methylated B-complex formulations generally provide sufficient amounts, from 10 - 50 mg of B-6 or P-5-P. A few such products include <q>Pure Encapsulations B-Complex Plus</q> and <q>Integrative Therapeutics Active B-Complex</q>. Talk to your neurologist about reducing DRT and supplementing with B-6, B-12 and folic acid.
 			</p>
+			
+			<h4>References</h4>
+			<ol class="reference-list">
+				<li id="keun">
+					<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8634393/"
+					title="Dietary Approaches to Improve Efficacy and Control Side Effects of Levodopa Therapy in Parkinson's Disease: A Systematic Review"
+					target="_blank"
+					>Dietary Approaches to Improve Efficacy and Control Side Effects of Levodopa Therapy in Parkinson's Disease: A Systematic Review</a>, Jikke T Boelens Keun, et al.
+				</li>
+			</ol>
 		</section>
+		
 		<section id="vitamin-b12">
 			<h3>
 				Vitamin B-12 (Cobalamin)
