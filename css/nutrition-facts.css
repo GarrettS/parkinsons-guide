@@ -1,0 +1,66 @@
+.nutrition-facts { 
+    background-color: #FFFC; 
+    border: 0.1vh solid black; 
+    padding: 3px; width: 244px;
+    font-size: 28px;
+    font-family:  Arial, Helvetica, sans-serif;
+}
+.nutrition-facts td { 
+    color: black; 
+    font-weight: 900;
+    font-size: 8pt; 
+    padding: 0.25ex; 
+}
+.nutrition-facts td.header { 
+    font-weight: 900;
+    font-size: 1em; 
+    white-space: nowrap; 
+}        
+.nutrition-facts .label { 
+    font-weight: 900;
+    width: 100%;
+}
+.nutrition-facts .serving { 
+    font-size: 50%; 
+    text-align: center;
+    padding-bottom: 0.25ex;
+	border-bottom: 0.6vi solid #000C;
+}
+
+.nutrition-facts td {
+	position: relative;
+}
+
+.nutrition-facts > tfoot > tr:last-child > td {
+	border-top: 0.6vi solid #000C;
+}
+
+.nutrition-facts .weight { 
+	font-weight: 400;
+	display: inline;
+	margin-left: .12ex;
+}
+
+.nutrition-facts table.vitamins td {  
+    white-space: nowrap; 
+    width: 33%; 
+}
+.nutrition-facts .line { 
+    border-top: 1px solid black; 
+}
+.nutrition-facts .nutrition-facts-sublabel { 
+    font-weight: 500;
+}
+
+.indent {
+	text-indent: 1em;
+	font-weight: 500;
+}
+
+.indent .weight {
+	font-weight: 500;
+}
+.nutrition-note {
+	font-style: italic;
+	font-weight: 200;
+}
