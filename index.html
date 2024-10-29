@@ -179,6 +179,12 @@ dt {
     font-style: italic;
 }
 
+#problems-list > dt {
+	font-weight: 550;
+	float: left;
+	margin-right: 1ex;
+}
+
 dd.es {
     margin: 0.5ex 0.5ex 1.5ex 0.5ex;
     color: var(--dd-solution);
@@ -188,6 +194,18 @@ dd.es::before {
     content: "Solutions: ";
     font-style: italic;
 }
+
+.compact-inline-list, .compact-inline-list > * {
+	display: inline;
+	margin: 0;
+}
+
+.compact-inline-list > dt {
+	display: inline; 
+	margin-right: .8ex;
+	font-weight: 600;
+}
+
 section > figure {
     border-width: 0.1vh;
     border-style: solid;
@@ -1670,37 +1688,37 @@ function resetDefaultPosition(target) {
         <dl id="problems-list">
                     
             <dt class="antifibrillogenic">Antifibrillogenic</dt>
-            <dd>Preventing fibril formation of α-synuclein.</dd>
+            <dd> — prevents fibril formation of α-synuclein </dd>
             <dd class="es">
                 Phosphatidylserine, uridine, tocotrienols and tocopherols, curcumin, ginger, ginseng, PQQ, saffron.
             </dd>
         
             <dt class="anti-aggregant">Anti-aggregant</dt>
-            <dd>Preventing aggregation of fibrils and other junk</dd>
+            <dd> — prevents aggregation of fibrils and other junk</dd>
             <dd class="es">
                 Phosphatidylserine, uridine, tocotrienols and tocopherols, curcumin, ginseng, PQQ, CDP-Choline, Alpha-GPC, saffron, sauna.
             </dd>
 
             <dt class="anti-inflammatory">Anti-inflammatory</dt>
-            <dd>Reducing Neuroinflammation</dd>
+            <dd> — reduces neuroinflammation</dd>
             <dd class="es">
                 DHA, phosphatidylserine, tocotrienols and tocopherols, curcumin, ginseng, PQQ, phosphatidylserine, saffron, photobiomodulation, HRT (testosterone/estradiol), exercise (moderate aerobic), sauna.
             </dd>
         
             <dt class="antioxidant">Antioxidant</dt>
-            <dd>Oxidative stress causes α-synuclein aggregation and neuroinflammation in PD. <cite class="reflink"><a href="#s-j-won">S.J. Won</a></cite></dd>
+            <dd> — reduces oxidative stress that causes α-synuclein aggregation and neuroinflammation. <cite class="reflink"><a href="#s-j-won">S.J. Won</a></cite></dd>
             <dd class="es">
                 Creatine, DHA, tocotrienols and tocopherols, curcumin, PQQ, ginseng, saffron, taurine, TMG, phosphatidylserine, photobiomodulation.
             </dd>
             
             <dt class="bbb-dysfunction">BBB and Barrier Dysfunction</dt>
-            <dd>Improves BBB function and protection</dd>
+            <dd> — improves protein clearance mechanisms: BBB, choroid plexus, CSF, ventricles, basement membrane, glymphatic system, UPS and ALP, brain phagocytes, etc</dd>
             <dd class="es">
                 Collagen peptides (especially collagen type IV), hyaluronic acid, CDP-Choline, Alpha-GPC, phosphatidylserine DHA, uridine, tocotrienols and tocopherols, curcumin, ginger, ginseng, PQQ, saffron, exercise (<abbr title="high-intensity interval training">HIIT</abbr>), HRT, DHEA, pregnenolone, growth hormone (GH) and secretagogues (tesamorelin, CJC-1295), vitamin C, vitamin K2, vitamin D3, beta-glucan (from mushrooms), MSCs, photobiomodulation.
             </dd>
 
             <dt class="mitochondrial">Mitochondrial</dt>
-            <dd>Promoting mitochondrial health (mitogenesis, mitophagy)</dd>
+            <dd> — promotes mitochondrial health (mitogenesis, mitophagy)</dd>
             <dd class="es">
                 Creatine, Na-r-ALA, DHA, UMP, Alpha-GPC, PQQ, <abbr title="Acetyl-L-Carnitine">ALCAR</abbr>, tocotrienols and tocopherols, berberine, ginger, ginseng, CDP-Choline, exercise (<abbr title="high-intensity interval training">HIIT</abbr>, resistance training, zone 2), B-1 (thiamine), p-5-p, B-12, beta-glucan, <abbr title="N-Acetylecysteine">NAC</abbr>, NAD+ precursors, MOTS-c, tesamorelin, photobiomodulation, <abbr title="Mesenchymal Stem Cells">MSC</abbr> therapy, cold therapy.
             </dd>
@@ -1712,27 +1730,43 @@ function resetDefaultPosition(target) {
             
             <dt>Calcium Dysregulation</dt>
             <dd>
-            	Addressing excessive mitochondrial calcium uptake.
+            	— prevents excess inracellular calcium and reducing extracellular calcium through bone formation 
             </dd>
+            
+	        <strong><small>Intracellular Calcium:</small></strong>
             <dd class="es">
-            	Osmolytes: Trehalose, taurine, betaine, creatine, hydromax glycerol, Alpha-GPC, uridine monophosphate, sarcosine. Electrolytes: Magnesium (intracellular calcium antagonist), sodium and potassium (sodium-potassium pump stabilizes cellular resting membrane potential, indirectly influencing calcium influx and transport), and chloride (both an osmolyte and electrolyte).
+            	<dl class="compact-inline-list">
+            		<dt>Osmolytes:</dt><dd> Trehalose, taurine, betaine, creatine, hydromax glycerol, Alpha-GPC, uridine monophosphate, sarcosine.</dd>
+
+<dt>Electrolytes:</dt><dd> Magnesium (intracellular calcium antagonist), sodium, potassium (stabilizes cellular resting membrane potential via sodium-potassium pump), chloride (both an osmolyte and electrolyte).</dd>
+
+<dt>VGCC Blockers:</dt><dd> Ginger ([6]-gingerol and [6]-shogaol), ginseng (ginsenosides), magnesium, quercetin, EGCG (from green tea).</dd>
+
+<dt>IP3R Pathway Modulators:</dt><dd> Taurine, ginseng (ginsenosides), curcumin, Vitamin D3 (indirectly supports regulation of IP3 receptors via calcium homeostasis).</dd>
+
+<dt>Mitochondrial Protectors:</dt><dd> Ubiquinol, L-Carnitine, taurine, Vitamin K2, DHA (omega-3 fatty acid), CoQ10.</dd>
+            	</dl>
+            </dd>
+			<strong><small>Extracellular Calcium: Bone formation and resorption inhibition:</small></strong> 
+            <dd class="es">
+            	Taurine, D3, high-dose K-2 (5mg), magnesium, collagen peptides (especially collagen type IV), hyaluronic acid, boron, zinc, strontium, creatine, turmeric, ginger, vitamin C, quercetin, <abbr title="epigallocatechin gallate">EGCG</abbr> (from matcha), DHEA, pregnenolone, HRT, growth hormone and secretagogues, intense weight-bearing exercise, vibration table, photobiomodulation.
             </dd>
             
             <dt class="senolytic">Senolytic</dt>
-            <dd>Targeting senescent cells; promoting autophagy; improving UPS and ALP dysfunction.</dd>
+            <dd> — targets senescent cells; promoting autophagy; improving UPS and ALP dysfunction </dd>
         
             <dd class="es">
                 Urolithin-A, resveratrol, fisetin, quercetin, surforaphane, apigenin, piperlongumine, theaflavin, blueberry (pterostilbene), Exercise (HIIT, resistance training), mitochondrial support (DHA, UMP), curcumin, PQQ, ginseng, saffron, fasting and caloric restriction, trehalose, all mitochondrial enhancers, NAD+ and precursors (NMN, NR, and Niacin). Berberine improves the ubiquitin-proteasome system.
             </dd>
             
             <dt class="anti-ischemic">Anti-ischemic</dt>
-            <dd>Promoting blood flow deep within the brain</dd>
+            <dd> —pPromotes blood flow deep within the brain</dd>
             <dd class="es">
                 Photobiomodulation, DHA, exercise (aerobic and resistance training), fasting, GH and secretogogues, k2, nattokinase, ginseng, PQQ, saffron, photobiomodulation, sauna.
             </dd>
             
             <dt>Cognition</dt>
-            <dd>Improving cognitive function, attention, and memory.</dd>
+            <dd> — improves cognitive function, attention, and memory</dd>
             <dd class="es">
                 <abbr title="Acetyl-L-Carnitine">ALCAR</abbr>, cacao, creatine, DHA, UMP, CDP-Choline, Alpha-GPC, B-12, PQQ, K2, ubiquinol, ginseng, ginger, ginko biloba, bacopa monnieri, lutein, zeaxanthin, blueberry, lion's mane, cordyceps, turkey tail, tiger milk mushroom, exercise, B-12, phosphatidylserine.
             </dd>
@@ -1741,17 +1775,17 @@ function resetDefaultPosition(target) {
             <dd>GABA, taurine, theanine, melatonin</dd-->
             
             <dt class="sleep">Sleep</dt>
-            <dd>Addressing insomnia</dd>
+            <dd> — addresses insomnia and sleep quality</dd>
             <dd class="es">
                 Early exercise, photobiomodulation, phosphatidylserine, <abbr title="N-Acetylecysteine">NAC</abbr> curcumin, magnesium-L-threonate, melatonin, theanine, GABA, 5-HTP, saffron, HRT, DHEA, pregnenolone, TMG.
             </dd>
             
             <dt class="gi">Gastrointestinal</dt>
-            <dd>Improves gastrointestinal health and function</dd>
+            <dd> — improves gastrointestinal health and function</dd>
             <dd class="es">Probiotic (fermeted) foods, beta-glucan from mushrooms, inulin, collagen, hyaluronic acid (MW >1000 kDa)</dd>
             
             <dt class="dopaminergic">DRT Side Effects</dt>
-            <dd>Helps DRT side-effects (e.g., dyskinesia, impulse control disorders, cytotoxicity)</dd>
+            <dd> — helps DRT side-effects (e.g., dyskinesia, impulse control disorders, cytotoxicity)</dd>
             <dd class="es">
                 Phosphatidylserine, magnesium L-threonate, B-1 (thiamine), berberine, B-1 (thiamine), p-5-p, B-12, TMG.
             </dd>
@@ -4749,7 +4783,7 @@ function resetDefaultPosition(target) {
             </p>
             
             <p>
-            	Taurine's calcium-regulating effects in both skeletal muscle and cardiac tissue results in significant improvements in several performance metrics, including increased muscle force, improved lipid metabolism, and increased insulin sensitivity. The effects of taurine supplementation have resulted in improvements in time to exhaustion in athletes in some studies.
+            	Taurine's calcium-regulating effects in both skeletal muscle and cardiac tissue significantly improves several performance metrics, including muscle force, lipid metabolism, and insulin sensitivity. The effects of taurine supplementation have resulted in improvements in time to exhaustion in athletes in some studies.
             </p>
             
             <h4>Supplementation</h4>
