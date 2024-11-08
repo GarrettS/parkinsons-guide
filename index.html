@@ -738,12 +738,15 @@ function resetDefaultPosition(target) {
         <section id="causes-of-pd">
             <h3>Causes and Risk Factors</h3>
             <p>
-                Parkinson’s Disease develops from multiple factors that drive misfolding and aggregation of the protein α-synuclein. In healthy brains, α-synuclein regulates synaptic function and neurotransmitter release. In PD, α-synuclein misfolds, forming clumps known as oligomers. These oligomers can grow into larger aggregates called fibrils, eventually forming Lewy bodies, which drive neurodegeneration. Similar α-synuclein misfolding occurs in related disorders, such as dementia with Lewy bodies (DLB) and multiple system atrophy (MSA). Although these conditions are distinct, research regarding α-synuclein misfolding is important to addressing this problem. 
-            </p>
+                PD involves the abnormal clumping of α-synuclein, a protein normally helping neurons communicate by managing neurotransmitter release. In PD, however, α-synuclein misfolds, leading to issues in brain function. 
+			</p>
             <p>
                 Alpha-synuclein is abundant primarily in the brain, especially in the neocortex, hippocampus, and substantia nigra (SN) — CNS regions located in the cerebral cortex, temporal region, and posterior midbrain, respectively. Although it's not necessary to memorize areas of the brain, it's useful to know that research has long shown α-synuclein misfolding affects multiple brain regions. Smaller amounts are found in the heart, muscles, and other tissues. It is transported into and out of the brain by the blood-brain barrier and the blood-cerebrospinal fluid barrier, systems also affected in PD. <cite class="reflink"><a href="#yu-ting-sui">Y. Sui</a></cite>
             </p>
-            
+            			
+			<p> 
+                In PD, α-synuclein misfolds, forming clumps known as oligomers. These oligomers can grow into larger aggregates called fibrils, eventually forming Lewy bodies, which drive neurodegeneration. Similar α-synuclein misfolding occurs in related disorders, such as dementia with Lewy bodies (DLB) and multiple system atrophy (MSA). Although these conditions are distinct, research regarding α-synuclein misfolding is important to addressing this problem. 
+            </p>            
             <p>
                 In PD, aging, environmental hazards, and genetics interact pathologically. The pathological hallmarks of PD include dopaminergic neuronal death and neurotransmitter imbalances. α-synuclein aggregation, a fundamental etiological pathway, also leads to mitochondrial dysfunction, oxidative damage, apoptosis, and neuroinﬂammation, which contribute to disease progression. <cite class="reflink"><a href="#k-burton">K. Burton</a></cite>
             </p>
@@ -816,10 +819,43 @@ function resetDefaultPosition(target) {
                         <p>A toxic cellular environment perpetuates α-synuclein misfolding, ER stress, and glial activation, causing formation of toxic α-synuclein oligomers.</p>
                     </div>
                 </div>
-                    
+
+				<h5>What Causes Alpha-Synuclein Misfolding?</h5>
+				<p>
+					This raises a natural question: <em>What causes α-synuclein misfolding?</em>
+				</p>
+				<p>
+					Aside from genetic mutations, multiple things can contribute to alpha-synuclein misfolding, including a toxic cellular environment that is caused by problems resulting from α-synuclein misfolding itself.
+				</p>
+				
+				<h5>Propagation from Gut to Brain: The Braak Hypothesis</h5>
+				<p>
+					Misfolded α-synuclein propagating from the enteric nervous system (ENS) to the brain, known as the Braak hypothesis, explained later, is one such causal pathway. This dysfunction is exacerbated by excess calcium in dopaminergic neurons, which rely on precise calcium signaling to maintain normal firing patterns.
+				</p>
+				
+				<h5>Calcium Dysregulation as a Primary Pathway</h5>
+				<p>
+					Calcium dysregulation is a fundamental problem that contributes to α-synuclein misfolding. Abnormal calcium levels stress neurons and impair normal protein handling processes, preventing cells from addressing misfolding errors. It also contributes to mitochondrial function and endoplasmic reticulum (ER) stress, and causes further injury by damaging the clearance systems needed to remove misfolded proteins. <cite class="reflink"><a href="#emmanouilidou"></a></cite>
+				</p>
+				<p>
+					Calcium dysregulation may also compound gut-brain propagation of misfolded α-synuclein if calcium signaling deficits affect cellular stability in the vagus nerve, offering an added mechanistic link to Braak’s hypothesis. 
+				</p>
+				<h5>Intracellular Calcium Dysregulation: Pathway Overview</h5>
+				<p>
+					When a nerve impulse (or "action potential") reaches the presynaptic terminal (the end of the neuron), it triggers calcium channels (<abbr title="voltage-gated calcium channels">VGCCs</abbr>) to open, letting calcium into the neuron. Synaptic vesicles, specialized organelles responsible for storing and releasing neurotransmitters at chemical synapses, fuse with the presynaptic membrane, releasing their neurotransmitter contents into the synapse through a process called <dfn>exocytosis</dfn>, a form of active transport and whereby neurons transport neurotransmitters out of the cell (exo- + cytosis).
+				</p>
+
+				<p>
+					In healthy neurons, <abbr title="voltage-gated calcium channels">VGCCs</abbr> regulate calcium influx precisely, triggering neurotransmitter release only when needed (i.e. when a signal or "action potential" arrives). 
+				</p>
+				
+				<p>
+					However, in PD, dopaminergic neurons, which rely on calcium channels for rhythmic firing, are susceptible to calcium dysregulation. Similarly, GABAergic neurons, which rely on different calcium channel types, face compromised inhibition under excess calcium. These imbalances leads to an overall excitatory bias within neural networks, worsening neural stress.
+				</p>
+
                 <h5>Autophagy Dysfunction and Cellular Impact</h5>
                 <p>
-                    Normally, smaller misfolded proteins like α-synuclein are cleared by the UPS. However, the proteasomes in the <abbr title="ubiquitin proteasome system">UPS</abbr> can't digest larger, insoluble aggregates that mutant α-synuclein can form over time. 
+                    Normally, smaller misfolded proteins like α-synuclein are cleared by the UPS. However, the proteasomes in the <abbr title="ubiquitin proteasome system">UPS</abbr> can't digest larger, insoluble aggregates that α-synuclein can form over time. 
                 </p>
                 <p>
                     However, in PD, mutant or aggregated α-synuclein resists lysosomal degradation, due to their size and insolubility. This disrupts autophagy, causing the toxic accumulation of cellular waste. As autophagy fails, oxidative stress and inflammation cause mitochondrial damage and eventually cell death.
@@ -832,6 +868,16 @@ function resetDefaultPosition(target) {
                 <p>
                     Wild-type α-synuclein is removed through <dfn>autophagy</dfn>, a cellular process that breaks down damaged components via lysosomes. Lysosomes serve as the digestive system of the cell, degrading material taken up from outside the cell and digesting obsolete components of the cell itself.
                 </p>
+                
+                <h5>References</h5>
+                <ol class="reference-list">
+					<li id="emmanouilidou">
+						<a href="https://www.jneurosci.org/content/30/20/6838"
+						title="Cell-Produced α-Synuclein Is Secreted in a Calcium-Dependent Manner by Exosomes and Impacts Neuronal Survival"
+						target="_blank"
+						>Cell-Produced α-Synuclein Is Secreted in a Calcium-Dependent Manner by Exosomes and Impacts Neuronal Survival</a>, Evangelia Emmanouilidou, et al.
+					</li>
+				</ol>
             </section>
             
             <section id="senescence">
@@ -840,9 +886,9 @@ function resetDefaultPosition(target) {
                     Senescent cells stop dividing but continue to release harmful, pro-inflammatory molecules known as <dfn>senescence-associated secretory phenotypes</dfn> (SASPs). These secretions damage neighboring cells, promoting their dysfunction and driving them into a senescent state.
                 </p>
                 <p>
-                    Senescent cells contribute to mitochondrial dysfunction, neuroinflammation, and the spread of α-synuclein aggregates. By impairing autophagy, increasing oxidative stress, and perpetuating inflammation, they create a cycle that accelerates disease progression. 
+                    Senescent cells contribute to mitochondrial dysfunction, neuroinflammation, and the spread of α-synuclein aggregates. By impairing autophagy, increasing oxidative stress, and perpetuating inflammation, they create a cycle disrupts calcium homeostasis, and accelerates disease progression across neurotransmitter systems.
                 </p>
-            </section>
+            </section> 
             <section id="multiple-neurotransmitter-systems-damage">
                 <h4>Multiple Neurotransmitter Systems Damage</h4>
                 
@@ -863,7 +909,7 @@ function resetDefaultPosition(target) {
                 
                 <h5>GABAergic Dysfunction and Calcium Dysregulation</h5>
                 <p>
-                    GABAergic dysfunction disrupts motor control by causing calcium dysregulation, leading to prolonged excitatory states in neurons. Excessive calcium influx overwhelms mitochondria, which absorb this excess into the mitochondrial matrix, impairing energy production and triggering oxidative stress. Dopaminergic neurons are highly sensitive to calcium fluctuations and vulnerable to this excitotoxic damage, accelerating degeneration. 
+                    GABAergic dysfunction disrupts motor control, exacerbating calcium dysregulation, leading to prolonged excitatory states in neurons. Excessive calcium influx overwhelms mitochondria, which absorb this excess into the mitochondrial matrix, impairing energy production and triggering oxidative stress. Dopaminergic neurons are highly sensitive to calcium fluctuations and vulnerable to this excitotoxic damage, accelerating degeneration. 
                 </p>
                 
                 <h4>DRT Impact</h4>
@@ -932,7 +978,7 @@ function resetDefaultPosition(target) {
             <section id="mechanisms-of-spread">
                 <h4>Mechanisms of Spread</h4>
                 <p>
-                    Once aggregated, mutant α-synuclein spreads between neurons and neural networks, leading to abnormalities in synaptic structure and function before neuronal loss occurs. This process contributes to the progressive spread of the disease from initially affected brain regions to others.  <cite class="reflink"><a href="#daley">Daley</a>, <a href="#perez-acuna">Pérez-Acuña</a></cite>
+                    Once aggregated, misfolded α-synuclein spreads between neurons and neural networks, leading to abnormalities in synaptic structure and function before neuronal loss occurs. This process contributes to the progressive spread of the disease from initially affected brain regions to others.  <cite class="reflink"><a href="#daley">Daley</a>, <a href="#perez-acuna">Pérez-Acuña</a></cite>
                 </p>
                 
                 <h4>Senescent Spread</h4>
@@ -1315,7 +1361,8 @@ function resetDefaultPosition(target) {
                 <p>
                     Excess intracellular calcium occurs through three main pathways. First, channels at the cell surface (<abbr title="voltage-gated calcium channels">VGCCs</abbr>) allow calcium inside. Second, the mitochondrial calcium uniporter (MCU) regulates calcium entry directly into mitochondria for safe storage. Third, the inositol triphosphate receptor (IP3R) moves calcium from the cell’s internal stores into mitochondria. In Parkinson’s Disease, damaged mitochondria lose their ability to manage this calcium effectively, which leads to overload, energy issues, and cell death. In PD and similar conditions, mitochondrial damage (due to oxidative stress and other issues) and excess calcium disrupts the <abbr title="mitochondrial calcium uniporter">MCU</abbr>’s function, leading to uncontrolled, excess calcium uptake and an opening of the <abbr title="mitochondrial permeability transition pore">mPTP</abbr>, leading to neuronal death.
                 </p>
-                
+
+
                 <p>
                     High calcium levels outside cells—often due to supplementation—can trigger the <abbr title="inositol triphosphate receptor">IP3R</abbr> pathway, which further transports calcium from the <abbr title="endoplasmic reticulum">ER</abbr> to the mitochondria. This further overloads mitochondria, reducing ATP production and eventually triggering cell death. 
                 </p>
@@ -1333,7 +1380,7 @@ function resetDefaultPosition(target) {
                 
                 <h6>Solutions to Calcium Dyregulation</h6>
                 <p>
-                    The understated problem of calcium dyregulation is only worsened by the dearth of solutions. Pharmaceutical <abbr title="voltage-gated calcium channels">VGCC</abbr> blockers (L-type) have been proposed <cite class="reflink"><a href="#ntetsika"></a></cite>, however, those come with side effects and worse, clinical trials (STEADY III) results have been poor. A more comprehensive solution to addressing calcium management is in order.
+                    The understated problem of calcium dyregulation is only worsened by the dearth of solutions. Pharmaceutical <abbr title="voltage-gated calcium channels">VGCC</abbr> blockers (L-type) have been proposed <cite class="reflink"><a href="#ntetsika">Ntetsika</a></cite>, however, those come with side effects and worse, clinical trials (STEADY III) results have been poor. A more comprehensive solution to addressing calcium management is in order.
                 </p>
                 <p>
                     Excess intracellular calcium can be managed with natural (non-pharmaceutical) <abbr title="voltage-gated calcium channels">VGCC</abbr> (L-type) blockers, <abbr title="inositol triphosphate receptor">IP3R</abbr> modulators, and osmolytes, as well as by reducing excess extracellular calcium, which contributes to excess intracellular calcium (via the  <abbr title="inositol triphosphate receptor">IP3R</abbr> pathway). Excess extracellular calcium can be reduced by stimulating bone uptake of calcium. See the Calcium Dysregulation solutions in the <a href="#problems-list">problems list</a> for more. 
