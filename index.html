@@ -509,7 +509,7 @@ function resetDefaultPosition(target) {
         <h2>A Health Optimization Approach</h2>
         <p>
             <strong>Working Draft</strong>, 
-            <time datetime="2024-10-11">2024-10-11</time>
+            <time datetime="2024-10-15">2024-10-15</time>
         <p>
         <address class="author">
             <strong>Editor:</strong> Garrett Smith
@@ -772,13 +772,13 @@ function resetDefaultPosition(target) {
                 
                 <h5>Alpha-Synuclein Clearance Mechanisms</h5>
                 <p>
-                    Healthy cells clear small misfolded proteins with the ubiquitin-proteasome system (UPS) and larger aggregates with the autophagy-lysosome pathway (ALP). 
+                    Healthy cells clear small misfolded proteins with the ubiquitin-proteasome system (UPS) and larger aggregates with the autophagy-lysosome pathway (ALP).
                 </p>
                 
                 <p>
-                    Misfolded α-synuclein overwhelms both the <abbr title="ubiquitin-proteasome system">UPS</abbr> and <abbr title="autophagy-lysosomal pathway">ALP</abbr>. Aggregates too large for the  <abbr title="ubiquitin proteasome system">UPS</abbr> are directed to the <abbr title="autophagy-lysosomal pathway">ALP</abbr>, but α-synuclein fibrils resist lysosomal breakdown, resulting in toxic buildup. The overloaded <abbr title="ubiquitin-proteasome system">UPS</abbr> and <abbr title="autophagy-lysosomal pathway">ALP</abbr> further compromise waste clearance, leading to extracellular waste and increased neuronal damage. While these mechanisms are discussed further in this guide, they fall outside conventional treatment standards.
+                    In PD, the structure of misfolded α-synuclein and its sheer volume hinder its degradation and clearance. Misfolded α-synuclein aggregates are not efficiently broken down by the proteasome, leading to their buildup and overwhelming the <abbr title="ubiquitin proteasome system">UPS</abbr>. When the proteasome fails to degrade these aggregates, they are directed to the <abbr title="autophagy-lysosomal pathway">ALP</abbr>, where α-synuclein fibrils further resist lysosomal breakdown. This resistance disrupts both clearance pathways, contributing to extracellular waste and increasing neuronal stress. While these processes are explored further in this guide, they remain outside conventional treatment approaches.
                 </p>
-                
+          
                 <h6>Intracellular α-Synuclein Accumulation Diagram</h6>
                 <div id="ups-alp-diagram" class="flow-diagram diagram">
                     <div class="concept step">
@@ -816,6 +816,13 @@ function resetDefaultPosition(target) {
                     </div>
                 </div>
 
+				<p>
+					<dfn>autophagosome</dfn> — (<dfn>auto</dfn> — "self" + <dfn>phago</dfn> — "eat; consume" + <dfn>some</dfn> — "body") — temporary intracellular structure that engulfs damaged components and delivers them to lysosomes, which act as the cell's recycling centers.
+				</p>
+				<p>
+					In PD, autophagosomes try to clear away α-synuclein aggregates, but become overwhelmed, leading to buildup of these aggregates that worsens cellular dysfunction.
+				</p>
+				
 				<h5>What Causes Alpha-Synuclein Misfolding?</h5>
 				<p>
 					This raises a natural question: <em>What causes α-synuclein misfolding in the first place?</em>
@@ -831,12 +838,15 @@ function resetDefaultPosition(target) {
 				
 				<h5>Calcium Dysregulation as a Primary Pathway</h5>
 				<p>
-					Calcium dysregulation is a fundamental problem that contributes to α-synuclein misfolding. Abnormal calcium levels stress neurons, disrupt mitochondrial function, another primary problem, increase ER (endoplasmic reticulum) stress, and causes further injury by damaging the clearance systems needed to remove misfolded proteins. <cite class="reflink"><a href="#emmanouilidou">Emmanouilidou</a></cite>
+					Calcium dysregulation is a fundamental problem that contributes to α-synuclein misfolding. This can result from elevated parathyroid hormone (PTH), menopause, or deficiencies in vitamin D or magnesium. <cite class="reflink"><a href="#emmanouilidou">Emmanouilidou</a></cite>
 				</p>
 
-Additionally, calcium dysregulation may promote the spread of misfolded α-synuclein along the gut-brain axis if it destabilizes cellular processes in the vagus nerve, aligning with Braak’s hypothesis on PD progression.
 				<p>
-					Calcium dysregulation may also compound gut-brain propagation of misfolded α-synuclein if calcium signaling deficits affect cellular stability in the vagus nerve, offering an added mechanistic link to Braak’s hypothesis. 
+					Calcium dysregulation may promote the spread of misfolded α-synuclein along the gut-brain axis via the vagus nerve, providing a mechanistic link to Braak’s hypothesis, which would implicate calcium dysregulation as a driver of PD.
+				</p>
+
+				<p>
+					While elevated <abbr title="parathyroid hormones">PTH</abbr> can contribute to calcium dysregulation, addressing nutrient deficiencies and hormonal imbalances may better support neuronal health than pharmacological suppression of PTH, as drugs like cinacalcet, alendronate, and calcitriol carry significant side effects.
 				</p>
 				
 				<h5>Intracellular Calcium Dysregulation: Pathway Overview</h5>
@@ -845,13 +855,12 @@ Additionally, calcium dysregulation may promote the spread of misfolded α-synuc
 				</p>
 
 				<p>
-					In healthy neurons, <abbr title="voltage-gated calcium channels">VGCCs</abbr> regulate calcium influx precisely, triggering neurotransmitter release only when needed (i.e. when a signal or "action potential" arrives). 
-				</p>
-				
-				<p>
-					In PD, GABAergic and dopaminergic neurons, which rely on precise calcium levels, are especially vulnerable to calcium imbalance. Similarly, GABAergic neurons, which rely on different calcium channel types, face compromised inhibition under excess calcium. These imbalances leads to an overall excitatory bias within neural networks, worsening neural stress.
+					In healthy neurons, <abbr title="voltage-gated calcium channels">VGCCs</abbr> precisely regulate calcium influx, triggering neurotransmitter release only when a signal arrives. In PD, this regulation is disrupted, particularly in dopaminergic and GABAergic neurons, which depend on tight calcium control. These imbalances create an excitatory bias in neural networks, increasing neural stress.
 				</p>
 
+				<p>
+					Elevated calcium levels stress neurons, disrupt mitochondrial function, increase endoplasmic reticulum (ER) stress, and impair the clearance of misfolded proteins. Together, these disruptions heighten neuronal vulnerability, exacerbate α-synuclein aggregation, and contribute to PD pathology.
+				</p>
                 <h5>Autophagy Dysfunction and Cellular Impact</h5>
                 <p>
                     Normally, smaller misfolded proteins (like misfolded α-synuclein) are cleared by the <abbr title="ubiquitin proteasome system">UPS</abbr>. However, the proteasomes in the <abbr title="ubiquitin proteasome system">UPS</abbr> can't digest larger, insoluble aggregates that α-synuclein can form over time. 
