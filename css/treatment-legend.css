@@ -86,6 +86,9 @@ table.treatment-legend .rating-bar {
         var(--color-transparent-minimal) 75%, 
         var(--color-transparent-minimal) 100%
     );
+    position: relative;
+    margin-top: -3.1vi;
+    margin-left: 0.4vi;
 }
 
 table.treatment-legend .indicator {
@@ -99,12 +102,6 @@ table.treatment-legend .indicator {
     border-color: transparent;
 	border-style: solid;
     bottom: -1px;
-}
-
-.rating-bar {
-    position: relative;
-    margin-top: -3.1vi;
-    margin-left: 0.4vi;
 }
 
 table.treatment-legend .indicator span {
@@ -123,6 +120,21 @@ table.treatment-legend .rating-bar .indicator-strong {
     color: var(--color-strong);
     border-bottom-color: var(--color-strong);
     right: 85%;
+}
+
+.treatment-legend td > strong {
+	margin-left: 1ex;
+}
+
+
+.treatment-legend td > strong:first-child {
+	margin-left: 0;
+}
+
+.treatment-legend .qualifier {
+    margin-left: 30vi;
+    position: relative;
+    display: inline-block;
 }
 
 table.treatment-legend .rating-bar .indicator-moderate-strong {
