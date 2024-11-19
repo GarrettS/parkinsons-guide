@@ -1,9 +1,23 @@
+:root {
+	--nutrition-facts-background: #FFFC; 
+	--nutrition-facts-odd-row-background: #E3E3E3CC;
+}
+
 .nutrition-facts { 
-    background-color: #FFFC; 
+    background-color: var(--nutrition-facts-background);
     border: 0.1vh solid black; 
     padding: 3px; width: 244px;
     font-size: 28px;
     font-family:  Arial, Helvetica, sans-serif;
+}
+
+.nutrition-facts tbody th {
+	text-align: left;
+	font-size: 12pt;
+}
+
+.nutrition-facts-title {
+	white-space: nowrap;
 }
 .nutrition-facts td { 
     color: black; 
@@ -41,6 +55,11 @@
 	margin-left: .12ex;
 }
 
+.nutrition-facts tbody > tr.line:nth-child(odd) {
+	background-color: var(--nutrition-facts-odd-row-background);
+
+}
+
 .nutrition-facts table.vitamins td {  
     white-space: nowrap; 
     width: 33%; 
@@ -63,4 +82,18 @@
 .nutrition-note {
 	font-style: italic;
 	font-weight: 200;
+}
+
+.advisory {
+	font-weight: normal;
+}
+
+.advisory h4 {
+	margin-bottom: 0.3ex;
+	margin-top: 0.7ex;
+}
+
+.advisory p {
+	margin-top: 0.3ex;
+	margin-bottom: 0.1ex;
 }
