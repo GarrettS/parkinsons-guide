@@ -1,8 +1,24 @@
 :root {
-	--nutrition-facts-background: #FFFC; 
-	--nutrition-facts-odd-row-background: #E3E3E3CC;
+	--nutrition-facts-background: #FFFD;
+	--nutrition-facts-border-color: #000;
+	--nutrition-facts-even-row-background: #FFFD;
+	--nutrition-facts-odd-row-background: #E3E3E3DD;
+	--nutrition-facts-color: black; 
+	--nutrition-facts-serving-color: #000D; 
+
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+		--nutrition-facts-background: #777D; 
+		--nutrition-facts-border-color: #777;
+		--nutrition-facts-odd-row-background: #7a7a7aDD;
+		--nutrition-facts-even-row-background: #888C;
+		--nutrition-facts-color: #000;
+		--nutrition-facts-meta-text: #D3D3D3DD;
+		--nutrition-facts-serving-color: #090909DD; 
+    }
+}
 .nutrition-facts { 
     background-color: var(--nutrition-facts-background);
     border: 0.1vh solid black; 
@@ -14,6 +30,7 @@
 
 .nutrition-facts caption {
     background-color: var(--nutrition-facts-background);
+    color: var(--nutrition-facts-meta-text);
     border-width: 0.1vh 0.1vh 0 0.1vh;
     border-color: black;
     border-style: solid;
@@ -25,13 +42,14 @@
 .nutrition-facts tbody th {
 	text-align: left;
 	font-size: 12pt;
+    color: var(--nutrition-facts-meta-text);
 }
 
 .nutrition-facts-title {
 	white-space: nowrap;
 }
-.nutrition-facts td { 
-    color: black; 
+.nutrition-facts td {
+	color: var(--nutrition-facts-color);
     font-weight: 900;
     font-size: 8pt; 
     padding: 0.25ex; 
@@ -46,10 +64,11 @@
     width: 100%;
 }
 .nutrition-facts .serving { 
-    font-size: 50%; 
+    color: var(--nutrition-facts-meta-text);
+    font-size: 50%;
     text-align: center;
     padding-bottom: 0.25ex;
-	border-bottom: 0.6vi solid #000C;
+	border-bottom: 0.6vi solid var(--nutrition-facts-serving-color);
 }
 
 .nutrition-facts td {
@@ -57,7 +76,7 @@
 }
 
 .nutrition-facts > tfoot > tr:last-child > td {
-	border-top: 0.6vi solid #000C;
+	border-top: 0.6vi solid var(--nutrition-facts-serving-color);
 }
 
 .nutrition-facts .weight { 
@@ -66,18 +85,23 @@
 	margin-left: .12ex;
 }
 
-.nutrition-facts tbody > tr.line:nth-child(odd) {
-	background-color: var(--nutrition-facts-odd-row-background);
+.nutrition-facts tbody > tr:nth-child(even) > td {
+	background-color: var(--nutrition-facts-even-row-background);
+}
 
+.nutrition-facts tbody > tr:nth-child(odd) > td {
+	background-color: var(--nutrition-facts-odd-row-background);
 }
 
 .nutrition-facts table.vitamins td {  
     white-space: nowrap; 
-    width: 33%; 
+    width: 33%;
 }
 .nutrition-facts .line { 
-    border-top: 1px solid black; 
+    border-top: 1px solid;
+    border-color: var(--nutrition-facts-border-color);
 }
+
 .nutrition-facts .nutrition-facts-sublabel { 
     font-weight: 500;
 }
