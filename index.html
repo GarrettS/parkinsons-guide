@@ -208,6 +208,7 @@ dd.es::before {
 }
 
 section > figure {
+	position: relative;
     border-width: 0.1vh;
     border-style: solid;
     border-color: var(--section-figure-border-color);
@@ -222,15 +223,33 @@ figure > img.block-image {
 }
 
 
-img#choroid-plexus {
+figure img[id="choroid-plexus"] {
     max-width: 30vi;
 }
 
-figure > img#choroid-plexus.zoomable:focus {
-     transform: scale(1);
-    max-width: initial;
+figure > .zoomable, figure > .zoomable:active {
+	 cursor: zoom-in;
+	 transition: transform 0.3s ease-in-out;
+	 max-width: initial;
 }
 
+figure > .zoomable:focus {
+    transform: scale(1);
+    max-width: initial;
+    width: auto;
+}
+
+.zoomable-close {
+	display: none;
+}
+
+.zoomable:focus + .zoomable-close {
+	display: block;
+	position: absolute;
+	top: 2.01vi;
+	right: 0;
+	z-index: 100;
+}
 
 figure.flex-row {
     display: flex;
@@ -924,7 +943,7 @@ function resetDefaultPosition(target) {
                 </p>
                 
                 <p>
-                    Błaszczyk observed nearly a decade prior that calcium/GABA dysregulation lead directly to dopaminergic neuron loss and neuroinflammation, weakening the BBB. Subsequent research strengthens this assertion, showing this neuroinflammation extends to the glymphatic system and <abbr title="cerebrospinal fluid">CSF</abbr> circulation, furthering PD progression.
+                    Błaszczyk observed nearly a decade prior that calcium/GABA dysregulation lead directly to dopaminergic neuron loss and neuroinflammation, weakening the Blood–Brain Barrier (BBB). Subsequent research strengthens this assertion, showing this neuroinflammation extends to the glymphatic system and <abbr title="cerebrospinal fluid">CSF</abbr> circulation, furthering PD progression.
                 </p>
                 
                 <h5>GABAergic Dysfunction and Calcium Dysregulation</h5>
@@ -1133,25 +1152,26 @@ function resetDefaultPosition(target) {
 						Normally, smaller misfolded proteins (like α-synuclein) are cleared by the <abbr title="ubiquitin proteasome system"><abbr title="ubiquitin proteasome system">UPS</abbr></abbr>. However, the proteasomes in the UPS can't digest larger, insoluble aggregates that α-synuclein forms over time. In PD, mutant or aggregated α-synuclein resists lysosomal degradation, disrupting autophagy and causing the toxic accumulation of cellular waste. As autophagy fails, oxidative stress and inflammation increase, leading to mitochondrial damage and cell death.
 					</p>
                     <p>
-                         Microglia and astrocytes clear extracellular α-synuclein aggregates through phagocytosis. In PD, chronic neuroinflammation impairs this process, worsening protein clearance deficits. Increased BBB permeability compounds the problem, allowing contaminants and inflammatory substances to enter and harm the brain. These substances can accumulate in the CSF, further damaging the choroid plexus and disrupting CSF homeostasis, amplifying the strain on all of these interdependent clearance systems.
+                         Microglia and astrocytes clear extracellular α-synuclein aggregates through phagocytosis. In PD, chronic neuroinflammation impairs this process, worsening protein clearance deficits. Increased <abbr title="Blood–Brain Barrier">BBB</abbr> permeability compounds the problem, allowing contaminants and inflammatory substances to enter and harm the brain. These substances can accumulate in the CSF, further damaging the choroid plexus and disrupting CSF homeostasis, amplifying the strain on all of these interdependent clearance systems.
                     </p>    
                     
                     <h5>The Blood–Brain Barrier (BBB)</h5>
                     <p>
-                        The BBB is a protective layer of specialized cells that line the blood vessels of the central nervous system (CNS) in the brain, controlling what enters and exits the <abbr title="central nervous system">CNS</abbr> to maintain homeostasis, allowing necessary nutrients and oxygen to pass through while blocking toxins, pathogens, and other harmful substances.
+                        The Blood–Brain Barrier (BBB) is a protective layer of specialized cells that line the blood vessels of the central nervous system (CNS) in the brain, controlling what enters and exits the <abbr title="central nervous system">CNS</abbr> to maintain homeostasis, allowing necessary nutrients and oxygen to pass through while blocking toxins, pathogens, and other harmful substances.
                     </p>
         
                     <h5>Choroid Plexus and CSF</h5>
                     <p>
-                        The choroid plexus is a plexus of cells, a self-contained, functional unit located within the ventricles responsible for secreting <abbr title="cerebrospinal fluid">in the </abbr> and forming a blood-CSF barrier. It consists of a layer of epithelial cells surrounding a core of capillaries and loose connective tissue. As CSF circulates through the brain, it transports essential substances such as nutrients, growth factors, hormones, proteins, electrolytes, and neurotransmitters, while also collecting waste products, including misfolded proteins like α-synuclein. The waste-laden CSF is then drained through specialized pathways, including the ventricles and the glymphatic system, before being filtered out by the liver and kidneys. Damage to the choroid plexus can impair CSF production, disrupt waste clearance, and reduce the transport of essential substances, potentially contributing to cognitive decline.
+                        The choroid plexus is a specialized structure within the brain's ventricles that produces cerebrospinal fluid (CSF) and forms a blood-CSF barrier. It consists of epithelial cells surrounding capillaries and connective tissue. As CSF circulates through the brain, it transports essential substances such as nutrients, growth factors, hormones, proteins, electrolytes, and neurotransmitters, while also collecting waste products, including misfolded proteins like α-synuclein. The waste-laden CSF is then drained through specialized pathways, including the ventricles and the glymphatic system, before being filtered out by the liver and kidneys.
                     </p>
                     <p>
-                        Damage to the choroid plexus impairs CSF production and disrupts waste clearance, allowing α-synuclein to accumulate, clog, and damage its epithelial cells. This accumulation hinders the brain's ability to clear waste and deliver essential nutrients and growth factors, exacerbating neuroinflammation. <cite class="reflink"><a href="#albachari">Al-Bachari</a>, <a href="#saunders">Saunders</a>, <a href="#tadayon">Tadayon</a></cite>
+                        Damage to the choroid plexus impairs <abbr title="Cerebrospinal Fluid">CSF</abbr> production and disrupts waste clearance, allowing α-synuclein to accumulate, clog, and damage its epithelial cells. This accumulation hinders the brain's ability to clear waste and deliver essential nutrients and growth factors, exacerbating neuroinflammation.  <cite class="reflink"><a href="#albachari">Al-Bachari</a>, <a href="#saunders">Saunders</a>, <a href="#tadayon">Tadayon</a></cite>
                     </p>    
 
                     <figure>
                         <img alt="Choroid Plexus" src="img/choroid-plexus.jpg" 
                         id="choroid-plexus" class="block-image zoomable" tabindex="-1">
+                    	<button class="zoomable-close">Close</button>
                         <figcaption>
                             <p>
                                 Choroid Plexus — a highly vascularized tissue located in each ventricle of the brain that secretes CSF.
