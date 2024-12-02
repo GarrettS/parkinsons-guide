@@ -107,6 +107,7 @@ abbr[title], dfn[title] {
     text-decoration-color: var(--abbr-text-decoraction-color);
     cursor: text;
     transition: background-color 0.6s ease-out;
+    text-wrap: nowrap; /* prevents adjacent punctuation from appearing on next line in Chromium */
 }
 
 abbr[title]:hover, dfn[title]:hover {
