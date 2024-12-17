@@ -395,6 +395,14 @@ section section {
     font-size: smaller;
 }
 
+#peptides-list {
+	font-size: smaller;
+	list-style: 'Π  ';
+}
+#peptides-list strong {
+	margin-right: 0.1vi;
+}
+
 </style>
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/diagrams.css">
@@ -571,7 +579,7 @@ function resetDefaultPosition(target) {
             </li>
             <li><a href="#etiological-solutions">Etiological Solutions</a></li>
             <li><a href="#how-to-build-a-supplement-plan">How to Build a Supplement Plan</a></li>
-            <li><a href="#food">Food</a></li>
+            <li><a href="#food">Dietary Strategies</a></li>
 
             <li><a href="#treatment-approaches">Treatment Approaches</a>
                 <ul>
@@ -954,7 +962,7 @@ function resetDefaultPosition(target) {
                 
                 <h4>DRT Impact</h4>
                 <p>
-                     Dopamine Replacement Therapy (DRT) provides temporary symptomatic relief but contributes to long-term neurodegenerative damage by worsening calcium dysregulation. This calcium overload stresses mitochondria, leading to accelerated neurodegeneration. Additionally, DRT depletes vitamin B6, essential for GABA and serotonin production, compounding neurotransmitter imbalances. DRT alone—without addressing the underlying GABA imbalance—overstimulates excitatory pathways, leading to excessive calcium influx into neurons, perpetuating a harmful feedback cycle.
+                     Dopamine Replacement Therapy (DRT) provides temporary symptomatic relief but contributes to long-term neurodegenerative damage by worsening calcium dysregulation. This calcium overload stresses mitochondria, leading to accelerated neurodegeneration. Additionally, DRT depletes vitamin B6, essential for GABA and serotonin production, compounding neurotransmitter imbalances. DRT alone—without addressing the underlying GABA imbalance—overstimulates excitatory pathways, leading to excessive calcium influx into neurons, perpetuating a harmful feedback cycle. To add further injury, patients taking oral levodopa are advised to consume a low protein diet to maximize its effects, but this decreases protein turnover, impacting the <abbr title="ubiquitin proteasome system">UPS</abbr> and <abbr title="autophagy-lysosomal pathway">ALP</abbr> which help clear α-synuclein aggregates.
                 </p>
                 
                 <h4>Solutions</h4>
@@ -2785,16 +2793,12 @@ function resetDefaultPosition(target) {
     </section>
     <section id="food">
         <h3>
-            Food
-        </h3>
-
+            Dietary Strategies
+		</h3>
         <p>
             Certain compounds found in food and supplements help protect against neurodegeneration, with some supporting exercise performance and others improving sleep. Some are synergistic, and some require dietary fats, like eggs or coconut oil, for absorption. This section explores dietary choices, treating food as medicine for PD.
         </p>
-        
-        <h3>
-             Dietary Strategies for Parkinson's Disease
-        </h3>
+
         <p>
             A diet for PD should prioritize gut health, blood sugar control, and the inclusion of bioactives that aid disease management.
         </p>
@@ -2802,9 +2806,10 @@ function resetDefaultPosition(target) {
             To manage blood glucose, eliminate all refined sugars, reduce starch intake, and include protein (whey protein post-workout; glycine at night). Fats rich in <abbr title="medium chain triglycerides">MCTs</abbr>, like coconut oil, provide an efficient energy source for the brain and improve the absorption of fat-soluble compounds such as turmeric.
         </p>
         
+
         <h4>When Protein Increases Glutathione</h4>
         <p>
-            
+            TODO
         </p>
         <p>
         
@@ -2831,12 +2836,16 @@ function resetDefaultPosition(target) {
         <p>
             SCFAs maintain the gut lining and nourish beneficial bacteria. Dietary fiber, fermented by gut bacteria, is the primary source of SCFAs. These fatty acids help regulate appetite, reduce cravings for sugary foods, and improve blood glucose and insulin sensitivity. Lower inflammation further enhances metabolic health. <cite class="reflink"><a href="#xiong">R. Xiong</a>, <a href="#c-de-luca">C. de Luca</a></cite>
         </p>
-        
-        <h4>Food and the Gut-Brain Axis in Parkinson's Disease</h4>
-                
+               
+        <h4>The Gut-Brain Axis and Microbiome Health</h4>
+        <p>
+            Studies have consistently shown that individuals with PD have unhealthy gut microbiome, with reduced diversity and altered composition compared to healthy individuals, and that this contributes to the development and progression of PD symptoms. <cite class="reflink"><a href="#berthouzoz">Bberthouzoz</a></cite>
+        </p>
+
         <p>
             Restoring balance to the gut microbiome through probiotics and prebiotics can improve gastrointestinal function. In PD, gut issues are common, and addressing them may slow neurodegeneration.
         </p>
+        
         <p>
             Recent research has explored the use of probiotics in PD, including constipation, endothelial health, and the gut-brain axis. A 2022 study titled <q>Role of Microbiota-Gut-Brain Axis in Regulating Dopaminergic Signaling</q> found that gut microbiota help maintain adequate concentrations of dopamine via bidirectional communication along the gut-brain axis. <cite class="reflink"><a href="#s-romano">S. Romano</a>, <a href="#a-h-tan">A.H. Tan</a>, <a href="#hamamah">Hamamah</a></cite>
         </p>
@@ -2845,11 +2854,7 @@ function resetDefaultPosition(target) {
         <p>
             According to a 2018 study, nearly 60% of non-diabetic PD patients may have undiagnosed insulin resistance, despite having normal blood sugar levels. And although higher body mass index (BMI) was associated with increased IR, even lean PD patients showed a higher percentage (41%) of IR compared to healthy adults without PD.
         </p>
-        
-        <p>
-            Studies have consistently shown that individuals with PD exhibit alterations in their gut microbiome, characterized by reduced diversity and altered composition compared to healthy individuals. This dysbiosis may contribute to the development and progression of PD symptoms.
-        </p>
-        
+                
         <h4>Meal Ideas for Brain Health</h4>
         <p>
             These meals use ingredients known for neuroprotective, anti-inflammatory, ECM, and brain health benefits. 
@@ -2923,6 +2928,12 @@ function resetDefaultPosition(target) {
                 >Inflammation and Insulin Resistance</a>, Carl de Luca and Jerrold M. Olefsky.
             </li>
             
+            <li id="berthouzoz">
+				<a href="https://pubmed.ncbi.nlm.nih.gov/36934020/"
+				title="Oral and intestinal dysbiosis in Parkinson's disease"
+				target="_blank"
+				>Oral and intestinal dysbiosis in Parkinson's disease</a>, E Berthouzoz, et al.
+			</li>
             <li id="s-romano">
                 <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7946946/"
                 title="Meta-analysis of the Parkinson’s disease gut microbiome suggests alterations linked to intestinal inflammation"
@@ -4021,13 +4032,13 @@ function resetDefaultPosition(target) {
 				</p>
 
 				<h4>List of Peptides</h4>
-				<ul>
+				<ul id="peptides-list">
 					<li><strong>SS-31 (Elamipretide):</strong> Stabilizes mitochondrial membranes, reduces oxidative stress, and enhances ATP production.</li>
 					<li><strong>BPC-157:</strong> Repairs blood-brain barrier (BBB) integrity and promotes neurovascular health.</li>
 					<li><strong>TB-500:</strong> Enhances tissue repair and reduces inflammation, showing potential for neurological applications.</li>
 					<li><strong>Semax:</strong> A nootropic peptide that promotes neurogenesis and has neuroprotective properties.</li>
 					<li><strong>Selank:</strong> Provides anxiolytic effects and supports cognitive function with potential neuroprotective benefits.</li>
-					<li>MOTS-c: mitochondrial biogenesis and cellular energy regulation, decreased neuroinflammation.
+					<li><strong>MOTS-c:</strong> mitochondrial biogenesis and cellular energy regulation, decreased neuroinflammation.
 					</li>
 					<li><strong>Humanin:</strong> Protects against oxidative stress and apoptosis, offering neuroprotective benefits.</li>
 					<li><strong>AICAR:</strong> Activates AMPK to improve energy metabolism and mitochondrial biogenesis but has a less favorable safety profile.</li>
@@ -4127,7 +4138,7 @@ function resetDefaultPosition(target) {
 				
         		<h5>BPC-157</h5>
                 <p>
-                    BPC-157, administered subcutaneously (Sub-Q), has shown potential in repairing BBB integrity and promoting neurovascular health, which could be beneficial in the context of PD. It is widely used among athletes and biohackers for minor acute injury recovery. <cite class="reflink"><a href="#vukojevic">Vukojević</a></cite>
+                    BPC-157, administered subcutaneously (Sub-Q), has shown potential in repairing BBB integrity and promoting neurovascular health, and has been shown to counteract PD symptoms in rodent studies. BPC-157 is widely used among athletes and biohackers for minor acute injury recovery with virtually no side effects. <cite class="reflink"><a href="#vukojevic">Vukojević</a>, <a href="#vukojevic2">Vukojević 2</a></cite>
                 </p>
 				
 				<h5>TB-500</h5>
@@ -4199,7 +4210,12 @@ function resetDefaultPosition(target) {
 						target="_blank"
 						>BPC-157, administered subcutaneously (Sub-Q), has shown potential in repairing BBB integrity and promoting neurovascular health, which could be beneficial in the context of PD.</a>, J. Vukojević, et al.
 					</li>
-					
+					<li id="vukojevic2">
+                        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8504390/"
+                        title="Pentadecapeptide BPC 157 and the central nervous system"
+                        target="_blank"
+                        >Pentadecapeptide BPC 157 and the central nervous system</a>, Jakša Vukojević, et al.
+                    </li>
 					<li id="karaa">
                     <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5890606/"
 						title="Randomized dose-escalation trial of elamipretide in adults with primary mitochondrial myopathy"
