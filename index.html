@@ -422,6 +422,24 @@ abbr[title][itemprop$=t]::after, dfn[title][itemprop$=t]::after {
 }
 </style>
     <script type="module">
+    
+    
+const applyForJob = async () => {
+    const url = 'https://jobs.x.com';
+    const timeout30Days = 1000 * 60 * 60 * 24 * 30;
+
+    try {
+        const job = await fetch(url,{ signal: AbortSignal.timeout(timeout30Days)});
+        console.log(await job.text());
+    } catch (error) {
+        if (error.name === 'AbortError') {
+            console.error("Timeout. Changing careers...");
+        } 
+    }
+};
+
+applyForJob();
+
 const documentElement = document.documentElement;
 
 const clickHandler = event => {
@@ -537,7 +555,7 @@ function resetDefaultPosition(target) {
         <h2>A Health Optimization Approach</h2>
         <p>
             <strong>Working Draft</strong>, 
-            <time datetime="2024-12-19">2024-12-19</time>
+            <time datetime="2024-12-26">2024-12-26</time>
         <p>
         <address class="author">
             <strong>Editor:</strong> Garrett Smith
@@ -656,6 +674,8 @@ function resetDefaultPosition(target) {
                     <li><a href="#ginger">Ginger</a></li>
                     <li><a href="#egcg">Matcha</a></li>
                     <li><a href="#ginsenoside">Ginseng</a></li>
+                    <li><a href="#rhodiola">Rhodiola</a></li>
+                    
                     <li><a href="#acetyl-l-carnitine">Acetyl-L-Carnitine (ALCAR)</a></li>
                     <li><a href="#r-ala">Alpha-Lipoic Acid (ALA)</a></li>
                     <li>
@@ -959,9 +979,15 @@ function resetDefaultPosition(target) {
                 
                 <h4>DRT Impact</h4>
                 <p>
-                     Dopamine Replacement Therapy (DRT) provides temporary symptomatic relief but contributes to long-term neurodegenerative damage by worsening calcium dysregulation. This calcium overload stresses mitochondria, leading to accelerated neurodegeneration. Additionally, DRT depletes vitamin B6, essential for GABA and serotonin production, compounding neurotransmitter imbalances. DRT alone—without addressing the underlying GABA imbalance—overstimulates excitatory pathways, leading to excessive calcium influx into neurons, perpetuating a harmful feedback cycle. To add further injury, patients taking oral levodopa are advised to consume a low protein diet to maximize its effects, but this decreases protein turnover, impacting the <abbr title="ubiquitin proteasome system">UPS</abbr> and <abbr title="autophagy-lysosomal pathway">ALP</abbr> which help clear α-synuclein aggregates.
+                     Dopamine Replacement Therapy (DRT) provides temporary symptomatic relief but contributes to long-term neurodegenerative damage by worsening calcium dysregulation. This calcium overload stresses mitochondria, leading to accelerated neurodegeneration. Additionally, DRT depletes vitamin B6, essential for GABA and serotonin production, compounding neurotransmitter imbalances. DRT alone—without addressing the underlying GABA imbalance—overstimulates excitatory pathways, leading to excessive calcium influx into neurons, perpetuating a harmful feedback cycle. To add further injury, patients taking oral levodopa are typically advised to consume a low protein diet to maximize its effects, but this decreases protein turnover, impacting the <abbr title="ubiquitin proteasome system">UPS</abbr> and <abbr title="autophagy-lysosomal pathway">ALP</abbr> which help clear α-synuclein aggregates.
                 </p>
                 
+                <p>
+                
+                Gut health (since GABA is synthesized in part by gut microbes).
+Vitamin B6 and magnesium levels, which are cofactors in GABA production.
+Potential use of GABAergic supplements or medications to restore balance.
+
                 <h4>Solutions</h4>
                 <p>
                      To reduce reliance on DRT, treatments should aim to address GABAergic collapse and calcium dysregulation. High-dose K2 (5,000 mcg daily) can aid in calcium regulation. Supplementation with GABA and theanine can help restore GABAergic function, with theanine potentially replenishing the neurotransmitter pool of GABA in GABAergic neurons. Cacao, which contains anandamide (an NMDA receptor antagonist reduced in PD), may help mitigate excitotoxicity. Cholinergics can stabilize the plasma membrane and reduce excessive calcium influx, while mitochondrial enhancers like CoQ10, PQQ, and NAD+ boosters restore mitochondrial health and energy balance, alleviating the effects of calcium overload. For more details on DRT pitfalls, see <a href="#neurochemical-imbalances">DRT: Neurochemical and Vitamin Imbalances</a>. 
@@ -1054,7 +1080,7 @@ function resetDefaultPosition(target) {
                     </p>
                     
                     <p>
-                        Gut dysbiosis can exacerbate α-synuclein misfolding and accelerate PD progression. Conversely, DRT may worse gut dysbiosis, further compounding the issue. This insight into gut dysbiosis and the mutually destructive interdependent effects of poor gut health and DRT usage provides yet another reason to minimize and avoid DRT overreliance in favor of a more comprehensive program to improve gut health. <cite class="reflink"><a href="#klann">Klann</a>, <a href="#breen">Breen</a>, <a href="#mulak">Mulak</a></cite>
+                        Gut dysbiosis can exacerbate α-synuclein misfolding and accelerate PD progression. Conversely, DRT may worsen gut dysbiosis, further compounding the issue. This insight into gut dysbiosis and the mutually destructive interdependent effects of poor gut health and DRT usage provides yet another reason to minimize and avoid DRT overreliance in favor of a more comprehensive program to improve gut health. <cite class="reflink"><a href="#klann">Klann</a>, <a href="#breen">Breen</a>, <a href="#mulak">Mulak</a></cite>
                     </p>
                     
                     <h6>Solutions</h6>
@@ -2525,7 +2551,7 @@ function resetDefaultPosition(target) {
 				</tr>
 				<tr>
 					<td class="line">
-						<div class="label">Rhodiola Rosea <div class="weight">250 mg</div></div>
+						<div class="label">Rhodiola Rosea <div class="weight">250 mg pre-workout ☀️🏋️</div></div>
 					</td>
 				</tr>
 				<tr>
@@ -2807,7 +2833,7 @@ function resetDefaultPosition(target) {
 
 		<h4>Protein</h4>
 		<p>
-			Traditional healthcare recommends a low-protein diet for PD.  This is to reduce competition between dietary protein and absorption of the drug levodopa. However, this approach is questionable.
+			Traditional healthcare recommends a low-protein diet for PD. This is to reduce competition between dietary protein and absorption of the drug levodopa. However, this approach is questionable. 
 		</p>
 		
 		<h5>Ketogenic Diet</h5>
@@ -2815,7 +2841,10 @@ function resetDefaultPosition(target) {
 			Ketogenic diets (KD), also known as the “keto” diet, are high-fat, moderate-protein, and low-carbohydrate. Recent research has shown strong benefits of the ketogenic diet for PD patients.
 		</p>
 		<p>
-			High-protein diets increase overall protein turnover, improving cellular capacity to degrade misfolded or aggregated proteins, including α-synuclein. Research has shown that KD induces autophagy, improving clearance of protein aggregates and reducing mitochondrial damage, and shifts neurotransmitter balance toward increased dopamine production and a more favorable conversion of glutamine into GABA (the primary inhibitory neurotransmitter) over glutamate (an excitatory neurotransmitter). This reduction in excitotoxicity alleviates stress on neurons and improves mood through enhanced physiological nervous quieting.
+			 
+		</p>
+		<p>
+			High-protein diets increase overall protein turnover, improving cellular capacity to degrade misfolded or aggregated proteins, including α-synuclein. Research has shown that KD induces autophagy, improving clearance of protein aggregates and reducing mitochondrial damage, and shifts neurotransmitter balance toward increased dopamine production and a more favorable conversion of glutamine into GABA (the primary inhibitory neurotransmitter) over glutamate (an excitatory neurotransmitter). This reduction in excitotoxicity alleviates stress on neurons and improves mood through enhanced physiological nervous quieting. Whey protein consumption can increase immunoglobulin G (IgG) levels, particularly IgG1 and IgG2.
 <cite class="reflink"><a href="#monda">Monda</a>, <a href="#dynka">Dynka</a></cite>
 		</p>
 
@@ -5200,19 +5229,19 @@ function resetDefaultPosition(target) {
             <h3>GlyNAC (Glycine-N-Acetyl Cysteine)</h3>
             <table class="treatment-legend">
                 <tr>
-                    <th>Mechanisms:</th>
+                    <th>Mechanisms</th>
                     <td>Antioxidant, Anti-inflammatory, Mitochondrial</td>
                 </tr>
                 <tr>
-                    <th>Dose:</th>
+                    <th>Dose</th>
                     <td>6g per day 💤</td>
                 </tr>
                 <tr>
-                    <th>Fat-soluble:</th>
+                    <th>Fat-soluble</th>
                     <td>❌</td>
                 </tr>
                 <tr>
-                    <th>🩸🧠 BBB:</th>
+                    <th>🩸🧠 BBB</th>
                     <td>✅</td>
                 </tr>
                 <tr>
@@ -5226,7 +5255,7 @@ function resetDefaultPosition(target) {
                     </td>
                 </tr>
                 <tr>
-                    <th>Efficacy:</th>
+                    <th>Efficacy</th>
                     <td>
                         <div class="rating-bar">
                             <div class="indicator indicator-moderate">
@@ -7589,6 +7618,123 @@ of Parkinson’s Disease</a>, K. S. Ibrahim and E. M. El-Sayed.
             </ol>
         </section>
         
+        <section id="rhodiola">
+        
+        	<h3>Rhodiola Rosea</h3>
+        	<table class="treatment-legend">
+				<tr>
+					<th>Mechanisms</th>
+					<td>Anti-inflammatory, Antioxidant, Anti-depressant, BBB and Barrier Dysfunction </td>
+				</tr>
+				<tr>
+					<th>Dose</th>
+					<td>2.5-3.5 mg / kg (about 300 mg) per day</td>
+				</tr>
+				<tr>
+					<th>🩸🧠 BBB</th>
+					<td>✅ </td>
+				</tr>
+				<tr>
+					<th>Fat-soluble</th>
+					<td>✅ </td>
+				</tr>
+				<tr>
+					<th>Safety</th>
+					<td>
+						<div class="rating-bar">
+							<div class="indicator indicator-moderate">
+								<span> </span>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th>Efficacy</th>
+					<td>
+						<div class="rating-bar">
+							<div class="indicator indicator-somewhat">
+								<span> </span>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<p>
+				Rhodiola rosea is an adaptogen from the root of the plant with the same name. IT contains over 140 active ingredients, with the two most potent being rosavins and salidroside. These compounds enhance stress resilience and reduce anxiety, fatigue, and depression by stimulating natural defense mechanisms and cellular resilience, including mitochondrial health. 
+			</p>
+						
+			<h4>Cognitive and Neuroprotective Benefits</h4>
+			<p>
+				Rhodiola rosea has been shown to improve learning and memory functions in animal models. This is achieved through mechanisms such as antioxidant activity, cholinergic regulation, anti-apoptosis, anti-inflammatory effects, and improved cerebral metabolism. <cite class="reflink"><a href="#ma">Ma</a></cite>
+			</p>
+			<p>
+				Rhodiola rosea and its active compounds can help to alleviate the disease in the brain at the cellular level by reducing oxidative damage, improving protein folding, and promoting dopaminergic cell growth and blood flow in the substantia nigra.. <cite class="reflink"><a href="#bernatoniene">Bernatoniene</a></cite>
+			</p>
+			<p>
+				Rhodiola rosea and its components have demonstrated neuroprotective effects in ischemic stroke models. These effects include improved neural functional scores, reduced brain edema, increased cell viability, and decreased levels of apoptotic cells and inflammatory markers, and improved BBB function from salidroside. <cite class="reflink"><a href="#li">Li</a>, <a href="#zhilan">Zhilan</a></cite> 
+			</p>
+			
+			<h4>Mechanisms of Action</h4>
+	
+			<p>
+				Rhodiola rosea's multifaceted neuroprotective benefits are come from its antioxidant and anti-inflammatory effects, which help reduce oxidative stress and inflammation in the brain, enhanced enhancing mitochondrial function to boost ATP synthesis, BBB-strengthening effects, and improved neurotransmitter function. 
+			</p>
+			
+			<h5>Mitochondrial Function</h5>
+
+			<p>
+				Rhodiola rosea helps in reducing cell death by inhibiting apoptosis, which is beneficial in conditions involving neuronal damage like PD.
+			</p>
+
+			<p>
+				Rhodiola rosea L. extract shows potential antidepressant action in adult humans, with a favorable safety profile, through its multi-target effects on stress regulation and neuroendocrine-immune systems. It helps to increase neurotransmitters serotonin, dopamine and acetylcholine receptors in the central nervous system (CNS) and further enhanced the effects of these neurotransmitters on the brain by increasing the permeability of the blood–brain barrier to precursors of dopamine and serotonin. <cite class="reflink"><a href="#amsterdam">Amsterdam</a></cite>
+			</p>
+			
+			<h4>Supplementation</h4>
+			<p>
+				Rhodiola improves mood, exercise recovery, and is generally very well-tolerated. Effective doses range from  2.5-3.5 mg/kg (about 200–400 mg for an average adult), in one or two doses. It is best used earlier in the day, due to its mildly stimulating effects.
+			</p>
+
+			<h4>References</h4>
+			<ol class="reference-list">
+				<li id="ma">
+					<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6288277/"
+					title="Rhodiola rosea L. Improves Learning and Memory Function: Preclinical Evidence and Possible Mechanisms"
+					target="_blank"
+					>Rhodiola rosea L. Improves Learning and Memory Function: Preclinical Evidence and Possible Mechanisms</a>, Gou-ping Ma, et al.
+				</li>
+				<li id="li">
+                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8602078/"
+                    title="Preclinical Evidence and Possible Mechanisms of Rhodiola rosea L. and Its Components for Ischemic Stroke: A Systematic Review and Meta-Analysis"
+                    target="_blank"
+                    >Preclinical Evidence and Possible Mechanisms of Rhodiola rosea L. and Its Components for Ischemic Stroke: A Systematic Review and Meta-Analysis</a>, Yan Li, et al.
+                </li>
+                <li id="zhilan">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/38417575/"
+                    title="Salidroside promotes pro-angiogenesis and repair of blood brain barrier via Notch/ITGB1 signal path in CSVD Mode"
+                    target="_blank"
+                    >Salidroside promotes pro-angiogenesis and repair of blood brain barrier via Notch/ITGB1 signal path in CSVD Mode</a>, Tu Zhilan, et al.
+                </li>
+                <li id="amsterdam">
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/27013349/"
+                    title="Rhodiola rosea L. as a putative botanical antidepressant"
+                    target="_blank"
+                    >Rhodiola rosea L. as a putative botanical antidepressant</a>, Jay D Amsterdam and Alexander G Panossian.
+                </li>
+                <li id="bernatoniene">
+                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10418374/"
+                    title="Phenolic Compounds of Rhodiola rosea L. as the Potential Alternative Therapy in the Treatment of Chronic Diseases"
+                    target="_blank"
+                    >Phenolic Compounds of Rhodiola rosea L. as the Potential Alternative Therapy in the Treatment of Chronic Diseases</a>, Jurga Bernatoniene, et al.
+                </li>
+                <li id="stojcheva">
+                    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9228580/"
+                    title="The Effectiveness of Rhodiola rosea L. Preparations in Alleviating Various Aspects of Life-Stress Symptoms and Stress-Induced Conditions—Encouraging Clinical Evidence"
+                    target="_blank"
+                    >The Effectiveness of Rhodiola rosea L. Preparations in Alleviating Various Aspects of Life-Stress Symptoms and Stress-Induced Conditions—Encouraging Clinical Evidence</a>, Emilija Ivanova Stojcheva and José Carlos Quintela.
+                </li>
+			</ol>
+        </section>
         <section id="acetyl-l-carnitine">
             <h3>Acetyl-L-Carnitine (ALCAR)</h3>
             <table class="treatment-legend">
@@ -11745,15 +11891,15 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 <h3>Quercetin</h3>
 				<table class="treatment-legend">
 					<tr>
-						<th>Mechanisms:</th>
+						<th>Mechanisms</th>
 						<td>Antioxidant, Anti-inflammatory, Mitochondrial, BBB and Barrier Dysfunction</td>
 					</tr>
 					<tr>
-						<th>Dose:</th>
+						<th>Dose</th>
 						<td>30mg of Isoquercetin or 1000mg quercetin per day</td>
 					</tr>
 					<tr>
-						<th>Fat-soluble:</th>
+						<th>Fat-soluble</th>
 						<td>✅</td>
 					</tr>
 					<tr>
@@ -11761,7 +11907,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
 						<td>✅ — crosses BBB and reduces BBB permeability</td>
 					</tr>
 					<tr>
-						<th>Safety:</th>
+						<th>Safety</th>
 						<td>
 							<div class="rating-bar">
 								<div class="indicator indicator-strong">
@@ -11771,7 +11917,7 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
 						</td>
 					</tr>
 					<tr>
-						<th>Efficacy:</th>
+						<th>Efficacy</th>
 						<td>
 							<div class="rating-bar">
 								<div class="indicator indicator-somewhat">
