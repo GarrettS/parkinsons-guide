@@ -197,12 +197,15 @@ dd.es::before {
 }
 
 .compact-inline-list, .compact-inline-list > * {
-    display: inline;
-    margin: 0;
+    display: inline-block;
+    margin: 0.5em;
+}
+
+.compact-inline-list p {
+	margin: 1em 0;
 }
 
 .compact-inline-list > dt {
-    display: inline; 
     margin-right: .8ex;
     font-weight: 600;
 }
@@ -555,7 +558,7 @@ function resetDefaultPosition(target) {
         <h2>A Health Optimization Approach</h2>
         <p>
             <strong>Working Draft</strong>, 
-            <time datetime="2025-03-04">2025-03-04</time>
+            <time datetime="2025-03-05">2025-03-05</time>
         <p>
         <address class="author">
             <strong>Editor:</strong> Garrett Smith
@@ -1916,15 +1919,53 @@ Potential use of GABAergic supplements or medications to restore balance.
             <dd class="es">
                 <strong><small>Intracellular Calcium:</small></strong>
                 <dl class="compact-inline-list">
-                    <dt>Osmolytes:</dt><dd> Trehalose, taurine, betaine, creatine, hydromax glycerol, Alpha-GPC, uridine monophosphate, sarcosine.</dd>
+					<p>
+						Calcium dysregulation is a fundamental etiological pathway in PD, contributing to mitochondrial dysfunction, oxidative stress, excitotoxicity, and neurodegeneration. Key contributors include L-type <abbr title="voltage-gated calcium channels">VGCCs</abbr>, Endoplasmic reticulum (ER) stress and <abbr title="inositol triphosphate receptor">IP3R</abbr> dysfunction leading to excessive intracellular calcium release, and mitochondrial calcium overload—impairs ATP production and triggers senescence and cell death.
+					</p>
+                    <dt>Osmolytes – regulate cellular hydration, stabilize proteins, and protect membranes, mitigating calcium-induced stress.
+                    </dt>
 
-<dt>Electrolytes:</dt><dd> Magnesium (intracellular calcium antagonist), sodium, potassium (stabilizes cellular resting membrane potential via sodium-potassium pump), chloride (both an osmolyte and electrolyte).</dd>
+					<dd>
+						Trehalose: Regulates osmotic balance, stabilizes cellular hydration, and protects membranes from stress-induced damage.
+					</dd>
+					<dd>
+						Taurine: Taurine modulate VGCCs, reducing calcium entry into neurons, acts as an intracellular osmolyte, and stabilizes membrane potential. Reduces NMDA receptor-mediated calcium influx, protecting against excitotoxicity.
+					</dd>
+					<dd>
+						Alpha-GPC: Provides choline for membrane phospholipid synthesis, indirectly supporting osmotic balance and membrane stability.
+					</dd>
 
-<dt>VGCC Blockers:</dt><dd> Ginger ([6]-gingerol and [6]-shogaol), ginseng (ginsenosides), magnesium, quercetin, EGCG (from green tea).</dd>
+					<dd>
+						Creatine: draws water into cells, indirectly affecting ion homeostasis, including calcium. 
+					</dd>
+					<dd>
+						Uridine Monophosphate (UMP): Supports phospholipid biosynthesis for mitochondrial and ER membranes.
+					</dd>
 
-<dt><abbr title="inositol triphosphate receptor">IP3R</abbr> Pathway Modulators:</dt><dd> Ginseng (ginsenosides), curcumin, Vitamin D3 (indirectly supports regulation of IP3 receptors via calcium homeostasis).</dd>
+					<dd>
+						Betaine: Osmoprotectant that helps maintain proper cellular hydration, indirectly influencing ion channel function, reduces osmotic stress, and supports membrane integrity.
+					</dd>
+					<dd>
+						HydroMax Glycerol: Increases cellular hydration, potentially stabilizing intracellular osmotic conditions that impact calcium homeostasis.
+					</dd>
 
-<dt>Mitochondrial Protectors:</dt><dd> Ubiquinol, L-Carnitine, taurine, Vitamin K2, DHA (omega-3 fatty acid), CoQ10.</dd>
+					<dd>
+						Sarcosine: helps regulate intracellular fluid balance.
+					<dd>
+                    	</dl>
+Trehalose, taurine, betaine, creatine, hydromax glycerol, Alpha-GPC, uridine monophosphate, sarcosine.</dd>
+
+						<dt>Electrolytes:</dt>
+						<dd> Magnesium (intracellular calcium antagonist), sodium, potassium (stabilizes cellular resting membrane potential via sodium-potassium pump), chloride (both an osmolyte and electrolyte).</dd>
+						
+						<dt>VGCC Blockers:</dt>
+						<dd> Ginger ([6]-gingerol and [6]-shogaol), ginseng (ginsenosides), magnesium, quercetin, EGCG (from green tea).</dd>
+						
+						<dt><abbr title="inositol triphosphate receptor">IP3R</abbr> Pathway Modulators:</dt>
+						<dd> Ginseng (ginsenosides), curcumin, Vitamin D3 (indirectly supports regulation of IP3 receptors via calcium homeostasis).</dd>
+						
+						<dt>Mitochondrial Protectors:</dt>
+						<dd> Ubiquinol, L-Carnitine, taurine, Vitamin K2, DHA (omega-3 fatty acid), CoQ10.</dd>
                 </dl>
             </dd>
             
@@ -12683,6 +12724,10 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 </p>
                 
                 <p>
+                	Apigenin binds to GABA A receptors, specifically the benzodiazepine receptors in the brain. This binding increases the inhibitory effects of GABA, a neurotransmitter that reduces nerve activity and promotes relaxation and mild sedative effect. <cite class="reflink"><a href="#viola">Viola</a></cite>
+                </p>
+                
+                <p>
                     Clinical studies assessing apigenin’s potential effects on sleep are promising, though limited. Many of these studies used chamomile extract, which is often about 1% apigenin by mass (0.8–1.2%) and in which apigenin is a bioactive ingredient. The effects observed from chamomile extract could be due to apigenin, other components of chamomile, or a combination of both. However, these results, combined with the animal data and mechanistic effects that include increased antioxidant markers, GABAergic activity, and decreased corticosterone levels indicate that apigenin contributes to these effects. <cite class="reflink"><a href="#kramer">Kramer</a></cite>
                 </p>
                 
@@ -12692,6 +12737,12 @@ href="https://www.amazon.com/gp/product/B0027YKO1C/ref=as_li_tl?ie=UTF8&amp;tag=
                 </p>
                 <h4>References</h4>
                 <ol class="reference-list">
+                	<li id="viola">
+						<a href="https://pubmed.ncbi.nlm.nih.gov/7617761/"
+						title="apigenin is a mild benzodiazepine receptor agonist, exerting anxiolytic and mild sedative effects at higer doses"
+						target="_blank"
+						>Apigenin, a component of Matricaria recutita flowers, is a central benzodiazepine receptors-ligand with anxiolytic effects</a>, Viola, et al.
+					</li>
                     <li id="kramer">
                         <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10929570/"
                         title="Apigenin: a natural molecule at the intersection of sleep and aging"
